@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+.env
+chroma_db/
+*.egg-info/
+dist/
+build/
