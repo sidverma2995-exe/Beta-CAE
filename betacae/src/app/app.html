@@ -1,21 +1,35 @@
 <div class="app-container">
   <header class="app-header">
     <div class="header-top">
-      <h1>Beta CAE</h1>
+      <h1>BTI - Dev Catalyst</h1>
       <button class="upload-btn" (click)="onUploadClick()" [disabled]="isUploading" title="Upload document to knowledge base">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
           <polyline points="17 8 12 3 7 8"/>
           <line x1="12" y1="3" x2="12" y2="15"/>
         </svg>
-        {{ isUploading ? 'Uploading...' : 'Upload' }}
+        {{ isUploading ? ('Indexing' + (uploadFileTotal > 1 ? ' (' + uploadFileIndex + '/' + uploadFileTotal + ')' : '') + '...') : 'Upload' }}
       </button>
     </div>
-    @if (uploadMessage) {
-      <div class="upload-toast">{{ uploadMessage }}</div>
+
+    @if (isUploading) {
+      <div class="upload-progress-area">
+        <div class="upload-progress-bar-track">
+          <div class="upload-progress-bar-fill" [style.width.%]="uploadProgress"></div>
+        </div>
+        <span class="upload-progress-label">
+          @if (uploadFileTotal > 1) { ({{ uploadFileIndex }}/{{ uploadFileTotal }}) }
+          {{ uploadProgress }}%
+        </span>
+      </div>
     }
+
+    @if (uploadMessage) {
+      <div class="upload-toast" [class.error]="uploadMessage.startsWith('Upload failed')">{{ uploadMessage }}</div>
+    }
+
     <nav class="tab-nav">
-      <a routerLink="/qa" routerLinkActive="active">Question & Answer</a>
+      <a routerLink="/qa" routerLinkActive="active">Q & A</a>
       <a routerLink="/chat" routerLinkActive="active">Chat</a>
       <a routerLink="/code" routerLinkActive="active">Code</a>
     </nav>

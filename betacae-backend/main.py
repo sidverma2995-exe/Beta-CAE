@@ -1,8 +1,12 @@
 import logging
 import time
 import io
+import json
+import asyncio
+import threading
 from fastapi import FastAPI, UploadFile, File, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from dotenv import load_dotenv
 import os
@@ -43,6 +47,7 @@ class QueryRequest(BaseModel):
 class QueryResponse(BaseModel):
     answer: str
     sources: list[str] = []
+    chunks: list[dict] = []
 
 
 @app.middleware("http")
@@ -72,7 +77,109 @@ async def query(request: QueryRequest):
     result = rag_engine.query(request.query, request.mode)
     duration = time.time() - start_time
     logger.info(f"Query processed in {duration:.2f}s - Answer length: {len(result['answer'])} chars, Sources: {result.get('sources', [])}")
-    return QueryResponse(answer=result["answer"], sources=result.get("sources", []))
+    return QueryResponse(answer=result["answer"], sources=result.get("sources", []), chunks=result.get("chunks", []))
+
+
+@app.post("/query/stream")
+async def query_stream(request: QueryRequest):
+    logger.info(f"Stream query received - Mode: {request.mode}, Query: '{request.query[:100]}'")
+    if not request.query.strip():
+        raise HTTPException(status_code=400, detail="Query cannot be empty")
+
+    loop = asyncio.get_event_loop()
+    output_queue: asyncio.Queue = asyncio.Queue()
+
+    threading.Thread(
+        target=rag_engine.query_stream,
+        args=(request.query, request.mode, output_queue, loop),
+        daemon=True,
+    ).start()
+
+    async def generate_sse():
+        while True:
+            kind, data = await output_queue.get()
+            if kind == "token":
+                yield f"data: {json.dumps({'token': data})}\n\n"
+            elif kind == "done":
+                yield f"data: {json.dumps({'done': True, 'sources': data['sources'], 'chunks': data['chunks']})}\n\n"
+                break
+            elif kind == "error":
+                yield f"data: {json.dumps({'error': data})}\n\n"
+                break
+
+    return StreamingResponse(
+        generate_sse(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
+
+
+def _extract_text(content: bytes, filename: str, ext: str) -> str:
+    """Extract plain text from file bytes. Raises HTTPException on failure."""
+    if ext == ".pdf":
+        try:
+            import fitz
+            pdf_doc = fitz.open(stream=content, filetype="pdf")
+            text = "".join(page.get_text() for page in pdf_doc)
+            pdf_doc.close()
+            if not text.strip():
+                raise HTTPException(status_code=400, detail="Could not extract text from PDF. The PDF may be image-based.")
+            return text
+        except ImportError:
+            raise HTTPException(status_code=500, detail="PDF processing not available. Install PyMuPDF.")
+    return content.decode("utf-8", errors="ignore")
+
+
+ALLOWED_EXTENSIONS = {".txt", ".pdf", ".md", ".py", ".js", ".ts", ".html", ".css"}
+
+
+@app.post("/upload/progress")
+async def upload_document_progress(file: UploadFile = File(...)):
+    """Upload a document with SSE progress events so the UI can show a progress bar."""
+    if not file.filename:
+        raise HTTPException(status_code=400, detail="No file provided")
+
+    ext = os.path.splitext(file.filename)[1].lower()
+    if ext not in ALLOWED_EXTENSIONS:
+        raise HTTPException(status_code=400, detail=f"File type {ext} not supported.")
+
+    content = await file.read()
+    filename = file.filename
+
+    loop = asyncio.get_event_loop()
+    event_queue: asyncio.Queue = asyncio.Queue()
+
+    def progress_cb(step, message, current=0, total=0):
+        loop.call_soon_threadsafe(
+            event_queue.put_nowait, {"step": step, "message": message, "current": current, "total": total}
+        )
+
+    def run_indexing():
+        try:
+            progress_cb("parsing", f"Reading '{filename}'...")
+            text = _extract_text(content, filename, ext)
+            progress_cb("parsing", f"Extracted {len(text):,} characters", 1, 1)
+            rag_engine.add_document_with_progress(text, filename, progress_cb=progress_cb)
+        except HTTPException as e:
+            loop.call_soon_threadsafe(event_queue.put_nowait, {"step": "error", "message": e.detail})
+        except Exception as e:
+            logger.error(f"Upload indexing failed: {e}", exc_info=True)
+            loop.call_soon_threadsafe(event_queue.put_nowait, {"step": "error", "message": str(e)})
+
+    threading.Thread(target=run_indexing, daemon=True).start()
+
+    async def generate_sse():
+        while True:
+            event = await event_queue.get()
+            yield f"data: {json.dumps(event)}\n\n"
+            if event["step"] in ("done", "error"):
+                break
+
+    return StreamingResponse(
+        generate_sse(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
 
 
 @app.post("/upload")

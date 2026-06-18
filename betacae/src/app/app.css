@@ -59,6 +59,36 @@
   margin-bottom: 0.5rem;
 }
 
+.upload-toast.error {
+  background: rgba(229, 115, 115, 0.2);
+  border-color: rgba(229, 115, 115, 0.4);
+}
+
+.upload-progress-area {
+  margin-bottom: 0.5rem;
+}
+
+.upload-progress-bar-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.3rem;
+}
+
+.upload-progress-bar-fill {
+  height: 100%;
+  background: #64b5f6;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.upload-progress-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .tab-nav {
   display: flex;
   gap: 0.5rem;

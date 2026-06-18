@@ -4,14 +4,25 @@
       <div class="welcome-message">
         <div class="welcome-icon">💬</div>
         <h2>Welcome to Chat</h2>
-        <p>Have a conversation with Beta CAE AI assistant. Ask anything and get helpful responses. Type your message below to start chatting!</p>
+        <p>Have a conversation with Dev Catalyst AI assistant. Ask anything and get helpful responses. Type your message below to start chatting!</p>
       </div>
     }
     @for (msg of messages; track msg.timestamp) {
       <div class="message" [class.user]="msg.role === 'user'" [class.assistant]="msg.role === 'assistant'">
         <div class="message-bubble">
-          <span class="message-role">{{ msg.role === 'user' ? 'You' : 'Beta CAE' }}</span>
+          <span class="message-role">{{ msg.role === 'user' ? 'You' : 'Dev Catalyst' }}</span>
           <p>{{ msg.content }}</p>
+          @if (msg.role === 'assistant' && msg.chunks && msg.chunks.length > 0) {
+            <details class="ref-chunks">
+              <summary>{{ msg.chunks.length }} referred chunk(s)</summary>
+              @for (chunk of msg.chunks; track $index) {
+                <div class="ref-chunk">
+                  <span class="ref-source">{{ chunk.source }}</span>
+                  <pre class="ref-content">{{ chunk.content }}</pre>
+                </div>
+              }
+            </details>
+          }
         </div>
       </div>
     }

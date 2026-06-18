@@ -1,3 +1,19 @@
+# Ignore generated Sphinx HTML docs
+Coding_User_Guide/python_api/html/
+
+# Ignore FAISS index files
+betacae-backend/faiss_index/
+*.faiss
+*.pkl
+
+# Node / build outputs
+node_modules/
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
 # Node
 node_modules/
 
