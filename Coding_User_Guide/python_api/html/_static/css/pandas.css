@@ -1,0 +1,138 @@
+/* Override some aspects of the pydata-sphinx-theme */
+
+:root {
+  /* Use softer blue from bootstrap's default info color */
+  --pst-color-info: 23, 162, 184;
+}
+
+/* COLORS */
+html {
+  --pst-color-muted: #6c757d !important;
+  --pst-color-muted-text: #fff !important;
+  --pst-color-muted-highlight: #545b62 !important;
+}
+html[data-theme='light'] {
+  --pst-color-text-base: #323232;
+  --pst-color-link-hover: #ee9040;
+}
+html[data-theme='dark'] {
+  --pst-color-background: #272E38;
+  --pst-color-link-hover: var(--pst-color-primary);
+}
+html[data-theme='dark'] .bd-header {
+  background-color: #383F4A !important;
+}
+html[data-theme='dark'] .form-control, .line-block, .table {
+  color: var(--pst-color-text-base);
+}
+h1, h2 {
+  color: var(--pst-color-primary);
+}
+
+/* FONT-SIZE */
+html {
+  --pst-font-size-base: 15px;
+  --pst-font-size-h1: 36px;
+  --pst-font-size-h2: 32px;
+  --pst-font-size-h3: 26px;
+  --pst-font-size-h4: 21px;
+  --pst-font-size-h5: 18px;
+  --pst-font-size-h6: 16px;
+  --pst-font-size-milli: 12px;
+}
+
+/* NAVBAR & SIDEBAR */
+.navbar-header-items__start {
+  width: 25%;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.nav-link:hover, .bd-links a:hover {
+  text-decoration: none !important;
+}
+html[data-theme='light'] a.nav-link:hover {
+  color: var(--pst-color-link) !important;
+}
+html[data-theme='dark'] a.nav-link  {
+  color: #FCFEFF !important;
+}
+html[data-theme='dark'] a.nav-link:hover {
+  color: var(--pst-color-primary) !important;
+}
+.bd-header .navbar-nav>.current>.nav-link {
+  border-bottom: 0;
+}
+#search-input {
+  border: 0;
+}
+
+/* Main index page overview cards */
+.intro-card {
+  background: transparent;
+  border-radius: 0;
+  border-color: #c0c0c0;
+  padding: 30px 10px 20px 10px;
+  margin: 10px 0px;
+}
+.intro-card p.sd-card-text {
+  margin: 0px;
+}
+.intro-card .sd-card-img-top {
+  margin: 10px 0;
+  padding: 2px 0;
+  height: 52px;
+  background-color: transparent !important;
+}
+.intro-card .sd-card-header {
+  border: none;
+  background-color: transparent;
+  color: #150458 !important;
+  font-size: var(--pst-font-size-h5);
+  font-weight: bold;
+  padding: 2.5rem 0rem 0.5rem 0rem;
+}
+.intro-card .sd-card-footer {
+  border: none;
+  background-color: transparent;
+}
+.intro-card .sd-card-footer p.sd-card-text{
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SVG FILTER */
+html[data-theme='light'] .homepage .sd-card-img-top {
+  filter: invert(23%) sepia(85%) saturate(1781%) hue-rotate(192deg) brightness(97%) contrast(90%);
+}
+html[data-theme='light'] .ansa-card .sd-card-img-top {
+  filter: invert(19%) sepia(99%) saturate(1871%) hue-rotate(191deg) brightness(105%) contrast(106%);
+}
+html[data-theme='light'] .meta-card .sd-card-img-top {
+  filter: invert(18%) sepia(51%) saturate(4041%) hue-rotate(342deg) brightness(90%) contrast(88%);
+}
+html[data-theme='light'] .komvos-card .sd-card-img-top {
+  filter: invert(63%) sepia(27%) saturate(865%) hue-rotate(34deg) brightness(90%) contrast(86%);
+}
+html[data-theme='dark'] .sd-card-img-top {
+  filter: invert(100%) sepia(70%) saturate(5521%) hue-rotate(180deg) brightness(110%) contrast(111%) !important;
+}
+
+/* Module page */
+.api-ref ~ .bd-container .bd-sidenav .toctree-l1:not(:first-child) {
+  display: none;
+}
+#searchbox {
+  display: none;
+}
+.bd-sidebar-secondary .theme-version {
+  display: none;
+}
+/* fix double colon after 'Parameters' etc */
+dl.field-list > dt:after{
+  content: "";
+}

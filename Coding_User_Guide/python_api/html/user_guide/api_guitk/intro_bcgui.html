@@ -1,0 +1,1501 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>BCGUI Functionality &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/api_guitk/intro_bcgui';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="bcgui-functionality">
+<h1>BCGUI Functionality<a class="headerlink" href="#bcgui-functionality" title="Permalink to this heading">#</a></h1>
+<section id="what-is-bcgui">
+<h2>What is BCGUI<a class="headerlink" href="#what-is-bcgui" title="Permalink to this heading">#</a></h2>
+<p>BCGUI (BETA C Graphical User Interface) is a powerful and versatile library of GUI functions. It is meant to help script users build windows that consist of any type of graphical interface, like lineEdits, comboBoxes, checkBoxes, Lists etc, in order to interact easier and more efficiently with ANSA entities.</p>
+</section>
+<section id="bcgui-structure-and-philosophy">
+<h2>BCGUI structure and philosophy<a class="headerlink" href="#bcgui-structure-and-philosophy" title="Permalink to this heading">#</a></h2>
+<p>The BCGUI entities are divided in 3 categories of classes; the widgets, the layouts and the items. These classes will be extensively described in the following chapters.</p>
+<section id="widget-classes-or-widgets">
+<h3>Widget classes or widgets<a class="headerlink" href="#widget-classes-or-widgets" title="Permalink to this heading">#</a></h3>
+<p>This category includes all the important GUI entities that are visible and manageable by the user, like windows, buttons, combo boxes, etc. Its most important functions are described below:</p>
+<p><strong>BCWindow</strong></p>
+<p>Creates a window that may hold any other widget, layout or item. It is the highest-level widget that can be created by the BCGUI library. A vertical layout is created by default.</p>
+<p><strong>BCLineEdit</strong></p>
+<p>Creates an one-line text editor.</p>
+<p><strong>BCCheckBox</strong></p>
+<p>Creates a check box with a text label on its right.</p>
+<p><strong>BCComboBox</strong></p>
+<p>Creates a drop down list, with options to choose from.</p>
+<p><strong>BCPushButton</strong></p>
+<p>It is a button that can perform an action on click or on toggle.</p>
+<p>A simple ‘BCWindow’ with a ‘BCLineEdit’, a ‘BCCheckBox’, a ‘BCComboBox’ and ‘BCPushButton’ is shown below:</p>
+<img alt="../../_images/bcgui1.jpg" src="../../_images/bcgui1.jpg" />
+<p><strong>BCFrame</strong></p>
+<p>The ‘BCFrame’ class creates a flexible visual box which can obtain several shadow styles and accommodate other widgets. A layout must be set in a ‘BCFrame’ since they do not have one by default. For placing widgets inside, vertically or horizontally, use functions BCVBoxCreate or BCHBoxCreate respectively.</p>
+<p><strong>BCLabel</strong></p>
+<p>Creates a text or image display.</p>
+<p><strong>BCLabelTicker</strong></p>
+<p>Creates an auto-scrolling label.</p>
+<p><strong>BCSpinBox</strong></p>
+<p>Creates a widget that allows the user to choose a value, either by clicking the up/down buttons to increase/decrease the value currently displayed, or by typing the value directly into it.</p>
+<p><strong>BCSeparator</strong></p>
+<p>Creates a thin line to separate widgets.</p>
+<p><strong>BCSlider</strong></p>
+<p>Creates a vertical or horizontal widget for controlling a bounded value. It lets the user move a slider along a horizontal or vertical groove and translates the slider’s position into an integer value within the defined range.</p>
+<p><strong>BCStatusBar</strong></p>
+<p>Provides the option to easily change the size of the BCWindow.</p>
+<p>An example of using BCFrame, BCSeparator, BCLabel, BCSpinBox, BCSlider and BCStatusBar is shown below:</p>
+<img alt="../../_images/bcgui2.jpg" src="../../_images/bcgui2.jpg" />
+<p><strong>BCListView</strong></p>
+<p>It implements a list/tree view. It can display and control a hierarchy of multi-column items and provides the ability to add new items at any time.</p>
+<p><strong>BCItemViewInfoBox</strong></p>
+<p>Creates a horizontal line with three labels, placed at the bottom of a ListView or an ItemView,  providing information about the total and the selected items, as well as custom texts.</p>
+<img alt="../../_images/bcgui6.jpg" src="../../_images/bcgui6.jpg" />
+<p><strong>BCWidgetStack</strong></p>
+<p>Creates a stack of widgets of which only one (the top most) is visible at any time.</p>
+<p><strong>BCSplitter</strong></p>
+<p>Creates a splitter widget that lets the user control the size of child widgets, by dragging the boundary between the children.</p>
+<p>In the following image a ‘BCSplitter’ separates a ‘BCListView’ from a ‘BCButtonGroup’. On the bottom left corner of the window there is a ‘BCWidgetStack’, which includes different label widgets. The selection of a ‘BCListViewItem’ from the ‘BCListView’ raises a different ‘BCLabel’ (i.e. widget) on the widget area. For example, when the item ‘Preference 5’ is selected, the label containing the text ‘Preference 5 is selected.’ is raised to the top of the widget stack.</p>
+<img alt="../../_images/bcgui3.jpg" src="../../_images/bcgui3.jpg" />
+<p><strong>BCTabWidget</strong></p>
+<p>Creates a ‘tabBar’ with a specific number of tabs and a ‘page area’ below the tabs. Each tab is associated with a different page. Only the current tab’s page is shown in the page area; all the other tabs’ pages are hidden.</p>
+<p><strong>BCTextEdit</strong></p>
+<p>Creates a powerful single-page rich text editor. ‘BCTextEdit’ allows the user to perform a variety of actions, like undo/redo, &lt;Ctrl+C&gt; for copy, &lt;Ctrl+V&gt; for paste, etc. It works on paragraphs and characters. A paragraph is a formatted string which is word-wrapped to fit into the width of the widget. By default when reading plain text, one newline signify a paragraph. A document consists of zero or more paragraphs, indexed from 0. Characters are indexed on a per-paragraph basis, also indexed from 0.</p>
+<p>In the folowing image, a ‘BCTabWidget’ was created with 2 tabs. Each tab holds a ‘BCTextEdit’.</p>
+<img alt="../../_images/bcgui4.jpg" src="../../_images/bcgui4.jpg" />
+<p><strong>BCTextBrowser</strong></p>
+<p>Provides a BCTextEdit with hypertext navigation.</p>
+<p><strong>BCTable</strong></p>
+<p>The BCTable class creates a flexible editable (spreadsheet-like) table widget. Other widgets can be inserted in a ‘BCTable’ as well.</p>
+<p>In the following image there is a ‘BCTable’ with vertical and horizontal headers. Rows and columns can be selected through the headers.</p>
+<img alt="../../_images/bcgui5.jpg" src="../../_images/bcgui5.jpg" />
+<p><strong>BCPopupMenu</strong></p>
+<p>Creates a pull down menu of choices.</p>
+<p><strong>BCWizard</strong></p>
+<p>Creates a typical wizard dialog window, consisting of a custom number of pages. Each page of the BCWizard is a BCFrame, which can contain any other widget. The user can move back and forth in the BCWizard’s pages, by using the widget’s ‘Back’ and ‘Next’ built-in buttons.</p>
+<img alt="../../_images/bcgui44.jpg" src="../../_images/bcgui44.jpg" />
+<p><strong>BCWidgetExpand</strong></p>
+<p>It is a widget used to save space in forms. Use this class to provide expansion functionality to any widget, without having to resize the parent window. The class is simple to use and really useful in widgets applying a scroll bar (such as ‘BCListViews’ or ‘BCTextEdits’). Drag the mouse towards the direction where the widget must be expanded, while holding ‘Shift’ and middle mouse button. The widget remains expanded as long as the mouse cursor remains inside it.</p>
+<img alt="../../_images/bcgui7.jpg" src="../../_images/bcgui7.jpg" />
+<p><strong>BCLineEditPath</strong></p>
+<p>Creates a ‘BCLineEditPath’, which is a ‘BCFrame’ that contains an editable history ‘BCComboBox’, a “Browse” ‘BCToolButton’ and a “Clear history” ‘BCToolButton’. These paths will be available any time ANSA is used. The BCLineEditPath can be a “files”, “folders” or “everything” type and it can be used with “open” or “save as” mode.</p>
+<img alt="../../_images/bcgui8.jpg" src="../../_images/bcgui8.jpg" />
+<p><strong>BCTimer</strong></p>
+<p>The ‘BCTimer’ provides timer signals and single-shot timers.</p>
+<p><strong>BCProgressBar</strong></p>
+<p>Creates a Progress Bar, which is used to give the user an indication of the progress of an operation and to reassure him that the application is still running.</p>
+</section>
+<section id="layout-classes-or-layouts">
+<h3>Layout classes or layouts<a class="headerlink" href="#layout-classes-or-layouts" title="Permalink to this heading">#</a></h3>
+<p>These are the invisible entities that manage the layouts of widgets.</p>
+<p><strong>BCBoxLayout</strong></p>
+<p>The ‘BCBoxLayout’ is one of the most useful tools for managing geometry. It consists of a rectangular box having transparent outside border which can obtain horizontal or vertical orientation for it’s children (either widgets or other layouts). It is usually used as a parent in widgets creation.</p>
+<p><strong>BCGridLayout</strong></p>
+<p>The ‘BCGridLayout’ class lays out widgets in a grid. It occupies the available space, divides it up into rows and columns, and puts each widget it manages into the correct cell.</p>
+<p>BCLayouts are used to define the widgets’ placement inside a ‘BCWindow’. A ‘BCWindow’ has by default a ‘BCBoxLayout’ with vertical orientation. This means that all the children of the ‘BCWindow’ or its ‘BCBoxLayout’ will be placed one under the other, according to the order they have been created. In the following example, children can be either widgets (the ‘OK’ and ‘Cancel’ BCPushButtons) or other layouts (the horizontal ‘BCBoxLayout’ and the ‘BCGridLayout’).</p>
+<img alt="../../_images/bcgui9.jpg" src="../../_images/bcgui9.jpg" />
+</section>
+<section id="items">
+<h3>Items<a class="headerlink" href="#items" title="Permalink to this heading">#</a></h3>
+<p><strong>BCSpacer</strong></p>
+<p>Creates a blank space in a layout. It can be extended to all directions, according to the default parameters.</p>
+<img alt="../../_images/bcgui10.jpg" src="../../_images/bcgui10.jpg" />
+<p><strong>BCListViewItem</strong> and <strong>BCCheckListItem</strong></p>
+<p>These two items constitute the content of a ‘BCListView’. They may belong to the ‘BCListView’ directly (top-level items), or to other items, if hierarchy is allowed. Controllable widgets can be added to them, like ‘checkBoxes’, ‘comboBoxes’ and ‘buttons’.</p>
+</section>
+</section>
+<section id="general-remarks">
+<h2>General remarks<a class="headerlink" href="#general-remarks" title="Permalink to this heading">#</a></h2>
+<p>The creation of graphical interface with BCGUI may include any of the above widgets, layouts or items, following the parent-child logic. This means that a BCGUI entity is constructed as a child of another one. In this way the relation, i.e. the placement and the dependencies of each entity, can be easily defined. Actions like showing, hiding or destroying a parent widget, automatically are applied recursively to all its children.</p>
+<p>The ‘BCWindow’ is the highest level widget a user can create in script and it is automatically set as parent.</p>
+<p><em>Pseudocode for a simple BCWindow</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">w</span>   <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowCreate</span><span class="p">()</span>
+<span class="n">le</span>  <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditCreate</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>     <span class="c1">#le has parent w</span>
+<span class="n">f</span>   <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>        <span class="c1">#f has parent w and placed below le</span>
+<span class="n">l</span>   <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>    <span class="c1">#l has parent f</span>
+<span class="n">b1</span>  <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>   <span class="c1">#b1 has parent l</span>
+<span class="n">b2</span>  <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>   <span class="c1">#b2 has parent l and will be placed next</span>
+                                    <span class="c1">#to or below b1, according l&#39;s orientation.</span>
+</pre></div>
+</div>
+<p>Here is the pseudocode for a layout example:</p>
+<p><em>Pseudocode for layouts example</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowCreate</span><span class="p">()</span>
+<span class="n">horizontal</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>  <span class="c1">#horizontal layout is the 1st child</span>
+<span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">horizontal</span><span class="p">)</span>          <span class="c1">#label belongs to horizontal</span>
+<span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEdit</span><span class="p">(</span><span class="n">horizontal</span><span class="p">)</span>             <span class="c1">#lineEdit is horizontal&#39;s 2nd child</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGridLayout</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>             <span class="c1">#grid layout is placed below horizontal</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">guitkBCPushButtonCreate</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span> <span class="c1">#Create button at (row, col)</span>
+
+<span class="n">ok</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>         <span class="c1">#&#39;ok&#39; button is BCWindow&#39;s 3rd child</span>
+<span class="n">cancel</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>     <span class="c1">#&#39;cancel&#39; button is BCWindow&#39;s 4th child</span>
+</pre></div>
+</div>
+<p>BCGUI functions were built in a way to be immediately comprehensible, even by beginner users. Help for all BCGUI functions (prototype, arguments, operation etc.) can be found in the script editor’s help section.</p>
+<p>The name of a BCGUI function consists of the class it belongs to (e.g. BCLineEdit) plus the action  performed on an object of this class (e.g. SetText). Thus, the function name is BCLineEditSetText. If a function does not begin with a class name, it means that it is a general function, applicable to all widgets and layouts (not items). For example, the BCName function returns the name that may have been set to a widget or layout by the BCSetName. Also, in the case of ‘BCPushButtons’ and ‘BCToolButtons’, there are many ‘BCButton…’ functions, applicable to both classes of buttons.</p>
+<p>From the above example it is obvious to conclude that all the BCGUI functions start with BC, while each different word starts with a capital letter.</p>
+<p>Generally, the first argument of every function is the widget or the layout which an action will be performed, or its parent in the case of ‘BC…Create’ functions.</p>
+</section>
+</section>
+<section id="bcgui-examples">
+<h1>BCGUI Examples<a class="headerlink" href="#bcgui-examples" title="Permalink to this heading">#</a></h1>
+<p>In this section some real code examples are presented.</p>
+<section id="a-simple-bcwindow">
+<h2>A simple BCWindow<a class="headerlink" href="#a-simple-bcwindow" title="Permalink to this heading">#</a></h2>
+<p>The first example is the code implementation of the pseudocode presented in the previous section:</p>
+<img alt="../../_images/bcgui11.jpg" src="../../_images/bcgui11.jpg" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">guitk</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowCreate</span><span class="p">(</span><span class="s1">&#39;Simple BCWindow&#39;</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCOnExitDestroy</span><span class="p">)</span>
+    <span class="n">le</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditCreate</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="s1">&#39;This is a LineEdit&#39;</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCHorizontal</span><span class="p">)</span>
+    <span class="n">b1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="s2">&quot;Button 1&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">b2</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="s2">&quot;Button 2&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCShow</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In order for a widget to be displayed, the function BCShow must be called, having as argument the widget. This will trigger a recursive call for the widget’s children as well. In the example above, only one ‘BCShow’ call for the ‘BCWindow’ ‘w’ is enough to show everything that it contains. The ‘BCOnExitDestroy’ option used in ‘BCWindowCreate’ means that when the window closes (by pressing escape &lt;esc&gt;, return or the[x] button), it will be destroyed. The other available option is the ‘BCOnExitHide’ but it is strongly recommended to avoid using it, since a wrong usage may lead to memory leaks.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A ‘BCWindow’ is good to have a unique name. Any information about the window (e.g size, position, values of its widgets etc) will be stored in ANSA.xml under this name. However, the ‘BCWindow’s’ name must not be confused with the name of the title bar, which can be changed by using the ‘BCSetCaption’.</p>
+</div>
+<section id="creating-and-using-callback-functions">
+<h3>Creating and using callback functions<a class="headerlink" href="#creating-and-using-callback-functions" title="Permalink to this heading">#</a></h3>
+<p>In the previous example a ‘BCWindow’ with 2 “dummy” buttons was created, i.e. on button click no operation has been defined. This is where the user needs to define callback functions, i.e. functions that will be called when a user interacts with widgets or items.</p>
+<p>Callback functions are defined as normal script functions and their name is passed as an argument to the appropriate BCGUI functions, followed by a user argument of any data type (float, string, integer, matrix etc). Help about BCGUI callback functions (prototype, arguments etc.) can be found at the end of the description section of each BCGUI function that uses a callback as an argument.</p>
+<p>In the following example, a ‘BCWindow’ is created with 2 ‘BCLineEdits’ and a ‘BCPushButton’. The upper ‘BCLineEdit’ accepts doubles as input and when &lt;Enter&gt; is pressed the square root calculation of the current value is triggered, while the calculated value is set to the lower (output) ‘BCLineEdit’. When the ‘BCPushButton’ is pressed, the calculated value is printed in the Output window. In both callback functions the output ‘BCLineEdit’ is passed as data.</p>
+<img alt="../../_images/bcgui12.jpg" src="../../_images/bcgui12.jpg" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">guitk</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">calculateFun</span><span class="p">(</span><span class="n">le</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="n">newVal</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditGetDouble</span><span class="p">(</span><span class="n">le</span><span class="p">))</span>  <span class="c1">#Calculation of the square root</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditSetDouble</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">newVal</span><span class="p">)</span>            <span class="c1">#Set calculated value to the output lineEdit</span>
+    <span class="k">return</span> <span class="mi">1</span>                                           <span class="c1"># Returns 1 so that the window will remain open.</span>
+
+<span class="k">def</span> <span class="nf">printFun</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="n">textToPrint</span> <span class="o">=</span> <span class="s1">&#39;The calculated value is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditGetDouble</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">textToPrint</span><span class="p">)</span> <span class="c1">#Just print the value shown in output lineEdit</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowCreate</span><span class="p">(</span><span class="s1">&#39;Sqrt calculation&#39;</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCOnExitDestroy</span><span class="p">)</span>
+    <span class="n">grid</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGridLayoutCreate</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="nb">input</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditCreateDouble</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCGridLayoutAddWidget</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignLeft</span> <span class="o">+</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignVCenter</span><span class="p">)</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditCreateDouble</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCGridLayoutAddWidget</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignLeft</span> <span class="o">+</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignVCenter</span><span class="p">)</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditSetReadOnly</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditSetEnterPressedFunction</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">calculateFun</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+
+    <span class="n">butPrint</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">printFun</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCButtonSetPixmapFile</span><span class="p">(</span><span class="n">butPrint</span><span class="p">,</span> <span class="s2">&quot;print_16.png&quot;</span><span class="p">)</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCGridLayoutAddWidget</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">butPrint</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignCenter</span><span class="p">)</span>
+
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditSetMinimumWidth</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCSizeLarge</span><span class="p">)</span> <span class="c1">#Make the LineEdits Large</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditSetMinimumWidth</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCSizeLarge</span><span class="p">)</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCGridLayoutSetColStretch</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">#The 1st column should take all</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCGridLayoutSetColStretch</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">#the expansion.</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCDialogButtonBoxCreate</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCShow</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The complete source code of this example can be found here <a class="reference download internal" download="" href="../../_downloads/d4abebcada4fe0ee4b1d1dff0b0b1534/BCGUI_calcSqrt.py"><code class="xref download docutils literal notranslate"><span class="pre">BCGUI</span> <span class="pre">-</span> <span class="pre">Square</span> <span class="pre">Root</span> <span class="pre">Calculation</span></code></a></p>
+</section>
+</section>
+<section id="moving-more-data-around">
+<h2>Moving more data around<a class="headerlink" href="#moving-more-data-around" title="Permalink to this heading">#</a></h2>
+<p>An alternative way to pass more data to callback functions is to use the BCSetUserDataKey and BCGetUserDataKey functions. The first one associates key - data pairs (of types string-element) to a widget or layout and the second one retrieves the data using the corresponding string keys.</p>
+<img alt="../../_images/bcgui13.jpg" src="../../_images/bcgui13.jpg" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">guitk</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">calculateEquation</span><span class="p">(</span><span class="n">data</span><span class="p">):</span> <span class="c1">#Retrieving widgets from BCWindow w (==data)</span>
+        <span class="nb">input</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">)</span>
+        <span class="n">sp1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;sp1&quot;</span><span class="p">)</span>
+        <span class="n">sp2</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;sp2&quot;</span><span class="p">)</span>
+
+        <span class="c1">#Calculation</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditGetDouble</span><span class="p">(</span><span class="nb">input</span><span class="p">);</span>
+        <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">i_1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxGetInt</span><span class="p">(</span><span class="n">sp1</span><span class="p">)</span>
+                <span class="n">i_2</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxGetInt</span><span class="p">(</span><span class="n">sp2</span><span class="p">)</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">i_1</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">i_2</span><span class="p">)</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">lineEditChangedFun</span><span class="p">(</span><span class="n">le</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="c1">#le is the input lineEdit; data is the w BCWindow</span>
+        <span class="n">lab</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;lab&quot;</span><span class="p">)</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditGetDouble</span><span class="p">(</span><span class="n">le</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">blank</span><span class="p">:</span> <span class="c1">#if the input field is blank</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelSetText</span><span class="p">(</span><span class="n">lab</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+
+        <span class="n">calculateEquation</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">spinBoxChangedFun</span><span class="p">(</span><span class="n">sp</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="c1">#sp here could be sp1 or sp2 BCSpinBoxes; data is the w BCWindow</span>
+        <span class="n">calculateEquation</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">printFun</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="c1">#button here is butPrint; data is the w BCWindow</span>
+        <span class="c1">#Just print the value shown in output lineEdit</span>
+        <span class="nb">input</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;output&quot;</span><span class="p">)</span>
+        <span class="n">lab</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;lab&quot;</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">)</span>
+
+        <span class="n">d</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditGetDouble</span><span class="p">(</span><span class="nb">input</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditSetDouble</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">blank</span><span class="p">)</span><span class="c1">#Give blank as output</span>
+                <span class="n">textToPrint</span> <span class="o">=</span> <span class="s2">&quot;The input value cannot be negative or 1&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditSetDouble</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+                <span class="n">textToPrint</span> <span class="o">=</span> <span class="s2">&quot;The calculated value is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">textToPrint</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowCreate</span><span class="p">(</span><span class="s2">&quot;Equation calculation&quot;</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCOnExitDestroy</span><span class="p">)</span>
+        <span class="n">l1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCHorizontal</span><span class="p">)</span>
+        <span class="nb">input</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditCreateDouble</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="s2">&quot; ^ &quot;</span><span class="p">)</span>
+        <span class="n">sp1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxCreate</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxSetMinValue</span><span class="p">(</span><span class="n">sp1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxSetMaxValue</span><span class="p">(</span><span class="n">sp1</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="s2">&quot; * e ^ &quot;</span><span class="p">)</span>
+        <span class="n">sp2</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxCreate</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxSetMinValue</span><span class="p">(</span><span class="n">sp2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxSetMaxValue</span><span class="p">(</span><span class="n">sp2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="s2">&quot; / log(&quot;</span><span class="p">)</span>
+        <span class="n">lab</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditGetText</span><span class="p">(</span><span class="nb">input</span><span class="p">))</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpacerCreate</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">l2</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCHorizontal</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditCreateDouble</span><span class="p">(</span><span class="n">l2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditSetReadOnly</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">butPrint</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">l2</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">printFun</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="c1">#You can also set the widget before the data assignment</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCButtonSetPixmapFile</span><span class="p">(</span><span class="n">butPrint</span><span class="p">,</span> <span class="s2">&quot;print_16.png&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpacerCreate</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span> <span class="c1">#Horizontal spacer. Keeps output and butPrint to the left</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="nb">input</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="s2">&quot;sp1&quot;</span><span class="p">,</span> <span class="n">sp1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="s2">&quot;sp2&quot;</span><span class="p">,</span> <span class="n">sp2</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="s2">&quot;lab&quot;</span><span class="p">,</span> <span class="n">lab</span><span class="p">)</span><span class="c1">#We hold the lab in order to change its text.</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span><span class="c1">#create a variable to hold the result</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxSetValueChangedFunction</span><span class="p">(</span><span class="n">sp1</span><span class="p">,</span> <span class="n">spinBoxChangedFun</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxSetValueChangedFunction</span><span class="p">(</span><span class="n">sp2</span><span class="p">,</span> <span class="n">spinBoxChangedFun</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditSetTextChangeFunction</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">lineEditChangedFun</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCDialogButtonBoxCreate</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCShow</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The complete source code of this example can be found here <a class="reference download internal" download="" href="../../_downloads/5b63bad107724f236d0fbda76c45a0e1/BCGUI_calcEquation.py"><code class="xref download docutils literal notranslate"><span class="pre">BCGUI</span> <span class="pre">-</span> <span class="pre">Equation</span> <span class="pre">Calculation</span></code></a></p>
+</section>
+<section id="creating-a-bcwizard">
+<h2>Creating a BCWizard<a class="headerlink" href="#creating-a-bcwizard" title="Permalink to this heading">#</a></h2>
+<p>A Wizard dialog window can be implemented by creating a ‘BCWizard’ object and adding ‘BCFrame’ widgets as its pages.</p>
+<p>Firstly, the function ‘BCWizardCreate’ is used to create the main wizard window, which is the object to hold all the wizard pages.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">wizard</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWizardCreate</span><span class="p">(</span><span class="s2">&quot;Example Wizard&quot;</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCOnExitDestroy</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>By using the function ‘BCWizardAddPage’, the user can add a specified ‘BCFrame’ widget as a new page, while defining the page’s navigation text, title and info text. The ‘BCFrame’ widget can contain any other known BCGui widgets.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">guitk</span><span class="o">.</span><span class="n">BCWizardAddPage</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">CreatePage1</span><span class="p">(</span><span class="n">wizard</span><span class="p">),</span> <span class="s2">&quot;Introduction&quot;</span><span class="p">,</span> <span class="s2">&quot;Install BETA-CAE Systems product&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CreatePage1</span><span class="p">(</span><span class="n">wizard</span><span class="p">):</span>
+
+        <span class="n">page</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">wizard</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCVertical</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="s2">&quot;This wizard will guide you through the installation process.&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpacerCreate</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="s2">&quot;Please click &#39;Next&#39; to start.&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpacerCreate</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">page</span>
+</pre></div>
+</div>
+<p>The function ‘BCWizardSetCurrentPageChangedFunction’, can be used to define the callback function to be called when the current page of the wizard has changed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">guitk</span><span class="o">.</span><span class="n">BCWizardSetCurrentPageChangedFunction</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">wizardCurrentPageChanged</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The user can also define the accept and reject functions of the ‘BCWizard’ window, just like a plain ‘BCWindow’, by using the functions ‘BCWindowSetAcceptFunction’ and ‘BCWindowSetRejectFunction’.</p>
+<p>The following images demonstrate a simple ‘BCWizard’.</p>
+<img alt="../../_images/bcgui44.jpg" src="../../_images/bcgui44.jpg" />
+<img alt="../../_images/bcgui45.jpg" src="../../_images/bcgui45.jpg" />
+<img alt="../../_images/bcgui46.jpg" src="../../_images/bcgui46.jpg" />
+<p>The source code used to construct this ‘BCWizard’ is shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">guitk</span>
+
+<span class="k">def</span> <span class="nf">SetLicenseTermsAccepted</span><span class="p">(</span><span class="n">cb</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">wizard</span><span class="p">):</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWizardSetNextButtonEnabled</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">WizardFinished</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wizard is about to finish (Of course, nothing will be installed)&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">WizardCancelled</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wizard is about to cancel.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">wizardCurrentPageChanged</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">oldIndex</span><span class="p">,</span> <span class="n">newIndex</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+        <span class="n">cb</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="s2">&quot;acceptCheckBox&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">oldIndex</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">newIndex</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCCheckBoxSetChecked</span><span class="p">(</span><span class="n">cb</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCWizardSetNextButtonEnabled</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">CreatePage1</span><span class="p">(</span><span class="n">wizard</span><span class="p">):</span>
+
+        <span class="n">page</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">wizard</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCVertical</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="s2">&quot;This wizard will guide you through the installation process.&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpacerCreate</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="s2">&quot;Please click &#39;Next&#39; to start.&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpacerCreate</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">page</span>
+
+<span class="k">def</span> <span class="nf">CreatePage2</span><span class="p">(</span><span class="n">wizard</span><span class="p">):</span>
+
+        <span class="n">page</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">wizard</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCVertical</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="s2">&quot;Please read the license carefully.&quot;</span><span class="p">)</span>
+        <span class="n">terms</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCTextEditCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="s2">&quot;Copyright (c) 2011, BETA-CAE Systems&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCTextEditSetReadOnly</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">cb</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCCheckBoxCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="s2">&quot;Accept the license terms&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpacerCreate</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="s2">&quot;acceptCheckBox&quot;</span><span class="p">,</span> <span class="n">cb</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCCheckBoxSetToggledFunction</span><span class="p">(</span><span class="n">cb</span><span class="p">,</span> <span class="n">SetLicenseTermsAccepted</span><span class="p">,</span> <span class="n">wizard</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">page</span>
+
+<span class="k">def</span> <span class="nf">CreatePage3</span><span class="p">(</span><span class="n">wizard</span><span class="p">):</span>
+
+        <span class="n">page</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">wizard</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCVertical</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="s2">&quot;Please click &#39;Finish&#39; to install the product.&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpacerCreate</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">page</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+        <span class="n">wizard</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWizardCreate</span><span class="p">(</span><span class="s2">&quot;Installation Wizard&quot;</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCOnExitDestroy</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWizardAddPage</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">CreatePage1</span><span class="p">(</span><span class="n">wizard</span><span class="p">),</span> <span class="s2">&quot;Introduction&quot;</span><span class="p">,</span> <span class="s2">&quot;Install BETA-CAE Systems product&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWizardAddPage</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">CreatePage2</span><span class="p">(</span><span class="n">wizard</span><span class="p">),</span> <span class="s2">&quot;License&quot;</span><span class="p">,</span> <span class="s2">&quot;License Agreement&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWizardAddPage</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">CreatePage3</span><span class="p">(</span><span class="n">wizard</span><span class="p">),</span> <span class="s2">&quot;Conclusion&quot;</span><span class="p">,</span> <span class="s2">&quot;Ready to Install&quot;</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWizardSetCurrentPageChangedFunction</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">wizardCurrentPageChanged</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowSetAcceptFunction</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">WizardFinished</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowSetRejectFunction</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">WizardCancelled</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCShow</span><span class="p">(</span><span class="n">wizard</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The complete source code of this example can be found here <a class="reference download internal" download="" href="../../_downloads/4163cb4092bb120f9cb52f6652c242ff/BCGUI_wizard.py"><code class="xref download docutils literal notranslate"><span class="pre">BCGUI</span> <span class="pre">-</span> <span class="pre">Wizard</span> <span class="pre">Creation</span></code></a></p>
+</section>
+<section id="interacting-with-ansa-entities">
+<h2>Interacting with ANSA entities<a class="headerlink" href="#interacting-with-ansa-entities" title="Permalink to this heading">#</a></h2>
+<p>In this example a ‘BCListView’ is created and filled with all the PSHELLs found in the current ANSA database. If there are too many PSHELLs to process, an increasing ‘BCProgressBar’, that appears in place of a ‘BCLineEditPath’, allows to see the progress made. After the procedure, the ‘BCProgressBar’ is replaced again by the ‘BCLineEditPath’. This effect is made possible by using a ‘BCWidgetStack’.</p>
+<p>The items shown for each PSHELL are:</p>
+<ul class="simple">
+<li><p>Element visibility</p></li>
+<li><p>Color</p></li>
+<li><p>PID</p></li>
+<li><p>Name</p></li>
+<li><p>Element number</p></li>
+<li><p>MID</p></li>
+<li><p>FROZEN_ID</p></li>
+</ul>
+<p>The visibility of the PSHELLs can be controlled by the checkboxes. Double click on an item will open its entity card for editing, while on close the item will be updated. Right click on an item removes it completely from list, without deleting the PSHELL itself. Note the use of a ‘BCTimer’ in this case.</p>
+<p>The field ‘Name’ can be changed through the list. The field ‘MID’ can also be changed through the list, whereas a check is executed to determine if the new MID is valid. If not, the old ‘MID’ is restored and a warning is displayed on the first section of the ‘BCItemViewInfoBox’, at the bottom of the ‘BCListView’. A multi-condition filter is set to the list.</p>
+<p>The ‘BCListView’ is inserted in a ‘BCWidgetExpand’ widget in order to be expanded to its full size, without altering the size of its containing ‘BCWindow’.</p>
+<p>A ‘BCLineEditPath’ is set on top of the list, which can be used to load new ANSA databases that will trigger a list update.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">guitk</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="c1">#Column numbers declaration</span>
+<span class="n">COL_NUMS</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">CHECK_COL</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">COLOR_COL</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">PID_COL</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">NAME_COL</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">ELEMS_COL</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">MID_COL</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">FROZEN_COL</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">LINE_EDIT_PATH_ID</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">PROGRESS_BAR_ID</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">checkButtonPressedFun</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+        <span class="n">search_type</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;FACE&quot;</span><span class="p">,</span> <span class="s2">&quot;SHELL&quot;</span><span class="p">)</span>
+        <span class="n">pshell</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemGetUserData</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="n">shells</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">pshell</span><span class="p">,</span> <span class="n">search_type</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="c1">#change the visibility of the shells</span>
+        <span class="k">if</span> <span class="n">state</span><span class="p">:</span>
+                <span class="n">base</span><span class="o">.</span><span class="n">And</span><span class="p">(</span><span class="n">pshell</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">base</span><span class="o">.</span><span class="n">Not</span><span class="p">(</span><span class="n">pshell</span><span class="p">)</span>
+        <span class="c1">#If the property has non-visible elements, uncheck button</span>
+        <span class="k">if</span> <span class="n">state</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">shells</span><span class="p">):</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemCheckableSetOn</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">renameFun</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">list_bc</span><span class="p">):</span>
+
+        <span class="n">pshell</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemGetUserData</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="n">column</span> <span class="o">==</span> <span class="n">NAME_COL</span><span class="p">:</span>  <span class="c1">#Renaming PSHELL&#39;s Name</span>
+                <span class="n">newName</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemGetText</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">NAME_COL</span><span class="p">)</span>
+                <span class="n">base</span><span class="o">.</span><span class="n">SetEntityCardValues</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">pshell</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="n">newName</span><span class="p">})</span>
+
+        <span class="k">elif</span> <span class="n">column</span> <span class="o">==</span> <span class="n">MID_COL</span><span class="p">:</span>    <span class="c1">#Resetting PSHELL&#39;s MID</span>
+                <span class="n">newMID</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemGetInt</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">MID_COL</span><span class="p">)</span>
+                <span class="n">mats</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;MAT1&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">ids</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">mat</span> <span class="ow">in</span> <span class="n">mats</span><span class="p">:</span>
+                        <span class="n">ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mat</span><span class="o">.</span><span class="n">_id</span><span class="p">)</span>
+                        <span class="c1">#Check if user inputed MID exists</span>
+                        <span class="k">if</span> <span class="n">newMID</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">:</span>
+                                <span class="n">base</span><span class="o">.</span><span class="n">SetEntityCardValues</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">pshell</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;MID1&quot;</span><span class="p">:</span> <span class="n">newMID</span><span class="p">})</span>
+                        <span class="k">else</span><span class="p">:</span>
+                                <span class="n">ret</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityCardValues</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">pshell</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;MID1&quot;</span><span class="p">,))</span>
+                                <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetText</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">MID_COL</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="s1">&#39;MID1&#39;</span><span class="p">]))</span>
+                                <span class="n">info_box</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="s1">&#39;info_box&#39;</span><span class="p">)</span>
+                                <span class="c1">#Check if the user typed text or number</span>
+                                <span class="k">if</span> <span class="n">newMID</span> <span class="o">&lt;</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">blank</span><span class="p">:</span>
+                                        <span class="n">guitk</span><span class="o">.</span><span class="n">BCItemViewInfoBoxSetText</span><span class="p">(</span><span class="n">info_box</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;No material with id &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">newMID</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; exists!&quot;</span><span class="p">)</span>
+                                <span class="k">else</span><span class="p">:</span>
+                                        <span class="n">guitk</span><span class="o">.</span><span class="n">BCItemViewInfoBoxSetText</span><span class="p">(</span><span class="n">info_box</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;The material id must be an integer!&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">updateItem</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+
+        <span class="n">search_type</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;FACE&quot;</span><span class="p">,</span> <span class="s2">&quot;SHELL&quot;</span><span class="p">)</span>
+        <span class="n">pshell</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemGetUserData</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityCardValues</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">pshell</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;PID&quot;</span><span class="p">,</span> <span class="s2">&quot;MID1&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;FROZEN_ID&quot;</span><span class="p">,</span> <span class="s2">&quot;COLOR_R&quot;</span><span class="p">,</span> <span class="s2">&quot;COLOR_B&quot;</span><span class="p">,</span> <span class="s2">&quot;COLOR_G&quot;</span><span class="p">))</span>
+
+        <span class="n">shells</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">pshell</span><span class="p">,</span> <span class="n">search_type</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">shells</span><span class="p">)</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">shells</span><span class="p">:</span>
+                <span class="k">if</span>  <span class="n">base</span><span class="o">.</span><span class="n">IsEntityVisible</span><span class="p">(</span><span class="n">ent</span><span class="p">):</span>
+                        <span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>
+                        <span class="k">break</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemCheckableSetOn</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetRectangleColor</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">COLOR_COL</span><span class="p">,</span> <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;COLOR_R&#39;</span><span class="p">],</span> <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;COLOR_G&#39;</span><span class="p">],</span> <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;COLOR_B&#39;</span><span class="p">])</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetText</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">PID_COL</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="s1">&#39;PID&#39;</span><span class="p">]))</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetText</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">NAME_COL</span><span class="p">,</span> <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">])</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetText</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">ELEMS_COL</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetText</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">MID_COL</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="s1">&#39;MID1&#39;</span><span class="p">]))</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetText</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">FROZEN_COL</span><span class="p">,</span> <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;FROZEN_ID&#39;</span><span class="p">])</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewFilterUpdateComboBox</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">FROZEN_COL</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">destroyItem</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+
+        <span class="c1">#Just delete the item, not the PSHELL itself.</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemDestroy</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">mouseClickFun</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">mb</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">item</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">0</span>
+
+        <span class="k">if</span> <span class="n">mb</span> <span class="o">==</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCRightButton</span><span class="p">:</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCTimerSingleShot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">destroyItem</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">doubleClickFun</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">item</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">1</span>
+
+        <span class="n">pshell</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemGetUserData</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="n">base</span><span class="o">.</span><span class="n">EditEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">pshell</span><span class="p">)</span>
+        <span class="n">updateItem</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>       <span class="c1">#Update item after a possible editing.</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">updateList</span><span class="p">(</span><span class="n">list_bc</span><span class="p">):</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewClear</span><span class="p">(</span><span class="n">list_bc</span><span class="p">)</span>
+
+        <span class="n">ws</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="s1">&#39;ws&#39;</span><span class="p">)</span>
+        <span class="n">pb</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWidgetStackWidget</span><span class="p">(</span><span class="n">ws</span><span class="p">,</span> <span class="n">PROGRESS_BAR_ID</span><span class="p">)</span> <span class="c1">#Getting the BCProgressBar with its id</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWidgetStackRaiseId</span><span class="p">(</span><span class="n">ws</span><span class="p">,</span> <span class="n">PROGRESS_BAR_ID</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCProgressBarSetProgress</span><span class="p">(</span><span class="n">pb</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">search_type</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;PSHELL&quot;</span><span class="p">,)</span>
+        <span class="n">pshells</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">search_type</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCProgressBarSetTotalSteps</span><span class="p">(</span><span class="n">pb</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pshells</span><span class="p">))</span>
+
+        <span class="n">search_type</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;FACE&quot;</span><span class="p">,</span> <span class="s2">&quot;SHELL&quot;</span><span class="p">)</span>
+        <span class="n">rename</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">pshell</span> <span class="ow">in</span> <span class="n">pshells</span><span class="p">:</span>
+                <span class="n">shells</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">pshell</span><span class="p">,</span> <span class="n">search_type</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+                <span class="n">num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">shells</span><span class="p">)</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityCardValues</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">pshell</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;PID&quot;</span><span class="p">,</span> <span class="s2">&quot;MID1&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;FROZEN_ID&quot;</span><span class="p">,</span> <span class="s2">&quot;COLOR_R&quot;</span><span class="p">,</span> <span class="s2">&quot;COLOR_G&quot;</span><span class="p">,</span> <span class="s2">&quot;COLOR_B&quot;</span><span class="p">))</span>
+                <span class="n">titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="s1">&#39;PID&#39;</span><span class="p">]),</span> <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">],</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="s1">&#39;MID1&#39;</span><span class="p">]),</span> <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;FROZEN_ID&#39;</span><span class="p">]]</span>
+
+                <span class="n">item</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewAddItem</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">COL_NUMS</span><span class="p">,</span> <span class="n">titles</span><span class="p">,</span> <span class="n">rename</span><span class="p">)</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetUserData</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">pshell</span><span class="p">)</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetRectangleColor</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">COLOR_COL</span><span class="p">,</span> <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;COLOR_R&#39;</span><span class="p">],</span> <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;COLOR_G&#39;</span><span class="p">],</span> <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;COLOR_B&#39;</span><span class="p">])</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetRenamedFunction</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">renameFun</span><span class="p">,</span> <span class="n">list_bc</span><span class="p">)</span>
+
+                <span class="c1">#Check if current pshell is visible</span>
+                <span class="n">v</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">if</span> <span class="n">base</span><span class="o">.</span><span class="n">IsEntityVisible</span><span class="p">(</span><span class="n">pshell</span><span class="p">):</span>
+                        <span class="n">v</span><span class="o">=</span><span class="kc">True</span>
+
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemSetCheckable</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemCheckableSetOn</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewItemCheckableSetToggledFunction</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">checkButtonPressedFun</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+                <span class="c1">#Update progressBar</span>
+                <span class="n">current</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCProgressBarProgress</span><span class="p">(</span><span class="n">pb</span><span class="p">)</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCProgressBarSetProgress</span><span class="p">(</span><span class="n">pb</span><span class="p">,</span> <span class="n">current</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewFilterUpdateComboBox</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">FROZEN_COL</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWidgetStackRaiseId</span><span class="p">(</span><span class="n">ws</span><span class="p">,</span> <span class="n">LINE_EDIT_PATH_ID</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">onEnterFun</span><span class="p">(</span><span class="n">le</span><span class="p">,</span> <span class="n">list_bc</span><span class="p">):</span>
+        <span class="c1">#Open file and update list</span>
+        <span class="n">my_file</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditGetText</span><span class="p">(</span><span class="n">le</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">my_file</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">my_file</span> <span class="o">!=</span> <span class="n">base</span><span class="o">.</span><span class="n">DataBaseName</span><span class="p">():</span>
+                <span class="n">session</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="s1">&#39;blank&#39;</span><span class="p">)</span>
+                <span class="n">base</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">my_file</span><span class="p">)</span>
+        <span class="n">updateList</span><span class="p">(</span><span class="n">list_bc</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">clearListFun</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">list_bc</span><span class="p">):</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewClear</span><span class="p">(</span><span class="n">list_bc</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="n">titles</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Visible&quot;</span><span class="p">,</span> <span class="s2">&quot;Color&quot;</span><span class="p">,</span> <span class="s2">&quot;PID&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Elements&quot;</span><span class="p">,</span> <span class="s2">&quot;MID1&quot;</span><span class="p">,</span> <span class="s2">&quot;FROZEN_ID&quot;</span><span class="p">)</span>
+
+        <span class="n">base</span><span class="o">.</span><span class="n">SetCurrentDeck</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">)</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowCreate</span><span class="p">(</span><span class="s2">&quot;PIDs list&quot;</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCOnExitDestroy</span><span class="p">)</span>
+
+        <span class="c1">#Create a splitter between the two widgets</span>
+        <span class="n">spl</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCSplitterCreate</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCVertical</span><span class="p">)</span>
+
+        <span class="c1">#Create a widgetStack to place a BCLineEditPath and a BCProgressBar</span>
+        <span class="n">ws</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWidgetStackCreate</span><span class="p">(</span><span class="n">spl</span><span class="p">)</span>
+        <span class="n">lep</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditPathCreate</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">DataBaseName</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;ANSA_Example_lineEditPath&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWidgetStackAddWidget</span><span class="p">(</span><span class="n">ws</span><span class="p">,</span> <span class="n">lep</span><span class="p">,</span> <span class="n">LINE_EDIT_PATH_ID</span><span class="p">)</span>
+        <span class="n">pb</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCProgressBarCreate</span><span class="p">(</span><span class="n">ws</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWidgetStackAddWidget</span><span class="p">(</span><span class="n">ws</span><span class="p">,</span> <span class="n">pb</span><span class="p">,</span> <span class="n">PROGRESS_BAR_ID</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWidgetStackRaiseWidget</span><span class="p">(</span><span class="n">ws</span><span class="p">,</span> <span class="n">lep</span><span class="p">);</span>
+
+        <span class="c1">#The list will be controlled by BCWidgetExpand we</span>
+        <span class="n">we</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWidgetExpandCreate</span><span class="p">(</span><span class="n">spl</span><span class="p">);</span>
+        <span class="n">list_bc</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewCreate</span><span class="p">(</span><span class="n">we</span><span class="p">,</span> <span class="n">COL_NUMS</span><span class="p">,</span> <span class="n">titles</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWidgetExpandSetWidget</span><span class="p">(</span><span class="n">we</span><span class="p">,</span> <span class="n">list_bc</span><span class="p">)</span>
+
+        <span class="c1">#Setting BCLineEditPath</span>
+        <span class="n">combo</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditPathGetCombo</span><span class="p">(</span><span class="n">lep</span><span class="p">)</span>
+        <span class="n">le</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCComboBoxGetLineEdit</span><span class="p">(</span><span class="n">combo</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditSetExtentionsFilter</span><span class="p">(</span><span class="n">le</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ansa&quot;</span><span class="p">])</span>
+
+        <span class="c1">#The file selected by file manager will update the list, as well</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditPathSetDialogEnterEnabled</span><span class="p">(</span><span class="n">lep</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditPathSetEnterPressedFunction</span><span class="p">(</span><span class="n">lep</span><span class="p">,</span> <span class="n">onEnterFun</span><span class="p">,</span> <span class="n">list_bc</span><span class="p">)</span>
+
+        <span class="c1">#Set the alignment of data shown in each column.</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetColumnAlignment</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">PID_COL</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignRight</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetColumnAlignment</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">ELEMS_COL</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignRight</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetColumnAlignment</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">MID_COL</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignRight</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetColumnAlignment</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">FROZEN_COL</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignCenter</span><span class="p">)</span>
+
+        <span class="c1">#Set the multi condition filter.</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetFilterEnabled</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetColumnDataTypes</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="p">(</span><span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCBool</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCInvalid</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCInt</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCString</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCInt</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCInt</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCBool</span><span class="p">))</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewFilterSetColumnEnabled</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">CHECK_COL</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewFilterSetColumnEnabled</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">COLOR_COL</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewFilterSetComboBox</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">FROZEN_COL</span><span class="p">)</span>
+
+        <span class="c1">#Set a BCItemViewInfoBox</span>
+        <span class="n">info_box</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCItemViewInfoBoxCreate</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">list_bc</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="s2">&quot;info_box&quot;</span><span class="p">,</span> <span class="n">info_box</span><span class="p">)</span>
+
+        <span class="c1">#Set a double click function and a right click function</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetDoubleClickedFunction</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">doubleClickFun</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetMouseClickedFunction</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="n">mouseClickFun</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">list_bc</span><span class="p">,</span> <span class="s2">&quot;ws&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="p">)</span>      <span class="c1">#We will need ws in updateList</span>
+        <span class="n">updateList</span><span class="p">(</span><span class="n">list_bc</span><span class="p">)</span>
+
+        <span class="n">ddb</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCDialogButtonBoxCreate</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">clear</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">ddb</span><span class="p">,</span> <span class="s2">&quot;Clear list&quot;</span><span class="p">,</span> <span class="n">clearListFun</span><span class="p">,</span> <span class="n">list_bc</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCDialogButtonBoxAddButton</span><span class="p">(</span><span class="n">ddb</span><span class="p">,</span> <span class="n">clear</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCShow</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The complete source code of this example can be found here <a class="reference download internal" download="" href="../../_downloads/58190b1dbc4243ed4b21ca4e248688d0/BCGUI_listPids.py"><code class="xref download docutils literal notranslate"><span class="pre">BCGUI</span> <span class="pre">-</span> <span class="pre">PIDs</span> <span class="pre">List</span></code></a></p>
+<p>When calling the main function of the above script, the ‘BCWindow’ containing the ‘BCListView’ and other widgets is created, showing the PSHELLs of the current database. It is then docked by the user to the left docking area and resized to minimum width, in order to save space for the drawing area.</p>
+<p>The use of the ‘BCWidgetExpand’ tool is shown in the following image:</p>
+<img alt="../../_images/bcgui14.jpg" src="../../_images/bcgui14.jpg" />
+<p>The PSHELLs visibility can be controlled through the checkboxes on the first column of the ‘BCListView’:</p>
+<img alt="../../_images/bcgui15.jpg" src="../../_images/bcgui15.jpg" />
+<p>The name of a PSHELL can be simply changed by clicking on its name on the ‘BCListView’:</p>
+<img alt="../../_images/bcgui16.jpg" src="../../_images/bcgui16.jpg" />
+<p>The same can be applied to the MID attribute of a PSHELL. This time there is also a procedure checking if the new MID is valid:</p>
+<img alt="../../_images/bcgui17.jpg" src="../../_images/bcgui17.jpg" />
+<p>Number 6 was given as MID, which is an invalid value. After the ‘Enter’ button was pressed, the MID changed back to its original value and a warning appeared in the ‘BCItemViewInfoBox’, on the bottom left of the screen:</p>
+<img alt="../../_images/bcgui18.jpg" src="../../_images/bcgui18.jpg" />
+<p>On double-click, the PSHELL card appears and the PSHELL settings can be changed. By clicking OK, the ‘BCListView’ is automatically updated:</p>
+<img alt="../../_images/bcgui19.jpg" src="../../_images/bcgui19.jpg" />
+<p>There is the option to open another ansa file, by clicking on the ‘folder’ icon next to the ‘BCLineEditPath’. By doing this, the new PIDs are automatically loaded into the ‘BCListView’:</p>
+<img alt="../../_images/bcgui20.jpg" src="../../_images/bcgui20.jpg" />
+</section>
+<section id="advanced-bcgui-functionality">
+<h2>Advanced BCGUI functionality<a class="headerlink" href="#advanced-bcgui-functionality" title="Permalink to this heading">#</a></h2>
+<p>This example demonstrates how widgets can be placed inside container widgets, such as ‘BCDrawerGrids’, ‘BCToolBoxes’ and ‘BCTabWidgets’. It also demonstrates how the widgets’ state can be saved in the current xml file (apart from the ‘BCWindow’s’ position and size, which is done automatically) and retrieve it on demand. Finally, a few interesting ways of controlling and displaying data are shown.</p>
+<p>For simplicity reasons most callback functions have been omitted.</p>
+<p>A ‘BCWindow’ is created under the name ‘AutoSavingSettings’. It contains a ‘BCTabWidget’ with 2 tabs. The first contains a ‘BCToolBox’ and the other a ‘BCButtonLineEdit’ with a ‘BCPushButton’, a ‘BCGridLayout’ with 9 ‘BCPushButtons’, a ‘BCTextEdit’ and ‘BCLabelTicker’ (i.e. a ‘BCLabel’ is a label whose text can scroll when the mouse pointer is over it and it can be dragged to the left or to the right).</p>
+<p>Only the first tab’s widgets’ state can be saved to and read from xml, that’s why the 2 extra buttons in ‘BCDialogButtonBox’ are enabled only when this tab is selected.</p>
+<table class="table">
+<tbody>
+<tr class="row-odd"><td><img alt="../../_images/bcgui21.jpg" src="../../_images/bcgui21.jpg" />
+</td>
+<td><img alt="../../_images/bcgui22.jpg" src="../../_images/bcgui22.jpg" />
+</td>
+</tr>
+<tr class="row-even"><td><img alt="../../_images/bcgui23.jpg" src="../../_images/bcgui23.jpg" />
+</td>
+<td><img alt="../../_images/bcgui24.jpg" src="../../_images/bcgui24.jpg" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>When the current tab changes, the ‘BCCaption’ of ‘BCWindow’ (the title) changes as well to the tab’s label. Nevertheless, its ‘BCName’ (‘AutoSavingSettings’) must never change and it must be unique, i.e. no other window with the same ‘BCName’ should exist in ANSA. The reason for this is that all settings are saved to the xml file under this name.</p>
+<p>A control has been set for closing ‘BCWindow’s’ when pressing ‘Enter’. Normally, a window closes on ‘Enter’ unless a BCWindowSetCheckFunction or a BCWindowSetAcceptFunction are set. In this case the first one must be used, and the ‘BCWindow’s’ exit is controlled by the current value of the ‘BCSpinBox’ found in the “Red Frame”. If it is higher than 6, a warning appears in ANSA Info and the ‘BCWindow’ flashes and stays open.</p>
+<p>Initially, the ‘BCComboBox’ in the “Green frame” has 3 options: ‘All’, ‘None’ and ‘Write Protected’. The first 2 operate as normal ‘comboBox’ options. If the last is selected a ‘BCPopupMenu’ appears, containing a hierarchical ‘BCListView’ and a ‘BCPushButton’ at the bottom. In this way any options offered by a ‘BCComboBox’ can be refined to the finest detail.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">guitk</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">tabChangedFun</span><span class="p">(</span><span class="n">tw</span><span class="p">,</span> <span class="n">oldTab</span><span class="p">,</span> <span class="n">newTab</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+        <span class="n">readOnDemand</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="s2">&quot;readOnDemand&quot;</span><span class="p">)</span>
+        <span class="n">saveOnDemand</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="s2">&quot;saveOnDemand&quot;</span><span class="p">)</span>
+        <span class="n">tab1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="s2">&quot;tab1&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">tab1</span> <span class="o">==</span> <span class="n">newTab</span><span class="p">:</span>
+                <span class="n">e</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="n">e</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="c1">#Disable read and save button for second tab, since they are not applicable</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetEnabled</span><span class="p">(</span><span class="n">readOnDemand</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetEnabled</span><span class="p">(</span><span class="n">saveOnDemand</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetCaption</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCTabWidgetGetTabLabel</span><span class="p">(</span><span class="n">tw</span><span class="p">,</span> <span class="n">newTab</span><span class="p">))</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">radioButtonPressed</span><span class="p">(</span><span class="n">bgroup</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Radio Button Pressed:&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">comboBoxChanged</span><span class="p">(</span><span class="n">combo</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">popup</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCPopupMenuPopup</span><span class="p">(</span><span class="n">popup</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">checkWindow</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">spin</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGetUserDataKey</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="s2">&quot;spin&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxGetInt</span><span class="p">(</span><span class="n">spin</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">:</span>
+                <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowFlash</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="c1">#That&#39;s a flashy feature...</span>
+                <span class="k">return</span> <span class="s2">&quot;The spin box value is too high!&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+<span class="k">def</span> <span class="nf">readSettingsOnDemand</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowReadControlSettings</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">saveSettingsOnDemand</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowSaveControlSettings</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">createToolBox</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">BCVBox_1</span><span class="p">):</span>
+        <span class="n">BCLabel_1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">BCVBox_1</span><span class="p">,</span> <span class="s2">&quot;Common Widgets&quot;</span><span class="p">)</span>
+        <span class="n">BCToolBox_1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCToolBoxCreate</span><span class="p">(</span><span class="n">BCVBox_1</span><span class="p">)</span>
+        <span class="n">blueFrame</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">BCToolBox_1</span><span class="p">)</span>
+        <span class="n">BCBoxLayout_1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">blueFrame</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCVertical</span><span class="p">)</span>
+        <span class="n">redFrame</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">BCToolBox_1</span><span class="p">)</span>
+        <span class="n">BCBoxLayout_2</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">redFrame</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCHorizontal</span><span class="p">)</span>
+        <span class="n">greenFrame</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">BCToolBox_1</span><span class="p">)</span>
+        <span class="n">BCBoxLayout_3</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">greenFrame</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCHorizontal</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCToolBoxInsertItem</span><span class="p">(</span><span class="n">BCToolBox_1</span><span class="p">,</span> <span class="n">blueFrame</span><span class="p">,</span> <span class="s2">&quot;Blue Frame&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCToolBoxInsertItem</span><span class="p">(</span><span class="n">BCToolBox_1</span><span class="p">,</span> <span class="n">redFrame</span><span class="p">,</span> <span class="s2">&quot;Red Frame&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCToolBoxInsertItem</span><span class="p">(</span><span class="n">BCToolBox_1</span><span class="p">,</span> <span class="n">greenFrame</span><span class="p">,</span> <span class="s2">&quot;Green Frame&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetBackgroundColor</span><span class="p">(</span><span class="n">blueFrame</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetBackgroundColor</span><span class="p">(</span><span class="n">redFrame</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetBackgroundColor</span><span class="p">(</span><span class="n">greenFrame</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+        <span class="c1">#BLUE FRAME</span>
+        <span class="c1">#create a drawer</span>
+        <span class="n">drawer</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCDrawerGridCreate</span><span class="p">(</span><span class="n">blueFrame</span><span class="p">)</span>
+
+        <span class="c1">#create 3 check boxes</span>
+        <span class="n">checkFrame</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">drawer</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">checkFrame</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCHorizontal</span><span class="p">)</span>
+        <span class="n">checkBoxA</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCCheckBoxCreate</span><span class="p">(</span><span class="n">checkFrame</span><span class="p">,</span> <span class="s2">&quot;CheckBox A&quot;</span><span class="p">)</span>
+        <span class="n">checkBoxB</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCCheckBoxCreate</span><span class="p">(</span><span class="n">checkFrame</span><span class="p">,</span> <span class="s2">&quot;CheckBox B&quot;</span><span class="p">)</span>
+        <span class="n">checkBoxC</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCCheckBoxCreate</span><span class="p">(</span><span class="n">checkFrame</span><span class="p">,</span> <span class="s2">&quot;CheckBox C&quot;</span><span class="p">)</span>
+
+        <span class="c1">#create a button group with radio buttons</span>
+        <span class="n">bgroup</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCButtonGroupCreate</span><span class="p">(</span><span class="n">drawer</span><span class="p">,</span> <span class="s2">&quot;Exclusive Radios&quot;</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCVertical</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCButtonGroupSetCheckable</span><span class="p">(</span><span class="n">bgroup</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;RadioButton &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">rb</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCRadioButtonCreate</span><span class="p">(</span><span class="n">bgroup</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCButtonGroupSetPressedFunction</span><span class="p">(</span><span class="n">bgroup</span><span class="p">,</span> <span class="n">radioButtonPressed</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="c1">#create a button</span>
+        <span class="n">buttonFrame</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">drawer</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">buttonFrame</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCHorizontal</span><span class="p">)</span>
+        <span class="n">toggleButton1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">buttonFrame</span><span class="p">,</span> <span class="s2">&quot;toggleButton1&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCRadioButtonAddManagedWidget</span><span class="p">(</span><span class="n">rb</span><span class="p">,</span> <span class="n">toggleButton1</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCManagedShow</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCManagedHide</span><span class="p">)</span>
+        <span class="n">toggleButton2</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCToolButtonCreate</span><span class="p">(</span><span class="n">buttonFrame</span><span class="p">,</span> <span class="s2">&quot;filter_16.png&quot;</span><span class="p">,</span> <span class="s2">&quot;toggleButton2&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCButtonSetToggleButton</span><span class="p">(</span><span class="n">toggleButton1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1">#add the widgets to the drawer</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCDrawerGridInsertWidget</span><span class="p">(</span><span class="n">drawer</span><span class="p">,</span> <span class="n">checkFrame</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;CheckBoxes&quot;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCDrawerGridInsertStableWidget</span><span class="p">(</span><span class="n">drawer</span><span class="p">,</span> <span class="n">bgroup</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCDrawerGridInsertWidget</span><span class="p">(</span><span class="n">drawer</span><span class="p">,</span> <span class="n">buttonFrame</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Buttons&quot;</span><span class="p">)</span>
+
+        <span class="c1">#RED FRAME</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelCreate</span><span class="p">(</span><span class="n">redFrame</span><span class="p">,</span> <span class="s2">&quot;Degrees:&quot;</span><span class="p">)</span>
+        <span class="n">spin</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCSpinBoxCreate</span><span class="p">(</span><span class="n">redFrame</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="s1">&#39;spin&#39;</span><span class="p">,</span> <span class="n">spin</span><span class="p">)</span> <span class="c1">#We will need this for the &#39;checkWIndow&#39; function</span>
+
+        <span class="c1">#GREEN FRAME</span>
+        <span class="n">comboBox</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCComboBoxCreate</span><span class="p">(</span><span class="n">greenFrame</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;All&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="s1">&#39;Write Protected&#39;</span><span class="p">])</span>
+
+        <span class="c1">#create a popupmenu</span>
+        <span class="n">popup</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPopupMenuCreate</span><span class="p">(</span><span class="n">comboBox</span><span class="p">)</span>
+        <span class="n">popupFrame</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">popup</span><span class="p">)</span>
+        <span class="n">popupVbox</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">popupFrame</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCVertical</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutSetMargin</span><span class="p">(</span><span class="n">popupVbox</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutSetSpacing</span><span class="p">(</span><span class="n">popupVbox</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">lview</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewCreate</span><span class="p">(</span><span class="n">popupVbox</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,),</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetResizeMode</span><span class="p">(</span><span class="n">lview</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCLastColumn</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewHeaderSetVisible</span><span class="p">(</span><span class="n">lview</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetIsRootDecorated</span><span class="p">(</span><span class="n">lview</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetSelectionMode</span><span class="p">(</span><span class="n">lview</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCMulti</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewSetSortingColumn</span><span class="p">(</span><span class="n">lview</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+                <span class="n">lvitem</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCListViewAddItem</span><span class="p">(</span><span class="n">lview</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;tmpItem&#39;</span><span class="p">,),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,))</span>
+
+        <span class="n">ok_but</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">popupVbox</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCPopupMenuInsertWidget</span><span class="p">(</span><span class="n">popup</span><span class="p">,</span> <span class="n">popupFrame</span><span class="p">)</span>
+
+        <span class="c1">#The callback function</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCComboBoxSetActivatedFunction</span><span class="p">(</span><span class="n">comboBox</span><span class="p">,</span> <span class="n">comboBoxChanged</span><span class="p">,</span> <span class="n">popup</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">createSecondTab</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">BCVBox_2</span><span class="p">):</span>
+        <span class="c1">#Create the line edit and the button</span>
+        <span class="n">BCHBOX_1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCHBoxCreate</span><span class="p">(</span><span class="n">BCVBox_2</span><span class="p">)</span>
+        <span class="n">le</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCLineEditCreate</span><span class="p">(</span><span class="n">BCHBOX_1</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">BCHBOX_1</span><span class="p">,</span> <span class="s1">&#39;OK&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="c1">#Create the grid with the buttons</span>
+        <span class="n">grid</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCGridLayoutCreate</span><span class="p">(</span><span class="n">BCVBox_2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+                        <span class="n">button</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="s1">&#39;Button_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                        <span class="n">guitk</span><span class="o">.</span><span class="n">BCGridLayoutAddWidget</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignVCenter</span> <span class="o">+</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCAlignLeft</span><span class="p">)</span>
+        <span class="c1">#Create a text edit</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCTextEditCreate</span><span class="p">(</span><span class="n">BCVBox_2</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="c1">#Create a label ticker</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCLabelTickerCreate</span><span class="p">(</span><span class="n">BCVBox_2</span><span class="p">,</span> <span class="s1">&#39;BCTicker has the ability to scroll from left to right, when the text does not fit in the window.&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="n">window</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowCreate</span><span class="p">(</span><span class="s2">&quot;Auto Saving Settings&quot;</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCOnExitDestroy</span><span class="p">)</span>
+        <span class="c1">#Check on enter</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowSetCheckFunction</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">checkWindow</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="n">BCTabWidget_1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCTabWidgetCreate</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+
+        <span class="c1">#Create the first tab</span>
+        <span class="n">BCVBox_1</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCVBoxCreate</span><span class="p">(</span><span class="n">BCTabWidget_1</span><span class="p">)</span>
+        <span class="n">createToolBox</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">BCVBox_1</span><span class="p">)</span>
+
+        <span class="c1">#Create the second tab</span>
+        <span class="n">BCVBox_2</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCVBoxCreate</span><span class="p">(</span><span class="n">BCTabWidget_1</span><span class="p">)</span>
+        <span class="n">createSecondTab</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">BCVBox_2</span><span class="p">)</span>
+
+        <span class="c1">#Insert the Tabs</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCTabWidgetInsertTab</span><span class="p">(</span><span class="n">BCTabWidget_1</span><span class="p">,</span> <span class="n">BCVBox_1</span><span class="p">,</span> <span class="s2">&quot;Tool Box&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCTabWidgetInsertTab</span><span class="p">(</span><span class="n">BCTabWidget_1</span><span class="p">,</span> <span class="n">BCVBox_2</span><span class="p">,</span> <span class="s2">&quot;Buttons and BCLineEdit&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCTabWidgetSetTabMovingEnabled</span><span class="p">(</span><span class="n">BCTabWidget_1</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCTabWidgetSetCurrentTab</span><span class="p">(</span><span class="n">BCTabWidget_1</span><span class="p">,</span> <span class="n">BCVBox_1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetCaption</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="s1">&#39;Tool Box&#39;</span><span class="p">)</span>
+
+        <span class="c1">#Create a BCDialogButtonBox with the 2 extra buttons</span>
+        <span class="n">dbb</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCDialogButtonBoxCreate</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+        <span class="n">readOnDemand</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">dbb</span><span class="p">,</span> <span class="s2">&quot;Read On Demand&quot;</span><span class="p">,</span> <span class="n">readSettingsOnDemand</span><span class="p">,</span> <span class="n">window</span><span class="p">);</span>
+        <span class="n">saveOnDemand</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCPushButtonCreate</span><span class="p">(</span><span class="n">dbb</span><span class="p">,</span> <span class="s2">&quot;Save On Demand&quot;</span><span class="p">,</span> <span class="n">saveSettingsOnDemand</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCDialogButtonBoxAddButton</span><span class="p">(</span><span class="n">dbb</span><span class="p">,</span> <span class="n">readOnDemand</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCDialogButtonBoxAddButton</span><span class="p">(</span><span class="n">dbb</span><span class="p">,</span> <span class="n">saveOnDemand</span><span class="p">)</span>
+
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="s1">&#39;readOnDemand&#39;</span><span class="p">,</span> <span class="n">readOnDemand</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="s1">&#39;saveOnDemand&#39;</span><span class="p">,</span> <span class="n">saveOnDemand</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCSetUserDataKey</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="s1">&#39;tab1&#39;</span><span class="p">,</span> <span class="n">BCVBox_1</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCTabWidgetSetCurrentChangedFunction</span><span class="p">(</span><span class="n">BCTabWidget_1</span><span class="p">,</span> <span class="n">tabChangedFun</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span>
+        <span class="n">guitk</span><span class="o">.</span><span class="n">BCShow</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The complete source code of this example can be found here <a class="reference download internal" download="" href="../../_downloads/3db9ab37a64dcc07f5d09474ca4f5c4a/BCGUI_tabs.py"><code class="xref download docutils literal notranslate"><span class="pre">BCGUI</span> <span class="pre">-</span> <span class="pre">Tabs</span> <span class="pre">Example</span></code></a></p>
+</section>
+</section>
+<section id="bcgui-designer">
+<h1>BCGUI Designer<a class="headerlink" href="#bcgui-designer" title="Permalink to this heading">#</a></h1>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this heading">#</a></h2>
+<p>The designer is a tool that enables the easy generation of windows using a graphical user interface. The functions used for creating the interface belong to the BCGUI function group that was presented in the previous section. The great advantage of the designer is the automatic generation of code that reduces the preparation time of a script. The following paragraphs will focus in the presentation of the designer’s interface, without any particular emphasis on the BCGUI functions that are used in the background.</p>
+</section>
+<section id="the-designer-s-interface">
+<h2>The Designer’s interface<a class="headerlink" href="#the-designer-s-interface" title="Permalink to this heading">#</a></h2>
+<p>The designer is accessed through the Script Editor, by clicking on Tools&gt;Designer. It’s initial launch interface , contains the following sections:</p>
+<p><strong>ToolBox</strong></p>
+<p>This is the window that hosts all the functions for creating widgets, layouts or items.</p>
+<p><strong>Constructed Items</strong></p>
+<p>This is a tree list with all created items.</p>
+<p><strong>Common Parameters</strong></p>
+<p>This window lists all the parameters that are common for each BCGUI item.</p>
+<p><strong>Parameters</strong></p>
+<p>This window displays all the parameters related to the selected item from the Constructed Items window.</p>
+<p><strong>CallBack Functions</strong></p>
+<p>This window hosts all the created callback functions.</p>
+<p><strong>Source Code</strong></p>
+<p>This is the area where the automatically created source code resides.</p>
+<p><strong>Help</strong></p>
+<p>This is the area where the documentation of the selected function is displayed.</p>
+<img alt="../../_images/bcgui25.jpg" src="../../_images/bcgui25.jpg" />
+</section>
+<section id="toolbox">
+<h2>ToolBox<a class="headerlink" href="#toolbox" title="Permalink to this heading">#</a></h2>
+<p>The ToolBox is the starting point of all the actions performed in the BCGUI Designer. It hosts in separate tabs all the necessary functions for creating the main window, buttons, containers, views, widgets and input items. Initially, only the Window tab is active, since the first action is to create the window that will be used as the parent object of all the widgets. Expand the Window tree and press the Apply Settings button to create the main window with the name ‘TopWindow’.</p>
+<img alt="../../_images/bcgui26.jpg" src="../../_images/bcgui26.jpg" />
+<p>This will make the rest of the categories available.</p>
+<img alt="../../_images/bcgui27.jpg" src="../../_images/bcgui27.jpg" />
+<p>Expanding any object under any category will reveal a basic set of options, necessary for the creation of the object. These options are actually the input arguments of a BCGUI function and thus they are characterized by their type (integer, string, element etc) and their value. Initially, the options have the default values but they can be also set up by the user, except from those that are of element type. The button Apply Settings creates the object. In the following example a push button and a check box have been created under the top window.</p>
+<img alt="../../_images/bcgui28.jpg" src="../../_images/bcgui28.jpg" />
+<p>The parent object controls the objects’ order. As it is shown above, any object that is added directly to the top window is distributed vertically. To control the order of the objects, create a predefined horizontal or vertical box layout (HBox or VBox), or a BoxLayout with controllable orientation and add the widgets within it.</p>
+<img alt="../../_images/bcgui29.jpg" src="../../_images/bcgui29.jpg" />
+</section>
+<section id="constructed-items">
+<h2>Constructed Items<a class="headerlink" href="#constructed-items" title="Permalink to this heading">#</a></h2>
+<p>All the created objects are listed in the Constructed Items window. The list has a tree structure where it is easy to recognize any parent-child relationship or objects’ classes.</p>
+<img alt="../../_images/bcgui30.jpg" src="../../_images/bcgui30.jpg" />
+<p>Actions like drag and drop are allowed and thus the position of an object can be altered at any time.</p>
+<img alt="../../_images/bcgui31.jpg" src="../../_images/bcgui31.jpg" />
+<p>Selecting an object from the list, highlights the corresponding object of the TopWindow. On the contrary, by pressing &lt;Ctrl+Left mouse button&gt; on an object in the TopWindow, highlights the object in the list.</p>
+<img alt="../../_images/bcgui32.jpg" src="../../_images/bcgui32.jpg" />
+<p>Any object can be deleted by right clicking on it and selecting the ‘Delete Item’ option.</p>
+<img alt="../../_images/bcgui33.jpg" src="../../_images/bcgui33.jpg" />
+</section>
+<section id="common-parameters">
+<h2>Common Parameters<a class="headerlink" href="#common-parameters" title="Permalink to this heading">#</a></h2>
+<p>The Common Parameters window, lists all the options that are considered as common for every individual object. The name and the input arguments of the parameters are displayed in two separate columns.</p>
+<img alt="../../_images/bcgui34.jpg" src="../../_images/bcgui34.jpg" />
+<p>In order to change the default parameter options, expand the parameter and type where it is allowed the new value. At the end, press the Apply Settings button to confirm the changes. In the following image, a tooltip is going to be added for the button ‘BCPushButton_1’. Select the button from the Constructed Items window, or from the screen, and type the tooltip text under the Values column of the tip parameter. After confirmation, place the cursor over the button to see the created tooltip.</p>
+<table class="table">
+<tbody>
+<tr class="row-odd"><td><img alt="../../_images/bcgui35.jpg" src="../../_images/bcgui35.jpg" />
+</td>
+<td><img alt="../../_images/bcgui36.jpg" src="../../_images/bcgui36.jpg" />
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading">#</a></h2>
+<p>The Parameters window lists all the unique functions that can be applied on a selected object. As soon as an object is selected either from the screen or from the Constructed Items window, the title of the Parameters window and the actual parameters change accordingly. The following picture shows the Parameters window when the push button is selected. The name and the input arguments of the parameters are displayed in two separate columns.</p>
+<img alt="../../_images/bcgui37.jpg" src="../../_images/bcgui37.jpg" />
+<p>The name of each parameter describes its use. As in any other list of parameters, the corresponding options have the default values but they can get altered by the user. For example, in order to change the name of the button, expand the ‘ButtonSetText’ and type a new value for the option ‘text’. At the end, press the Apply Settings button to confirm the changes.</p>
+<table class="table">
+<tbody>
+<tr class="row-odd"><td><img alt="../../_images/bcgui38.jpg" src="../../_images/bcgui38.jpg" />
+</td>
+<td><img alt="../../_images/bcgui39.jpg" src="../../_images/bcgui39.jpg" />
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="callback-functions">
+<h2>CallBack Functions<a class="headerlink" href="#callback-functions" title="Permalink to this heading">#</a></h2>
+<p>All these functions from the Parameters widnow, whose name ends with ‘Function’, are used to set up the callback functions of the object. In order to find all the functions related to callback functions, activate the filter and type ‘function’ in the Parameters field:</p>
+<img alt="../../_images/bcgui40.jpg" src="../../_images/bcgui40.jpg" />
+<p>Two different callback functions have been filtered for the Push Button. The user can change any option according to his needs. When the Apply Settings button is pressed, the callback type and its name are automatically listed under the CallBack window. The title of the window indicates the parent object type:</p>
+<img alt="../../_images/bcgui41.jpg" src="../../_images/bcgui41.jpg" />
+<p>The last argument of all the callback functions can be of any type and corresponds to user data that are needed for the callback function to operate.</p>
+</section>
+<section id="help-area">
+<h2>Help area<a class="headerlink" href="#help-area" title="Permalink to this heading">#</a></h2>
+<p>Each parameter corresponds to a BCGUI function. By selecting a parameter either from the Common Parameters or from the Parameters window, displays the help text of the corresponding BCGUI function on the Help area.</p>
+<img alt="../../_images/bcgui42.jpg" src="../../_images/bcgui42.jpg" />
+<p>The help text of functions that set up callbacks, also contains the syntax of the callback. Thus, the user is also informed about the input arguments and the return values of it.</p>
+</section>
+<section id="source-code-area">
+<h2>Source Code area<a class="headerlink" href="#source-code-area" title="Permalink to this heading">#</a></h2>
+<p>The Source Code window is the area where the BCGUI Designer automatically constructs the code, as soon as an action is performed. An action is performed every time the Apply Settings button is pressed, or when the tree under the List With Constructed Items is updated with manual movements. The generated code consists of one main function and any number of callback functions.</p>
+<p>The following image shows the source code that was automatically constructed, by performing all the actions mentioned previously:</p>
+<img alt="../../_images/bcgui43.jpg" src="../../_images/bcgui43.jpg" />
+<p>The source code is not editable and changes automatically only when an action is performed or when an object is deleted. However, it can be totally cleared without destroying the created window through the Code&gt;Clear Source Code. The next time an action will be performed, the source code will be generated again.</p>
+</section>
+<section id="editing-the-source-code">
+<h2>Editing the source code<a class="headerlink" href="#editing-the-source-code" title="Permalink to this heading">#</a></h2>
+<p>The source code, including both the main function and the callback functions that are constructed by the designer tool, will probably be just a small part of an extensive script. The rest of the code must be manually added by the user through the script editor. The source code can be saved as any other script through the File&gt;Save and can then be reopened by the script editor for further editing. Alternatively, it can be directly sent to the editor through the Code&gt;Set Code to Script Editor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The designer cannot be used for opening scripts, unless it is free of user defined code.</p>
+</div>
+</section>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   BCGUI Functionality
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-bcgui">
+     What is BCGUI
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bcgui-structure-and-philosophy">
+     BCGUI structure and philosophy
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#widget-classes-or-widgets">
+       Widget classes or widgets
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#layout-classes-or-layouts">
+       Layout classes or layouts
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#items">
+       Items
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-remarks">
+     General remarks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bcgui-examples">
+   BCGUI Examples
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-simple-bcwindow">
+     A simple BCWindow
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creating-and-using-callback-functions">
+       Creating and using callback functions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#moving-more-data-around">
+     Moving more data around
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-bcwizard">
+     Creating a BCWizard
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interacting-with-ansa-entities">
+     Interacting with ANSA entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-bcgui-functionality">
+     Advanced BCGUI functionality
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bcgui-designer">
+   BCGUI Designer
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general">
+     General
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-designer-s-interface">
+     The Designer’s interface
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#toolbox">
+     ToolBox
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#constructed-items">
+     Constructed Items
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#common-parameters">
+     Common Parameters
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parameters">
+     Parameters
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#callback-functions">
+     CallBack Functions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#help-area">
+     Help area
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#source-code-area">
+     Source Code area
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#editing-the-source-code">
+     Editing the source code
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1883 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module meta.constants &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_meta/generated/meta.constants';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="meta.html">Module meta</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="meta.annotations.html">Module meta.annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.base.html">Module meta.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.betascript.html">Module meta.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.betavisibility.html">Module meta.betavisibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.boundaries.html">Module meta.boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.calc.html">Module meta.calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.collaboration.html">Module meta.collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.connections.html">Module meta.connections</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module meta.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.coordsystems.html">Module meta.coordsystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.dm.html">Module meta.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.elements.html">Module meta.elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.em.html">Module meta.em</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.groups.html">Module meta.groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.isofunctions.html">Module meta.isofunctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.materials.html">Module meta.materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.models.html">Module meta.models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.nodes.html">Module meta.nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.nvh.html">Module meta.nvh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.overlay.html">Module meta.overlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.pages.html">Module meta.pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.parts.html">Module meta.parts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.planes.html">Module meta.planes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.plot2d.html">Module meta.plot2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.report.html">Module meta.report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.results.html">Module meta.results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.sections.html">Module meta.sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.session.html">Module meta.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="meta.spdrm.html">Module meta.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="meta.spdrm.process.html">Module meta.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="meta.spreadsheet.html">Module meta.spreadsheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.tdk.html">Module meta.tdk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.toolbars.html">Module meta.toolbars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.utils.html">Module meta.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.visuals.html">Module meta.visuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.vr.html">Module meta.vr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.windows.html">Module meta.windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meta.annotations.html">Module meta.annotations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.base.html">Module meta.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.betascript.html">Module meta.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.betavisibility.html">Module meta.betavisibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.boundaries.html">Module meta.boundaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.calc.html">Module meta.calc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.collaboration.html">Module meta.collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.connections.html">Module meta.connections</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module meta.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.coordsystems.html">Module meta.coordsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.dm.html">Module meta.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.elements.html">Module meta.elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.em.html">Module meta.em</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.groups.html">Module meta.groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.isofunctions.html">Module meta.isofunctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.materials.html">Module meta.materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.models.html">Module meta.models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.nodes.html">Module meta.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.nvh.html">Module meta.nvh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.overlay.html">Module meta.overlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.pages.html">Module meta.pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.parts.html">Module meta.parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.planes.html">Module meta.planes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.plot2d.html">Module meta.plot2d</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.report.html">Module meta.report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.results.html">Module meta.results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.sections.html">Module meta.sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.session.html">Module meta.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="meta.spdrm.html">Module meta.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="meta.spdrm.process.html">Module meta.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meta.spreadsheet.html">Module meta.spreadsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.tdk.html">Module meta.tdk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.toolbars.html">Module meta.toolbars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.utils.html">Module meta.utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.visuals.html">Module meta.visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.vr.html">Module meta.vr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.windows.html">Module meta.windows</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-meta.constants">
+<span id="module-meta-constants"></span><span id="api-ref-meta-constants"></span><h1>Module meta.constants<a class="headerlink" href="#module-meta.constants" title="Permalink to this heading">#</a></h1>
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SPC">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SPC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SPC" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SPC boundary keyword constant.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">boundaries</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">model_id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">constant_value</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">SPC</span>
+
+    <span class="n">constant_name</span> <span class="o">=</span> <span class="n">boundaries</span><span class="o">.</span><span class="n">StringBoundaryType</span><span class="p">(</span><span class="n">constant_value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">constant_name</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="n">deck_type</span> <span class="o">=</span> <span class="n">boundaries</span><span class="o">.</span><span class="n">DeckTypeOfBoundary</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">constant_value</span><span class="p">)</span>
+        <span class="n">deck_subtype</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">subtype_counter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+            <span class="n">deck_subtype_cur</span> <span class="o">=</span> <span class="n">boundaries</span><span class="o">.</span><span class="n">DeckSubtypeOfBoundary</span><span class="p">(</span>
+                <span class="n">model_id</span><span class="p">,</span> <span class="n">constant_value</span><span class="p">,</span> <span class="n">subtype_counter</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">deck_subtype_cur</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">deck_subtype</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">deck_subtype</span> <span class="o">=</span> <span class="n">deck_subtype</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">deck_subtype_cur</span>
+                <span class="k">if</span> <span class="n">deck_subtype</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">deck_subtype</span> <span class="o">=</span> <span class="n">deck_subtype</span> <span class="o">+</span> <span class="n">deck_subtype_cur</span>
+
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;mETA constant:</span><span class="se">\n</span><span class="s2">constants.&quot;</span> <span class="o">+</span> <span class="n">constant_name</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">constant_value</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Deck type:   &quot;</span><span class="p">,</span> <span class="n">deck_type</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Deck subtype:   &quot;</span><span class="p">,</span> <span class="n">deck_subtype</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SPC1">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SPC1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SPC1" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SPC1 boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MPC">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MPC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MPC" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MPC boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.TEMP">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">TEMP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.TEMP" title="Permalink to this definition">#</a></dt>
+<dd><p>The META TEMP boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.FORCE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">FORCE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.FORCE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META FORCE boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.FORCE1">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">FORCE1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.FORCE1" title="Permalink to this definition">#</a></dt>
+<dd><p>The META FORCE1 boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.FORCE2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">FORCE2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.FORCE2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META FORCE2 boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MOMENT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MOMENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MOMENT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MOMENT boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MOMENT1">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MOMENT1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MOMENT1" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MOMENT1 boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MOMENT2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MOMENT2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MOMENT2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MOMENT2 boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PLOAD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PLOAD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PLOAD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PLOAD boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PLOAD1">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PLOAD1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PLOAD1" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PLOAD1 boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PLOAD2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PLOAD2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PLOAD2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PLOAD2 boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PLOAD4">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PLOAD4</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PLOAD4" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PLOAD4 boundary keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.TRIA3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">TRIA3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.TRIA3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META TRIA3 element keyword constant.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">elements</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">model_id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">constant</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">TRIA3</span>
+
+    <span class="n">str_type</span> <span class="o">=</span> <span class="n">elements</span><span class="o">.</span><span class="n">StringElementType</span><span class="p">(</span><span class="n">constant</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">str_type</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="n">deck_type</span> <span class="o">=</span> <span class="n">elements</span><span class="o">.</span><span class="n">DeckTypeOfElement</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">constant</span><span class="p">)</span>
+        <span class="n">deck_subtype</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">subtype</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">300</span><span class="p">):</span>
+            <span class="n">deck_subtype_new</span> <span class="o">=</span> <span class="n">elements</span><span class="o">.</span><span class="n">DeckSubtypeOfElement</span><span class="p">(</span>
+                <span class="n">model_id</span><span class="p">,</span> <span class="n">constant</span><span class="p">,</span> <span class="n">subtype</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">deck_subtype_new</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">deck_subtype</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">deck_subtype</span> <span class="o">=</span> <span class="n">deck_subtype</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">deck_subtype_new</span>
+                <span class="k">if</span> <span class="n">deck_subtype</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">deck_subtype</span> <span class="o">=</span> <span class="n">deck_subtype</span> <span class="o">+</span> <span class="n">deck_subtype_new</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mETA constant:</span><span class="se">\n</span><span class="s2">constants.&quot;</span> <span class="o">+</span> <span class="n">str_type</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">constant</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Deck type:   &quot;</span><span class="p">,</span> <span class="n">deck_type</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Deck subtype:   &quot;</span><span class="p">,</span> <span class="n">deck_subtype</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.TRIA6">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">TRIA6</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.TRIA6" title="Permalink to this definition">#</a></dt>
+<dd><p>The META TRIA6 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.QUAD4">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">QUAD4</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.QUAD4" title="Permalink to this definition">#</a></dt>
+<dd><p>The META QUAD4 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.QUAD8">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">QUAD8</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.QUAD8" title="Permalink to this definition">#</a></dt>
+<dd><p>The META QUAD8 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.TETRA">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">TETRA</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.TETRA" title="Permalink to this definition">#</a></dt>
+<dd><p>The META TETRA element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PENTA">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PENTA</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PENTA" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PENTA element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.HEXA">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">HEXA</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.HEXA" title="Permalink to this definition">#</a></dt>
+<dd><p>The META HEXA element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.TETRA10">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">TETRA10</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.TETRA10" title="Permalink to this definition">#</a></dt>
+<dd><p>The META TETRA10 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PENTA15">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PENTA15</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PENTA15" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PENTA15 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.HEXA20">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">HEXA20</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.HEXA20" title="Permalink to this definition">#</a></dt>
+<dd><p>The META HEXA20 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.ROD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">ROD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.ROD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META ROD element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.BEAM">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">BEAM</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.BEAM" title="Permalink to this definition">#</a></dt>
+<dd><p>The META BEAM element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.BUSH">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">BUSH</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.BUSH" title="Permalink to this definition">#</a></dt>
+<dd><p>The META BUSH element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.TUBE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">TUBE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.TUBE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META TUBE element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.ELAS1">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">ELAS1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.ELAS1" title="Permalink to this definition">#</a></dt>
+<dd><p>The META ELAS1 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.DAMP1">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">DAMP1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.DAMP1" title="Permalink to this definition">#</a></dt>
+<dd><p>The META DAMP1 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MASS1">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MASS1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MASS1" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MASS1 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.VISC">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">VISC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.VISC" title="Permalink to this definition">#</a></dt>
+<dd><p>The META VISC element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.BAR">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">BAR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.BAR" title="Permalink to this definition">#</a></dt>
+<dd><p>The META BAR element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GAP">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GAP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GAP" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GAP element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.BEND">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">BEND</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.BEND" title="Permalink to this definition">#</a></dt>
+<dd><p>The META BEND element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.ONROD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">ONROD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.ONROD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META ONROD element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.ELAS2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">ELAS2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.ELAS2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META ELAS2 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.DAMP2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">DAMP2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.DAMP2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META DAMP2 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MASS2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MASS2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MASS2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MASS2 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.ONM1">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">ONM1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.ONM1" title="Permalink to this definition">#</a></dt>
+<dd><p>The META ONM1 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.ONM2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">ONM2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.ONM2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META ONM2 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBAR">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBAR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBAR" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBAR element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE2 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3 element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.JOINT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">JOINT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.JOINT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META JOINT element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PLOTEL">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PLOTEL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PLOTEL" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PLOTEL element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.FACE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">FACE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.FACE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META FACE element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.HEDRA">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">HEDRA</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.HEDRA" title="Permalink to this definition">#</a></dt>
+<dd><p>The META HEDRA element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SHELL">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SHELL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SHELL" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SHELL element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SOLID">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SOLID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SOLID" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SOLID element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RROD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RROD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RROD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RROD element keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PROD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PROD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PROD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PROD element keyword constant.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">parts</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">model_id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">constant</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">PROD</span>
+
+    <span class="n">str_type</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="n">StringPartType</span><span class="p">(</span><span class="n">constant</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">str_type</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="n">deck_type</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="n">DeckTypeOfPart</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">constant</span><span class="p">)</span>
+        <span class="n">deck_subtype</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">subtype</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+            <span class="n">deck_subtype_new</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="n">DeckSubtypeOfPart</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">constant</span><span class="p">,</span> <span class="n">subtype</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">deck_subtype_new</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">deck_subtype</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">deck_subtype</span> <span class="o">=</span> <span class="n">deck_subtype</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">deck_subtype_new</span>
+                <span class="k">if</span> <span class="n">deck_subtype</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">deck_subtype</span> <span class="o">=</span> <span class="n">deck_subtype</span> <span class="o">+</span> <span class="n">deck_subtype_new</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mETA constant:</span><span class="se">\n</span><span class="s2">constants.&quot;</span> <span class="o">+</span> <span class="n">str_type</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">constant</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Deck type:   &quot;</span><span class="p">,</span> <span class="n">deck_type</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Deck subtype:   &quot;</span><span class="p">,</span> <span class="n">deck_subtype</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PBEAM">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PBEAM</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PBEAM" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PBEAM part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PTUBE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PTUBE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PTUBE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PTUBE part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PELAS">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PELAS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PELAS" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PELAS part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PDAMP">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PDAMP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PDAMP" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PDAMP part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PVISC">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PVISC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PVISC" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PVISC part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PMASS">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PMASS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PMASS" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PMASS part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PBAR">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PBAR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PBAR" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PBAR part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PGAP">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PGAP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PGAP" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PGAP part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PBEND">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PBEND</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PBEND" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PBEND part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PBUSH">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PBUSH</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PBUSH" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PBUSH part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PSOLID">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PSOLID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PSOLID" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PSOLID part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PSHELL">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PSHELL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PSHELL" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PSHELL part keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MAT1">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MAT1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MAT1" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MAT1 material keyword constant.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">materials</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">model_id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">mat_type</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">MAT1</span>
+    <span class="n">mat1_mats</span> <span class="o">=</span> <span class="n">materials</span><span class="o">.</span><span class="n">MaterialsByType</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">mat_type</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">mat1_mats</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">materials</span><span class="o">.</span><span class="n">StringMaterialType</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">type</span><span class="p">),</span> <span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">constant_value</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">):</span>
+        <span class="n">constant_name</span> <span class="o">=</span> <span class="n">materials</span><span class="o">.</span><span class="n">StringMaterialType</span><span class="p">(</span><span class="n">constant_value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">constant_name</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;constants.&quot;</span> <span class="o">+</span> <span class="n">constant_name</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">constant_value</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MAT2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MAT2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MAT2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MAT2 material keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MAT3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MAT3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MAT3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MAT3 material keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MAT4">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MAT4</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MAT4" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MAT4 material keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MAT5">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MAT5</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MAT5" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MAT5 material keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MAT8">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MAT8</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MAT8" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MAT8 material keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MAT9">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MAT9</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MAT9" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MAT9 material keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CORD1R">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CORD1R</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CORD1R" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CORD1R coordinate system keyword constant.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">coordsystems</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">model_id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">coord_id</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">constant_value</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">CORD1R</span>
+    <span class="n">constant_name</span> <span class="o">=</span> <span class="n">coordsystems</span><span class="o">.</span><span class="n">StringCoordSystemType</span><span class="p">(</span><span class="n">constant_value</span><span class="p">)</span>
+    <span class="n">deck_name</span> <span class="o">=</span> <span class="n">coordsystems</span><span class="o">.</span><span class="n">DeckTypeOfCoordSystem</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">constant_value</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">&quot;constants.&quot;</span>
+        <span class="o">+</span> <span class="n">constant_name</span>
+        <span class="o">+</span> <span class="s2">&quot; = &quot;</span>
+        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">constant_value</span><span class="p">)</span>
+        <span class="o">+</span> <span class="s2">&quot;  Deck type of coordinate system: &quot;</span>
+        <span class="o">+</span> <span class="n">deck_name</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;###################################################&quot;</span><span class="p">)</span>
+
+    <span class="n">cs_all</span> <span class="o">=</span> <span class="n">coordsystems</span><span class="o">.</span><span class="n">CoordSystems</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="n">iter_end</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cs_all</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">cs</span> <span class="ow">in</span> <span class="n">cs_all</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">iter_end</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">cs</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">cs</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+            <span class="n">coordsystems</span><span class="o">.</span><span class="n">StringCoordSystemType</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">type</span><span class="p">),</span>
+            <span class="n">cs</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span>
+            <span class="n">cs</span><span class="o">.</span><span class="n">ref_id</span><span class="p">,</span>
+            <span class="n">cs</span><span class="o">.</span><span class="n">imported</span><span class="p">,</span>
+            <span class="n">cs</span><span class="o">.</span><span class="n">moving</span><span class="p">,</span>
+            <span class="n">cs</span><span class="o">.</span><span class="n">model_id</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">xaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">xaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">xaxis</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">yaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">yaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">yaxis</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">zaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">zaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">zaxis</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;--------------------------------------------------------------------------------------------------------------&quot;</span>
+        <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CORD1C">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CORD1C</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CORD1C" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CORD1C coordinate system keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CORD1S">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CORD1S</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CORD1S" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CORD1S coordinate system keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CORD2R">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CORD2R</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CORD2R" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CORD2R coordinate system keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CORD2C">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CORD2C</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CORD2C" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CORD2C coordinate system keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CORD2S">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CORD2S</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CORD2S" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CORD2S coordinate system keyword constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.NONE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">NONE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.NONE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META NONE connection type constant.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">connections</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">constant_value</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">SPOTWELD_LINE</span>
+    <span class="n">constant_name</span> <span class="o">=</span> <span class="n">connections</span><span class="o">.</span><span class="n">StringConnectionType</span><span class="p">(</span><span class="n">constant_value</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;constants.&quot;</span> <span class="o">+</span> <span class="n">constant_name</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">constant_value</span><span class="p">))</span>
+    <span class="n">constant_value</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">RBE3_HEXA_RBE3</span>
+    <span class="n">constant_string</span> <span class="o">=</span> <span class="n">connections</span><span class="o">.</span><span class="n">StringConnectionSubtype</span><span class="p">(</span><span class="n">constant_value</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">&quot;Constant value: &quot;</span>
+        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">constant_value</span><span class="p">)</span>
+        <span class="o">+</span> <span class="s2">&quot;   Subtype string: &quot;</span>
+        <span class="o">+</span> <span class="n">constant_string</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;###################################################&quot;</span><span class="p">)</span>
+
+    <span class="n">model_id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">conns</span> <span class="o">=</span> <span class="n">connections</span><span class="o">.</span><span class="n">Connections</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="n">iter_end</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">conns</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">con</span> <span class="ow">in</span> <span class="n">conns</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">iter_end</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">con</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">con</span><span class="o">.</span><span class="n">model_id</span><span class="p">,</span>
+            <span class="n">con</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+            <span class="n">connections</span><span class="o">.</span><span class="n">StringConnectionType</span><span class="p">(</span><span class="n">con</span><span class="o">.</span><span class="n">type</span><span class="p">),</span>
+            <span class="n">con</span><span class="o">.</span><span class="n">subtype</span><span class="p">,</span>
+            <span class="n">connections</span><span class="o">.</span><span class="n">StringConnectionSubtype</span><span class="p">(</span><span class="n">con</span><span class="o">.</span><span class="n">subtype</span><span class="p">),</span>
+        <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.POINT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">POINT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.POINT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META POINT connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SPOTWELD_LINE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SPOTWELD_LINE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SPOTWELD_LINE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SPOTWELD_LINE connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SEALLINE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SEALLINE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SEALLINE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SEALLINE connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SEAMLINE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SEAMLINE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SEAMLINE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SEAMLINE connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.ADHESIVE_LINE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">ADHESIVE_LINE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.ADHESIVE_LINE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META ADHESIVE_LINE connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.ADHESIVE_FACE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">ADHESIVE_FACE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.ADHESIVE_FACE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META ADHESIVE_FACE connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GUMDROP">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GUMDROP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GUMDROP" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GUMDROP connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.HEMMING">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">HEMMING</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.HEMMING" title="Permalink to this definition">#</a></dt>
+<dd><p>The META HEMMING connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CUSTOM_FE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CUSTOM_FE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CUSTOM_FE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CUSTOM_FE connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CONN_RBE2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CONN_RBE2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CONN_RBE2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CONN_RBE2 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CONN_RBAR">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CONN_RBAR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CONN_RBAR" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CONN_RBAR connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CBAR">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CBAR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CBAR" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CBAR connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CBEAM">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CBEAM</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CBEAM" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CBEAM connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CELAS2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CELAS2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CELAS2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CELAS2 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE2_CELAS1_RBE2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE2_CELAS1_RBE2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE2_CELAS1_RBE2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE2_CELAS1_RBE2 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PASTED_NODES">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PASTED_NODES</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PASTED_NODES" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PASTED_NODES connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CBUSH">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CBUSH</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CBUSH" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CBUSH connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.DYNA_SPOT_WELD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">DYNA_SPOT_WELD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.DYNA_SPOT_WELD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META DYNA_SPOT_WELD connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PAM_SPOT_WELD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PAM_SPOT_WELD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PAM_SPOT_WELD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PAM_SPOT_WELD connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PAM_PLINK">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PAM_PLINK</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PAM_PLINK" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PAM_PLINK connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3_HEXA_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3_HEXA_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3_HEXA_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3_HEXA_RBE3 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.AUTO_SP2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">AUTO_SP2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.AUTO_SP2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META AUTO_SP2 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3_CBUSH_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3_CBUSH_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3_CBUSH_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3_CBUSH_RBE3 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SPIDER">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SPIDER</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SPIDER" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SPIDER connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RADIOSS_WELD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RADIOSS_WELD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RADIOSS_WELD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RADIOSS_WELD connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.ABAQUS_FASTENER">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">ABAQUS_FASTENER</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.ABAQUS_FASTENER" title="Permalink to this definition">#</a></dt>
+<dd><p>The META ABAQUS_FASTENER connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.HEXA_CONTACT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">HEXA_CONTACT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.HEXA_CONTACT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META HEXA_CONTACT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PAM_LLINK">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PAM_LLINK</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PAM_LLINK" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PAM_LLINK connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PAM_SLINK">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PAM_SLINK</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PAM_SLINK" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PAM_SLINK connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE2_CBEAM">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE2_CBEAM</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE2_CBEAM" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE2_CBEAM connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PAM_ELINK">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PAM_ELINK</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PAM_ELINK" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PAM_ELINK connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SPIDER2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SPIDER2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SPIDER2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SPIDER2 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3_CELAS1_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3_CELAS1_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3_CELAS1_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3_CELAS1_RBE3 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CONN_RBE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CONN_RBE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CONN_RBE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CONN_RBE3 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBAR_SHELL">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBAR_SHELL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBAR_SHELL" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBAR_SHELL connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CONTACT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CONTACT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CONTACT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CONTACT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3_COHESIVE_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3_COHESIVE_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3_COHESIVE_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3_COHESIVE_RBE3 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.COHESIVE_CONTACT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">COHESIVE_CONTACT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.COHESIVE_CONTACT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META COHESIVE_CONTACT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3_CBAR_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3_CBAR_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3_CBAR_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3_CBAR_RBE3 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3_CBEAM_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3_CBEAM_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3_CBEAM_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3_CBEAM_RBE3 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PERMAS_SPOTWELD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PERMAS_SPOTWELD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PERMAS_SPOTWELD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PERMAS_SPOTWELD connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.FOLDING">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">FOLDING</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.FOLDING" title="Permalink to this definition">#</a></dt>
+<dd><p>The META FOLDING connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.Y_JOINT_SHELL">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">Y_JOINT_SHELL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.Y_JOINT_SHELL" title="Permalink to this definition">#</a></dt>
+<dd><p>The META Y_JOINT_SHELL connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.OVERLAP_SHELL">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">OVERLAP_SHELL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.OVERLAP_SHELL" title="Permalink to this definition">#</a></dt>
+<dd><p>The META OVERLAP_SHELL connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CRIMP_WELD_SHELL">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CRIMP_WELD_SHELL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CRIMP_WELD_SHELL" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CRIMP_WELD_SHELL connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.LASER_WELD_SHELL">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">LASER_WELD_SHELL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.LASER_WELD_SHELL" title="Permalink to this definition">#</a></dt>
+<dd><p>The META LASER_WELD_SHELL connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.EDGE_WELD_SHELL">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">EDGE_WELD_SHELL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.EDGE_WELD_SHELL" title="Permalink to this definition">#</a></dt>
+<dd><p>The META EDGE_WELD_SHELL connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.Y_JOINT_FEMFAT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">Y_JOINT_FEMFAT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.Y_JOINT_FEMFAT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META Y_JOINT_FEMFAT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.OVERLAP_FEMFAT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">OVERLAP_FEMFAT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.OVERLAP_FEMFAT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META OVERLAP_FEMFAT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CRIMP_WELD_FEMFAT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CRIMP_WELD_FEMFAT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CRIMP_WELD_FEMFAT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CRIMP_WELD_FEMFAT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.LASER_WELD_FEMFAT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">LASER_WELD_FEMFAT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.LASER_WELD_FEMFAT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META LASER_WELD_FEMFAT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.EDGE_WELD_FEMFAT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">EDGE_WELD_FEMFAT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.EDGE_WELD_FEMFAT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META EDGE_WELD_FEMFAT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.TIE_CONN3D">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">TIE_CONN3D</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.TIE_CONN3D" title="Permalink to this definition">#</a></dt>
+<dd><p>The META TIE_CONN3D connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.NASTRAN_CWELD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">NASTRAN_CWELD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.NASTRAN_CWELD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META NASTRAN_CWELD connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SHELL_CONTACT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SHELL_CONTACT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SHELL_CONTACT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SHELL_CONTACT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PASTED_HEXAS">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PASTED_HEXAS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PASTED_HEXAS" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PASTED_HEXAS connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.FEMFAT_SPOT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">FEMFAT_SPOT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.FEMFAT_SPOT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META FEMFAT_SPOT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CGAP">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CGAP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CGAP" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CGAP connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CFAST">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CFAST</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CFAST" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CFAST connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SHELL_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SHELL_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SHELL_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SHELL_RBE3 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE2_HEXA_RBE2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE2_HEXA_RBE2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE2_HEXA_RBE2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE2_HEXA_RBE2 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.IQUAD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">IQUAD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.IQUAD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META IQUAD connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.IQUAD_HEXA_IQUAD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">IQUAD_HEXA_IQUAD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.IQUAD_HEXA_IQUAD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META IQUAD_HEXA_IQUAD connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.IQUAD_SPRING_IQUAD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">IQUAD_SPRING_IQUAD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.IQUAD_SPRING_IQUAD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META IQUAD_SPRING_IQUAD connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SOLID_NUGGET">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SOLID_NUGGET</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SOLID_NUGGET" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SOLID_NUGGET connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.BOLT_ON_SOLID">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">BOLT_ON_SOLID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.BOLT_ON_SOLID" title="Permalink to this definition">#</a></dt>
+<dd><p>The META BOLT_ON_SOLID connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3_PENTA_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3_PENTA_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3_PENTA_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3_PENTA_RBE3 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.BEAM_CONTACT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">BEAM_CONTACT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.BEAM_CONTACT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META BEAM_CONTACT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.Y_JOINT_SHELL_CLOSED">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">Y_JOINT_SHELL_CLOSED</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.Y_JOINT_SHELL_CLOSED" title="Permalink to this definition">#</a></dt>
+<dd><p>The META Y_JOINT_SHELL_CLOSED connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.Y_JOINT_SHELL_DOUBLE_CLOSED">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">Y_JOINT_SHELL_DOUBLE_CLOSED</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.Y_JOINT_SHELL_DOUBLE_CLOSED" title="Permalink to this definition">#</a></dt>
+<dd><p>The META Y_JOINT_SHELL_DOUBLE_CLOSED connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.OVERLAP_SHELL_CLOSED">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">OVERLAP_SHELL_CLOSED</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.OVERLAP_SHELL_CLOSED" title="Permalink to this definition">#</a></dt>
+<dd><p>The META OVERLAP_SHELL_CLOSED connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RADIOSS_CLUSTER">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RADIOSS_CLUSTER</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RADIOSS_CLUSTER" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RADIOSS_CLUSTER connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.LASER_WELD_SHELL_CLOSED">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">LASER_WELD_SHELL_CLOSED</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.LASER_WELD_SHELL_CLOSED" title="Permalink to this definition">#</a></dt>
+<dd><p>The META LASER_WELD_SHELL_CLOSED connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CONSTRAINED_SPR2">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CONSTRAINED_SPR2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CONSTRAINED_SPR2" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CONSTRAINED_SPR2 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.BOLT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">BOLT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.BOLT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META BOLT connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CONNECTOR_ENTITY">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CONNECTOR_ENTITY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CONNECTOR_ENTITY" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CONNECTOR_ENTITY connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CONNECTOR_ENTITY_TEMPLATE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CONNECTOR_ENTITY_TEMPLATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CONNECTOR_ENTITY_TEMPLATE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CONNECTOR_ENTITY_TEMPLATE connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.COUPLING_CONNECTOR">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">COUPLING_CONNECTOR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.COUPLING_CONNECTOR" title="Permalink to this definition">#</a></dt>
+<dd><p>The META COUPLING_CONNECTOR connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.FEMSITE_SPOTWELD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">FEMSITE_SPOTWELD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.FEMSITE_SPOTWELD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META FEMSITE_SPOTWELD connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GEB">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GEB</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GEB" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GEB connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GEB_BC">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GEB_BC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GEB_BC" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GEB_BC connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GEB_BC_TEMPLATE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GEB_BC_TEMPLATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GEB_BC_TEMPLATE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GEB_BC_TEMPLATE connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GEB_CON">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GEB_CON</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GEB_CON" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GEB_CON connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GEB_GN">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GEB_GN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GEB_GN" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GEB_GN connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GEB_MT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GEB_MT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GEB_MT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GEB_MT connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GEB_MT_TEMPLATE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GEB_MT_TEMPLATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GEB_MT_TEMPLATE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GEB_MT_TEMPLATE connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GEB_OR">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GEB_OR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GEB_OR" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GEB_OR connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GEB_OR_TEMPLATE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GEB_OR_TEMPLATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GEB_OR_TEMPLATE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GEB_OR_TEMPLATE connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GEB_SB">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GEB_SB</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GEB_SB" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GEB_SB connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.GENERIC_ENTITIES_BUILDER_TEMPLATE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">GENERIC_ENTITIES_BUILDER_TEMPLATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.GENERIC_ENTITIES_BUILDER_TEMPLATE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META GENERIC_ENTITIES_BUILDER_TEMPLATE connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3_CONNECTOR_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3_CONNECTOR_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3_CONNECTOR_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3_CONNECTOR_RBE3 connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3_SHELL_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3_SHELL_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3_SHELL_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3_SHEL_RBE3 connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.BEAM_BOLT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">BEAM_BOLT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.BEAM_BOLT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META BEAM_BOLT connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SOLID_BOLT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SOLID_BOLT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SOLID_BOLT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SOLID_BOLT connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.ROBSCAN">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">ROBSCAN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.ROBSCAN" title="Permalink to this definition">#</a></dt>
+<dd><p>The META ROBSCAN connection type constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.FEMSITE_ROBSCAN">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">FEMSITE_ROBSCAN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.FEMSITE_ROBSCAN" title="Permalink to this definition">#</a></dt>
+<dd><p>The META FEMSITE_ROBSCAN connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RBE3_DIAMOND_RBE3">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RBE3_DIAMOND_RBE3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RBE3_DIAMOND_RBE3" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RBE3_DIAMOND_RBE3 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.BOLT_RIGID_PATCHES">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">BOLT_RIGID_PATCHES</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.BOLT_RIGID_PATCHES" title="Permalink to this definition">#</a></dt>
+<dd><p>The META BOLT_RIGID_PATCHES connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PENTA_CONTACT_ON_SOLIDS">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PENTA_CONTACT_ON_SOLIDS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PENTA_CONTACT_ON_SOLIDS" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PENTA_CONTACT_ON_SOLIDS connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CONSTRAINED_INTERPOLATION_SP">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CONSTRAINED_INTERPOLATION_SP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CONSTRAINED_INTERPOLATION_SP" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CONSTRAINED_INTERPOLATION_SP connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SPLIT_CLOSED_SHELL">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SPLIT_CLOSED_SHELL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SPLIT_CLOSED_SHELL" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SPLIT_CLOSED_SHELL connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SOLID_WELD">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SOLID_WELD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SOLID_WELD" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SOLID_WELD connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SUPERELEMENT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SUPERELEMENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SUPERELEMENT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SUPERELEMENT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PSE98">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PSE98</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PSE98" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PSE98 connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MPC_HEXA_MPC">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MPC_HEXA_MPC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MPC_HEXA_MPC" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MPC_HEXA_MPC connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.RADIOSS_BOLT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">RADIOSS_BOLT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.RADIOSS_BOLT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META RADIOSS_BOLT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.MPC_CBUSH_MPC">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">MPC_CBUSH_MPC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.MPC_CBUSH_MPC" title="Permalink to this definition">#</a></dt>
+<dd><p>The META MPC_CBUSH_MPC connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.SPR_RIVET">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">SPR_RIVET</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.SPR_RIVET" title="Permalink to this definition">#</a></dt>
+<dd><p>The META SPR_RIVET connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PSE2001_RIGID">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PSE2001_RIGID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PSE2001_RIGID" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PSE2001_RIGID connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.PSE2001_FLEXIBLE">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">PSE2001_FLEXIBLE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.PSE2001_FLEXIBLE" title="Permalink to this definition">#</a></dt>
+<dd><p>The META PSE2001_FLEXIBLE connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.CBUSH_CBAR_CBUSH">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">CBUSH_CBAR_CBUSH</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.CBUSH_CBAR_CBUSH" title="Permalink to this definition">#</a></dt>
+<dd><p>The META CBUSH_CBAR_CBUSH connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.HYBRID_BOLT">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">HYBRID_BOLT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.HYBRID_BOLT" title="Permalink to this definition">#</a></dt>
+<dd><p>The META HYBRID_BOLT connection subtype constant.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.app_version">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">app_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.app_version" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the current meta version</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">app_version</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.app_version_int">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">app_version_int</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.app_version_int" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the current meta version</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">app_version_int</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.app_home_dir">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">app_home_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.app_home_dir" title="Permalink to this definition">#</a></dt>
+<dd><p>The system directory used for the configuration files</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">app_home_dir</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.app_root_dir">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">app_root_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.app_root_dir" title="Permalink to this definition">#</a></dt>
+<dd><p>The system’s root directory</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">app_root_dir</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="meta.constants.app_temp_dir">
+<span class="sig-prename descclassname"><span class="pre">meta.constants.</span></span><span class="sig-name descname"><span class="pre">app_temp_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.constants.app_temp_dir" title="Permalink to this definition">#</a></dt>
+<dd><p>The path of the temporary directory used by the application</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">app_temp_dir</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

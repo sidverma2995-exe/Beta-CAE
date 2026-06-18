@@ -1,0 +1,2393 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module ansa.taskmanager &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_ansa/generated/ansa.taskmanager';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ansa.html">Module ansa</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ansa.analysis_tools.html">Module ansa.analysis_tools</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ansa.base.html">Module ansa.base</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="ansa.base.checks.html">Module ansa.base.checks</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.general.html">Module ansa.base.checks.general</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.geometry.html">Module ansa.base.checks.geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.mesh.html">Module ansa.base.checks.mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.penetration.html">Module ansa.base.checks.penetration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.kinetics.html">Module ansa.base.kinetics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.batchmesh.html">Module ansa.batchmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.betascript.html">Module ansa.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.cad.html">Module ansa.cad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.calc.html">Module ansa.calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.connections.html">Module ansa.connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.constants.html">Module ansa.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.dm.html">Module ansa.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.kinetics.html">Module ansa.kinetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.mesh.html">Module ansa.mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.morph.html">Module ansa.morph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.report.html">Module ansa.report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.session.html">Module ansa.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ansa.spdrm.html">Module ansa.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ansa.spdrm.process.html">Module ansa.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module ansa.taskmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.utils.html">Module ansa.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.vr.html">Module ansa.vr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.analysis_tools.html">Module ansa.analysis_tools</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ansa.base.html">Module ansa.base</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ansa.base.checks.html">Module ansa.base.checks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.general.html">Module ansa.base.checks.general</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.geometry.html">Module ansa.base.checks.geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.mesh.html">Module ansa.base.checks.mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.penetration.html">Module ansa.base.checks.penetration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.base.kinetics.html">Module ansa.base.kinetics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.batchmesh.html">Module ansa.batchmesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.betascript.html">Module ansa.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.cad.html">Module ansa.cad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.calc.html">Module ansa.calc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.connections.html">Module ansa.connections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.constants.html">Module ansa.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.dm.html">Module ansa.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.kinetics.html">Module ansa.kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.mesh.html">Module ansa.mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.morph.html">Module ansa.morph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.report.html">Module ansa.report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.session.html">Module ansa.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ansa.spdrm.html">Module ansa.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ansa.spdrm.process.html">Module ansa.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module ansa.taskmanager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.utils.html">Module ansa.utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.vr.html">Module ansa.vr</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-ansa.taskmanager">
+<span id="module-ansa-taskmanager"></span><span id="api-ref-ansa-taskmanager"></span><h1>Module ansa.taskmanager<a class="headerlink" href="#module-ansa.taskmanager" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.AparameterTaskItemLinkToAparameter">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">AparameterTaskItemLinkToAparameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ansa_parameter_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">expression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.AparameterTaskItemLinkToAparameter" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Associates an A_PARAMETER task item of a design variable in the optimization task with an A_PARAMETER.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">The task item object.</div>
+</div>
+</dd>
+<dt><strong>ansa_parameter_ref</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">APARAM object.</div>
+</div>
+</dd>
+<dt><strong>expression</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">expression to be used when executing the item from the optimization task. Use “$DV” to get Current Value of the Design variable.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 0 on success, -1 on failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;new_parameter&quot;</span>
+    <span class="n">create_vals</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">}</span>
+    <span class="n">param</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CreateEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;A_PARAMETER&quot;</span><span class="p">,</span> <span class="n">create_vals</span><span class="p">)</span>
+    <span class="n">expr</span> <span class="o">=</span> <span class="s2">&quot;=&quot;</span> <span class="o">+</span> <span class="n">name</span>
+    <span class="n">prop</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;PSHELL&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;T&quot;</span><span class="p">:</span> <span class="n">expr</span><span class="p">}</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">SetEntityCardValues</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">vals</span><span class="p">)</span>
+
+    <span class="n">opt_task</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Optimization item&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">prepro</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Pre-Processing&quot;</span><span class="p">,</span> <span class="n">opt_task</span><span class="p">)</span>
+    <span class="n">design_variable_task_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Design Variable&quot;</span><span class="p">,</span> <span class="n">prepro</span><span class="p">)</span>
+    <span class="n">param_task_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span>
+        <span class="s2">&quot;A_PARAMETER&quot;</span><span class="p">,</span> <span class="n">design_variable_task_item</span>
+    <span class="p">)</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">AparameterTaskItemLinkToAparameter</span><span class="p">(</span>
+        <span class="n">param_task_item</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;$DV+1&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.ChangeTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">ChangeTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.ChangeTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function changes the status of a task item from checked to unchecked.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">The task item whose status will be switched to unchecked.</div>
+<div class="line">Can be obtained using GetTaskItemsByName() or GetTaskItemsByType().</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Return Value:</div>
+<div class="line">0: The Task Item unupdated succesfuly.</div>
+<div class="line">1: The Task Item failed to unupdate.</div>
+<div class="line">-1: No such Task Item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Get all task items named &quot;MyModelAssembly&quot;</span>
+    <span class="n">model_assembly</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;MyModelAssembly&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Uncheck the first item in the model_assembly list</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">ChangeTaskItem</span><span class="p">(</span><span class="n">model_assembly</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret_val</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.ClearBreakTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">ClearBreakTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.ClearBreakTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Removes break from Task Item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">The Task Item to remove the break from.</div>
+<div class="line">It can be obtained by a call to GetTaskItemsByName() or GetTaskItemsByType().</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">1: the break on the Task Item was removed.</div>
+<div class="line">-1: no such Task Item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">model_assembly</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;My Model Assembly&quot;</span><span class="p">)</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">ClearBreakTaskItem</span><span class="p">(</span><span class="n">model_assembly</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.CreateTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">CreateTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.taskmanager.CreateTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function creates a new task item in Task Manager. The item type must be given</div>
+<div class="line">exactly as it is displayed in the type field of Task Manager, e.g “Common Model”, </div>
+<div class="line">“Trim Item”, “Read XML file” etc. The new item will be created under the </div>
+<div class="line">target task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">String that determines the type of the task item to be created.</div>
+</div>
+</dd>
+<dt><strong>target_task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">Target task item. The task item under which the newly created one will be placed.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a reference to the newly created item, or None in case of error.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Start with an empty task tree</span>
+    <span class="c1"># Create a Common Model task item</span>
+    <span class="n">new_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Common Model&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># Create a Model Assembly task item under the Common Model</span>
+    <span class="n">new_item2</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Model Assembly&quot;</span><span class="p">,</span> <span class="n">new_item</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.DeleteTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">DeleteTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_results</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.DeleteTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function deletes the defined task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item that will be deleted. Can be obtained by using GetTaskItemsByName() or </div>
+<div class="line">GetTaskItemsByType().</div>
+</div>
+</dd>
+<dt><strong>delete_results</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">Accepted values: “on” or “off”. </div>
+<div class="line">(Default: “off”)</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line">0: The Task Item was deleted succesfuly.</div>
+<div class="line">1: The Task Item failed to delete.</div>
+<div class="line">-1: No such Task Item exists.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Get task items named &quot;Refinement&quot;</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;Refinement&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="c1"># delete collected task items</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">DeleteTaskItem</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.DisableTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">DisableTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.DisableTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function disables (marks as skipped) the prescribed task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item which will disbaled. Can be obtained using GetTaskItemsByName() or </div>
+<div class="line-block">
+<div class="line">GetTaskItemsByType().</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line">0: The Task Item was succesfuly disabled.</div>
+<div class="line">1: The Task Item failed to disable.</div>
+<div class="line">-1: No such Task Item existed.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect all task items of type &quot;Abaqus Standard Load Case&quot;</span>
+    <span class="n">loadcases</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Abaqus Standard Load Case&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">loadcase</span> <span class="ow">in</span> <span class="n">loadcases</span><span class="p">:</span>
+        <span class="c1"># Disable collected task items</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">DisableTaskItem</span><span class="p">(</span><span class="n">loadcase</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.EditCommentsTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">EditCommentsTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.EditCommentsTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function sets a comment to the comments field of a task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item whose comments field will be edited. Can be</div>
+<div class="line">obtained by using GetTaskItemsByName() or GetTaskItemsByType().</div>
+</div>
+</dd>
+<dt><strong>comment</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The string that will be inserted as a comment.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">1: The comment on the Task Item was set.</div>
+<div class="line">-1: No such Task Item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect all task items whose name is &quot;MyModelAssembly&quot;</span>
+    <span class="n">tasks</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;MyModelAssembly&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+        <span class="c1"># Edit the Comments field of the collected items</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">EditCommentsTaskItem</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="s2">&quot;This is a test comment&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.EnableTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">EnableTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.EnableTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function enables (unmark as skipped) the prescribed task item. </div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item which will be enabled. Can be obtained by using </div>
+<div class="line">the GetTaskItemsByName() or GetTaskItemsByType().</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line">0, if the Task Item was successfully enabled.</div>
+<div class="line">1, if the Task Item failed to enable.</div>
+<div class="line">-1, if there is no such Task Item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect all task items of type &quot;Abaqus Standard Load Case&quot;</span>
+    <span class="n">loadcases</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Abaqus Standard Load Case&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">loadcase</span> <span class="ow">in</span> <span class="n">loadcases</span><span class="p">:</span>
+        <span class="c1"># Enable collected task items</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">EnableTaskItem</span><span class="p">(</span><span class="n">loadcase</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.ExecTaskItemMenuFun">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">ExecTaskItemMenuFun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_subfunction_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.ExecTaskItemMenuFun" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Executes any subfunction of a task item context menu. The subfunction name must be given </div>
+<div class="line">exactly as it is displayed in the context menu.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item from the context menu of which, a subfunction will be selected.</div>
+</div>
+</dd>
+<dt><strong>item_subfunction_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the subfunction.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 0 on success and -1 on failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect all task items named &quot;ModelAssembly&quot;</span>
+    <span class="n">common</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;MyModelAssembly&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Execute the &quot;Convert From Model&quot; option of the context menu</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">ExecTaskItemMenuFun</span><span class="p">(</span><span class="n">common</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;Convert From Model&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetAllTaskItems">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetAllTaskItems</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">ansa.base.Entity</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.taskmanager.GetAllTaskItems" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns all task items regardless of their type/name.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[base.Entity]</dt><dd><div class="line-block">
+<div class="line">Returns a list with the elements of all task items.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetAllTaskItems</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemName</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetCommentsTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetCommentsTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetCommentsTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function obtains the entry of the comment field of a task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item whose comment field will be obtained. Can be obtained </div>
+<div class="line">by a call to GetTaskItemsByName() or GetTaskItemsByType().</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns a string that contains the comment of the task item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect all task items in the task tree</span>
+    <span class="n">tasks</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetAllTaskItems</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetCommentsTaskItem</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
+            <span class="c1"># Print the comment if it exists</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">GetCommentsTaskItem</span><span class="p">(</span><span class="n">task</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Print &quot;Empty Comment&quot; otherwise</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Empty Comment&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetRootTaskManager">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetRootTaskManager</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></span><a class="headerlink" href="#ansa.taskmanager.GetRootTaskManager" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Function that returns a reference to the task manager root.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>base.Entity</dt><dd><div class="line-block">
+<div class="line">Returns a reference to the root task manager.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Get a reference to task manager root</span>
+    <span class="n">task_manager</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetRootTaskManager</span><span class="p">()</span>
+
+    <span class="c1"># Collect all Shell elements placed under control of the task manager</span>
+    <span class="n">shells</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">task_manager</span><span class="p">,</span> <span class="s2">&quot;SHELL&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Print message</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of solids: &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">shells</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetRunningTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetRunningTaskItem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetRunningTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Gets a reference to the element of the running task item. The running item is a script.</div>
+<div class="line">It can be used in cases where a script item is placed inside a task more than once and </div>
+<div class="line">performs every time that is called different actions.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a reference to the running task item, or None if the running item is not found.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">script_task_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetRunningTaskItem</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemName</span><span class="p">(</span><span class="n">script_task_item</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetTaskItemChildren">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetTaskItemChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetTaskItemChildren" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function gets the children of the selected parent task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item whose children will be obtained.</div>
+</div>
+</dd>
+<dt><strong>method</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">The method that will be used.</div>
+<div class="line">Valid types:</div>
+<div class="line">-1: Returns all children.</div>
+<div class="line">-0: Returns first level children.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a list that contains the repsective task items.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Get task items named &quot;Common Model&quot;</span>
+    <span class="n">common</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;Common Model&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Get 1st level children of the fist instance of &quot;Common Model&quot;</span>
+    <span class="n">children</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemChildren</span><span class="p">(</span><span class="n">common</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemName</span><span class="p">(</span><span class="n">child</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetTaskItemName">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetTaskItemName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetTaskItemName" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function obtains the name of the prescribed task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item whose name will be obtained.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns a string containing the name of the task item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect &quot;Abaqus Standard Load Case&quot; task items</span>
+    <span class="n">loadcases</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Abaqus Standard Load Case&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">loadcase</span> <span class="ow">in</span> <span class="n">loadcases</span><span class="p">:</span>
+        <span class="c1"># Get the name of each task item in the list</span>
+        <span class="n">loadcase_name</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemName</span><span class="p">(</span><span class="n">loadcase</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">loadcase_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetTaskItemStatus">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetTaskItemStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetTaskItemStatus" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function obtains the status of the defined task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item whose status will be obtained.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns one of the following integers:</div>
+<div class="line">0: The Task Item is not updated (not ticked).</div>
+<div class="line">1: The Task Item is updated (ticked).</div>
+<div class="line">2: The Task Item is disabled.</div>
+<div class="line">-1: No such Task Item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect all &quot;Abaqus Standard Load Case&quot; task items</span>
+    <span class="n">loadcases</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Abaqus Standard Load Case&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">loadcase</span> <span class="ow">in</span> <span class="n">loadcases</span><span class="p">:</span>
+        <span class="c1"># Get the status of each task item in the list</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemStatus</span><span class="p">(</span><span class="n">loadcase</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetTaskItemType">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetTaskItemType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetTaskItemType" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function obtains the type of the prescribed task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item whose type will be obtained.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns a string representing the type of the given task item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect all the task items named &quot;Common Model&quot;</span>
+    <span class="n">common</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;Common Model&quot;</span><span class="p">)</span>
+    <span class="c1"># Collect the 1st level children of the first instance of &quot;Common Model&quot;</span>
+    <span class="n">children</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemChildren</span><span class="p">(</span><span class="n">common</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
+        <span class="c1"># For each task item in the list get and print its type</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemType</span><span class="p">(</span><span class="n">child</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetTaskItemsByName">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetTaskItemsByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetTaskItemsByName" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function collects all task item of a specific name.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the task items to be collected.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a list of all the matched Task Items.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect all task items named &quot;MyModelAssembly&quot;</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;MyModelAssembly&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="c1"># Print the type of each task item in the list</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemType</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetTaskItemsByType">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetTaskItemsByType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetTaskItemsByType" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function collects all the task items of a specific type.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The type of the task items to be collected. Must be set exactly as it </div>
+<div class="line">is written in the type field of the Task Manager.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a list of all the matched Task Items.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect all task items of type &quot;Abaqus Standard Load Case&quot;</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Abaqus Standard Load Case&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="c1"># Print the Name of each task item in the list</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemName</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.MorphparameterTaskItemLinkToMorphparameter">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">MorphparameterTaskItemLinkToMorphparameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">morph_parameter_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after_morph_action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.MorphparameterTaskItemLinkToMorphparameter" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Associates a MORPHPARAMETER task item of a design variable in the optimization task with a morph PARAMETER.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A task item object.</div>
+</div>
+</dd>
+<dt><strong>morph_parameter_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A morph parameter object.</div>
+</div>
+</dd>
+<dt><strong>after_morph_action</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">Can have 2 values “Reconstruct” or “Smooth”</div>
+</div>
+</dd>
+<dt><strong>expression</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">expression to be used when executing the item from the optimization task. Use “$DV” to get Current Value of the Design variable.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 0 on success, 1 on failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">param</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;PARAMETERS&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">opt_task</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Optimization item&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">prepro</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Pre-Processing&quot;</span><span class="p">,</span> <span class="n">opt_task</span><span class="p">)</span>
+    <span class="n">design_variable_task_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Design Variable&quot;</span><span class="p">,</span> <span class="n">prepro</span><span class="p">)</span>
+    <span class="n">param_task_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span>
+        <span class="s2">&quot;MORPH PARAMETER&quot;</span><span class="p">,</span> <span class="n">design_variable_task_item</span>
+    <span class="p">)</span>
+
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">MorphparameterTaskItemLinkToMorphparameter</span><span class="p">(</span><span class="n">param_task_item</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.MoveTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">MoveTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref_to_move</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.MoveTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Moves the given task item into another item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref_to_move</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item that will be moved.</div>
+</div>
+</dd>
+<dt><strong>target_task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item under which the moving </div>
+<div class="line">task item will be placed.</div>
+</div>
+</dd>
+<dt><strong>drop_position</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">drop_position can have 3 options</div>
+<div class="line">“OnTarget”, “BelowTarget” and “AboveTarget”</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">1 : Succesfully moved.</div>
+<div class="line">0 : Failed to move.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Get task items named &quot;MyModelAssembly&quot;</span>
+    <span class="n">model_assembly</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;MyModelAssembly&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Get task items named &quot;User Script&quot;</span>
+    <span class="n">tasks</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;User Script&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+        <span class="c1"># Place each item in the list under the first instance of model_assembly</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">MoveTaskItem</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">model_assembly</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.OpenTaskManager">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">OpenTaskManager</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.OpenTaskManager" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Opens the Task manager window.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Always returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">OpenTaskManager</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.ReadTask">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">ReadTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.ReadTask" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function reads a specific task.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_filename</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">A string that describes the path and the filename of the ANSA </div>
+<div class="line">database that contains the task. It can be DM relative.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Always returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#ansa.taskmanager.SaveTask" title="ansa.taskmanager.SaveTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansa.taskmanager.SaveTask</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">ReadTask</span><span class="p">(</span><span class="s2">&quot;DM:/Tasks/CommonModel.ansa&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.RunAllTasks">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">RunAllTasks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.RunAllTasks" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Runs all tasks that exist in database.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line">0: If all Task Items updated (run) succesfuly.</div>
+<div class="line">1: If any Task Item failed to update (run).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">RunAllTasks</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SetBreakTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SetBreakTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SetBreakTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets a break on a Task Item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>item</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">The Task Item to set a break on it can be obtained by a call to </div>
+<div class="line">GetTaskItemsByName() or GetTaskItemsByType().</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line-block">
+<div class="line">1: If the break on the Task Item was set.</div>
+</div>
+<div class="line">-1: If no such Task Item exists.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">loadcases</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Abaqus Standard Load Case&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">loadcase</span> <span class="ow">in</span> <span class="n">loadcases</span><span class="p">:</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetBreakTaskItem</span><span class="p">(</span><span class="n">loadcase</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SetOutputTaskItemName">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SetOutputTaskItemName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_name_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SetOutputTaskItemName" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function changes the Output Task Item’s exported file name.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A reference to the task item.</div>
+</div>
+</dd>
+<dt><strong>new_name_str</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The new path and file name of the exported file.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line-block">
+<div class="line">0, on success.</div>
+<div class="line">1, if failed to name the exported file.</div>
+</div>
+<div class="line">-1, if there is no such Task Item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect all task item of &quot;Output&quot; type</span>
+    <span class="n">OutputItems</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Output&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">OutputItem</span> <span class="ow">in</span> <span class="n">OutputItems</span><span class="p">:</span>
+        <span class="c1"># Set a path and file name for each item in the list</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetOutputTaskItemName</span><span class="p">(</span><span class="n">OutputItem</span><span class="p">,</span> <span class="s2">&quot;c:/temp/users/folder/data.inp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SetTaskItemName">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SetTaskItemName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_name_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SetTaskItemName" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function renames a task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item that will be renamed.</div>
+</div>
+</dd>
+<dt><strong>new_name_str</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The new name of the task item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line-block">
+<div class="line">0: On sucess. </div>
+<div class="line">1: On failure to rename the Task Item.</div>
+</div>
+<div class="line">-1: If no such Task Item exists.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">loadcase_name</span> <span class="o">=</span> <span class="s2">&quot;Load_position_&quot;</span>
+    <span class="n">loadcases</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Abaqus Standard Load Case&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">loadcase</span> <span class="ow">in</span> <span class="n">loadcases</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">loadcase_name</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetTaskItemName</span><span class="p">(</span><span class="n">loadcase</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SetToscaOptResultsDir">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SetToscaOptResultsDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SetToscaOptResultsDir" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets the directory of the optimization results to the Task Item (GENERATE_REPORT_FILE or RUN_SMOOTH)</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">The Task Item (GENERATE_REPORT_FILE or RUN_SMOOTH).</div>
+</div>
+</dd>
+<dt><strong>directory_str</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The directory with the optimization results.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line-block">
+<div class="line">0: On success.</div>
+<div class="line">1: On failure name the exported file.</div>
+</div>
+<div class="line">-1: If no such Task Item exists.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">RunSmoothItems</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;RUN_SMOOTH&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">RunSmoothItems</span><span class="p">:</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetToscaOptResultsDir</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="s2">&quot;C:/temp/users/folder/data.inp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.UpdateTaskItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">UpdateTaskItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.UpdateTaskItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function runs the specified task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item to be executed. Can be obtained by using </div>
+<div class="line">the functions GetTaskItemsByName() or GetTaskItemsByType().</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line-block">
+<div class="line">0, The Task Item was succesfuly updated.</div>
+<div class="line">1, The Task Item failed to update.</div>
+</div>
+<div class="line">-1, No such Task Item exists.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Get all task items named &quot;MyModelAssembly&quot;</span>
+    <span class="n">model_assembly</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;MyModelAssembly&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Run the first item in the model_assembly list</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">UpdateTaskItem</span><span class="p">(</span><span class="n">model_assembly</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret_val</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetTaskUserScriptData">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetTaskUserScriptData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetTaskUserScriptData" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Gets the data of a task manager user script.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item whose data will be returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a dictionary containing the following information for </div>
+<div class="line">the given task manager user script:</div>
+<div class="line">module file name:   (module_fname)</div>
+<div class="line">function name:      (function_name)</div>
+<div class="line">arguments:          (arguments)</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;User Script&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskUserScriptData</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Function name:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;function_name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SetTaskUserScriptData">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SetTaskUserScriptData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">script_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SetTaskUserScriptData" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets the data to a task manager user script.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item of which the data will be edited.</div>
+</div>
+</dd>
+<dt><strong>script_data</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A dictionary containing the information to be set</div>
+<div class="line">The entries of the dictionary are:</div>
+<div class="line">-module_fname: module file name</div>
+<div class="line">-function_name: function name</div>
+<div class="line">-arguments: arguments</div>
+<div class="line">-store_results: “on” “off”</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 0 on success and 1 on failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;User Script&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;module_fname&quot;</span><span class="p">:</span> <span class="s2">&quot;/home/user/an_ansa_python_mod.py&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;function_name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_function&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="s2">&quot;100,200&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetTaskUserScriptData</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SaveTask">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SaveTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SaveTask" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function saves all the task items of the TaskManager.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>filename</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">A string that describes the path and the filename of the ANSA </div>
+<div class="line">database, that the task items will be saved.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 0 on success, or 1 on failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#ansa.taskmanager.ReadTask" title="ansa.taskmanager.ReadTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansa.taskmanager.ReadTask</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">SaveTask</span><span class="p">(</span><span class="s2">&quot;/home/user/Tasks/CommonModel.ansa&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.TaskTemplateItem">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">TaskTemplateItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_reference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_arguments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_tip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ansa.taskmanager.TaskTemplateItem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A decorator that adds a User Script task item.</div>
+<div class="line">It must be placed above the definition of the function which you want to be executed</div>
+<div class="line">when called.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>template_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the Task item</div>
+</div>
+</dd>
+<dt><strong>template_reference</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The name of the specific Task item’s context menu to show</div>
+</div>
+</dd>
+<dt><strong>template_arguments</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The arguments to pass in the created User Script</div>
+</div>
+</dd>
+<dt><strong>template_tip</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The tip to show on the User Script task item</div>
+</div>
+</dd>
+<dt><strong>template_icon</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The icon to show on the User Script task item</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+
+<span class="nd">@ansa</span><span class="o">.</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">TaskTemplateItem</span><span class="p">(</span><span class="s2">&quot;TemplateFun1&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">TemplateFun1main</span><span class="p">():</span>
+    <span class="c1"># function code</span>
+    <span class="k">pass</span>
+
+<span class="c1"># will be available only for &quot;Pre-Processing&quot; items</span>
+<span class="nd">@ansa</span><span class="o">.</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">TaskTemplateItem</span><span class="p">(</span><span class="s2">&quot;TemplateFun2&quot;</span><span class="p">,</span> <span class="s2">&quot;Pre-Processing&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">TemplateFun2main</span><span class="p">():</span>
+    <span class="c1"># function code</span>
+    <span class="k">pass</span>
+
+<span class="c1"># will be available only for &quot;Pre-Processing&quot; items with &quot;Script_args&quot;</span>
+<span class="nd">@ansa</span><span class="o">.</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">TaskTemplateItem</span><span class="p">(</span><span class="s2">&quot;TemplateFun3&quot;</span><span class="p">,</span> <span class="s2">&quot;Pre-Processing&quot;</span><span class="p">,</span> <span class="s1">&#39;&quot;Script_args&quot;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">TemplateFun3main</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+    <span class="c1"># function code</span>
+    <span class="k">pass</span>
+
+<span class="c1"># will be available only for &quot;Pre-Processing&quot; items with &quot;Script_args&quot; and tooltip &quot;Script_tool_tip&quot;</span>
+<span class="nd">@ansa</span><span class="o">.</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">TaskTemplateItem</span><span class="p">(</span>
+    <span class="s2">&quot;TemplateFun4&quot;</span><span class="p">,</span> <span class="s2">&quot;Pre-Processing&quot;</span><span class="p">,</span> <span class="s1">&#39;&quot;Script_args&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;Script_tool_tip&quot;&#39;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">TemplateFun4main</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+    <span class="c1"># function code</span>
+    <span class="k">pass</span>
+
+<span class="c1"># will be available only for &quot;Pre-Processing&quot; items with &quot;Script_args&quot; and tooltip &quot;Script_tool_tip&quot; and icon &quot;gear_small.svg&quot;</span>
+<span class="nd">@ansa</span><span class="o">.</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">TaskTemplateItem</span><span class="p">(</span>
+    <span class="s2">&quot;TemplateFun5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Pre-Processing&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;&quot;Script_args&quot;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;&quot;Script_tool_tip&quot;&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;gear_small.svg&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">TemplateFun5main</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+    <span class="c1"># function code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SetSolverItemData">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SetSolverItemData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SetSolverItemData" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets the data to a task manager solver item</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>solver_item</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The Solvet task item</div>
+</div>
+</dd>
+<dt><strong>solver_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Solver type string, it can be one of:</div>
+<div class="line">‘Epilysis’</div>
+<div class="line">‘NASTRAN’</div>
+<div class="line">‘LS-DYNA’</div>
+<div class="line">‘PAM-CRASH’</div>
+<div class="line">‘ABAQUS’</div>
+<div class="line">‘RADIOSS’</div>
+<div class="line">‘ANSYS’</div>
+<div class="line">‘FLUENT’</div>
+<div class="line">‘FLUENT-2D’</div>
+<div class="line">‘STAR’</div>
+<div class="line">‘UH3D’</div>
+<div class="line">‘CFD++’</div>
+<div class="line">‘OPENFOAM’</div>
+<div class="line">‘PERMAS’</div>
+<div class="line">‘MOLDEX3D’</div>
+<div class="line">‘TAITHERM’</div>
+<div class="line">‘SESTRA’</div>
+<div class="line">‘THESEUS’</div>
+<div class="line">‘SC/TETRA’</div>
+<div class="line">‘TAU’</div>
+<div class="line">‘CGNS’</div>
+<div class="line">‘CGNS-2D’</div>
+<div class="line">‘OPTISTRUCT’</div>
+<div class="line">‘MARC’</div>
+<div class="line">‘ACTRAN’</div>
+<div class="line">‘KINETICS</div>
+<div class="line">‘User defined’</div>
+</div>
+</dd>
+<dt><strong>output_item</strong><span class="classifier">object, optional</span></dt><dd><div class="line-block">
+<div class="line">Output item to use for solving</div>
+</div>
+</dd>
+<dt><strong>solver_command</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">Solver command to use</div>
+</div>
+</dd>
+<dt><strong>solver_options</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">Solver options</div>
+</div>
+</dd>
+<dt><strong>solver_session</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">Session file for CFD Solvers</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Return -1 for error, 0 for success and 1 for failure</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Optimization item&quot;</span><span class="p">)</span>
+
+    <span class="n">solver_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Solver&quot;</span><span class="p">,</span> <span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">output_task_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;./biw_final.nas&quot;</span><span class="p">)</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetSolverItemData</span><span class="p">(</span>
+        <span class="n">solver_item</span><span class="o">=</span><span class="n">solver_item</span><span class="p">,</span>
+        <span class="n">solver_type</span><span class="o">=</span><span class="s2">&quot;NASTRAN&quot;</span><span class="p">,</span>
+        <span class="n">output_item</span><span class="o">=</span><span class="n">output_task_item</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">solver_command</span><span class="o">=</span><span class="s2">&quot;./nastran&quot;</span><span class="p">,</span>
+        <span class="n">solver_options</span><span class="o">=</span><span class="s1">&#39; &quot;./biw_final.nas&quot; bat=no&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SetPostProcessingItemData">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SetPostProcessingItemData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">post_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SetPostProcessingItemData" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets the data to a task manager Post-Processing item</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>post_item</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The Post-Processing task item</div>
+</div>
+</dd>
+<dt><strong>post_command</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The Meta command, will use the default if empty</div>
+</div>
+</dd>
+<dt><strong>post_session</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The session file, will look in current directory if empty</div>
+</div>
+</dd>
+<dt><strong>post_directory</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The output directory, current if empty</div>
+</div>
+</dd>
+<dt><strong>post_response</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The meta response file</div>
+</div>
+</dd>
+<dt><strong>post_options</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">the Meta command options</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Return -1 for error, 0 for success and 1 for failure</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Optimization item&quot;</span><span class="p">)</span>
+    <span class="n">post_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Post-Processing&quot;</span><span class="p">,</span> <span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetPostProcessingItemData</span><span class="p">(</span>
+        <span class="n">post_item</span><span class="o">=</span><span class="n">post_item</span><span class="p">,</span>
+        <span class="n">post_command</span><span class="o">=</span><span class="s2">&quot;./meta_post64.sh&quot;</span><span class="p">,</span>
+        <span class="n">post_session</span><span class="o">=</span><span class="s2">&quot;./max_stress.ses&quot;</span><span class="p">,</span>
+        <span class="n">post_directory</span><span class="o">=</span><span class="s2">&quot;./&quot;</span><span class="p">,</span>
+        <span class="n">post_response</span><span class="o">=</span><span class="s2">&quot;max_stress.ses.results&quot;</span><span class="p">,</span>
+        <span class="n">post_options</span><span class="o">=</span><span class="s2">&quot; -noses -nolog -b -foregr -s $SES $DIR  $RES&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.LCPointsFisrtTorsionalWizard">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">LCPointsFisrtTorsionalWizard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes_lc_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">ansa.base.Entity</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.taskmanager.LCPointsFisrtTorsionalWizard" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Wizard to create LC_POINTS to be used in order to calculate the First Torsional Mode</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>nodes_lc_points</strong><span class="classifier">list[base.Entity], optional</span></dt><dd><div class="line-block">
+<div class="line">A nodes list to create the LC_POINTS</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">A list with the created LC_POINTS</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">lcPoints</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">LCPointsFisrtTorsionalWizard</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetTaskItemParents">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetTaskItemParents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetTaskItemParents" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Function to get the parents of the given item</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item_ref</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item to get its parents</div>
+</div>
+</dd>
+<dt><strong>parent_level</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">True: Returns all parents.</div>
+<div class="line">False: Returns first level parents.</div>
+<div class="line">default value True</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">A list with the parent items</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;User Script&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">parents</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemParents</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">parents</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">parents</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemParents</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">parents</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SetTaskItemIcon">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SetTaskItemIcon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SetTaskItemIcon" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function sets an icon to a task item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item which icon will be changed</div>
+</div>
+</dd>
+<dt><strong>icon_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The icon path or the icon name for the embedded icons</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line-block">
+<div class="line">0: On sucess. </div>
+<div class="line">1: On failure to set the icon</div>
+</div>
+<div class="line">-1: If no such Task Item exists.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">loadcase_name</span> <span class="o">=</span> <span class="s2">&quot;Load_position_&quot;</span>
+    <span class="n">loadcases</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;Abaqus Standard Load Case&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">loadcase</span> <span class="ow">in</span> <span class="n">loadcases</span><span class="p">:</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetTaskItemIcon</span><span class="p">(</span><span class="n">loadcase</span><span class="p">,</span> <span class="s2">&quot;C:\data\icons\loadcase_icons.png&quot;</span><span class="p">)</span>
+        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SetResponseItemData">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SetResponseItemData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ansa_entity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ansa_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SetResponseItemData" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets the data to a task manager Response item</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>response_item</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The response item</div>
+</div>
+</dd>
+<dt><strong>ansa_entity</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The ansa entity to retrive response</div>
+</div>
+</dd>
+<dt><strong>ansa_field</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The ansa field to monitor</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Return -1 for error, 0 for success and 1 for failure</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span><span class="p">,</span> <span class="n">constants</span><span class="p">,</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">main_items</span> <span class="o">=</span> <span class="n">ansa</span><span class="o">.</span><span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;OPTIMIZATION_TASK_1&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">main_items</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">opt_task_m</span> <span class="o">=</span> <span class="n">main_items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">taskmanager</span><span class="o">.</span><span class="n">ExecTaskItemMenuFun</span><span class="p">(</span><span class="n">opt_task_m</span><span class="p">,</span> <span class="s2">&quot;Definition&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">opt_task_m</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Optimization item&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">setName</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetTaskItemName</span><span class="p">(</span><span class="n">opt_task_m</span><span class="p">,</span> <span class="s2">&quot;OPTIMIZATION_TASK_1&quot;</span><span class="p">)</span>
+    <span class="n">opt_task_pre</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Pre-Processing&quot;</span><span class="p">,</span> <span class="n">opt_task_m</span><span class="p">)</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;Response Item&quot;</span><span class="p">,</span> <span class="n">opt_task_pre</span><span class="p">)</span>
+    <span class="n">setName</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetTaskItemName</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="s2">&quot;MEASUREMENT_1_RESULT&quot;</span><span class="p">)</span>
+
+    <span class="n">p_aent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">ansa</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">CurrentDeck</span><span class="p">(),</span> <span class="s2">&quot;MEASUREMENT&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">ansa_field</span> <span class="o">=</span> <span class="s2">&quot;RESULT&quot;</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetResponseItemData</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">p_aent</span><span class="p">,</span> <span class="n">ansa_field</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetEntityFieldFromAnsaParam">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetEntityFieldFromAnsaParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ansa_param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetEntityFieldFromAnsaParam" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function returns the entity and the field referenced from the A_PARAMETER</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>ansa_param</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The task item whose fields will be obtained. Can be obtained </div>
+<div class="line">by a call to GetTaskItemsByName() or GetTaskItemsByType().</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a dictionary with [entity, card_field]</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">a_params</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByType</span><span class="p">(</span><span class="s2">&quot;A_PARAMETER&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ap</span> <span class="ow">in</span> <span class="n">a_params</span><span class="p">:</span>
+        <span class="nb">dict</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetEntityFieldFromAnsaParam</span><span class="p">(</span><span class="n">ap</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.SetDOESingleAction">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">SetDOESingleAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.taskmanager.SetDOESingleAction" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">set when the action will be executed</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The DOESingleAction task item</div>
+</div>
+</dd>
+<dt><strong>item_action</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The action, valid values:</div>
+<div class="line">“On start up” and “At the end”</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Return 0 for succes, 1 for failure</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;OPTIMIZATION_TASK_1&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="n">single_action</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;DOESingleActions&quot;</span><span class="p">,</span> <span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetDOESingleAction</span><span class="p">(</span><span class="n">single_action</span><span class="p">,</span> <span class="s2">&quot;On start up&quot;</span><span class="p">)</span>
+    <span class="n">new_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;User Script&quot;</span><span class="p">,</span> <span class="n">single_action</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;function_name_1&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;module_fname&quot;</span><span class="p">:</span> <span class="s2">&quot;my_script.py&quot;</span><span class="p">,</span> <span class="s2">&quot;function_name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">}</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetTaskUserScriptData</span><span class="p">(</span><span class="n">new_item</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetTaskItemName</span><span class="p">(</span><span class="n">new_item</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+    <span class="n">single_action</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;DOESingleActions&quot;</span><span class="p">,</span> <span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetDOESingleAction</span><span class="p">(</span><span class="n">single_action</span><span class="p">,</span> <span class="s2">&quot;At the end&quot;</span><span class="p">)</span>
+    <span class="n">new_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">CreateTaskItem</span><span class="p">(</span><span class="s2">&quot;User Script&quot;</span><span class="p">,</span> <span class="n">single_action</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;function_name_2&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;module_fname&quot;</span><span class="p">:</span> <span class="s2">&quot;my_script.py&quot;</span><span class="p">,</span> <span class="s2">&quot;function_name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">}</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetTaskUserScriptData</span><span class="p">(</span><span class="n">new_item</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">taskmanager</span><span class="o">.</span><span class="n">SetTaskItemName</span><span class="p">(</span><span class="n">new_item</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.taskmanager.GetPostProcessingItemData">
+<span class="sig-prename descclassname"><span class="pre">ansa.taskmanager.</span></span><span class="sig-name descname"><span class="pre">GetPostProcessingItemData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#ansa.taskmanager.GetPostProcessingItemData" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Get the data from a task manager Post-Processing item</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>task_item</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The Post-Processing task item</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>dict</dt><dd><div class="line-block">
+<div class="line">A dictionary with values</div>
+<div class="line">{‘post_command’: ‘’, </div>
+<div class="line">‘post_session’: ‘’, </div>
+<div class="line">‘post_directory’: ‘’, </div>
+<div class="line">‘post_response’: ‘’, </div>
+<div class="line">‘post_options’: ‘ ‘}</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#ansa.taskmanager.SetPostProcessingItemData" title="ansa.taskmanager.SetPostProcessingItemData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansa.taskmanager.SetPostProcessingItemData</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">taskmanager</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">post_item</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetTaskItemsByName</span><span class="p">(</span><span class="s2">&quot;Post-Processing&quot;</span><span class="p">)</span>
+    <span class="nb">dict</span> <span class="o">=</span> <span class="n">taskmanager</span><span class="o">.</span><span class="n">GetPostProcessingItemData</span><span class="p">(</span><span class="n">post_item</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

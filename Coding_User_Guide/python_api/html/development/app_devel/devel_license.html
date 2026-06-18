@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>BETA Developer License &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'development/app_devel/devel_license';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="beta-developer-license">
+<h1>BETA Developer License<a class="headerlink" href="#beta-developer-license" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>BETA CAE Systems has introduced a new license feature in ANSA and META, called <strong>BETA Developer License</strong>. This license is intended for developing script applications using the ANSA and META Python API, without having to acquire a full license. Limitations and reduced functionality come along with the Developer License.</p>
+</section>
+<section id="ansa">
+<h2>ANSA<a class="headerlink" href="#ansa" title="Permalink to this heading">#</a></h2>
+<section id="launching-ansa">
+<h3>Launching ANSA<a class="headerlink" href="#launching-ansa" title="Permalink to this heading">#</a></h3>
+<p>In order to launch ANSA in Developer License mode, use the <strong>“–developer-license”</strong> option:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-0">
+Linux</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansa64.sh<span class="w"> </span>--developer-license
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-1">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span>ansa64.bat --developer-license
+</pre></div>
+</div>
+</div>
+</div>
+<p>The ANSA Launcher won’t appear. Instead, ANSA will open directly and its main window title will contain the label <strong>“Developer License”</strong>.</p>
+</section>
+<section id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>When the model contains more that 1000 elements or more than 50 faces:</p>
+<blockquote>
+<div><ul>
+<li><p>Output of neutral deck files (File &gt; Output) is disabled. API output functions like <strong>base.OutputNastran</strong> always return failure. However, parsing of arguments is performed, so that an error free script can be written.</p></li>
+<li><p>Output of CAD files (File &gt; Output CAD) is disabled.</p></li>
+<li><p>Output from Database Browser’s right click Output option is disabled.</p></li>
+<li><p>API functions return modified double values. The modification is around 1.5% for values less than 1 and goes down to 1e-06% for values greater than 10e14. Zero, whole doubles, nan, inf and -inf are returned unmodified. The modified functions are the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CalcElementMass" title="ansa.base.CalcElementMass"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CalcElementMass()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CalcShellArea" title="ansa.base.CalcShellArea"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CalcShellArea()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CalcSolidVolume" title="ansa.base.CalcSolidVolume"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CalcSolidVolume()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.ElementQuality" title="ansa.base.ElementQuality"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.ElementQuality()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.Entity.get_entity_values" title="ansa.base.Entity.get_entity_values"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.Entity.get_entity_values()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.Entity.position" title="ansa.base.Entity.position"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.Entity.position()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.GetEntityCardValues" title="ansa.base.GetEntityCardValues"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.GetEntityCardValues()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.GetLoadCurveData" title="ansa.base.GetLoadCurveData"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.GetLoadCurveData()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.GetShellEffectiveEngineeringProperties" title="ansa.base.GetShellEffectiveEngineeringProperties"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.GetShellEffectiveEngineeringProperties()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.Sgraph" title="ansa.base.Sgraph"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.Sgraph()</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>ANSA Databases are saved encrypted. When saving a database, a respective message is shown in ANSA Info. A database saved in Developer License mode can be opened only by ANSA running under this license. If you try to open it with normal ANSA, a denial message will appear in ANSA Info. Saving as previous version (File &gt; Save as v20) is disabled. The API function <strong>base.SaveAs(filename=’foo.ansa’, version=’v20’|’previous’)</strong> returns failure.</p></li>
+<li><p>Epilysis is blocked. In ANSA, the button NASTRAN &gt; EPILYSIS &gt; SOLVE is removed. API functions <strong>base.Epilysis</strong> and <strong>base.OutputEpilysis</strong> return failure.</p></li>
+</ul>
+</section>
+</section>
+<section id="meta">
+<h2>META<a class="headerlink" href="#meta" title="Permalink to this heading">#</a></h2>
+<section id="launching-meta">
+<h3>Launching META<a class="headerlink" href="#launching-meta" title="Permalink to this heading">#</a></h3>
+<p>In order to launch META in Developer License mode, use the “–developer-license” option:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-2">
+Linux</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>meta_post64.sh<span class="w"> </span>--developer-license
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-3">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span>meta_post64.bat --developer-license
+</pre></div>
+</div>
+</div>
+</div>
+<p>The META Launcher won’t appear. Instead, META will open directly and its main window title will contain the label <strong>“Developer License”</strong></p>
+</section>
+<section id="id1">
+<h3>Limitations<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>For 3D models with more than 1000 elements and curves with more than 50 points:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>All 3D result values and curve point values read in META will be modified. The outcome of NVH calculators, the Linear Combination tool, the Random Response tool and the Section Forces tool will also be returned modified.</p></li>
+<li><p>It won’t be possible to export to formats other than META databases and project files.</p></li>
+<li><p>All script functions that return values related to geometry will return modified values.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>A database saved in Developer License mode can only be opened by META running under this license. If you try to open it with normal META, a denial message will appear in the Info window. Saving a database in previous formats (&lt;=16.0.0) is disabled.</p></li>
+</ul>
+</section>
+</section>
+<section id="application-licensing-and-distribution">
+<h2>Application Licensing and Distribution<a class="headerlink" href="#application-licensing-and-distribution" title="Permalink to this heading">#</a></h2>
+<p>If you are interested in Licensing and Distributing your applications, read more about the <a class="reference internal" href="#application-licensing-and-distribution"><span class="std std-ref">Application Licensing and Distribution</span></a> mechanism that BETA CAE Systems has introduced.</p>
+</section>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ansa">
+   ANSA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#launching-ansa">
+     Launching ANSA
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limitations">
+     Limitations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meta">
+   META
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#launching-meta">
+     Launching META
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Limitations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-licensing-and-distribution">
+   Application Licensing and Distribution
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

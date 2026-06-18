@@ -1,0 +1,1402 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module ansa.session &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_ansa/generated/ansa.session';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ansa.html">Module ansa</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ansa.analysis_tools.html">Module ansa.analysis_tools</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ansa.base.html">Module ansa.base</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="ansa.base.checks.html">Module ansa.base.checks</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.general.html">Module ansa.base.checks.general</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.geometry.html">Module ansa.base.checks.geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.mesh.html">Module ansa.base.checks.mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.penetration.html">Module ansa.base.checks.penetration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.kinetics.html">Module ansa.base.kinetics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.batchmesh.html">Module ansa.batchmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.betascript.html">Module ansa.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.cad.html">Module ansa.cad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.calc.html">Module ansa.calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.connections.html">Module ansa.connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.constants.html">Module ansa.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.dm.html">Module ansa.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.kinetics.html">Module ansa.kinetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.mesh.html">Module ansa.mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.morph.html">Module ansa.morph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.report.html">Module ansa.report</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module ansa.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ansa.spdrm.html">Module ansa.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ansa.spdrm.process.html">Module ansa.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.taskmanager.html">Module ansa.taskmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.utils.html">Module ansa.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.vr.html">Module ansa.vr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.analysis_tools.html">Module ansa.analysis_tools</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ansa.base.html">Module ansa.base</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ansa.base.checks.html">Module ansa.base.checks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.general.html">Module ansa.base.checks.general</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.geometry.html">Module ansa.base.checks.geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.mesh.html">Module ansa.base.checks.mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.penetration.html">Module ansa.base.checks.penetration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.base.kinetics.html">Module ansa.base.kinetics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.batchmesh.html">Module ansa.batchmesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.betascript.html">Module ansa.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.cad.html">Module ansa.cad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.calc.html">Module ansa.calc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.connections.html">Module ansa.connections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.constants.html">Module ansa.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.dm.html">Module ansa.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.kinetics.html">Module ansa.kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.mesh.html">Module ansa.mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.morph.html">Module ansa.morph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.report.html">Module ansa.report</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module ansa.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ansa.spdrm.html">Module ansa.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ansa.spdrm.process.html">Module ansa.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.taskmanager.html">Module ansa.taskmanager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.utils.html">Module ansa.utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.vr.html">Module ansa.vr</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-ansa.session">
+<span id="module-ansa-session"></span><span id="api-ref-ansa-session"></span><h1>Module ansa.session<a class="headerlink" href="#module-ansa.session" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.ApplicationInformation">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">ApplicationInformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'text'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ansa.session.ApplicationInformation" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function reports build and runtime information of the running ANSA process.</div>
+<div class="line"><br /></div>
+<div class="line">This includes the ANSA version, its build date, and information about the</div>
+<div class="line">architecture of the application and the underling operating system.</div>
+<div class="line">The report is similar to:</div>
+<div class="line">+————————————————————</div>
+<div class="line-block">
+<div class="line">A N S A </div>
+<div class="line">version: 12.2, compiled on: Jan 11 2007, 13:02:45</div>
+<div class="line">built: 64-bit</div>
+<div class="line">platform: Linux x86_64 2.4.21-209-smp little-endian</div>
+</div>
+<div class="line">+————————————————————</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>format</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The format of the returned data. Can be ‘text’ or ‘dict’.  Default is ‘text’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">If format =’text’, it returns a string containing the build/runtime information. If format = ‘dict’, the information is returned as a dictionary object.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">ApplicationInformation</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.DeckName">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">DeckName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deck</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ansa.session.DeckName" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function returns the deck name as string, given the integer deck constant.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>deck</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">The integer deck constant.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns a string of the Deck name on success. On failure, it raises a ValueError Exception.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>ValueError</dt><dd><div class="line-block">
+<div class="line">Invalid deck constant as argument.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="ansa.base.html#ansa.base.CurrentDeck" title="ansa.base.CurrentDeck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansa.base.CurrentDeck</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">constants</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">DeckName</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>  <span class="c1"># Will print &quot;NASTRAN&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.New">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">New</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.session.New" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function instructs the program to create a new file.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>option</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Accepted values:  “blank”, “discard”, “active” or “all”.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 0 in all cases.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;discard&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.Quit">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">Quit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.session.Quit" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function quits the current file and exits the program.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>status</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">The exit code status of the application. (Default = 0)</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 0 in all cases.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">Quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.defbutton">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">defbutton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rgb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ansa.session.defbutton" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A decorator that adds a menu button.</div>
+<div class="line">It must be placed above the definition of the function which you want to be executed when the created button is pressed.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>group</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the group in which the button will be created.</div>
+</div>
+</dd>
+<dt><strong>label</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The label of the button.</div>
+<div class="line">(If nothing is declared, the label will be the name of function).</div>
+</div>
+</dd>
+<dt><strong>tip</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The button’s tip.</div>
+<div class="line">(The text that is shown when the user rolls the mouse pointer over the button)</div>
+</div>
+</dd>
+<dt><strong>rgb</strong><span class="classifier">tuple, optional</span></dt><dd><div class="line-block">
+<div class="line">A tuple with the rgb color used as underline color in the created button e.g. (255, 0, 0) for red color.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+
+<span class="nd">@ansa</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">defbutton</span><span class="p">(</span><span class="s2">&quot;groupName&quot;</span><span class="p">,</span> <span class="s2">&quot;buttonLabel&quot;</span><span class="p">,</span> <span class="s2">&quot;buttonTip&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">myFunction</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Button Pressed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.BenchmarkFPS">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">BenchmarkFPS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctrl_flag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift_flag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times_to_press_benchmark</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.session.BenchmarkFPS" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns a list of size the “times_to_press_benchmark”, which contains the results of FPS, </div>
+<div class="line">same as if you had pressed in ANSA Settings&gt;Graphics&gt;Benchmark button having checkboxes </div>
+<div class="line">CTRL and SHIFT as per arguments and settings frames set 20(default value).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>frames</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Value that sets the number of frames that will be checked.</div>
+</div>
+</dd>
+<dt><strong>ctrl_flag</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Options are 0 and 1. Value 0 sets the ctrl flag as unchecked and </div>
+<div class="line">value 1 sets the flag as checked.</div>
+</div>
+</dd>
+<dt><strong>shift_flag</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Options are 0 and 1. Value 0 sets the shift flag as unchecked and </div>
+<div class="line">value 1 sets the flag as checked.</div>
+</div>
+</dd>
+<dt><strong>times_to_press_benchmark</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Value that sets how many times the benchmark is called.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>Iterable[float]</dt><dd><div class="line-block">
+<div class="line">Returns a list of size times_to_press_benchmark with the float values of FPS.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="c1"># The following example calls the benchmark 3 times for the open database,</span>
+<span class="c1"># having frames=20 and CTRL+SHIFT ON and then calculates the mean FPS value.</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">number_of_frames</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">ctrl_flag</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">shift_flag</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">times_to_bechmark</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">benchmark</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">BenchmarkFPS</span><span class="p">(</span>
+        <span class="n">number_of_frames</span><span class="p">,</span> <span class="n">ctrl_flag</span><span class="p">,</span> <span class="n">shift_flag</span><span class="p">,</span> <span class="n">times_to_bechmark</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">benchmark</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.SaveSettings">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">SaveSettings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.session.SaveSettings" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 20.0.0: </span>Use <a class="reference internal" href="ansa.base.html#ansa.base.BCSettingsWriteFile" title="ansa.base.BCSettingsWriteFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.BCSettingsWriteFile()</span></code></a> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">Saves the current settings of ANSA in the defaults file.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">It returns 0 in all cases.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="ansa.base.html#ansa.base.BCSettingsWriteFile" title="ansa.base.BCSettingsWriteFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansa.base.BCSettingsWriteFile</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">This function is deprecated. Use ansa.guitk.BCSettingsWriteFile()</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.SaveSettingsAs">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">SaveSettingsAs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.session.SaveSettingsAs" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 20.0.0: </span>Use <a class="reference internal" href="ansa.base.html#ansa.base.BCSettingsWriteFile" title="ansa.base.BCSettingsWriteFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.BCSettingsWriteFile()</span></code></a> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">This function gives the option to save the current settings used in ANSA, with a different file name.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>filename</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">the full pathname of the file where current settings (.defaults) will be saved.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">It returns 0 on success, 1 otherwise.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="ansa.base.html#ansa.base.BCSettingsWriteFile" title="ansa.base.BCSettingsWriteFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansa.base.BCSettingsWriteFile</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">This function is deprecated. Use ansa.guitk.BCSettingsWriteFile(filename)</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.GetReadyForNewTask">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">GetReadyForNewTask</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ansa.session.GetReadyForNewTask" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function is invoked when the currently running ANSA instance is to be </div>
+<div class="line">declared as available for running new tasks. The actual effect will depend on</div>
+<div class="line">the configuration / state of the ANSA at the time. Specifically, on invocation</div>
+<div class="line">of this command:</div>
+<div class="line">* The currently open database is discarded</div>
+<div class="line">* Python Exception with string ‘ReadyForNewTask’ as argument is raised. This is</div>
+<div class="line-block">
+<div class="line">equivalent as if the following Python statement was invoked:</div>
+<div class="line">raise Exception(‘ReadyForNewTask’)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">When the execution engine detects that the script terminated with such an </div>
+<div class="line">exception, then the following courses of action are possible:</div>
+<div class="line">* If ANSA is not running as a worker (i.e. the listen port has not been</div>
+<div class="line-block">
+<div class="line">configured), then the process is terminated.</div>
+</div>
+<div class="line">* If ANSA is running as a worker, but script execution was not triggered by the</div>
+<div class="line-block">
+<div class="line">connected entity, then an Event Report message is sent with Event Code </div>
+<div class="line">‘Ready for New Task’</div>
+</div>
+<div class="line">* If ANSA is running as a worker and script execution was triggered by the </div>
+<div class="line-block">
+<div class="line">connected entity, then nothing happens.</div>
+</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>None</dt><dd><div class="line-block">
+<div class="line">This function always raises an exception / never returns a value</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>Exception</dt><dd><div class="line-block">
+<div class="line">An Exception object is always raised by this function</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">task</span><span class="p">():</span>
+    <span class="c1"># Execute task and then declare self as ready for new tasks</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">GetReadyForNewTask</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.PrintMemoryUsage">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">PrintMemoryUsage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.session.PrintMemoryUsage" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 23.1.0: </span>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.GetProcessSystemMetrics()</span></code> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">Will print the application’s current memory usage.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>prefix</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">If the prefix argument is given, then it will precede the printed text.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 on success and 0 on failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">PrintMemoryUsage</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.ProgramArguments">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">ProgramArguments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.session.ProgramArguments" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function retrieves the command line arguments of the program.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[str]</dt><dd><div class="line-block">
+<div class="line">Returns a list containing the program arguments.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">ProgramArguments</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="s2">&quot; arguments&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.GetFreePhysicalMemory">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">GetFreePhysicalMemory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.session.GetFreePhysicalMemory" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 23.1.0: </span>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.GetProcessSystemMetrics()</span></code> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">Returns the free physical memory at the time of this function’s call in kilobytes (1024 bytes).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns the free physical memory on success and 0 on failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">GetFreePhysicalMemory</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.BetaClearVariable">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">BetaClearVariable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ansa.session.BetaClearVariable" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function frees the memory from the given beta variable.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the beta variable.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">True if operation was successful, False otherwise.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">beta_var_name</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">BetaSetVariable</span><span class="p">(</span><span class="n">beta_var_name</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">BetaGetVariable</span><span class="p">(</span><span class="n">beta_var_name</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">BetaClearVariable</span><span class="p">(</span><span class="n">beta_var_name</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">BetaGetVariable</span><span class="p">(</span><span class="n">beta_var_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Variable &quot;&#39;</span> <span class="o">+</span> <span class="n">beta_var_name</span> <span class="o">+</span> <span class="s1">&#39;&quot; cannot be retrieved&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.BetaGetVariable">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">BetaGetVariable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.session.BetaGetVariable" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Ansa script can store user data and address them by a name.</div>
+<div class="line">These data are NOT volatile as script variables and can be accessed either from different scripts or whenever a script is run.</div>
+<div class="line">This function allows the user to retrieve data stored under a user specified name.</div>
+<div class="line">Wildcards can also be used (“*”, “?”, “[…]”).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the beta variable to be retrieved.</div>
+</div>
+</dd>
+<dt><strong>match</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">Control the matching mode of the name lookup.</div>
+<div class="line">Values are:</div>
+<div class="line">-constants.ENM_EXACT: an exact match (default)</div>
+<div class="line">-constants.ENM_WILDCARD: a wildcard match</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">The function returns the Beta Variable if the variable is found. It returns None otherwise.</div>
+<div class="line"><br /></div>
+<div class="line">If match=constants.ENM_WILDCARD is used, it returns a dictionary with key the variable name and data the variable value.</div>
+<div class="line">The dictionary is empty if no variables matching the wildcard expression were found.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>ValueError</dt><dd><div class="line-block">
+<div class="line">If an unknown match value is given.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#ansa.session.BetaSetVariable" title="ansa.session.BetaSetVariable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansa.session.BetaSetVariable</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">BetaSetVariable</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">BetaGetVariable</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">BetaSetVariable</span><span class="p">(</span><span class="s2">&quot;AB&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variables matching *&quot;</span><span class="p">)</span>
+    <span class="nb">vars</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">BetaGetVariable</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">constants</span><span class="o">.</span><span class="n">ENM_WILDCARD</span><span class="p">)</span>  <span class="c1"># returns all variables</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">vars</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name: </span><span class="si">{}</span><span class="s2"> Value: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variables matching [a-z]*&quot;</span><span class="p">)</span>
+    <span class="nb">vars</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">BetaGetVariable</span><span class="p">(</span>
+        <span class="s2">&quot;[a-z]*&quot;</span><span class="p">,</span> <span class="n">constants</span><span class="o">.</span><span class="n">ENM_WILDCARD</span>
+    <span class="p">)</span>  <span class="c1"># returns variables starting with lower letter</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">vars</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name: </span><span class="si">{}</span><span class="s2"> Value: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.BetaSetVariable">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">BetaSetVariable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ansa.session.BetaSetVariable" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Ansa script can store user data and address them by a name.</div>
+<div class="line">These data are NOT volatile as script variables and can be accessed either from </div>
+<div class="line">different scripts or whenever a script is run.</div>
+<div class="line">This function allows the user to store data under a user specified name.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the beta variable.</div>
+</div>
+</dd>
+<dt><strong>value</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A bytes object of the data to store.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True on success, or False on failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#ansa.session.BetaGetVariable" title="ansa.session.BetaGetVariable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansa.session.BetaGetVariable</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">BetaSetVariable</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">BetaGetVariable</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">BetaSetVariable</span><span class="p">(</span><span class="s2">&quot;AB&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variables matching *&quot;</span><span class="p">)</span>
+    <span class="nb">vars</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">BetaGetVariable</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">constants</span><span class="o">.</span><span class="n">ENM_WILDCARD</span><span class="p">)</span>  <span class="c1"># returns all variables</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">vars</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name: </span><span class="si">{}</span><span class="s2"> Value: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variables matching [a-z]*&quot;</span><span class="p">)</span>
+    <span class="nb">vars</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">BetaGetVariable</span><span class="p">(</span>
+        <span class="s2">&quot;[a-z]*&quot;</span><span class="p">,</span> <span class="n">constants</span><span class="o">.</span><span class="n">ENM_WILDCARD</span>
+    <span class="p">)</span>  <span class="c1"># returns variables starting with lower letter</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">vars</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name: </span><span class="si">{}</span><span class="s2"> Value: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.GetMemoryUsage">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">GetMemoryUsage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.session.GetMemoryUsage" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 23.1.0: </span>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.GetProcessSystemMetrics()</span></code> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">Returns the application’s physical memory consumption in kilobytes(1024 bytes).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns the application’s physical memory consumption on success and None on failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">GetMemoryUsage</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.AcquireFeature">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">AcquireFeature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.session.AcquireFeature" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">It registers license token found in a BETA LM license.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>feature</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The feature to acquire license tokens for. </div>
+<div class="line">The list of available feature names for a specific license server can be found </div>
+<div class="line">with the command beta_lm_stat -h server. BETA CAE Systems issues license </div>
+<div class="line">keys to application developers upon request.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">1: When the feature has been acquired successfully.</div>
+<div class="line">-1: When an incompatible feature is given (ex: ANSA).</div>
+<div class="line">-10: When an invalid feature is given.</div>
+<div class="line">-12: When no credit is available.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#ansa.session.ReleaseFeature" title="ansa.session.ReleaseFeature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansa.session.ReleaseFeature</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">You need to call session.ReleaseFeature on a feature, as soon as the user exits the licensed functionality.</div>
+<div class="line">On program termination, all acquired features will be auto-released.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ret_feature</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">AcquireFeature</span><span class="p">(</span><span class="s2">&quot;TEST_SCRIPT&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">ret_feature</span> <span class="o">==</span> <span class="o">-</span><span class="mi">12</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No credit is available&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">ret_feature</span> <span class="o">==</span> <span class="o">-</span><span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is invalid feature&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="n">even_nums</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">even_nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">ReleaseFeature</span><span class="p">(</span><span class="s2">&quot;TEST_SCRIPT&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ret</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tokens released succesfully&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.ReleaseFeature">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">ReleaseFeature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#ansa.session.ReleaseFeature" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Releases a previously acquired feature through session.AcquireFeature.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>feature</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The feature to release the tokens from.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">1: When a previously acquired feature is succesfully released.</div>
+<div class="line">-1: When an incompatible feature, unknown or a non acquired feature is given.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#ansa.session.AcquireFeature" title="ansa.session.AcquireFeature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansa.session.AcquireFeature</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">You need to call session.ReleaseFeature on a feature, as soon as the user exits the licensed functionality.</div>
+<div class="line">On program termination, all acquired features will be auto-released.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ret_feature</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">AcquireFeature</span><span class="p">(</span><span class="s2">&quot;TEST_SCRIPT&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">ret_feature</span> <span class="o">==</span> <span class="o">-</span><span class="mi">12</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No credit is available&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">ret_feature</span> <span class="o">==</span> <span class="o">-</span><span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is invalid feature&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="n">even_nums</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">even_nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">ReleaseFeature</span><span class="p">(</span><span class="s2">&quot;TEST_SCRIPT&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ret</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tokens released succesfully&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.setPluginInfos">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">setPluginInfos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">classInstance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansa.session.setPluginInfos" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets an instance of a user-defined class, as plugin’s information.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>classInstance</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">An Instance of a user-defined class with specific variable names.</div>
+<div class="line">The main Variable names are:</div>
+<div class="line">- filepath: Set as string the path of actual main file. (mandatory)</div>
+<div class="line">- Buttons: A dict in which you set your buttons with key:button’s label and </div>
+<div class="line-block">
+<div class="line">values: tuple(function name, tooltip, help, path for image of button).</div>
+</div>
+<div class="line">- title: Set title of plugin as string.</div>
+<div class="line">- author: Set author of plugin as string.</div>
+<div class="line">- hostApplication: Set host application of plugin as string.</div>
+<div class="line">- minHostApplicationVersion: Set minimmum host application version of plugin as string.</div>
+<div class="line">- description: Set description of plugin as string.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">class</span> <span class="nc">plinfos</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Title of plugin&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;Author of plugin&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hostApplication</span> <span class="o">=</span> <span class="s2">&quot;ANSA&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">minHostApplicationVersion</span> <span class="o">=</span> <span class="s2">&quot;v16.0.0&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Description of plugin&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filepath</span> <span class="o">=</span> <span class="s2">&quot;/file/path/of/plugin/plugin.ppl&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">Buttons</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;ButtonLabel&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;functionName&quot;</span><span class="p">,</span> <span class="s2">&quot;tooltip&quot;</span><span class="p">,</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;imagefilePath&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">plinfos</span><span class="p">()</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">setPluginInfos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.session.SystemInfo">
+<span class="sig-prename descclassname"><span class="pre">ansa.session.</span></span><span class="sig-name descname"><span class="pre">SystemInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'text'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span></span></span><a class="headerlink" href="#ansa.session.SystemInfo" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function reports system information of the machine running ANSA process. </div>
+<div class="line">This includes the system name, the system version, the architecture type, the number of CPU cores etc.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>format</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The format of the returned data. Can be ‘text’ or ‘dict’.  Default is ‘text’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str | dict</dt><dd><div class="line-block">
+<div class="line">If format =’text’ a string object is returned. If format = ‘dict’ the system information is returned as a dictionary object.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">session</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">SystemInfo</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1863 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Interacting with META &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/api_meta/intro_meta';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="interacting-with-meta">
+<h1>Interacting with META<a class="headerlink" href="#interacting-with-meta" title="Permalink to this heading">#</a></h1>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this heading">#</a></h2>
+<p>The basic idea behind the META API is to automate many repetitive and tedious
+procedures with the minimum user interaction and to perform specific tasks that are not covered by
+the standard META commands and MΕΤΑ session capabilities. Some of the tasks that can be
+performed within META API are the following:</p>
+<ul class="simple">
+<li><p>Load models, scan and load resuts from solver output files.</p></li>
+<li><p>Extract any type of information from an already loaded model (data from nodes, elements, boundary elements, materials, models, coordinate systems and groups etc).</p></li>
+<li><p>Access and manipulate data from META entities like annotations, groups, cut planes and isofunctions.</p></li>
+<li><p>Manipulate 2D plots: create and modify curves, run functions and access their attributes.</p></li>
+<li><p>Create new results (deformation-scalar-vector) on nodes and elements or make calculations on existing ones.</p></li>
+<li><p>Create and manipulate 3D and 2D windows.</p></li>
+<li><p>Create custom GUI.</p></li>
+<li><p>Use of session commands.</p></li>
+<li><p>Running automatically (after launching META) a series of functions.</p></li>
+<li><p>Communication with the interface (File Manager functions, Pick functions).</p></li>
+<li><p>Profit from Python’s functionality to manipulate files and directories, read and write ASCII or binary files, use system commands etc.</p></li>
+</ul>
+<p>These tasks are controlled through a series of MΕΤΑ specific functions, objects and methods.</p>
+<p>To use a META specific function in Python, the relevant module has to be imported from
+META. The names of the modules are the available categories in the drop-down menu in tab
+Library in Functions List window. The functions are then called as methods of the imported module.</p>
+<p>For example to print the ids and names of the all models</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">models</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_models</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Id:   &#39;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;   Name:   &#39;</span><span class="o">+</span><span class="n">model</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Python objects are directly linked to META entities and not copies, as it is shown in the following three examples:</p>
+<p><strong>Example 1</strong> - Access object after deletion of internal META entity</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">window_name</span> <span class="o">=</span> <span class="s1">&#39;MetaPost&#39;</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">key</span>
+    <span class="n">deck</span> <span class="o">=</span> <span class="s1">&#39;DYNA&#39;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LoadModel</span><span class="p">(</span><span class="n">window_name</span><span class="p">,</span><span class="n">filename</span><span class="p">,</span><span class="n">deck</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Model id: &#39;</span><span class="p">,</span><span class="n">r</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">models</span><span class="o">.</span><span class="n">DeleteModel</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">id</span><span class="p">,</span><span class="n">window_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Model id: &#39;</span><span class="p">,</span><span class="n">r</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Model id: 0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Model id: None</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 2</strong> - Update of objects fields</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">window_name</span> <span class="o">=</span> <span class="s1">&#39;MetaPost&#39;</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">key</span>
+    <span class="n">deck</span> <span class="o">=</span> <span class="s1">&#39;DYNA&#39;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LoadModel</span><span class="p">(</span><span class="n">window_name</span><span class="p">,</span><span class="n">filename</span><span class="p">,</span><span class="n">deck</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">active</span><span class="p">)</span>
+    <span class="n">utils</span><span class="o">.</span><span class="n">MetaCommand</span><span class="p">(</span><span class="s1">&#39;model active empty&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">active</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 3</strong> - Set value to a field of a META python object</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">window_name</span> <span class="o">=</span> <span class="s1">&#39;MetaPost&#39;</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">key</span>
+    <span class="n">deck</span> <span class="o">=</span> <span class="s1">&#39;DYNA&#39;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LoadModel</span><span class="p">(</span><span class="n">window_name</span><span class="p">,</span><span class="n">filename</span><span class="p">,</span><span class="n">deck</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">active</span><span class="p">)</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">active</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>An exception will be raised</p></td>
+</tr>
+</tbody>
+</table>
+<p>Copied objects can be used to maintain access to the initial object, after deletion of the internal META entity, as follow:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">class</span> <span class="nc">CopiedModel</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">label</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">deck</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">deck</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">active</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">object</span> <span class="o">=</span> <span class="n">obj</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">window_name</span> <span class="o">=</span> <span class="s1">&#39;MetaPost&#39;</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">key</span>
+    <span class="n">deck</span> <span class="o">=</span> <span class="s1">&#39;DYNA&#39;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LoadModel</span><span class="p">(</span><span class="n">window_name</span><span class="p">,</span><span class="n">filename</span><span class="p">,</span><span class="n">deck</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
+        <span class="n">r_copied</span> <span class="o">=</span> <span class="n">CopiedModel</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Model id: &#39;</span><span class="p">,</span><span class="n">r_copied</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+    <span class="n">models</span><span class="o">.</span><span class="n">DeleteModel</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">id</span><span class="p">,</span><span class="n">window_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Model id: &#39;</span><span class="p">,</span><span class="n">r_copied</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Output</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Model id: 0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Model id: 0</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="handling-data">
+<h1>Handling data<a class="headerlink" href="#handling-data" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>Using the available META modules, it is possible to access and manipulate the data of the various
+META entities. Contrary to BETA Scripting, the attributes of the META objects can be accessed
+directly without the need to define the object type first (as it is needed to define the META struct first).</p>
+</section>
+<section id="meta-objects">
+<h2>META Objects<a class="headerlink" href="#meta-objects" title="Permalink to this heading">#</a></h2>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>class</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.models.html#meta.models.Model" title="meta.models.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.models.Model</span></code></a></p></td>
+<td><p>is used to carry information about the loaded models</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.elements.html#meta.elements.Element" title="meta.elements.Element"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.elements.Element</span></code></a></p></td>
+<td><p>is used to carry information about the elements of loaded models</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.nodes.html#meta.nodes.Node" title="meta.nodes.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.nodes.Node</span></code></a></p></td>
+<td><p>is used to carry information about the loaded nodes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.parts.html#meta.parts.Part" title="meta.parts.Part"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.parts.Part</span></code></a></p></td>
+<td><p>is used to carry information about the loaded parts</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.boundaries.html#meta.boundaries.Boundary" title="meta.boundaries.Boundary"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.boundaries.Boundary</span></code></a></p></td>
+<td><p>is used to carry information about the boundary loaded elements</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.materials.html#meta.materials.Material" title="meta.materials.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.materials.Material</span></code></a></p></td>
+<td><p>is used to carry information about the loaded materials</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.pages.html#meta.pages.Page" title="meta.pages.Page"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.pages.Page</span></code></a></p></td>
+<td><p>is used to carry information about the existing pages</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.windows.html#meta.windows.Window" title="meta.windows.Window"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.windows.Window</span></code></a></p></td>
+<td><p>is used to carry information about the existing windows</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.groups.html#meta.groups.Group" title="meta.groups.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.groups.Group</span></code></a></p></td>
+<td><p>is used to carry information about the current groups</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.results.html#meta.results.Result" title="meta.results.Result"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.results.Result</span></code></a></p></td>
+<td><p>is used to carry information about the loaded results</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.results.html#meta.results.Deformation" title="meta.results.Deformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.results.Deformation</span></code></a></p></td>
+<td><p>is used to carry information about the deformation data on a node</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.results.html#meta.results.ModalDeformation" title="meta.results.ModalDeformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.results.ModalDeformation</span></code></a></p></td>
+<td><p>is used to carry information about the modal deformation data on a node</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.results.html#meta.results.NodalScalar" title="meta.results.NodalScalar"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.results.NodalScalar</span></code></a></p></td>
+<td><p>is used to carry information about scalar function data on a node</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.results.html#meta.results.CentroidScalar" title="meta.results.CentroidScalar"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.results.CentroidScalar</span></code></a></p></td>
+<td><p>is used to carry information about scalar function data on the centroid of an element</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.results.html#meta.results.CornerScalar" title="meta.results.CornerScalar"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.results.CornerScalar</span></code></a></p></td>
+<td><p>is used to carry information about scalar function data on the corners of an element</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.results.html#meta.results.NodalVector" title="meta.results.NodalVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.results.NodalVector</span></code></a></p></td>
+<td><p>is used to carry information about vector function data on a node</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.results.html#meta.results.CentroidVector" title="meta.results.CentroidVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.results.CentroidVector</span></code></a></p></td>
+<td><p>is used to carry information about vector function data on the centroid of an element</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.Plot" title="meta.plot2d.Plot"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.Plot</span></code></a></p></td>
+<td><p>is used to carry information about 2D plots</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.Point" title="meta.plot2d.Point"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.Point</span></code></a></p></td>
+<td><p>is used to carry information about points of curves</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.coordsystems.html#meta.coordsystems.CoordSystem" title="meta.coordsystems.CoordSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.coordsystems.CoordSystem</span></code></a></p></td>
+<td><p>is used to carry information about coordinate systems</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.annotations.html#meta.annotations.Annotation" title="meta.annotations.Annotation"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.annotations.Annotation</span></code></a></p></td>
+<td><p>is used to carry information about annotations</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.windows.html#meta.windows.Color" title="meta.windows.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.windows.Color</span></code></a></p></td>
+<td><p>is used to carry information about window colors</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.visuals.html#meta.visuals.Image" title="meta.visuals.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.visuals.Image</span></code></a></p></td>
+<td><p>is used to carry information about the existing images</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.visuals.html#meta.visuals.Video" title="meta.visuals.Video"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.visuals.Video</span></code></a></p></td>
+<td><p>is used to carry information about the existing videos</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.planes.html#meta.planes.Plane" title="meta.planes.Plane"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.planes.Plane</span></code></a></p></td>
+<td><p>is used to carry information about the existing planes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.isofunctions.html#meta.isofunctions.IsoFunction" title="meta.isofunctions.IsoFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.isofunctions.IsoFunction</span></code></a></p></td>
+<td><p>is used to carry information about the existing isofunctions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.coordsystems.html#meta.coordsystems.ElementCoordSystem" title="meta.coordsystems.ElementCoordSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.coordsystems.ElementCoordSystem</span></code></a></p></td>
+<td><p>is used to carry information about the coordinate systems of elements</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.parts.html#meta.parts.Layer" title="meta.parts.Layer"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.parts.Layer</span></code></a></p></td>
+<td><p>is used to carry information about the layers of a composite part</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.Footer" title="meta.plot2d.Footer"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.Footer</span></code></a></p></td>
+<td><p>is used to carry information about plot footer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.Fringe" title="meta.plot2d.Fringe"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.Fringe</span></code></a></p></td>
+<td><p>is used to carry information about plot fringe</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.Grid" title="meta.plot2d.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.Grid</span></code></a></p></td>
+<td><p>is used to carry information about plot grid</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.Curve" title="meta.plot2d.Curve"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.Curve</span></code></a></p></td>
+<td><p>is used to carry information about curves</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.CurveGroup" title="meta.plot2d.CurveGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.CurveGroup</span></code></a></p></td>
+<td><p>is used to carry information about the existing curve groups</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.PlotAxis" title="meta.plot2d.PlotAxis"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.PlotAxis</span></code></a></p></td>
+<td><p>is used to carry information about the x and y axes of 2d window</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.Legend" title="meta.plot2d.Legend"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.Legend</span></code></a></p></td>
+<td><p>is used to carry information about plot legends</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.Title" title="meta.plot2d.Title"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.Title</span></code></a></p></td>
+<td><p>is used to carry information about plot title</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.annotations.html#meta.annotations.AnnotationGroup" title="meta.annotations.AnnotationGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.annotations.AnnotationGroup</span></code></a></p></td>
+<td><p>is used to carry information about the existing annotation groups</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.connections.html#meta.connections.Connection" title="meta.connections.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.connections.Connection</span></code></a></p></td>
+<td><p>is used to carry information about connections</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.PlotModel" title="meta.plot2d.PlotModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.PlotModel</span></code></a></p></td>
+<td><p>is used to carry information about load ed plot models like time history files (2d models)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.spreadsheet.html#meta.spreadsheet.Spreadsheet" title="meta.spreadsheet.Spreadsheet"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.spreadsheet.Spreadsheet</span></code></a></p></td>
+<td><p>is used to carry information about Spreadsheet Editor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.spreadsheet.html#meta.spreadsheet.SpreadsheetCell" title="meta.spreadsheet.SpreadsheetCell"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.spreadsheet.SpreadsheetCell</span></code></a></p></td>
+<td><p>is used to carry information about cells in Spreadsheet Editor</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.spreadsheet.html#meta.spreadsheet.Sheet" title="meta.spreadsheet.Sheet"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.spreadsheet.Sheet</span></code></a></p></td>
+<td><p>is used to carry information about sheet in Spreadsheet Editor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.spreadsheet.html#meta.spreadsheet.SpreadsheetRange" title="meta.spreadsheet.SpreadsheetRange"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.spreadsheet.SpreadsheetRange</span></code></a></p></td>
+<td><p>is used to carry information about the range of cells on a spreadsheet sheet</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.elements.html#meta.elements.ElementLayer" title="meta.elements.ElementLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.elements.ElementLayer</span></code></a></p></td>
+<td><p>is used to carry information about the element layers</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.overlay.html#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></p></td>
+<td><p>is used to carry information about the overlay runs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.elements.html#meta.elements.ElementFace" title="meta.elements.ElementFace"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.elements.ElementFace</span></code></a></p></td>
+<td><p>is used to carry information about the element faces</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.windows.html#meta.windows.ParamPoint" title="meta.windows.ParamPoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.windows.ParamPoint</span></code></a></p></td>
+<td><p>is used to carry information about the parametric points</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.nvh.html#meta.nvh.ResponseNode" title="meta.nvh.ResponseNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.nvh.ResponseNode</span></code></a></p></td>
+<td><p>is used to carry information about the for NVH response nodes</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.nvh.html#meta.nvh.ResponseNodeLc" title="meta.nvh.ResponseNodeLc"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.nvh.ResponseNodeLc</span></code></a></p></td>
+<td><p>is used to carry information about the for NVH Response node linear combination</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.nvh.html#meta.nvh.Load" title="meta.nvh.Load"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.nvh.Load</span></code></a></p></td>
+<td><p>is used to carry information about the for NVH Loads/subloads</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.nvh.html#meta.nvh.ResponseElement" title="meta.nvh.ResponseElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.nvh.ResponseElement</span></code></a></p></td>
+<td><p>is used to carry information about the for NVH response elements</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.nvh.html#meta.nvh.ResponsePanel" title="meta.nvh.ResponsePanel"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.nvh.ResponsePanel</span></code></a></p></td>
+<td><p>is used to carry information about the for NVH response panels</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.nvh.html#meta.nvh.ModalMatrix" title="meta.nvh.ModalMatrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.nvh.ModalMatrix</span></code></a></p></td>
+<td><p>is used to carry information about the for NVH Modal Matrices</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.nvh.html#meta.nvh.LcNode" title="meta.nvh.LcNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.nvh.LcNode</span></code></a></p></td>
+<td><p>is used to carry information about the nodes contained in a linear combination response</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.utils.html#meta.utils.QualityAssurance" title="meta.utils.QualityAssurance"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.utils.QualityAssurance</span></code></a></p></td>
+<td><p>is used to carry information about the statistical data of the program</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.base.html#meta.base.Canvas" title="meta.base.Canvas"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.base.Canvas</span></code></a></p></td>
+<td><p>is used to draw primitives on the GL area</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.sections.html#meta.sections.Section" title="meta.sections.Section"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.sections.Section</span></code></a></p></td>
+<td><p>is used to carry information about the section</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Report" title="meta.report.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Report</span></code></a></p></td>
+<td><p>is used to create and edit reports</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Slide" title="meta.report.Slide"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Slide</span></code></a></p></td>
+<td><p>is used to carry information about the slide of a report</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Textbox" title="meta.report.Textbox"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Textbox</span></code></a></p></td>
+<td><p>is used to carry information about the textbox of a report</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Line" title="meta.report.Line"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Line</span></code></a></p></td>
+<td><p>is used to carry information about the line of a report</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Picture" title="meta.report.Picture"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Picture</span></code></a></p></td>
+<td><p>is used to carry information about the picture of a report</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Table" title="meta.report.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Table</span></code></a></p></td>
+<td><p>is used to carry information about the table of a report</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.ExcelTable" title="meta.report.ExcelTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.ExcelTable</span></code></a></p></td>
+<td><p>is used to carry information about the excel table of a report</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.ShapeGroup" title="meta.report.ShapeGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.ShapeGroup</span></code></a></p></td>
+<td><p>is used to carry information about the shape group of a report</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Rectangle" title="meta.report.Rectangle"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Rectangle</span></code></a></p></td>
+<td><p>is used to carry information about the rectangle of a report</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Ellipse" title="meta.report.Ellipse"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Ellipse</span></code></a></p></td>
+<td><p>is used to carry information about the ellipse of a report</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Triangle" title="meta.report.Triangle"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Triangle</span></code></a></p></td>
+<td><p>is used to carry information about the triangle of a report</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.TableRange" title="meta.report.TableRange"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.TableRange</span></code></a></p></td>
+<td><p>is used to carry information about the table cell range of a report</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.TableCell" title="meta.report.TableCell"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.TableCell</span></code></a></p></td>
+<td><p>is used to carry information about the table cell of a report</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.ReportFilter" title="meta.report.ReportFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.ReportFilter</span></code></a></p></td>
+<td><p>is used to find pptx files based on their tags</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.ReportTag" title="meta.report.ReportTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.ReportTag</span></code></a></p></td>
+<td><p>is used to carry information about the report tags</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Freeform" title="meta.report.Freeform"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Freeform</span></code></a></p></td>
+<td><p>is used to carry information about the freeform shape of a report</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Model3D" title="meta.report.Model3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Model3D</span></code></a></p></td>
+<td><p>is used to carry information about the 3d model of a report</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.VideoShape" title="meta.report.VideoShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.VideoShape</span></code></a></p></td>
+<td><p>is used to carry information about the video shape of a report</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.report.html#meta.report.Audio" title="meta.report.Audio"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.report.Audio</span></code></a></p></td>
+<td><p>is used to carry information about the audio shape of a report</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="meta-deck-constants">
+<h2>META deck constants<a class="headerlink" href="#meta-deck-constants" title="Permalink to this heading">#</a></h2>
+<p>A deck name is often needed as an argument for many of the META APIs, in order to define the desired deck.
+Below, can be found a list with all the available META deck constants.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Deck constants</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>“NASTRAN”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“ASCII”</p></td>
+</tr>
+<tr class="row-even"><td><p>“DYNA”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“MARC”</p></td>
+</tr>
+<tr class="row-even"><td><p>“ABAQUS”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“PATRAN”</p></td>
+</tr>
+<tr class="row-even"><td><p>“PAMCRASH”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“RADIOSS”</p></td>
+</tr>
+<tr class="row-even"><td><p>“ANSYS”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“SONATE”</p></td>
+</tr>
+<tr class="row-even"><td><p>“ACTRAN”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“FEMFAT”</p></td>
+</tr>
+<tr class="row-even"><td><p>“MADYMO”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“MEDINA”</p></td>
+</tr>
+<tr class="row-even"><td><p>“PERMAS”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“HYPERMESH”</p></td>
+</tr>
+<tr class="row-even"><td><p>“UNIVERSAL”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“ANIMATORDB”</p></td>
+</tr>
+<tr class="row-even"><td><p>“METADB”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“FLUENT”</p></td>
+</tr>
+<tr class="row-even"><td><p>“OPENFOAM”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“CCM”</p></td>
+</tr>
+<tr class="row-even"><td><p>“STL”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“VRML”</p></td>
+</tr>
+<tr class="row-even"><td><p>“3DXML”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“PLY”</p></td>
+</tr>
+<tr class="row-even"><td><p>“RETOMO”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“PLOT2D”</p></td>
+</tr>
+<tr class="row-even"><td><p>“JT”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“IM”</p></td>
+</tr>
+<tr class="row-even"><td><p>“GOM”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“ENSIGHT”</p></td>
+</tr>
+<tr class="row-even"><td><p>“SCTETRA”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“TECPLOT”</p></td>
+</tr>
+<tr class="row-even"><td><p>“PARAVIEW”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“FEFATIGUE”</p></td>
+</tr>
+<tr class="row-even"><td><p>“CFD++”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“U3D”</p></td>
+</tr>
+<tr class="row-even"><td><p>“RADTHERM” or “TAITHERM”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“THESEUS-FE”</p></td>
+</tr>
+<tr class="row-even"><td><p>“CFX”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“CGNS”</p></td>
+</tr>
+<tr class="row-even"><td><p>“XDMF”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“AVLFIRE”</p></td>
+</tr>
+<tr class="row-even"><td><p>“FIELDVIEW”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“CONVERGE”</p></td>
+</tr>
+<tr class="row-even"><td><p>“POWERFLOW”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“TAU”</p></td>
+</tr>
+<tr class="row-even"><td><p>“CAD”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“ONF”</p></td>
+</tr>
+<tr class="row-even"><td><p>“M01”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“ADAMS”</p></td>
+</tr>
+<tr class="row-even"><td><p>“ANSAKINETICS”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“OBJ”</p></td>
+</tr>
+<tr class="row-even"><td><p>“FBX”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“AUTOFORM”</p></td>
+</tr>
+<tr class="row-even"><td><p>“MXCHANGE”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“ATFX”</p></td>
+</tr>
+<tr class="row-even"><td><p>“MOLDFLOW”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“MOLDEX3D”</p></td>
+</tr>
+<tr class="row-even"><td><p>“POINTCLOUD”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“IMPETUS”</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="collect-entities">
+<h1>Collect entities<a class="headerlink" href="#collect-entities" title="Permalink to this heading">#</a></h1>
+<section id="id1">
+<h2>Introduction<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>There is also a separate group of script functions for META entities. For example, there are Element functions to collect the elements, Node functions to collect the nodes, etc.</p>
+<p>Additionally, there are the following generic functions <em>models.CollectEntities</em> to collect all the specified loaded entities:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.models.html#meta.models.CollectEntities" title="meta.models.CollectEntities"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.models.CollectEntities()</span></code></a></p></td>
+<td><p>Collect all existing entities of the specified type in the current META session</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.models.html#meta.models.CollectModelEntities" title="meta.models.CollectModelEntities"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.models.CollectModelEntities()</span></code></a></p></td>
+<td><p>Collect all existing entities of the specified type in a mode</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reference/api_ref_meta/generated/meta.windows.html#meta.windows.CollectWindowEntities" title="meta.windows.CollectWindowEntities"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.windows.CollectWindowEntities()</span></code></a></p></td>
+<td><p>Collect all existing entities of the specified type in a window</p></td>
+</tr>
+</tbody>
+</table>
+<p>The types of entities that can be collected using these functions are: pages, models, parts, elements, nodes, plots, curves, annotations, cut planes e.t.c</p>
+</section>
+<section id="collect-entities-of-the-database">
+<h2>Collect entities of the database<a class="headerlink" href="#collect-entities-of-the-database" title="Permalink to this heading">#</a></h2>
+<p>For collecting all entities, the appropriate functions are the functions with just the type of the entities
+to be collected, e.g. <em>Annotations()</em>, <em>Boundaries()</em>, <em>LoadsOfBoundary()</em>, <em>Elements()</em>, <em>Nodes()</em>, <em>Parts()</em>,
+<em>Models()</em>, <em>Groups()</em>, <em>Resultsets()</em>, <em>Connections()</em>, etc. Please note that Groups refer to the entities
+Parts/Groups of Part Manager, Includes, Boundaries, Connections, Sets</p>
+<p>In the case of model entities, the model id is given as argument.</p>
+<p>To access the entities directly according to their id, the list with the model objects can be
+converted to a dictionary with the <strong>XxxListToDict()</strong> functions where the key is the entities’ id, e.g.
+<em>AnnotationsListToDict()</em>, <em>ElementsListToDict()</em>, etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">parts</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+    <span class="n">model_id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">all_parts</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="n">Parts</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">all_parts</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="n">dict_parts</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="n">PartsListToDict</span><span class="p">(</span><span class="n">all_parts</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">dict_parts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="n">dict_parts</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="c1">#Get directly part with id 10</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To get the entities types of a model, the functions <strong>XxxTypeXxx()</strong> are available, e.g.
+<em>ElementsTypes()</em>, <em>CurvesTypesNastran()</em>, <em>DeformationTypes()</em>, <em>ScalarTypes()</em>, <em>VectorTypes()</em> etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">elements</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">model_id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">all_types</span> <span class="o">=</span> <span class="n">elements</span><span class="o">.</span><span class="n">ElementsTypes</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">element_type</span> <span class="ow">in</span> <span class="n">all_types</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">element_type</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To retrieve deformation results types of a database the following can be used.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">results</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;X:/project.metadb&#39;</span>
+    <span class="n">deck</span> <span class="o">=</span> <span class="s1">&#39;METADB&#39;</span>
+    <span class="n">all_types</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">DeformationTypes</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">deck</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">one_type</span> <span class="ow">in</span> <span class="n">all_types</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">one_type</span><span class="p">)</span>
+        <span class="n">deform_type</span> <span class="o">=</span> <span class="n">one_type</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Deformation type</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">deform_type</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total</span><span class="p">):</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">one_type</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># Id of the state</span>
+</pre></div>
+</div>
+<p>For curves types of Dyna, Pamcrash and Radios files the functions <em>plot2d.CurvesTypesDynaWithNames()</em>, <em>plot2d.CurvesTypesPamcrashWithNames()</em>
+and <em>plot2d.CurvesTypesRadiossWithNames()</em> are available to get also their name.</p>
+</section>
+<section id="collect-entities-from-other-entities">
+<h2>Collect entities from other entities<a class="headerlink" href="#collect-entities-from-other-entities" title="Permalink to this heading">#</a></h2>
+<p>Using the <strong>Xxx.get_xxx()</strong> methods of the objects, it is possible to collect entities from other entities, e.g. <em>parts.Part.get_elements()</em>,
+<em>elements.Element.get_nodes()</em> , <em>nodes.Node.get_elements()</em> , <em>groups.Group.get_parts()</em>, etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">groups</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">groups</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s1">&#39;My_Group&#39;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">group_parts</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">get_parts</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">group_parts</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">subtype</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">mat_id</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">shell_thick</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="collect-entities-according-to-their-attributes">
+<h2>Collect entities according to their attributes<a class="headerlink" href="#collect-entities-according-to-their-attributes" title="Permalink to this heading">#</a></h2>
+<p>In order to collect entities according to one of their attributes, <strong>Xxx.get_xxx()</strong> methods with named arguments can be used e.g.
+<strong>models.Model.get_nodes</strong> <em>(‘with_name’, name = ‘&lt;node name&gt;’)</em> , <strong>models.Model.get_nodes</strong> <em>(‘with_name’, field10 = ‘&lt;field name&gt;’)</em> , <strong>models.Model.get_elements</strong> <em>(‘all’, element_id = &lt;element id&gt; )</em> ,  <strong>windows.Window.get_curves</strong> <em>(‘byname’ , name = &lt;curve name&gt;)</em> , <strong>models.Model.get_elements</strong> <em>(‘all’, element_type = ‘&lt;element type&gt;’)</em>, <strong>models.Model.get_elements</strong> <em>(‘failed’, resultset = &lt;resultset&gt;)</em>, <strong>models.Model.get_nodes</strong> <em>(‘free’)</em>, <strong>parts.Part.get_elements</strong> <em>(‘outer’)</em>, <strong>models.Model.get_nodes</strong> <em>(‘follow’)</em> etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nb">type</span> <span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">PSHELL</span>
+    <span class="n">collected_parts</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_parts</span><span class="p">(</span><span class="s1">&#39;all&#39;</span> <span class="p">,</span> <span class="n">part_type</span>  <span class="o">=</span> <span class="nb">type</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">collected_parts</span><span class="p">:</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">type</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">subtype</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">mat_id</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">shell_thick</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For entities that need to be collected and which are neighbors of other entities, the argumnet <strong>‘neighbour’</strong> can be used e.g.
+<strong>models.Model.get_elements</strong> <em>(‘neighbour’)</em>, <strong>materials.Material.get_materials</strong> <em>(‘neighbour’)</em>, <strong>parts.Part.get_parts</strong> <em>(‘neighbour’)</em>  etc. can be used.
+Neighboring entities are those which are directly attached to the specified entity or calculated by the solver.</p>
+<p>For entities that need to be collected according to their nearest relative position to one given point,
+the argumnet <strong>‘nearest’</strong> can be used e.g. <strong>parts.Part.get_nodes</strong> <em>(‘nearest, point_coordinates = point, distance_type = ‘xyz’)</em>,
+<strong>groups.Group.get_nodes</strong> <em>(‘nearest, point_coordinates = point, distance_type = ‘xyz’)</em>, <strong>parts.Part.get_elements</strong> <em>(‘nearest’, point_coordinates = point)</em>,
+<strong>groups.Group.get_elements</strong> <em>(‘nearest’, point_coordinates = point )</em>, <strong>materials.Material.get_nodes</strong> <em>(‘nearest’, distance_type = ‘x’ , point_coordinates = point )</em>,
+<strong>materials.Material.get_elements</strong> <em>(‘nearest’, point_coordinates = point )</em> etc.</p>
+<p>When entities need to be collected according to results (deformation, scalar, vector) or according to
+more advanced filters, then the functions <strong>AdvFiltersOnXxx()</strong> and <strong>XxxFromAdvFilters()</strong> can be used,
+e.g. <em>AdvFiltersOnNodes()</em>, <em>AdvFiltersOnPoints()</em>, <em>ElementsFromAdvFilters()</em>, etc.. The difference
+between AdvFiltersXxx() and XxxFromAdvFilters() functions is that in AdvFiltersXxx() the filters are
+given as a string argument to the functions, whereas in XxxFromAdvFilters() the execution of the
+script will stop and a window will open in order for the user to specify the advanced filters.</p>
+<p>An easy way to build the string argument with the advanced filters for AdvFiltersXxx() is to apply an
+iFilter from GUI inside a META session. The string, that corresponds to the filters selected, will be
+shown as argument of the applied META command in the command line or in the current
+META_post.ses.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">elements</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">adv_filters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">adv_filters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;add:Parts:id:==1:Keep All&#39;</span><span class="p">)</span>
+    <span class="n">adv_filters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;intersect:Elements:centroidfuncmax::Max 3&#39;</span><span class="p">)</span>
+    <span class="n">all_resultsets</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_resultsets</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">all_resultsets</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">collected_elements</span> <span class="o">=</span> <span class="n">elements</span><span class="o">.</span><span class="n">AdvFiltersOnElements</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span><span class="n">adv_filters</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">collected_elements</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">plot2d</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">window_name</span> <span class="o">=</span> <span class="s1">&#39;Window1&#39;</span>
+    <span class="n">collected_curves</span> <span class="o">=</span> <span class="n">plot2d</span><span class="o">.</span><span class="n">CurvesFromAdvFilters</span><span class="p">(</span><span class="n">window_name</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">collected_curves</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="collect-visible-entities">
+<h2>Collect visible entities<a class="headerlink" href="#collect-visible-entities" title="Permalink to this heading">#</a></h2>
+<p>For collecting the visible entities, the <strong>‘visible’</strong> specifier of the <strong>Xxx.get_xxx()</strong> methods should be used
+e.g. <strong>pages.Page.get_annotations</strong> <em>(‘visible’)</em>, <strong>models.Model.get_elements</strong> <em>(‘visible’)</em>, <strong>pages.Page.get_curves</strong> <em>(‘visible’)</em>, etc.</p>
+<p>The <strong>‘visible’</strong> specifier optionally combined with named arguments type, window e.t.c
+e.g. <strong>models.Model.get_elements</strong> <em>(‘visible’ ,element_type = constants.SOLID)</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">parts</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">groups</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s1">&#39;My_Group&#39;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">get_parts</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">)</span>
+    <span class="c1">#w = windows.Window(&#39;MetaPost&#39;, 0)</span>
+    <span class="c1">#parts = group.get_parts(&#39;visible&#39;, window = w)</span>
+    <span class="c1">#parts = group.get_parts(&#39;visible&#39;, window = w, type = constants.PSOLID)</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">type</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">subtype</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">mat_id</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">shell_thick</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="collect-identified-entities">
+<h2>Collect identified entities<a class="headerlink" href="#collect-identified-entities" title="Permalink to this heading">#</a></h2>
+<p>For getting only the identified entities of a model the respective specifier is <strong>‘identified’</strong> e.g.
+<strong>models.Model.get_elements</strong> <em>(‘identified’)</em>, <strong>models.Model.get_nodes</strong> <em>(‘identified’)</em>, <strong>models.Model.get_parts</strong> <em>(‘identified’)</em> etc.</p>
+</section>
+<section id="collect-models-information">
+<h2>Collect models information<a class="headerlink" href="#collect-models-information" title="Permalink to this heading">#</a></h2>
+<p>There is a series of functions to get information from the loaded models, like <em>nodes.NumOfNodes</em>,
+<em>models.NumOfModels</em>, <em>parts.NumOfPartsByType(),</em> etc.</p>
+<p>Also information only for the active Models, Pages, Plots, Plot axes and Windows can be retrieved
+through the <strong>‘active’</strong> specifier of  of the <strong>Xxx.get_xxx()</strong> methods e.g.
+<strong>utils.get_models</strong> <em>(‘active’)</em>, <strong>utils.get_pages</strong> <em>(‘active’)</em>, <strong>pages.Page.get_plots</strong> <em>(‘active’)</em>, <strong>pages.Page.get_plot_axes</strong> <em>(‘active’)</em> and
+<strong>pages.Page.get_windows</strong> <em>(‘active’)</em>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">act_models</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_models</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">act_models</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">deck</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">active</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Information about the currently loaded plot models (the plot files listed in the Read Results &gt;
+Curves &gt; Files List) that may exist can be retrieved through the function <em>utils.get_plot_models()</em>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">plot_models</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_plot_models</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">pmod</span> <span class="ow">in</span> <span class="n">plot_models</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pmod</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">pmod</span><span class="o">.</span><span class="n">deck</span><span class="p">,</span> <span class="n">pmod</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="collect-newly-created-entities">
+<h2>Collect newly created entities<a class="headerlink" href="#collect-newly-created-entities" title="Permalink to this heading">#</a></h2>
+<p>For collecting all newly created entities of a specific type, the respective functions to use are
+<em>CreateNewXxxStart()</em>, <em>ReportNewXxx()</em> and <em>CreateNewXxxEnd()</em></p>
+<p>The syntax is, for example: <em>CreateNewAnnotationsStart()</em>, <em>ReportNewAnnotations()</em>,
+<em>CreateNewAnnotationsEnd()</em>, etc.</p>
+<p>This can be very useful in order to get the number and ids of entities created through filters or
+session commands.</p>
+<p>For example, for curves created through the Curve Function User Defined the function
+<em>ReportNewXxx()</em> will return the entity‟s objects without ending the recording of the created entities.</p>
+<p>To collect newly created entities within a period, the functions to use are <em>CollectNewXxxStart()</em> and
+<em>CollectNewXxxEnd()</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">plot2d</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">utils</span><span class="o">.</span><span class="n">MetaCommand</span><span class="p">(</span><span class="s1">&#39;xyplot read lsdyna &quot;Window1&quot; &quot;Z:/demo/nodout&quot; Node 1 Magnitude_of_acceleration_(ma)&#39;</span><span class="p">)</span>
+    <span class="n">plot2d</span><span class="o">.</span><span class="n">CollectNewCurvesStart</span><span class="p">()</span>
+    <span class="n">utils</span><span class="o">.</span><span class="n">MetaCommand</span><span class="p">(</span><span class="s1">&#39;xyplot curve function userdef &quot;Displacement Difference&quot; &quot;c1.x&quot; &quot;c1.y-c2.y&quot; &quot;Window1&quot;&#39;</span><span class="p">)</span>
+    <span class="n">new_curves</span> <span class="o">=</span> <span class="n">plot2d</span><span class="o">.</span><span class="n">CollectNewCurvesEnd</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">new_curves</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">id</span><span class="p">,</span><span class="n">c</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="collect-files-and-directories">
+<h2>Collect files and directories<a class="headerlink" href="#collect-files-and-directories" title="Permalink to this heading">#</a></h2>
+<p>For collecting files (of specific formats) or directories, the commands of the python os module can
+be used. A simple example to get the files in a directory is the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;Z:/demo&#39;</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="select-files-or-directories-through-the-file-manager">
+<h2>Select files or directories through the file manager<a class="headerlink" href="#select-files-or-directories-through-the-file-manager" title="Permalink to this heading">#</a></h2>
+<p>META API interacts directly with the File Manager through the commands <em>utils.SelectOpenDir()</em>,
+<em>utils.SelectSaveDir()</em>, <em>utils.SelectOpenFile()</em>, <em>utils.SelectSaveFile()</em>, <em>utils.SelectOpenFileIn()</em>, <em>utils.SelectSaveFileIn()</em>. These
+functions open the File Manager and allow the selection or creation of files and directories. This is
+an elegant way to use file and directory paths in user scripts, since it enables the interactive
+definition of script parameters. The functions that deal with files return a list containing strings
+that represent the full path to the selected files, while those for directories return a string indicating
+the full path to the folder.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Select the file for reading&#39;</span><span class="p">)</span>
+    <span class="n">read_file</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">SelectOpenFile</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;csv files (*.csv)&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">read_file</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No file was selected&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The file that was selected is:&#39;</span><span class="p">,</span> <span class="n">read_file</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Select the log file for writing the error messages&#39;</span><span class="p">)</span>
+    <span class="n">save_file</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">SelectSaveFile</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">save_file</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No file was selected&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The file that was selected for writing errors is:&#39;</span><span class="p">,</span> <span class="n">save_file</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Select the directory where the META files are located&#39;</span><span class="p">)</span>
+    <span class="nb">dir</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">SelectOpenDir</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">dir</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No dir was selected&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The selected directory is:&#39;</span><span class="p">,</span> <span class="nb">dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="create-edit-delete-and-handle-entities">
+<h1>Create, Edit, Delete and Handle Entities<a class="headerlink" href="#create-edit-delete-and-handle-entities" title="Permalink to this heading">#</a></h1>
+<section id="id2">
+<h2>Introduction<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>The entities Annotations, Cut planes, Groups, Isofunctions, Windows, Models, Pages, Plots, Parts
+Curves, Images and Videos can be created edited and deleted through script functions. The entities
+nodes, elements, materials and boundaries CANNOT be created, edited or deleted in META
+in general, so this is also not possible through scripting. Coordinate systems can be created but
+cannot be deleted. Moreover, specific functions exist for other operations related to the entities, e.g.
+to show, hide, get results from them, etc.</p>
+</section>
+<section id="create-entities">
+<h2>Create entities<a class="headerlink" href="#create-entities" title="Permalink to this heading">#</a></h2>
+<p>For creating entities the respective functions are <strong>CreateXxx()</strong>, e.g. <em>CreateEmptyAnnotation()</em>, <em>CreatePlane()</em>, <em>CreateGroupFromElements()</em>, etc..</p>
+<p>The entities can also be created by applying the respective session commands (see also chapter “META session commands for use in Scripting Language”). However, one advantage of creating the entities through script functions is that the function returns the objects of the created entities. For example, when creating a curve through scripting, the id of the curve is available.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">window_name</span> <span class="o">=</span> <span class="s1">&#39;MetaPost&#39;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;10th Annotation&#39;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">annotations</span><span class="o">.</span><span class="n">CreateEmptyAnnotation</span><span class="p">(</span><span class="n">window_name</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">annotations</span><span class="o">.</span><span class="n">IsAnnotation</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="edit-entities">
+<h2>Edit entities<a class="headerlink" href="#edit-entities" title="Permalink to this heading">#</a></h2>
+<p>There is a series of script methods for editing directly entities and their settings, for example <em>windows.Window.set_curves_settings()</em>, <em>windows.Window.set_annotations_settings()</em>, <em>annotations.Annotation.set_element()</em>, <em>planes.Plane.set_origin()</em>, <em>groups.Group.add_parts()</em>, <em>windows.Window.rotate_view()</em>, etc.
+However, the full possibilities of editing entities are covered through the META session commands and can be achieved by using the MetaCommand syntax (see also chapter “META session commands for use in Scripting Language”).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">planes</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">plane_name</span> <span class="o">=</span> <span class="s1">&#39;plane_axis2&#39;</span>
+    <span class="n">pl</span> <span class="o">=</span> <span class="n">planes</span><span class="o">.</span><span class="n">Plane</span><span class="p">(</span><span class="n">plane_name</span><span class="p">)</span>
+    <span class="c1">#Change origin through script function</span>
+    <span class="n">orig</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">102.3</span><span class="p">,</span> <span class="mf">25.6</span><span class="p">,</span> <span class="mf">30.8</span> <span class="p">]</span>
+    <span class="n">ok</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">set_origin</span><span class="p">(</span><span class="n">orig</span><span class="p">)</span>
+    <span class="c1">#Change section width through session command</span>
+    <span class="n">utils</span><span class="o">.</span><span class="n">MetaCommand</span><span class="p">(</span><span class="s1">&#39;plane options width 3 &quot;&#39;</span><span class="o">+</span><span class="n">plane_name</span><span class="o">+</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="delete-entities">
+<h2>Delete entities<a class="headerlink" href="#delete-entities" title="Permalink to this heading">#</a></h2>
+<p>For deleting entities the respective <strong>Xxx.delete()</strong> is used, e.g. <em>annotations.Annotation.delete()</em>, <em>plot2d.Curve.delete()</em>, <em>models.Model.delete()</em>, etc.</p>
+<p>The entities can also be deleted by applying the respective session commands.</p>
+</section>
+<section id="show-hide-entities">
+<h2>Show / Hide entities<a class="headerlink" href="#show-hide-entities" title="Permalink to this heading">#</a></h2>
+<p>For showing / hiding entities the respective method is <strong>Xxx.show()</strong> and <strong>Xxx.hide()</strong>, e.g. <em>annotations.Annotation.show()</em>, <em>plot2d.Curve.hide()</em> etc.</p>
+<p>When more than one 3d model entities or curves need to be shown / hidden, it is much faster to use the methods Xxx.show_xxx() and Xxx.hide_xxx(), e.g. <em>models.Model.show_elements()</em>,</p>
+<p><em>models.Model.hide_parts()</em>, <em>windows.Window.show_curves()</em>, etc. In this case the entities must be given as list. The entities can also be shown / hidden by applying the respective session commands.</p>
+</section>
+<section id="identify-entities">
+<h2>Identify entities<a class="headerlink" href="#identify-entities" title="Permalink to this heading">#</a></h2>
+<p>For identifying 3d model entities the respective method is <strong>Xxx.identify</strong> , e.g. <em>nodes.Node.identify()</em>, <em>elements.Element.identify()</em>, <em>materials.Material.identify()</em>, etc.</p>
+<p>When more than one 3d model entities need to be identified, it is much faster to use the methods <strong>Xxx.identify_xxx()</strong>, e.g. <em>models.Model.identify_elements()</em>, <em>models.Model.identify_parts()</em>, etc. In this case the entities must be given as list.</p>
+<p>The entities can also be identified by applying the respective session commands.</p>
+</section>
+<section id="get-handle-material-properties">
+<h2>Get /handle material properties<a class="headerlink" href="#get-handle-material-properties" title="Permalink to this heading">#</a></h2>
+<p>To get the properties of material the method <em>materials.Material.get_property()</em> can be used. To set these attributes the script method <em>materials.Material.set_property()</em> can be sused.</p>
+</section>
+<section id="get-results-attributes-of-entities">
+<h2>Get results/attributes of entities<a class="headerlink" href="#get-results-attributes-of-entities" title="Permalink to this heading">#</a></h2>
+<p>First of all, to get the states for which the resultsets are needed, the methods that can be used are <em>models.Model.get_current_resultset()</em>, <em>models.Model.get_resultsets()</em>, <em>models.Model.get_filtered_resultsets()</em>, <em>results.Result.get_resultsets()</em>.</p>
+<p>The <strong>‘generated’</strong> specifier can be used to <em>results.Result.get_resultsets()</em> method get the results that generated from a specifc resultset, e.g. <em>results.Result.get_resultsets(‘generated’)</em></p>
+<p>If more than one labels exist for the resultset, the specifiers ‘deformations’, ‘scalar’, ‘vector’, ‘function’ can be defined to get directly
+all the label results of the state. e.g. <em>results.Result.get_resultsets(‘deformations’)</em>, <em>results.Result.get_resultsets(‘scalar’)</em> e.t.c.</p>
+<p>Alternatively, the methods <em>results.Result.get_string_deformation_labels()</em>, <em>results.Result.get_string_scalar_labels()</em>, <em>results.Result.get_string_vector_labels()</em> can be used to get the available labels and then the method <em>results.Result.get_resultsets()</em> can be used to get the specific label result of the state.</p>
+<p>After the needed resultset is found, the functions to get the loaded results depend on the entity from which the result which is needed. So, in the Nodes functions group there are methods to get results on the nodes, in the Elements methods group there is method to get results on elements, in the Parts methods group method to get all results from a part, in the Materials methods, method to get all results from a material, in the Groups methods group method to get all results
+from a group and in the Models methods group there are methods to get all results from a model. Moreover, there is a method for each specific result needed. For nodes, to get the deformation results, there is the function <em>nodes.Node.get_deformations()</em>, to get the coordinates <em>nodes.Node.get_coordinates()</em>, to get scalar results <em>nodes.Node.get_nodal_scalar()</em> and to get vector results <em>nodes.Node.get_nodal_vector()</em>.</p>
+<p>Similarly for results on elements, there are methods <em>elements.Element.get_deformations()</em>, <em>elements.Element.get_centroid_scalar()</em>, <em>elements.Element.get_corner_scalar()</em>, <em>elements.Element.get_nodal_scalar()</em> and more.</p>
+<p>For parts / materials / models there are methods that return the results on all the nodes or elements, e.g. <em>parts.Part.get_centroid_vector()</em></p>
+<p>Also ‘max’, ‘min’ specifier can be used to get the max/min value of results e.g. <strong>models.Model.get_nodal_scalar</strong> <em>(&lt;resultset&gt;,’min’)</em>, <strong>elements.Element.get_deformations</strong> <em>(&lt;resultset&gt;,’max’)</em></p>
+<p>For CELAS spring connection elements the methods <em>elements.Element.get_stiffness()</em>, <em>elements.Element.get_damping()</em> and <em>elements.Element.get_mass()</em> can be used to get information about the stiffness, damping and mass respectively.</p>
+<p>To get and set the number of steps of an axis the methods <em>plot2d.PlotAxis.get_step()</em> and <em>plot2d.PlotAxis.set_steps()</em> respectively can be used.</p>
+<p>To get, calculate, and set the material tension, compression, shear, x_tension, y_tension, x_compression, y_compression, shear and f12 limits of composites materials, the methods <em>materials.Material.get_material_limit()</em> and <em>parts.Part.get_material_limit()</em> or <em>materials.Material.set_material_limit()</em> and <em>parts.Part.set_material_limit()</em> can be used respectively.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">results</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">nodes</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_current_resultset</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">CurrentResultset</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="n">node_id</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">node_id</span><span class="p">,</span> <span class="n">model_id</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">deform</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">get_deformations</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">IsDeformation</span><span class="p">(</span><span class="n">deform</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">deform</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">deform</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">deform</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">deform</span><span class="o">.</span><span class="n">total</span><span class="p">,</span> <span class="n">deform</span><span class="o">.</span><span class="n">node_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">results</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">all_resultsets</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_resultsets</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">all_resultsets</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="n">nodal_min</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_nodal_vector</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">)</span>
+    <span class="n">nodal_max</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_nodal_vector</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nodal_min</span><span class="p">:</span>
+        <span class="n">min_nodal</span> <span class="o">=</span> <span class="n">nodal_min</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#Struct with the minimum nodal vector value</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">min_nodal</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="c1">#Minimum nodal vector value</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">min_nodal</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="n">min_nodal</span><span class="o">.</span><span class="n">y</span><span class="p">,</span><span class="n">min_nodal</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="c1">#Normalized coordinates (X, Y, Z) of the minimun nodal vector value</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">min_nodal</span><span class="o">.</span><span class="n">node_id</span><span class="p">)</span> <span class="c1">#Id of the node with the minimum nodal vector value</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">min_nodal</span><span class="o">.</span><span class="n">part_id</span><span class="p">);</span> <span class="c1">#Id of the part or -1 if no part exists</span>
+    <span class="k">if</span> <span class="n">nodal_max</span><span class="p">:</span>
+        <span class="n">max_nodal</span> <span class="o">=</span> <span class="n">nodal_max</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#Struct with the maximum nodal vector value</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">max_nodal</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="c1">#Maximum nodal vector value</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">max_nodal</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="n">max_nodal</span><span class="o">.</span><span class="n">y</span><span class="p">,</span><span class="n">max_nodal</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="c1">#Normalized coordinates (X, Y, Z) of the maximum nodal vector value</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">max_nodal</span><span class="o">.</span><span class="n">node_id</span><span class="p">)</span> <span class="c1">#Id of the node with the maximum nodal vector value</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">max_nodal</span><span class="o">.</span><span class="n">part_id</span><span class="p">)</span> <span class="c1">#Id of the part or -1 if no part exists</span>
+</pre></div>
+</div>
+</section>
+<section id="get-measurements-from-entities">
+<h2>Get measurements from entities<a class="headerlink" href="#get-measurements-from-entities" title="Permalink to this heading">#</a></h2>
+<p>The functions to get measurements depend on the entity from which the measurement is needed. So, in the Nodes methods group there are methods to get measurements from the nodes, in the Elements methods group there are methods to get measurements from the elements, in the Parts methods group methods to get measurements from a part and in the Groups methods group methods to get measurements from a group.</p>
+<p>Moreover, there is a different function for each specific measurement needed. To get the distance between a node and another node there is the method <em>nodes.Node.get_distance_from_node()</em>, to get the distance between a node and a part the function is <em>nodes.Node.get_distance_from_part()</em>, etc. To get the angle formed by nodes the function is <em>AngleOfNodes()</em>. To get the distance between a part and a group the method is <em>parts.Part.get_distance_from_group()</em>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">parts</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">groups</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">part</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="n">Part</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">PSHELL</span><span class="p">,</span> <span class="n">model_id</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_current_resultset</span><span class="p">()</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">groups</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s1">&#39;My_Group&#39;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">get_distance_from_group</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">distance</span><span class="p">):</span>
+        <span class="n">dist_x</span> <span class="o">=</span> <span class="n">distance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Distance in direction X</span>
+        <span class="n">dist_y</span> <span class="o">=</span> <span class="n">distance</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># Distance in direction Y</span>
+        <span class="n">dist_z</span> <span class="o">=</span> <span class="n">distance</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># Distance in direction Z</span>
+        <span class="n">dist_total</span> <span class="o">=</span> <span class="n">distance</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># Total distance</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">dist_x</span><span class="p">,</span> <span class="n">dist_y</span><span class="p">,</span> <span class="n">dist_z</span><span class="p">,</span> <span class="n">dist_total</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="get-connected-and-neighbour-elements-nodes">
+<h2>Get connected and neighbour elements/nodes<a class="headerlink" href="#get-connected-and-neighbour-elements-nodes" title="Permalink to this heading">#</a></h2>
+<p>In cases that the connected elements or nodes are needed, the methods <em>models.Model.get_elements()</em>, <em>elements.Element.get_nodes()</em> and <em>nodes.Node.get_elements()</em> should be used. In case of mesh independent spotweld connections, where there is no node connectivity, the specifier <strong>‘neighbour’</strong> can still be used as long as the connectivity is supported in META. e.g. <em>models.Model.get_elements(‘neighbour’)</em></p>
+<p>The above script functions should be preferred from the visibility session commands, e.g. “add connected”, as the first are much faster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">elements</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">neighbour_elements</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_elements</span><span class="p">(</span><span class="s1">&#39;neighbour&#39;</span><span class="p">,</span> <span class="n">element_type</span> <span class="o">=</span> <span class="mi">3</span> <span class="p">,</span> <span class="n">element_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">neighbour_type</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">neighbour_elements</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In cases that the connected elements, nodes, parts etc. to connections are needed, the methods connections.Connection.get_xxx() should be used.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">connections</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">connection_id</span> <span class="o">=</span> <span class="mi">100022</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">connections</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="n">connection_id</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">connected_elements</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">get_elements</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">connected_elements</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="get-spreadsheet-entities-data">
+<h2>Get spreadsheet entities/data<a class="headerlink" href="#get-spreadsheet-entities-data" title="Permalink to this heading">#</a></h2>
+<p>There are functions to get data stored in a spreadsheet. To get a cells data the method <em>spreadsheet.Sheet.get_cell()</em> can be used.</p>
+<p>Also the entire row‟s or column‟s data can be stored in a list through the methods <em>spreadsheet.Sheet.get_row()</em> and <em>spreadsheet.Sheet.get_column()</em>. Returned lists stops at the last non-empty cell. If all cells are empty, an empty list is returned</p>
+<p>To get cells data of an entire cells area the method <em>spreadsheet.Sheet.get_range()</em> and function <em>SpreadsheetCellsByLabel(sheet_name, cell_label)</em> can be used. Cells data are stored in a list of same size as the defined spreadsheet area.</p>
+<p>Also in order to identify the spreadsheet cells area that involves data the function <em>spreadsheet.BoundingAreaOfSpreadsheet(sheet_name)</em> can be used. A list that determines the bounding box of non-empty cells (list[0][0]: top-row, list[0][1]: left-column, list[1][0]: bottom-row, list[1][1]: right-column) will be returned.</p>
+</section>
+<section id="get-report-entities-data">
+<h2>Get report entities/data<a class="headerlink" href="#get-report-entities-data" title="Permalink to this heading">#</a></h2>
+<p>For getting entities of a report, <strong>report.Xxx.get_xxx()</strong> methods can be used e.g. <em>report.Report.get_slides()</em>, <em>report.Slide.get_shape()</em>, <em>report.Textbox.get_text()</em>, <em>report.ExcelTable.get_size()</em>, <em>report.Table.get_cell()</em>  e.t.c.</p>
+<p>There are also <strong>report.Xxx.set_xxx()</strong> methods to set the value on the relative entities e.g. <em>report.Report.set_slide_size()</em>, <em>report.Slide.set_name()</em>, <em>report.Textbox.set_text()</em>, <em>report.ExcelTable.set_visibility()</em>, <em>report.Table.set_size()</em> e.t.c.</p>
+<p>In order to create the a report composer window there is the function <em>report.CreateReport()</em> and there are <strong>report.Xxx.add_xxx()</strong> methods to add new entities on the report e.g. <em>report.Report.add_slide()</em>, <em>report.Slide.add_textbox()</em>, <em>report.Slide.add_excel_table()</em>, <em>report.Slide.add_table()</em> e.t.c</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span><span class="p">,</span><span class="n">report</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">rep</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">CreateReport</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Example&#39;</span><span class="p">)</span>
+    <span class="c1">#If report already exists</span>
+    <span class="k">if</span> <span class="n">rep</span><span class="o">==</span><span class="kc">None</span><span class="p">:</span>
+        <span class="n">rep</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">CreateReport</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Example&#39;</span><span class="p">)</span>
+
+    <span class="n">slide</span> <span class="o">=</span> <span class="n">rep</span><span class="o">.</span><span class="n">get_slides</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">slide</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;Example&#39;</span><span class="p">)</span>
+
+    <span class="c1">#Create a textbox for the first slide</span>
+    <span class="n">textbox</span> <span class="o">=</span> <span class="n">slide</span><span class="o">.</span><span class="n">add_textbox</span><span class="p">()</span>
+    <span class="n">textbox</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;Example Slide&#39;</span><span class="p">)</span>
+    <span class="n">textbox</span><span class="o">.</span><span class="n">set_text_style</span><span class="p">(</span><span class="n">font_family</span><span class="o">=</span><span class="s1">&#39;Roboto&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">underline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text_align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+    <span class="n">textbox</span><span class="o">.</span><span class="n">set_size</span><span class="p">((</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">))</span>                   <span class="c1">#Coordinates defined according to slide&#39;s dimensions</span>
+    <span class="n">textbox</span><span class="o">.</span><span class="n">set_position</span><span class="p">((</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
+
+    <span class="c1">#Create a table of 2 rows and 2 columns</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">slide</span><span class="o">.</span><span class="n">add_table</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">set_position</span><span class="p">((</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;cm&#39;</span><span class="p">)</span>   <span class="c1">#Coordinates defined by specified units</span>
+    <span class="c1">#Add text to specific table cells</span>
+    <span class="n">cell</span><span class="o">=</span><span class="n">table</span><span class="o">.</span><span class="n">get_cell</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">cell</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;Column 1&#39;</span><span class="p">)</span>
+
+    <span class="n">cell</span><span class="o">=</span><span class="n">table</span><span class="o">.</span><span class="n">get_cell</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">cell</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;Column 2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="get-attributes-of-user-toolbar">
+<h2>Get attributes of User Toolbar<a class="headerlink" href="#get-attributes-of-user-toolbar" title="Permalink to this heading">#</a></h2>
+<p>To get the attributes of specific entities of user Toolbars the methods <em>toolbars.CheckboxGetState()</em>, <em>toolbars.SliderGetValue()</em>, <em>toolbars.TextboxGetValue()</em>, <em>toolbars.RadiobuttonGetState()</em>, <em>toolbars.TogglebuttonGetState()</em>, <em>toolbars.TextboxGetAllValues()</em>, <em>toolbars.GroupGetCheckState()</em> and <em>toolbars.ListGetValue()</em> are available.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s1">&#39;Toolbar 1&#39;</span>
+    <span class="n">checkbox_name</span> <span class="o">=</span> <span class="s1">&#39;Checkbox 1&#39;</span>
+
+    <span class="n">state</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">toolbars</span><span class="o">.</span><span class="n">CheckboxGetState</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">checkbox_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Checked&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not checked&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failure!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>User Toolbar Development Kit(TDK) is also available for a robust User Toolbar development. This kit comprises guidelines and a Python module that provide the necessary basis for Python-bases User Toolbars. The Python module provides users with a ready to use base class. This class contains base functionality, which is common for all Python-bases User Toolbars. The kit’s Python module is provided as open source code for better understanding. A User Toolbar on this kit is provided in the scripts folder of the META installation directory.</p>
+</section>
+</section>
+<section id="load-geometry-and-solver-results-create-user-defined-results">
+<h1>Load Geometry and Solver Results, Create User-Defined Results<a class="headerlink" href="#load-geometry-and-solver-results-create-user-defined-results" title="Permalink to this heading">#</a></h1>
+<section id="load-geometry-and-field-history-results">
+<h2>Load geometry and field / history results<a class="headerlink" href="#load-geometry-and-field-history-results" title="Permalink to this heading">#</a></h2>
+<p>For loading geometry the respective functions are <em>models.LoadModel()</em> for solver geometry data files and <em>models.LoadProjectModel()</em> for geometries from META databases and META projects.</p>
+<p>For loading field results the functions are <em>results.LoadDeformations()</em>, <em>results.LoadModalDeformations()</em>, <em>results.LoadScalar()</em> and <em>results.LoadVector()</em> for solver results data files and <em>results.LoadProjectDeformations()</em>, <em>results.LoadProjectScalar()</em> and <em>results.LoadProjectVector()</em> for results from META databases and META projects.</p>
+<p>The argument “data” which is needed for the functions is the same as the argument used in the equivalent META session commands. The best way to retrieve the correct syntax is to load the result manually from the META interface and view the session command passed to the current META_post.ses file.</p>
+<p>In order to append the loaded geometry/results the functions <em>results.LoadAppendDeformations()</em>, <em>results.LoadAppendProjectDeformations()</em>, <em>results.LoadAppendScalar()</em>, <em>results.LoadAppendScalarGetCoordSystems()</em>, <em>results.LoadAppendProjectScalar()</em>, <em>results.LoadAppendVector()</em>, <em>results.LoadAppendVectorGetCoordSystems()</em>, <em>results.LoadAppendProjectVector()</em> are available.</p>
+<p>For loading curves from history results files the respective functions are <strong>plot2d.LoadCurvesXxx()</strong>, e.g. <em>plot2d.LoadCurvesNastran()</em>, <em>plot2d.LoadCurvesDyna()</em>.</p>
+<p>The arguments which are needed for the functions, e.g. entities, variables, etc, are the same as the arguments used in the META session commands. The best way to retrieve the correct syntax is to load the result manually from the META interface and view the session command passed to the current META_post.ses file. The only difference is that the results are passed as matrices to the script functions. The string expressions can be easily changed to matrices and vice versa through the functions <em>utils.RangeToList()</em> and <em>utils.ListToRange()</em>.</p>
+<p>Especially for loading curves from RADIOSS history results files, the function <em>plot2d.LoadCurvesRadioss()</em> needs the time history id as argument. In case the time history id is not known, the function <em>plot2d.GetRadiossTimeHistoryId()</em> can be used to find the time history id for a specific history result.</p>
+<p>The entities can also be loaded by applying the respective session commands (see also chapter “META session commands for use in Scripting Language”). However, one advantage of loading the entities through script functions is that the function returns the objects of the created entities. For example, when loading a model through the script function, the id of the model is available.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">results</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">window_name</span> <span class="o">=</span> <span class="s1">&#39;MetaPost&#39;</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/home/demo/example.op2&#39;</span>
+    <span class="n">deck</span> <span class="o">=</span> <span class="s1">&#39;NASTRAN&#39;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LoadModel</span><span class="p">(</span><span class="n">window_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">deck</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">models</span><span class="o">.</span><span class="n">IsValidModel</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+        <span class="n">model_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">id</span>
+        <span class="n">states</span> <span class="o">=</span> <span class="s1">&#39;1-3&#39;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Displacements,Translational&#39;</span>
+        <span class="n">new_resultsets</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">LoadDeformations</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">deck</span><span class="p">,</span> <span class="n">states</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Stresses,VonMises,MaxofTopBottom&#39;</span>
+        <span class="n">new_resultsets</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">LoadScalar</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">deck</span><span class="p">,</span> <span class="n">states</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">new_resultsets</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">res</span><span class="o">.</span><span class="n">nodal_data_name</span><span class="p">,</span><span class="n">res</span><span class="o">.</span><span class="n">function_data_name</span><span class="p">,</span><span class="n">res</span><span class="o">.</span><span class="n">state</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">plot2d</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">window_name</span> <span class="o">=</span> <span class="s1">&#39;Window1&#39;</span>
+    <span class="n">plot_id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/home/demo/exmampleT01&#39;</span>
+    <span class="n">entity_id</span> <span class="o">=</span> <span class="s1">&#39;12954&#39;</span>
+    <span class="n">entity_type</span> <span class="o">=</span> <span class="s1">&#39;node&#39;</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">time_history</span> <span class="o">=</span> <span class="p">[</span> <span class="n">plot2d</span><span class="o">.</span><span class="n">GetRadiossTimeHistoryId</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">entity_id</span><span class="p">,</span> <span class="n">entity_type</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span> <span class="p">]</span>
+    <span class="n">entities</span> <span class="o">=</span> <span class="p">[</span> <span class="n">entity_id</span> <span class="p">]</span>
+    <span class="n">variables</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;dx&#39;</span> <span class="p">]</span>
+    <span class="n">new_curves</span> <span class="o">=</span> <span class="n">plot2d</span><span class="o">.</span><span class="n">LoadCurvesRadioss</span><span class="p">(</span><span class="n">window_name</span><span class="p">,</span> <span class="n">plot_id</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">entity_type</span><span class="p">,</span> <span class="n">time_history</span><span class="p">,</span> <span class="n">entities</span><span class="p">,</span> <span class="n">variables</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">new_curves</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The deck of the results is given as argument in the functions to load geometry and field results, whereas different functions exist for each deck for loading history results.</p>
+</div>
+</section>
+<section id="create-user-defined-field-results">
+<h2>Create user-defined field results<a class="headerlink" href="#create-user-defined-field-results" title="Permalink to this heading">#</a></h2>
+<p>Apart from loading solver results, it is possible to create user defined field results using the results from calculations realized inside the script.</p>
+<p>First of all a new empty state for field results can be created with the function <em>results.CreateResultSet()</em>. To add a new label to the resultset and set the results to the nodes or the elements, the functions to be used are <em>results.AddDeformationOnAllNodes()</em>, <em>results.AddNodalScalarOnAllNodes()</em> and <em>results.AddNodalVectorOnAllNodes()</em>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">results</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">model_id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">all_resultsets</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">Resultsets</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="n">state_id</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_resultsets</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Script added resultset&#39;</span>
+    <span class="n">cycle</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">new_resultsets</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">CreateResultset</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">state_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">new_resultsets</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">cycle</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">nodal_data_name</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">function_data_name</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">vector_data_name</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">subcase</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">state</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">step</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">frequency</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">eigenvalue</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">imaginary_eigenvalue</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">loadstep</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">generate_sequence</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">nodal_data_label</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">function_data_label</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">vector_data_label</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more complicated procedures:</p>
+<p>To reset all the values of a resultset and add values to the nodes or the elements, the functions to be used are <strong>StartAddingXxx()</strong> and <strong>EndAddingXxx()</strong>, e.g. <em>StartAddingDeformations()</em>, <em>EndAddindDeformations()</em>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">results</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">nodes</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">all_resultsets</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">Resultsets</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="n">resultset</span> <span class="o">=</span> <span class="n">all_resultsets</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">new_nodal_data_name</span> <span class="o">=</span> <span class="s1">&#39;Deformations Data&#39;</span>
+
+    <span class="n">node_ids</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">xdeform</span>  <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">ydeform</span>  <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">zdeform</span>  <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">visnodes</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_nodes</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">visnodes</span><span class="p">:</span>
+        <span class="n">node_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="n">xdeform</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+        <span class="n">ydeform</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="mf">0.91</span><span class="p">)</span>
+        <span class="n">zdeform</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="mf">1.398</span><span class="p">)</span>
+
+    <span class="n">meta</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">StartAddingDeformations</span><span class="p">(</span><span class="n">resultset</span><span class="p">,</span> <span class="n">new_nodal_data_name</span><span class="p">)</span>
+    <span class="n">meta</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">AddDeformationOnSomeNodes</span><span class="p">(</span><span class="n">resultset</span><span class="p">,</span> <span class="n">node_ids</span><span class="p">,</span> <span class="n">xdeform</span><span class="p">,</span> <span class="n">ydeform</span><span class="p">,</span> <span class="n">zdeform</span><span class="p">)</span>
+    <span class="n">meta</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">EndAddingDeformations</span><span class="p">(</span><span class="n">resultset</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To change the values of a resultset the functions to be used are <strong>results.StartChangingXxx()</strong> and <strong>results.EndAddingXxx()</strong>, e.g. <em>results.StartChangingCentroidVector()</em>, <em>results.EndAddingCentroidVector()</em>.</p>
+<p>To append a new label to a resultset and set values to the nodes or the elements for this label, the functions to be used are <strong>results.StartAppendingXxx()</strong> and <strong>results.EndAddingXxx()</strong>, e.g. <em>results.StartAppendingCentroidScalar()</em>, <em>results.EndAddingCentroidScalar()</em>.</p>
+<p>Between the StartXxx() and EndXxx() functions the values can be assigned to the nodes with the functions <em>results.AddCentroidScalarOnElement()</em>, <em>results.AddCentroidScalarOnSomeElements()</em>, <em>results.AddCentroidVectorOnElement()</em>, <em>results.AddCentroidVectorOnSomeElements()</em>, <em>results.AddCornerScalarOnElement()</em>, <em>results.AddCornerScalarOnSomeElements()</em>, <em>results.AddDeformationOnNode()</em> and <em>results.AddDeformationOnSomeNodes()</em>. When values are to be to more than one elements / nodes, functions <strong>results.XxxOnSomeElements()</strong> and <strong>results.XxxOnSomeNodes()</strong> should be preferred, as they are much faster.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The results.EndAddingXxx() function must be called at the end, or else the values will not be assigned to the resultset.</p>
+</div>
+</section>
+</section>
+<section id="useful-notes-about-meta-script-functions">
+<h1>Useful notes about META script functions<a class="headerlink" href="#useful-notes-about-meta-script-functions" title="Permalink to this heading">#</a></h1>
+<section id="speed-up-the-execution-of-scripts">
+<h2>Speed up the execution of scripts<a class="headerlink" href="#speed-up-the-execution-of-scripts" title="Permalink to this heading">#</a></h2>
+<p>When executing scripts some points should be taken into consideration in order to achieve minimum execution times.</p>
+<ul class="simple">
+<li><p>When the script includes functions that change the display of the META windows, each redraw will result to time consumption. To speed up the execution of the script, the redraws can be disabled and enabled only at the end of the script, in order to display directly the final state.</p></li>
+</ul>
+<p>This can be achieved through the lines:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">MetaCommand</span><span class="p">(</span><span class="s1">&#39;options session controldraw disable&#39;</span><span class="p">)</span>
+<span class="n">MetaCommand</span><span class="p">(</span><span class="s1">&#39;options session controldraw enable&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>When a function needs to be applied on more than one entities, it is always faster to use the function that applies directly on all the needed entities XxxOnSomeXxx, e.g.  <em>AddElementScalarOnSomeElements()</em>, etc, instead of applying the single function for each entity.</p></li>
+<li><p>When all the results from entitiy are needed, it is faster to use the method that gets all the results directly, e.g. <em>models.Model.get_deformations()</em>, <em>parts.Part.get_centroid_scalar()</em>, etc, instead of getting the result for each element / node separately.</p></li>
+<li><p>In cases the connected elements or nodes are needed the functions <em>models.Model.get_elements(‘neighbour’)</em>, <em>elements.Element.get_nodes()</em> and <em>nodes.Node.get_elements()</em> should be preferred from the visibility session commands, e.g. “add connected”, as the first are much faster.</p></li>
+</ul>
+</section>
+</section>
+<section id="user-defined-buttons-and-custom-gui">
+<h1>User defined buttons and custom GUI<a class="headerlink" href="#user-defined-buttons-and-custom-gui" title="Permalink to this heading">#</a></h1>
+<section id="id3">
+<h2>General<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>META API enables the creation of user defined buttons and fully customized graphical interfaces. The buttons that can be created are similar to the buttons of the GUI and are used to invoke user functions. For the management of specific tasks that must be controlled through a number of definitions and actions, it is very useful to create a custom GUI. There are two libraries of functions to create custom user interface.</p>
+<p><strong>User Toolbars</strong></p>
+<p>The first supports only the basic widgets that a GUI can hold, like checkbuttons, radio buttons, menu buttons, lists, tables.These GUI items are generated without the need to type any GUI generating code, which is more difficult and time consuming to do than creating a Toolbar.</p>
+<p>This simplicity comes at the cost of flexibility and customizability, as Toolbars offer only a predefined set of capabilitities, which are enough for the majority of the cases where a special GUI is needed. All Toolbars are available under the <em>User Toolbars</em> menu of META. <em>Toolbar Designer</em> (<em>User Toolbars&gt;Toolbar Designer</em>) tool is also available for the interactive creation / modification of toolbars.</p>
+<p><strong>GUITK Functionality</strong></p>
+<p>While the second library, GUITK, is more extensive and except from the main widgets mentioned before it also supports hundreds of more sophisticated tools. These tools allow the creation of any complex interface that may also contain tab widgets, popup menus, spin boxes, group of buttons, tooltips and so on. For more information check the <span class="xref std std-ref">guitk Module</span>.</p>
+</section>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Interacting with META
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general">
+     General
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#handling-data">
+   Handling data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meta-objects">
+     META Objects
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meta-deck-constants">
+     META deck constants
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#collect-entities">
+   Collect entities
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collect-entities-of-the-database">
+     Collect entities of the database
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collect-entities-from-other-entities">
+     Collect entities from other entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collect-entities-according-to-their-attributes">
+     Collect entities according to their attributes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collect-visible-entities">
+     Collect visible entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collect-identified-entities">
+     Collect identified entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collect-models-information">
+     Collect models information
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collect-newly-created-entities">
+     Collect newly created entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collect-files-and-directories">
+     Collect files and directories
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#select-files-or-directories-through-the-file-manager">
+     Select files or directories through the file manager
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-edit-delete-and-handle-entities">
+   Create, Edit, Delete and Handle Entities
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-entities">
+     Create entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#edit-entities">
+     Edit entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#delete-entities">
+     Delete entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-hide-entities">
+     Show / Hide entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identify-entities">
+     Identify entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-handle-material-properties">
+     Get /handle material properties
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-results-attributes-of-entities">
+     Get results/attributes of entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-measurements-from-entities">
+     Get measurements from entities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-connected-and-neighbour-elements-nodes">
+     Get connected and neighbour elements/nodes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-spreadsheet-entities-data">
+     Get spreadsheet entities/data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-report-entities-data">
+     Get report entities/data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-attributes-of-user-toolbar">
+     Get attributes of User Toolbar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-geometry-and-solver-results-create-user-defined-results">
+   Load Geometry and Solver Results, Create User-Defined Results
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-geometry-and-field-history-results">
+     Load geometry and field / history results
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-user-defined-field-results">
+     Create user-defined field results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#useful-notes-about-meta-script-functions">
+   Useful notes about META script functions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#speed-up-the-execution-of-scripts">
+     Speed up the execution of scripts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#user-defined-buttons-and-custom-gui">
+   User defined buttons and custom GUI
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     General
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

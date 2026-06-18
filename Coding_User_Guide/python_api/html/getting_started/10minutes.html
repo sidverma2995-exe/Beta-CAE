@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>10 Minutes to ANSA API &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'getting_started/10minutes';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10 Minutes to META API" href="10minutes_meta.html" />
+    <link rel="prev" title="Standalone Python Interpreter" href="interpreter.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro_py.html">Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpreter.html">Standalone Python Interpreter</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10 Minutes to ANSA API</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10minutes_meta.html">10 Minutes to META API</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="script_editor.html">Script Editor</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="minutes-to-ansa-api">
+<h1>10 Minutes to ANSA API<a class="headerlink" href="#minutes-to-ansa-api" title="Permalink to this heading">#</a></h1>
+<p>This is a short introduction to the ANSA API, geared mainly for new users. If you want to dive into all the details, you can read the complete <a class="reference internal" href="../user_guide/api_ansa/intro_ansa.html#interacting-with-ansa"><span class="std std-ref">Interacting with ANSA</span></a>.</p>
+<section id="script-editor">
+<h2>Script Editor<a class="headerlink" href="#script-editor" title="Permalink to this heading">#</a></h2>
+<p>Whether you are an experienced developer or a beginner to the field of programming, the <strong>Script Editor</strong> is going to be a good friend of yours, for at least your first couple of experiments with the ANSA API. Although it’s mainly designed as a playground for simple python scripts, the Script Editor is a complete editing environment attached directly to the ANSA core functionality, while offering very useful search and documentation help features.
+In order to access the Script Editor from ANSA, press the menu button Tools –&gt; Script –&gt; Script Editor. The Script Editor window will open and you can either start editing a new file or open an already existing one, by using the respective options from the File menu.</p>
+<p>A new file on the Script Editor will look as the following:</p>
+<img alt="../_images/script_editor.jpg" src="../_images/script_editor.jpg" />
+<p>The main part of the window is the editor, where specific python and ANSA API keywords are highlighted, while on the right side lies the Search toolbar. By double clicking on a selected function from the list, the respective help text appears on the bottom of the screen, on the Help window, or by right clicking, the function is written on the current file. When you press the <strong>Run</strong> button, the code will be executed and all the appropriate messages will appear on the Output window.</p>
+<p>You can read more info on how to use the <a class="reference internal" href="script_editor.html#script-editor"><span class="std std-ref">Script Editor</span></a>.</p>
+</section>
+<section id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">#</a></h2>
+<p>The ANSA API consists of a series of functions and classes that interact directly with the ANSA interface. These are divided in distinct modules, separating the different functionalities of the respective components contained in each one. Every module needs to be imported prior to using its functions and classes.</p>
+<p>The fundamental module of ANSA is the <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#module-ansa.base" title="ansa.base"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ansa.base</span></code></a> module, which contains all the functions and classes responsible for topo, deck, visibility and element data manipulation. While using the <strong>base</strong> module, the <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.constants.html#module-ansa.constants" title="ansa.constants"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ansa.constants</span></code></a> module is very commonly needed, as it contains a collection of all the ANSA constants and reserved methods, such as the deck constants for all the available decks.</p>
+<p>The deck constants can be simply accessed as shown on the following example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span>
+<span class="n">constants</span><span class="o">.</span><span class="n">ABAQUS</span>
+</pre></div>
+</div>
+</section>
+<section id="access-data-in-ansa">
+<h2>Access Data in ANSA<a class="headerlink" href="#access-data-in-ansa" title="Permalink to this heading">#</a></h2>
+<section id="the-ansa-entity">
+<h3>The ANSA Entity<a class="headerlink" href="#the-ansa-entity" title="Permalink to this heading">#</a></h3>
+<p>Every entity of the ANSA Database, whether it’s a <strong>Node</strong>, an <strong>Element</strong>, a <strong>Property</strong> or even a <strong>Connection</strong>, is actually an object of the class <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansa.base.Entity</span></code></a>. This means that all of these objects share the same state and behavior, as defined from the <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansa.base.Entity</span></code></a> class that they belong to. Such objects can be directly created through scripting, or already existing ones can be retrieved, by using the appropriate functions.</p>
+<p>Some of their commonly used read only attributes are the following:</p>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>_id</strong></dt><dd><p>Returns the ANSA Entity id.</p>
+</dd>
+<dt><strong>_name</strong></dt><dd><p>Returns the ANSA Entity name.</p>
+</dd>
+<dt><strong>_comment</strong></dt><dd><p>Returns the ANSA Entity comment.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>and an attribute that can also be modified:</p>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>position</strong></dt><dd><p>Directly get and set global x,y,z coordinates for point-like Entities.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>So for example, getting a node’s id and name is as simple as that:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">_name</span>
+<span class="n">nid</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">_id</span>
+</pre></div>
+</div>
+<p>While in order to change its position, we can directly assign it a tuple containing 3 values:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">position</span><span class="p">)</span> <span class="c1"># Prints the current node&#39;s position</span>
+<span class="n">node</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># Set the node&#39;s coordinates to x=6, y=7, z=4</span>
+</pre></div>
+</div>
+<p>Some of the commonly used methods they share are the following:</p>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Entity(deck, id, type, facet, edge_index)</strong></dt><dd><p>Entity object constructor; Returns the created Entity object.</p>
+</dd>
+<dt><strong>ansa_type(deck)</strong></dt><dd><p>Returns the ANSA type of the entity in the specified deck.</p>
+</dd>
+<dt><strong>card_fields(deck)</strong></dt><dd><p>Returns a list with the names of all the active card fields.</p>
+</dd>
+<dt><strong>get_entity_values(deck, fields)</strong></dt><dd><p>et values from the entity using the edit card’s field names. This method returns directly the entity objects for the fields that reference Entity objects. The fields argument is a list containing the names of the card field labels to extract the values from.</p>
+</dd>
+<dt><strong>set_entity_values(deck, fields)</strong></dt><dd><p>Set or change values of the entity using its Edit Card Fields. Returns zero on success, non zero on error. The fields argument is a dictionary with keys the name of the ANSA card labels and values the desired card field values. By using this method, it is possible to set an entity object as a value for a respective field.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Some of the above functions refer to the entity’s edit card and its card fields’ labels, which we will immediately analyse.</p>
+</section>
+<section id="ansa-entities-edit-cards">
+<h3>ANSA Entities edit cards<a class="headerlink" href="#ansa-entities-edit-cards" title="Permalink to this heading">#</a></h3>
+<p>Most of the entities in ANSA have a card that includes all the necessary information regarding them. The type of each entity is very important, since it is the keyword that must be used in order to have access to the card and its contents. The entity’s type is displayed on the card’s window header, enclosed in brackets. For example, a NASTRAN “shell” has a card with type <strong>SHELL</strong> and this is the keyword that must be used when dealing with this kind of entity, while on the other hand, an LS-DYNA “shell” has a card with type <strong>ELEMENT_SHELL</strong>. The labels of the card fields are also important, since they must be used in order to obtain or change their values.</p>
+<img alt="../_images/card.jpg" src="../_images/card.jpg" />
+<p>So, a simple use of the previously presented methods of the <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansa.base.Entity</span></code></a> class would look like this on a shell element entity:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Returns the type of the element on NASTRAN.</span>
+<span class="n">ansa_type</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">ansa_type</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The type of the element:&#39;</span><span class="p">,</span> <span class="n">ansa_type</span><span class="p">)</span>
+
+<span class="c1"># Returns a list with all the active fields of the edit card.</span>
+<span class="n">card_fields</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">card_fields</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All the active card fields:&#39;</span><span class="p">,</span> <span class="n">card_fields</span><span class="p">)</span>
+
+<span class="c1"># Retrieve the element&#39;s type, PID and Grid Points on a dictionary.</span>
+<span class="n">elem_fields</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">get_entity_values</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;PID&#39;</span><span class="p">,</span> <span class="s1">&#39;G1&#39;</span><span class="p">,</span> <span class="s1">&#39;G2&#39;</span><span class="p">,</span> <span class="s1">&#39;G3&#39;</span><span class="p">,</span> <span class="s1">&#39;G4&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The returned dictionary:&#39;</span><span class="p">,</span> <span class="n">elem_fields</span><span class="p">)</span>
+
+<span class="c1"># Set a different Property ID.</span>
+<span class="n">elem</span><span class="o">.</span><span class="n">set_entity_values</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;PID&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">})</span>
+</pre></div>
+</div>
+</section>
+<section id="retrieving-entities">
+<h3>Retrieving Entities<a class="headerlink" href="#retrieving-entities" title="Permalink to this heading">#</a></h3>
+<p>There are various ways to retrieve entities from the ANSA Database, with the most common of them being the functions <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CollectEntities" title="ansa.base.CollectEntities"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CollectEntities()</span></code></a> and <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.NameToEnts" title="ansa.base.NameToEnts"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.NameToEnts()</span></code></a>, for massive collection, and <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.GetEntity" title="ansa.base.GetEntity"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.GetEntity()</span></code></a> for retrieving a single entity, provided its id.</p>
+<section id="massive-collection-of-entities">
+<h4>Massive collection of Entities<a class="headerlink" href="#massive-collection-of-entities" title="Permalink to this heading">#</a></h4>
+<p>One of the advantages of the <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CollectEntities" title="ansa.base.CollectEntities"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CollectEntities()</span></code></a> function is that it can be used for finding entities that are used by other container-entities, while it’s also the only function that can collect visible entities. Its syntax is very flexible and can accept either lists/tuples or single elements, while a variable number of input arguments can be specified as well. Its required parameters are the desired deck, the container where the function will search in, and finally the search types to be collected.</p>
+<p>Let’s see the capabilities of this function with some examples.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Define the keywords of the entities that you want to collect in a tuple.</span>
+    <span class="c1"># These keywords are taken from the title of their cards.</span>
+    <span class="n">search_types</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;PSHELL&#39;</span><span class="p">,</span> <span class="s1">&#39;PSOLID&#39;</span><span class="p">)</span>
+    <span class="n">ents</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">search_types</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of entities collected:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ents</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>In this approach the search types are more than one, thus they are passed to the function as a tuple. The second argument of the function, which indicates the container to search in, is set to None, in order for the function to collect entities from the whole database. The output of the function is a list that contains the objects of PSHELLs and PSOLIDs of the database.</p>
+<p>If you want to collect all the properties or all the materials of the database, a string indicating the entity category should be used:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">all_props</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;__PROPERTIES__&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of properties collected:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_props</span><span class="p">))</span>
+
+    <span class="n">all_mats</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;__MATERIALS__&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of materials collected:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_mats</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Now suppose that you want to collect only the GRIDs that are used from SHELLs. In this case you don’t want to search for GRIDs on the whole database, but only on the existing SHELLs. In order to accomplish that, first you need to collect all the SHELLs and then collect all the GRIDs, providing the SHELLs collected as the container argument. Keep in mind that a container can either be a list or a single object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># First collect the shells of the whole database.</span>
+        <span class="n">shells</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;SHELL&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of shells:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">shells</span><span class="p">))</span>
+
+    <span class="c1"># Then collect the grids of these shells.</span>
+        <span class="n">grids</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">shells</span><span class="p">,</span> <span class="s2">&quot;GRID&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of grids used from shells:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">grids</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The third argument that defines the type of entities, can also accept some special keywords.
+One of those is the keyword “__ALL_ENTITIES__”, which can be used to collect all the entities that are included into a superior entity.
+This makes sense in SETs, PARTs, Connections, etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect the sets of the database</span>
+    <span class="n">sets</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;SET&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of sets:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sets</span><span class="p">))</span>
+
+    <span class="c1"># Collect all the entities that belong to these sets</span>
+    <span class="n">ents</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">sets</span><span class="p">,</span> <span class="s1">&#39;__ALL_ENTITIES__&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of entities in sets:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ents</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Another useful capability of the function <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CollectEntities" title="ansa.base.CollectEntities"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CollectEntities()</span></code></a> is collecting visible entities. This is made possible by setting the ‘filter_visible’ argument to True, as shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">shells</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;SHELL&#39;</span><span class="p">,</span> <span class="n">filter_visible</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of visible shells:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">shells</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>As a more complete example, suppose we want to create a function that finds all the nodes with x coordinate less than a given value and renames them as: “NODE WITH ID: &lt;id&gt; AND XCOORD: &lt;xcoord&gt;”. In order to accomplish that we need to use the functions <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CollectEntities" title="ansa.base.CollectEntities"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CollectEntities()</span></code></a> and <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.Entity.set_entity_values" title="ansa.base.Entity.set_entity_values"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ansa.base.Entity.set_entity_values()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">rename_nodes</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="c1"># Collect all nodes</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;GRID&#39;</span><span class="p">)</span>
+
+    <span class="n">nodes_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">nodes_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;NODE WITH ID: </span><span class="si">%d</span><span class="s1"> AND XCOORD: </span><span class="si">%.5f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">_id</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">set_entity_values</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">})</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of nodes with x coordinate less than </span><span class="si">%d</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes_list</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">nodes_list</span>
+</pre></div>
+</div>
+</section>
+<section id="collect-entities-according-to-their-names">
+<h4>Collect Entities according to their names<a class="headerlink" href="#collect-entities-according-to-their-names" title="Permalink to this heading">#</a></h4>
+<p>Apart from ids, names can also be used as searching keywords for collecting any type of entities. The function that pulls this process off, is the <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.NameToEnts" title="ansa.base.NameToEnts"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.NameToEnts()</span></code></a>, which takes an argument containing the search pattern, also accepting Perl regular expressions, and two more optional arguments containing the deck and the search mode. It returns a list containing references to all entities with successful name matches. This function is mostly used in combination with the <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.Entity.ansa_type" title="ansa.base.Entity.ansa_type"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ansa.base.Entity.ansa_type()</span></code></a> in order to distinguish the type of entities.
+In the following example, suppose that the whole database must be searched in order to collect and store any PSHELLs and PSOLIDs whose name starts with “Default”.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Collect entities that satisfy the searching pattern</span>
+    <span class="n">ents</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">NameToEnts</span><span class="p">(</span><span class="s2">&quot;^Default.*&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ents</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No entities were found.&#39;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="n">pshells</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">psolids</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">ents</span><span class="p">:</span>
+        <span class="c1"># Distinguish the type of entity</span>
+            <span class="k">if</span> <span class="n">ent</span><span class="o">.</span><span class="n">ansa_type</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;PSHELL&#39;</span><span class="p">:</span>
+            <span class="n">pshells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ent</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ent</span><span class="o">.</span><span class="n">ansa_type</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;PSOLID&#39;</span><span class="p">:</span>
+            <span class="n">psolids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ent</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The collected PSHELLS:&#39;</span><span class="p">,</span> <span class="n">pshells</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The collected PSOLIDS:&#39;</span><span class="p">,</span> <span class="n">psolids</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="get-a-single-entity">
+<h4>Get a single Entity<a class="headerlink" href="#get-a-single-entity" title="Permalink to this heading">#</a></h4>
+<p>In order to get a single object of an entity, the function <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.GetEntity" title="ansa.base.GetEntity"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.GetEntity()</span></code></a> can be used. The type and the id of the entity are required, in order to get a reference to the object of the entity.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">GetSingleEntity</span><span class="p">():</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;GRID&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The retrieved node:&#39;</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the above example, a GRID object with id 100 is returned.</p>
+<p>The type is not necessarily needed if the function is used for getting properties, materials or model browser containers. In that case, instead of the entity type, the keywords <strong>“__MATERIALS__”</strong>, <strong>“__PROPERTIES__”</strong> or <strong>“__MBCONTAINERS__”</strong> can be used.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">prop</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;__PROPERTIES__&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">mat</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;__MATERIALS__&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">mb</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;__MBCONTAINERS__&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.GetEntity" title="ansa.base.GetEntity"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.GetEntity()</span></code></a> function cannot collect ANSAPARTS and ANSAGROUPS from the PART MANAGER through their Module Id. Instead the function <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.GetPartFromModuleId" title="ansa.base.GetPartFromModuleId"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.GetPartFromModuleId()</span></code></a> has to be used.</p>
+</div>
+</section>
+</section>
+<section id="create-entities">
+<h3>Create Entities<a class="headerlink" href="#create-entities" title="Permalink to this heading">#</a></h3>
+<p>Apart from retrieving already existing entities, the ANSA API can also be used to create new entities like nodes, properties, materials etc. The function that can be used for this purpose is the <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CreateEntity" title="ansa.base.CreateEntity"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CreateEntity()</span></code></a>. It is necessary to declare the entity type keyword and a dictionary containing pairs of labels – values, in order to get a reference to the newly created entity.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CreateGrid</span><span class="p">():</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;X1&#39;</span><span class="p">:</span> <span class="mf">3.5</span><span class="p">,</span> <span class="s1">&#39;X2&#39;</span><span class="p">:</span> <span class="mf">10.8</span><span class="p">,</span> <span class="s1">&#39;X3&#39;</span><span class="p">:</span> <span class="mf">246.7</span><span class="p">}</span>
+    <span class="n">new_grid</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CreateEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;GRID&#39;</span><span class="p">,</span> <span class="n">fields</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The id of the new grid:&#39;</span><span class="p">,</span> <span class="n">new_grid</span><span class="o">.</span><span class="n">_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>During the creation of an entity, all the fields that are necessary for its definition but are not specified by the user (e.g. the id) are automatically filled by ANSA.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not all entities of ANSA can be created by using the <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CreateEntity" title="ansa.base.CreateEntity"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CreateEntity()</span></code></a> function. Some of them demand the use of specific functions like <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.NewPart" title="ansa.base.NewPart"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.NewPart()</span></code></a>, <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.NewGroup" title="ansa.base.NewGroup"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.NewGroup()</span></code></a>, etc.</p>
+</div>
+</section>
+</section>
+<section id="organize-data-in-containers">
+<h2>Organize Data in containers<a class="headerlink" href="#organize-data-in-containers" title="Permalink to this heading">#</a></h2>
+<p>After creating or collecting ANSA entities/data, it is very commonly needed to organize them in containers such as a Set, a Part, a Group or an Include, in order to easily retrieve them or massively apply to them a series of operations.</p>
+<p>Following, are some examples of using the aforementioned containers in quite plain scenarios.</p>
+<section id="model-browser-parts-groups">
+<h3>Model Browser - Parts, Groups<a class="headerlink" href="#model-browser-parts-groups" title="Permalink to this heading">#</a></h3>
+<p>The Model Browser is a GUI window where the user can see all the existing Groups and Parts, with all the Entities that are contained in them. In order to create a new group or a new part, the functions <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.NewGroup" title="ansa.base.NewGroup"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.NewGroup()</span></code></a> and <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.NewPart" title="ansa.base.NewPart"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.NewPart()</span></code></a> have to be used. Moreover, in order to add data in a part or even add a part in a group, the function <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.SetEntityPart" title="ansa.base.SetEntityPart"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.SetEntityPart()</span></code></a> has to be used.</p>
+<p>Suppose we want to create a group named ‘foo’, which contains a part named ‘bar’ and add to it any number of elements that the user is able to pick from the ANSA interface.
+The following example demonstrates how this can be accomplished:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Let the user pick the elements from the interface</span>
+    <span class="n">elems</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">PickEntities</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;__ELEMENTS__&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of elements picked:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">elems</span><span class="p">))</span>
+
+    <span class="c1"># Create the group and the part</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">NewGroup</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+    <span class="n">part</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">NewPart</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Add the part to the group</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">SetEntityPart</span><span class="p">(</span><span class="n">part</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
+
+    <span class="c1"># Add the elements to the part</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">SetEntityPart</span><span class="p">(</span><span class="n">elems</span><span class="p">,</span> <span class="n">part</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="includes-manager">
+<h3>Includes Manager<a class="headerlink" href="#includes-manager" title="Permalink to this heading">#</a></h3>
+<p>The Includes Manager handles all the Include Entities of the database, similar to the Model Browser and the Parts. An Include can be created by using the function <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CreateEntity" title="ansa.base.CreateEntity"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CreateEntity()</span></code></a> and entities can be added to any include by using the function <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.AddToInclude" title="ansa.base.AddToInclude"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.AddToInclude()</span></code></a>.</p>
+<p>As an example we can create an Include and add some elements in it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">elems</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">PickEntities</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;__ELEMENTS__&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of elements picked:&#39;</span><span class="p">,</span> <span class="n">elems</span><span class="p">)</span>
+
+    <span class="c1"># Create the include entity</span>
+    <span class="n">include</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CreateEntity</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;INCLUDE&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The created Include:&#39;</span><span class="p">,</span> <span class="n">include</span><span class="o">.</span><span class="n">_id</span><span class="p">)</span>
+
+    <span class="c1"># Add the elements to the include</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">AddToInclude</span><span class="p">(</span><span class="n">include</span><span class="p">,</span> <span class="n">elems</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="sets">
+<h3>Sets<a class="headerlink" href="#sets" title="Permalink to this heading">#</a></h3>
+<p>A set is an Entity which can hold any kind of ANSA Entities, in order to organize these data or massively apply operations on them. In order to create a set, the function <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CreateEntity" title="ansa.base.CreateEntity"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CreateEntity()</span></code></a> has to be used and in order to add entities in it, the function <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.AddToSet" title="ansa.base.AddToSet"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.AddToSet()</span></code></a> has to be used.</p>
+<p>A plain example where adding a property into a newly created set is shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Retrieve the Property</span>
+    <span class="n">prop</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;__PROPERTIES__&#39;</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
+
+    <span class="c1"># Create a set</span>
+    <span class="n">my_set</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CreateEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;SET&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;SetWithProp&#39;</span><span class="p">})</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The created Set:&#39;</span><span class="p">,</span> <span class="n">my_set</span><span class="o">.</span><span class="n">_id</span><span class="p">)</span>
+
+    <span class="c1"># Add the property to the set</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">AddToSet</span><span class="p">(</span><span class="n">my_set</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are trying to create a set with the same name as an already existing one, the function <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.CreateEntity" title="ansa.base.CreateEntity"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.CreateEntity()</span></code></a> will return None. That’s because sets in ANSA are identified by their unique name and not by an id, as many other ANSA entities. In order to make sure that the set is always created, the following function can be implemented, which appends an increasing number at the end of the set name:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">create_set</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">my_set</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CreateEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;SET&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">})</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">my_set</span><span class="p">:</span>
+        <span class="n">my_set</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CreateEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;SET&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="n">name</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)})</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">my_set</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="complete-example">
+<h2>Complete Example<a class="headerlink" href="#complete-example" title="Permalink to this heading">#</a></h2>
+<p>To complete this tutorial, let’s see an example that combines some of the aforementioned API functions.</p>
+<p>Suppose that firstly, we want to find all the nodes with x coordinate less than 1600 and rename them accordingly, as shown in a previous example. Then, we want to add all these identified nodes to a set named ‘MyTempSet’, but also make sure that this set is always created (avoid naming conflicts).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">_create_set</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">my_set</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CreateEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;SET&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">})</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">my_set</span><span class="p">:</span>
+        <span class="n">my_set</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CreateEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s1">&#39;SET&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="n">name</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)})</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">my_set</span>
+
+<span class="k">def</span> <span class="nf">_rename_nodes</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;GRID&#39;</span><span class="p">)</span>
+    <span class="n">nodes_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">nodes_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;NODE WITH ID: </span><span class="si">%d</span><span class="s1"> AND XCOORD: </span><span class="si">%.5f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">_id</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">set_entity_values</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">nodes_list</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="n">_rename_nodes</span><span class="p">(</span><span class="mi">1600</span><span class="p">)</span>
+    <span class="n">my_set</span> <span class="o">=</span> <span class="n">_create_set</span><span class="p">(</span><span class="s1">&#39;MyTempSet&#39;</span><span class="p">)</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">AddToSet</span><span class="p">(</span><span class="n">my_set</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that we provide a list with all the nodes to the function <a class="reference internal" href="../reference/api_ref_ansa/generated/ansa.base.html#ansa.base.AddToSet" title="ansa.base.AddToSet"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansa.base.AddToSet()</span></code></a>. It is much faster to collect all the Entity objects into a list and call the function just once, in contrast to calling the function multiple times for every single Entity object.</p>
+<p>Generally, functions that accept either a single entity or a list of entities, are working a lot faster when provided a list of Entity objects and called just once. You can read more tips on how to optimize your code <a class="reference internal" href="../user_guide/api_ansa/intro_ansa.html#code-optimization"><span class="std std-ref">Code optimization</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Keep in mind that this is just a short introduction to the ANSA API and you can always read the complete <span class="xref std std-ref">guitk Module</span>.</p>
+</div>
+</section>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="interpreter.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Standalone Python Interpreter</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="10minutes_meta.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">10 Minutes to META API</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#script-editor">
+   Script Editor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modules">
+   Modules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-data-in-ansa">
+   Access Data in ANSA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-ansa-entity">
+     The ANSA Entity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ansa-entities-edit-cards">
+     ANSA Entities edit cards
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#retrieving-entities">
+     Retrieving Entities
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#massive-collection-of-entities">
+       Massive collection of Entities
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#collect-entities-according-to-their-names">
+       Collect Entities according to their names
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#get-a-single-entity">
+       Get a single Entity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-entities">
+     Create Entities
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organize-data-in-containers">
+   Organize Data in containers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-browser-parts-groups">
+     Model Browser - Parts, Groups
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#includes-manager">
+     Includes Manager
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sets">
+     Sets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complete-example">
+   Complete Example
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

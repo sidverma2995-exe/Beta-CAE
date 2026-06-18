@@ -1,0 +1,1181 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>User Defined Quality Criteria &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/c_sdk/user_qual_criteria';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="user-defined-quality-criteria">
+<span id="sdk-udc"></span><h1>User Defined Quality Criteria<a class="headerlink" href="#user-defined-quality-criteria" title="Permalink to this heading">#</a></h1>
+<p>Users can develop their own quality criteria and integrate them seamlesly with the build in quality criteria. The computation of quality criteria is a very intensive and CPU demanding process and for this a general purpose element computation mechanism is given to user. The provided libraries can be used to develop the required computations. The APIs are in C programming language.</p>
+<section id="the-software-development-kit">
+<h2>The Software Development Kit<a class="headerlink" href="#the-software-development-kit" title="Permalink to this heading">#</a></h2>
+<section id="location">
+<h3>Location<a class="headerlink" href="#location" title="Permalink to this heading">#</a></h3>
+<p>The provided SDK is called UDC (User Defined Criteria). It can be downloaded from here <a class="reference download internal" download="" href="../../_downloads/596d99ccebc5766f04a41f286083a62c/udc.tar.gz"><code class="xref download docutils literal notranslate"><span class="pre">udc</span> <span class="pre">SDK</span></code></a></p>
+</section>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h3>
+<p>The package needs to be unzip. The contents of the package are:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Directory/File</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>build</p></td>
+<td><div class="line-block">
+<div class="line">An empty folder. This is where the shared object with the user’s code</div>
+<div class="line">will be placed.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>elements</p></td>
+<td><div class="line-block">
+<div class="line">The elements folder contains images showing the udc element’s</div>
+<div class="line">nodes.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CMakeLists.txt</p></td>
+<td><div class="line-block">
+<div class="line">The cmake file. Depending on your computer’s OS you have to use the</div>
+<div class="line">correct target_link_library and set the correct path.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>criterion.c</p></td>
+<td><div class="line-block">
+<div class="line">The user’s calculation functions are placed in here. They must follow a</div>
+<div class="line">specific prototype like udc_solid_volume</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>udc.h</p></td>
+<td><div class="line-block">
+<div class="line">The header file with our API functions. It must be included in</div>
+<div class="line">criterion.c to use them.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>beta-udc.lib</p></td>
+<td><div class="line-block">
+<div class="line">Library to be used in CMakeLists.txt in target_link_library path</div>
+<div class="line">(Windows only)</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="adding-your-own-criterion">
+<h3>Adding your own criterion<a class="headerlink" href="#adding-your-own-criterion" title="Permalink to this heading">#</a></h3>
+<p>In the UDC directory , there is a file , named <strong>criterion.c</strong>, which should contain the C implementation of each user defined quality criterion.This file currently contains a volume clement criterion implementation , as an example case. Note that if the user wants to use a different file than the given criterion.c the <strong>CMakeLists.txt</strong> needs to be edited as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>set<span class="o">(</span>SOURCES<span class="w"> </span>new_criterion.c<span class="o">)</span>
+</pre></div>
+</div>
+<p>In criterion.c create a function with the following prototype:</p>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.udc_xxxx">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">udc_xxxx</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">element</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.udc_xxxx" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The function’s name should start with <strong>udc_suffix</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – is the element for which you will make the calculation</p></li>
+<li><p><strong>value</strong> – is the calculated value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The function should return 1 if a value has been calculated or 0 if this was not possible</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Then place your function in udc.h</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">extern</span><span class="w"> </span><span class="n">DLL_PUBLIC</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">udc_xxxx</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">solid</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Now compile the project again and load the .so or .dll in ANSA.</p>
+</section>
+<section id="setting-up-the-compilation">
+<h3>Setting up the compilation<a class="headerlink" href="#setting-up-the-compilation" title="Permalink to this heading">#</a></h3>
+<section id="setting-up-the-make-file">
+<h4>Setting up the make file<a class="headerlink" href="#setting-up-the-make-file" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>In both Linux and Windows users have to edit CMakeLists.txt and modify the target_link_libraries path depending on your OS and the location of the <strong>shared_v21.0.0/linux64/lib64/</strong> directory in your local installation, as shown below:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>target_link_libraries<span class="o">(</span>udc_solid_volume
+<span class="w">    </span><span class="c1">#/path/to/shared_v21.0.0/linux64/lib64/libbeta-udc.so # Linux</span>
+<span class="w">    </span><span class="c1">#C:/path/to/shared_v21.0.0/linux64/lib64/libbeta-udc.so # Windows</span>
+</pre></div>
+</div>
+</section>
+<section id="for-linux-users">
+<h4>For Linux users<a class="headerlink" href="#for-linux-users" title="Permalink to this heading">#</a></h4>
+<p>Run the following commands:</p>
+<ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>template/build
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>..
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make
+</pre></div>
+</div>
+</section>
+<section id="for-windows-users">
+<h4>For Windows users<a class="headerlink" href="#for-windows-users" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple" start="2">
+<li><p>Go to the <em>template/build folder</em></p></li>
+<li><p>Run</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio 15 2017 Win64&quot;</span><span class="w"> </span>..
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Double click on the solution (.sln) file to open it with Visual Studio</p></li>
+<li><p>Build the project</p></li>
+</ol>
+</section>
+<section id="both-linux-and-windows">
+<h4>Both Linux and Windows<a class="headerlink" href="#both-linux-and-windows" title="Permalink to this heading">#</a></h4>
+<p>The compilation will create the <em>template/build/libudc_solid_volume.so</em> (Linux) or <em>template\build\udc_solid_volume.dll</em> (Windows) library. In order to rename the <em>.so</em> or the <em>.dll</em> , you can change the corresponding setting.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A single so or dll needs to be provided for all the user defined criteria</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above compilation instructions need to adhere to the <a class="reference external" href="./bin_comp.html">Binary Compatibility</a> instructions</p>
+</div>
+</section>
+</section>
+</section>
+<section id="adding-user-defined-criteria-in-ansa">
+<h2>Adding User Defined Criteria in ANSA<a class="headerlink" href="#adding-user-defined-criteria-in-ansa" title="Permalink to this heading">#</a></h2>
+<p>In order to load the compiled library of the User Defined Criteria follow the steps:</p>
+<ol class="arabic simple">
+<li><p>Copy the Library created in the previous step (so or dll) to the <strong>.BETA</strong> or in the <strong>ANSA_HOME</strong> directory.</p></li>
+<li><p>Go to Settings &gt; User Defined Quality Criteria.</p></li>
+<li><p>Load the created shared library.</p></li>
+<li><p>Add a criterion Type Shell or Solid.</p></li>
+<li><p>Add the name of the function that needs to be called for each user defined criterion</p></li>
+<li><p>Press Apply.</p></li>
+</ol>
+<img alt="../../_images/udqc.jpg" src="../../_images/udqc.jpg" />
+<p>From this point the UDC is behaving like any other quality criterion within ANSA. The failure settings can be adjusted from F11 or the OpenGL area.</p>
+<img alt="../../_images/udc_f11.jpg" src="../../_images/udc_f11.jpg" />
+<ol class="arabic simple" start="7">
+<li><p>Press the Hidden button and the criterion should be drawn</p></li>
+</ol>
+<img alt="../../_images/udc_draw.jpg" src="../../_images/udc_draw.jpg" />
+<p>The User Defined Criteria behave like any other criterion as follows:</p>
+<ul class="simple">
+<li><p>can be read/written in <em>ANSA.defaults</em>.</p></li>
+<li><p>can be read/written in <em>.qual files</em>.</p></li>
+<li><p>are calculated by the Python API functions.</p></li>
+<li><p>are applicable on both ANSA and Light solids.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The failed criteria cannot be fixed by the mesh auto-fix functions.</p>
+</div>
+</section>
+<section id="the-c-api">
+<h2>The C API<a class="headerlink" href="#the-c-api" title="Permalink to this heading">#</a></h2>
+<section id="the-order-of-the-solid-element-nodes">
+<h3>The order of the Solid Element Nodes<a class="headerlink" href="#the-order-of-the-solid-element-nodes" title="Permalink to this heading">#</a></h3>
+<p>The images below represent the order of the UDC nodes for every element type:</p>
+<section id="tetra-element">
+<h4>Tetra Element<a class="headerlink" href="#tetra-element" title="Permalink to this heading">#</a></h4>
+<img alt="../../_images/tetra.jpeg" src="../../_images/tetra.jpeg" />
+</section>
+<section id="penta-element">
+<h4>Penta Element<a class="headerlink" href="#penta-element" title="Permalink to this heading">#</a></h4>
+<img alt="../../_images/penta.jpeg" src="../../_images/penta.jpeg" />
+</section>
+<section id="hexa-element">
+<h4>Hexa Element<a class="headerlink" href="#hexa-element" title="Permalink to this heading">#</a></h4>
+<img alt="../../_images/hexa.jpeg" src="../../_images/hexa.jpeg" />
+</section>
+<section id="pyramid-element">
+<h4>Pyramid Element<a class="headerlink" href="#pyramid-element" title="Permalink to this heading">#</a></h4>
+<img alt="../../_images/pyramid.jpeg" src="../../_images/pyramid.jpeg" />
+</section>
+</section>
+<section id="the-c-functions">
+<h3>The C Functions<a class="headerlink" href="#the-c-functions" title="Permalink to this heading">#</a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="n">UdcElementType</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">UDC_UNKNOWN</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_NODE</span><span class="w">       </span><span class="o">=</span><span class="w">  </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_CQUAD4</span><span class="w">     </span><span class="o">=</span><span class="w">  </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_CTRIA3</span><span class="w">     </span><span class="o">=</span><span class="w">  </span><span class="mi">7</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_CQUAD8</span><span class="w">     </span><span class="o">=</span><span class="w">  </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_CTRIA6</span><span class="w">     </span><span class="o">=</span><span class="w">  </span><span class="mi">9</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_CTETRA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_PYRAMID</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_CPENTA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_CHEXA</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_CTETRA2</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_PYRAMID2</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_CPENTA2</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_CHEXA2</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_POLYGON</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span><span class="n">UDC_POLYHEDRON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">31</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="n">UdcElementType</span><span class="p">;</span>
+</pre></div>
+</div>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_is_node">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_is_node</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_is_node" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Check if element is a NODE</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – the element to be checked</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>1 if element is a NODE, 0 otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_is_shell">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_is_shell</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_is_shell" title="Permalink to this definition">#</a><br /></dt>
+<dd><blockquote>
+<div><p>Check if element is a POLYGON</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – the element to be checked</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>1 if element is a POLYGON, 0 otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_is_solid">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_is_solid</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_is_solid" title="Permalink to this definition">#</a><br /></dt>
+<dd><blockquote>
+<div><p>Check if element is a SOLID</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – the element to be checked</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>1 if element is a SOLID, 0 otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_is_polyhedron">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_is_polyhedron</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_is_polyhedron" title="Permalink to this definition">#</a><br /></dt>
+<dd><blockquote>
+<div><p>Check if element is a POLYHEDRON</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – the element to be checked</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>1 if element is a POLYHEDRON, 0 otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_get_element_type">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_get_element_type</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_get_element_type" title="Permalink to this definition">#</a><br /></dt>
+<dd><blockquote>
+<div><p>Get the UdcElementType of the element</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – the element to get its UdcElementType</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the UdcElementType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_node_pos">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_node_pos</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">node</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_node_pos" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the coordinates of a NODE</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> – the NODE to get its coordinates</p></li>
+<li><p><strong>pos</strong> – a 3 doubles array with the x, y, z coordinates</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>always returns 0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_shell_nodes">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_shell_nodes</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">shell</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_shell_nodes" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the 1st order NODEs of a SHELL. a node might be NULL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shell</strong> – the SHELL to get its NODEs</p></li>
+<li><p><strong>nodes</strong> – an array with the SHELL NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of NODEs in the nodes array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_shell_nodes_2nd_order">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_shell_nodes_2nd_order</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">shell</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">8</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_shell_nodes_2nd_order" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the 2nd order NODEs of a SHELL. a node might be NULL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shell</strong> – the SHELL to get its NODEs</p></li>
+<li><p><strong>nodes</strong> – an array with the SHELL NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of NODEs in the nodes array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_shell_nodes_num_2nd_order">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_shell_nodes_num_2nd_order</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">shell</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_shell_nodes_num_2nd_order" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the number of the 2nd order NODEs of a SHELL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shell</strong> – the SHELL to get its NODEs number</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of the 2nd order NODEs of a SHELL</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_polygon_nodes">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_polygon_nodes</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">polygon</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_polygon_nodes" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the NODEs of a POLYGON</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polygon</strong> – the POLYGON to get its NODEs</p></li>
+<li><p><strong>nodes</strong> – an array with the POLYGON NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of NODEs in the nodes array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_polygon_nodes_num">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_polygon_nodes_num</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">polygon</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_polygon_nodes_num" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the number of NODEs of a POLYGON</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polygon</strong> – the POLYGON to get its NODEs number</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of NODEs of a POLYGON</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_nodes">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_nodes</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">8</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_nodes" title="Permalink to this definition">#</a><br /></dt>
+<dd><blockquote>
+<div><p>Get the 1st order NODEs of a SOLID. a node might be NULL</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its NODEs</p></li>
+<li><p><strong>nodes</strong> – an array with the SOLID NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of NODEs in the nodes array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_nodes_2nd_order">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_nodes_2nd_order</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">20</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_nodes_2nd_order" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the 2nd order NODEs of a SOLID. a node might be NULL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its NODEs</p></li>
+<li><p><strong>nodes</strong> – an array with the SOLID NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of NODEs in the nodes array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_nodes_num">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_nodes_num</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_nodes_num" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the number of the 1st order NODEs of a SOLID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its NODEs number</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of the 1st order NODEs of a SOLID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_nodes_num_2nd_order">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_nodes_num_2nd_order</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_nodes_num_2nd_order" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the number of the 2nd order NODEs of a SOLID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its NODEs number</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of the 2nd order NODEs of a SOLID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_polyhedron_nodes">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_polyhedron_nodes</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">polyhedron</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_polyhedron_nodes" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the NODEs of a POLYHEDRON</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polyhedron</strong> – the POLYHEDRON to get its NODEs</p></li>
+<li><p><strong>nodes</strong> – an array with the unique POLYHEDRON NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of NODEs in the nodes array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_polyhedron_nodes_num">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_polyhedron_nodes_num</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">polyhedron</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_polyhedron_nodes_num" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the number of NODEs of a POLYHEDRON</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polyhedron</strong> – the POLYHEDRON to get its NODEs number</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of the NODEs of a POLYHEDRON</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_facets">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_facets</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_facets" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the 1st order NODEs of the facets of a SOLID. a node might be NULL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its facet NODEs</p></li>
+<li><p><strong>nodes</strong> – a 6x4 array with the SOLID facet NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of SOLID facets</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_facets_2nd_order">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_facets_2nd_order</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">8</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_facets_2nd_order" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the 2nd order NODEs of the facets of a SOLID. a node might be NULL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its facet NODEs</p></li>
+<li><p><strong>nodes</strong> – a 6x8 array with the SOLID facet NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of SOLID facets</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_facets_num">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_facets_num</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_facets_num" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get number of the facets of a SOLID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its facets number</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of SOLID facets</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_facet_nodes">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_facet_nodes</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">facet</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_facet_nodes" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the 1st order NODEs of a SOLID facet. a node might be NULL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its facet NODEs</p></li>
+<li><p><strong>facet</strong> – the SOLID facet index</p></li>
+<li><p><strong>nodes</strong> – an array with the SOLID facet NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of facet NODEs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_facet_nodes_2nd_order">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_facet_nodes_2nd_order</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">facet</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">8</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_facet_nodes_2nd_order" title="Permalink to this definition">#</a><br /></dt>
+<dd><blockquote>
+<div><p>Get the 2nd order NODEs of a SOLID facet. A node might be NULL</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its facet NODEs</p></li>
+<li><p><strong>facet</strong> – the SOLID facet index</p></li>
+<li><p><strong>nodes</strong> – an array with the SOLID facet NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of facet NODEs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_facet_nodes_num">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_facet_nodes_num</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">facet</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_facet_nodes_num" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the number of the 1st order NODEs of a SOLID facet</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its facet NODEs</p></li>
+<li><p><strong>facet</strong> – the SOLID facet index</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of facet NODEs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_solid_facet_nodes_num_2nd_order">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_solid_facet_nodes_num_2nd_order</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">solid</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">facet</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_solid_facet_nodes_num_2nd_order" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the number of the 2nd order NODEs of a SOLID facet</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solid</strong> – the SOLID to get its facet NODEs</p></li>
+<li><p><strong>facet</strong> – the SOLID facet index</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of facet NODEs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_polyhedron_hedra_nodes">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_polyhedron_hedra_nodes</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">polyhedron</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">hedra</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">nodes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_polyhedron_hedra_nodes" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the NODEs of a POLYHEDRON hedra</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polyhedron</strong> – the POLYHEDRON to get its hedra NODEs</p></li>
+<li><p><strong>hedra</strong> – the POLYHEDRON hedra index</p></li>
+<li><p><strong>nodes</strong> – an array with the POLYHEDRON hedra NODEs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of NODEs in the nodes array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_polyhedron_hedra_nodes_num">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_polyhedron_hedra_nodes_num</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">polyhedron</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">hedra</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_polyhedron_hedra_nodes_num" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the number of NODEs of a POLYHEDRON hedra</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polyhedron</strong> – the POLYHEDRON to get its hedra NODEs</p></li>
+<li><p><strong>hedra</strong> – the POLYHEDRON hedra index</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of the hedra NODEs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.betaudc_a_ent_polyhedron_hedras_num">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">betaudc_a_ent_polyhedron_hedras_num</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">polyhedron</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.betaudc_a_ent_polyhedron_hedras_num" title="Permalink to this definition">#</a><br /></dt>
+<dd><blockquote>
+<div><p>Get the number of hedras of a POLYHEDRON</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polyhedron</strong> – the POLYHEDRON to get its number of hedras</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of the POLYHEDRON hedras</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-software-development-kit">
+   The Software Development Kit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#location">
+     Location
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-your-own-criterion">
+     Adding your own criterion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-the-compilation">
+     Setting up the compilation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setting-up-the-make-file">
+       Setting up the make file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-linux-users">
+       For Linux users
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-windows-users">
+       For Windows users
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#both-linux-and-windows">
+       Both Linux and Windows
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-user-defined-criteria-in-ansa">
+   Adding User Defined Criteria in ANSA
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-c-api">
+   The C API
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-order-of-the-solid-element-nodes">
+     The order of the Solid Element Nodes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tetra-element">
+       Tetra Element
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#penta-element">
+       Penta Element
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hexa-element">
+       Hexa Element
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pyramid-element">
+       Pyramid Element
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-c-functions">
+     The C Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

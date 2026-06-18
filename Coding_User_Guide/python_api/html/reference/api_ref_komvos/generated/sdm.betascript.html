@@ -1,0 +1,785 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module sdm.betascript &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_komvos/generated/sdm.betascript';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sdm.html">Module sdm</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sdm.base.html">Module sdm.base</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module sdm.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.constants.html">Module sdm.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.dm.html">Module sdm.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.ml.html">Module sdm.ml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.sdm_base.html">Module sdm.sdm_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.session.html">Module sdm.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sdm.spdrm.html">Module sdm.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.fileChooser.html">Module sdm.spdrm.fileChooser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.inputGetter.html">Module sdm.spdrm.inputGetter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.messageDisplayer.html">Module sdm.spdrm.messageDisplayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.process.html">Module sdm.spdrm.process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.question.html">Module sdm.spdrm.question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.scriptCommands.html">Module sdm.spdrm.scriptCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.utils.html">Module sdm.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.base.html">Module sdm.base</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module sdm.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.constants.html">Module sdm.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.dm.html">Module sdm.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.ml.html">Module sdm.ml</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.sdm_base.html">Module sdm.sdm_base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.session.html">Module sdm.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="sdm.spdrm.html">Module sdm.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.fileChooser.html">Module sdm.spdrm.fileChooser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.inputGetter.html">Module sdm.spdrm.inputGetter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.messageDisplayer.html">Module sdm.spdrm.messageDisplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.process.html">Module sdm.spdrm.process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.question.html">Module sdm.spdrm.question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.scriptCommands.html">Module sdm.spdrm.scriptCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.utils.html">Module sdm.utils</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-sdm.betascript">
+<span id="module-sdm-betascript"></span><span id="api-ref-sdm-betascript"></span><h1>Module sdm.betascript<a class="headerlink" href="#module-sdm.betascript" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.betascript.CurrentModule">
+<span class="sig-prename descclassname"><span class="pre">sdm.betascript.</span></span><span class="sig-name descname"><span class="pre">CurrentModule</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#sdm.betascript.CurrentModule" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function is used to get the currently executing module.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns the internal reference to the current module.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">betascript</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">CurrentModule</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.betascript.ExecuteFunc">
+<span class="sig-prename descclassname"><span class="pre">sdm.betascript.</span></span><span class="sig-name descname"><span class="pre">ExecuteFunc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_arguments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#sdm.betascript.ExecuteFunc" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function is used to run BETA Script code from within Python Code.</div>
+<div class="line">This function executes a function found in a dynamically loaded BETA scripting language script.</div>
+<div class="line">‘module’ was returned by the ‘LoadModule’ function.</div>
+<div class="line">‘function_name’ is the name of the function to call, followed by the arguments you would normally pass to it.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>module</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A reference to the module.</div>
+</div>
+</dd>
+<dt><strong>function_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the function.</div>
+</div>
+</dd>
+<dt><strong>function_arguments</strong><span class="classifier">Any, optional</span></dt><dd><div class="line-block">
+<div class="line">Arguments to be passed to the function.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>Any</dt><dd><div class="line-block">
+<div class="line">Returns the return value of the called function. </div>
+<div class="line">It is safe to call this function even if ‘LoadModule’ failed.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">betascript</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">LoadModule</span><span class="p">(</span>
+        <span class="s2">&quot;/home/user/scripts/some_script.bs&quot;</span>
+    <span class="p">)</span>  <span class="c1"># load a script file</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">ExecuteFunc</span><span class="p">(</span>
+        <span class="n">module</span><span class="p">,</span> <span class="s2">&quot;some_fun&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">)</span>  <span class="c1"># execute a function found within it</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;result =&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+    <span class="n">betascript</span><span class="o">.</span><span class="n">UnloadModule</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># Unload the script</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.betascript.LoadExecuteFunc">
+<span class="sig-prename descclassname"><span class="pre">sdm.betascript.</span></span><span class="sig-name descname"><span class="pre">LoadExecuteFunc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_arguments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#sdm.betascript.LoadExecuteFunc" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function loads the ‘script_name’ script and calls the ‘function_name’ function passing it </div>
+<div class="line">the ‘function_arguments’ arguments and finally unloads the script. It is a simple shortcut to </div>
+<div class="line">the Load/Execute/Unload combination. This function is used to run BETA Script code from within Python Code.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>script_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the script.</div>
+</div>
+</dd>
+<dt><strong>function_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the function.</div>
+</div>
+</dd>
+<dt><strong>function_arguments</strong><span class="classifier">Any, optional</span></dt><dd><div class="line-block">
+<div class="line">The arguments to be passed to the function.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>Any</dt><dd><div class="line-block">
+<div class="line">Returns whatever the invoked function returns.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">betascript</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">LoadExecuteFunc</span><span class="p">(</span>
+        <span class="s2">&quot;/home/user/scripts/some_script.bs&quot;</span><span class="p">,</span> <span class="s2">&quot;some_fun&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">)</span>  <span class="c1"># execute a function found within a module</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;result=&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>  <span class="c1"># print the result</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.betascript.LoadModule">
+<span class="sig-prename descclassname"><span class="pre">sdm.betascript.</span></span><span class="sig-name descname"><span class="pre">LoadModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#sdm.betascript.LoadModule" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function is used to load a BETA scripting language script file and/or a Python module into memory. </div>
+<div class="line">The new script is in separate memory from the executing script and the user CANNOT call functions from it. </div>
+<div class="line">You can call functions from this script using the ‘ExecuteFunc’ function. It is usefull </div>
+<div class="line">to have this dynamic load feature because you can decide in runtimewhich script to load</div>
+<div class="line">depending on the operation you perform.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>module_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the module to be loaded.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns an object containing internal information about the loaded script, or None if it fails to load.</div>
+<div class="line">This element is passed to the ‘ExecuteFunc’ to execute a function from that script.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">betascript</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">LoadModule</span><span class="p">(</span>
+        <span class="s2">&quot;/home/user/scripts/some_script.bs&quot;</span>
+    <span class="p">)</span>  <span class="c1"># load a script file</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">ExecuteFunc</span><span class="p">(</span>
+        <span class="n">module</span><span class="p">,</span> <span class="s2">&quot;some_fun&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">)</span>  <span class="c1"># execute a function found within it</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;result =&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>  <span class="c1"># print the result</span>
+    <span class="n">betascript</span><span class="o">.</span><span class="n">UnloadModule</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># Unload the script</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.betascript.SetCurrentModule">
+<span class="sig-prename descclassname"><span class="pre">sdm.betascript.</span></span><span class="sig-name descname"><span class="pre">SetCurrentModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#sdm.betascript.SetCurrentModule" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Set the current module (the first in the loaded module list).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>module</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The module object to be set as current.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 on success and 0 on faillure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">betascript</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">nm</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">LoadModule</span><span class="p">(</span><span class="s2">&quot;/home/costas/from_loader.bs&quot;</span><span class="p">)</span>
+    <span class="n">om</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">CurrentModule</span><span class="p">()</span>
+    <span class="n">betascript</span><span class="o">.</span><span class="n">SetCurrentModule</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span>
+    <span class="n">betascript</span><span class="o">.</span><span class="n">UnloadModule</span><span class="p">(</span><span class="n">om</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.betascript.UnloadModule">
+<span class="sig-prename descclassname"><span class="pre">sdm.betascript.</span></span><span class="sig-name descname"><span class="pre">UnloadModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#sdm.betascript.UnloadModule" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function is used to run BETA Script code from within Python Code.</div>
+<div class="line">This function unloads a dynamically loaded BETA scripting language script from memory.</div>
+<div class="line">The ‘module’ argument is whatever the ‘LoadModule’ returned when you called to load the module.</div>
+<div class="line">It is safe to call this function even if ‘LoadModule’ failed.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>module</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A reference to the module.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Always returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">betascript</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">LoadModule</span><span class="p">(</span>
+        <span class="s2">&quot;/home/user/scripts/some_script.bs&quot;</span>
+    <span class="p">)</span>  <span class="c1"># load a script file</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">ExecuteFunc</span><span class="p">(</span>
+        <span class="n">module</span><span class="p">,</span> <span class="s2">&quot;some_fun&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">)</span>  <span class="c1"># execute a function found within it</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>  <span class="c1"># print the result</span>
+    <span class="n">betascript</span><span class="o">.</span><span class="n">UnloadModule</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>  <span class="c1"># Unload the script</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.betascript.CheckBreak">
+<span class="sig-prename descclassname"><span class="pre">sdm.betascript.</span></span><span class="sig-name descname"><span class="pre">CheckBreak</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#sdm.betascript.CheckBreak" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A function to check, in execution time, if the Escape(ANSA)/Pause(META) button is pushed.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns:</div>
+<div class="line">0, If the specific button is not pushed.</div>
+<div class="line">1, If the specific button is pushed.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">betascript</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10000</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">betascript</span><span class="o">.</span><span class="n">CheckBreak</span><span class="p">():</span>
+            <span class="k">break</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.betascript.RunPluginFunction">
+<span class="sig-prename descclassname"><span class="pre">sdm.betascript.</span></span><span class="sig-name descname"><span class="pre">RunPluginFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin_module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">button_label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#sdm.betascript.RunPluginFunction" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function is used to call a plugin function from script.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>plugin_module_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the plugin [ppl/bpl] without suffix.</div>
+</div>
+</dd>
+<dt><strong>group_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The group name. An empty string if there is no group.</div>
+</div>
+</dd>
+<dt><strong>button_label</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The label of the specified button in plugins toolbar.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">betascript</span>
+
+<span class="k">def</span> <span class="nf">myFunction</span><span class="p">():</span>
+    <span class="n">betascript</span><span class="o">.</span><span class="n">RunPluginFunction</span><span class="p">(</span><span class="s2">&quot;PluginModuleName&quot;</span><span class="p">,</span> <span class="s2">&quot;GroupName&quot;</span><span class="p">,</span> <span class="s2">&quot;PluginButtonLabel&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.betascript.FindModule">
+<span class="sig-prename descclassname"><span class="pre">sdm.betascript.</span></span><span class="sig-name descname"><span class="pre">FindModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">module</span></span></span><a class="headerlink" href="#sdm.betascript.FindModule" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function returns the module object of a loaded script.</div>
+<div class="line">Takes as argument the name of the wanted module.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>module_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the wanted module.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>ModuleType</dt><dd><div class="line-block">
+<div class="line">Returns the module object with the given module name.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">betascript</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">betascript</span><span class="o">.</span><span class="n">FindModule</span><span class="p">(</span><span class="s2">&quot;module_name&quot;</span><span class="p">)</span>
+    <span class="n">betascript</span><span class="o">.</span><span class="n">ExecuteFunc</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s2">&quot;function_in_module&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

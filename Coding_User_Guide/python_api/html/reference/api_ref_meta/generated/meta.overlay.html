@@ -1,0 +1,1822 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module meta.overlay &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_meta/generated/meta.overlay';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="meta.html">Module meta</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="meta.annotations.html">Module meta.annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.base.html">Module meta.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.betascript.html">Module meta.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.betavisibility.html">Module meta.betavisibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.boundaries.html">Module meta.boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.calc.html">Module meta.calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.collaboration.html">Module meta.collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.connections.html">Module meta.connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.constants.html">Module meta.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.coordsystems.html">Module meta.coordsystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.dm.html">Module meta.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.elements.html">Module meta.elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.em.html">Module meta.em</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.groups.html">Module meta.groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.isofunctions.html">Module meta.isofunctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.materials.html">Module meta.materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.models.html">Module meta.models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.nodes.html">Module meta.nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.nvh.html">Module meta.nvh</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module meta.overlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.pages.html">Module meta.pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.parts.html">Module meta.parts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.planes.html">Module meta.planes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.plot2d.html">Module meta.plot2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.report.html">Module meta.report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.results.html">Module meta.results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.sections.html">Module meta.sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.session.html">Module meta.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="meta.spdrm.html">Module meta.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="meta.spdrm.process.html">Module meta.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="meta.spreadsheet.html">Module meta.spreadsheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.tdk.html">Module meta.tdk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.toolbars.html">Module meta.toolbars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.utils.html">Module meta.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.visuals.html">Module meta.visuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.vr.html">Module meta.vr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.windows.html">Module meta.windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meta.annotations.html">Module meta.annotations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.base.html">Module meta.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.betascript.html">Module meta.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.betavisibility.html">Module meta.betavisibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.boundaries.html">Module meta.boundaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.calc.html">Module meta.calc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.collaboration.html">Module meta.collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.connections.html">Module meta.connections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.constants.html">Module meta.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.coordsystems.html">Module meta.coordsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.dm.html">Module meta.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.elements.html">Module meta.elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.em.html">Module meta.em</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.groups.html">Module meta.groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.isofunctions.html">Module meta.isofunctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.materials.html">Module meta.materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.models.html">Module meta.models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.nodes.html">Module meta.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.nvh.html">Module meta.nvh</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module meta.overlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.pages.html">Module meta.pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.parts.html">Module meta.parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.planes.html">Module meta.planes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.plot2d.html">Module meta.plot2d</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.report.html">Module meta.report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.results.html">Module meta.results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.sections.html">Module meta.sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.session.html">Module meta.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="meta.spdrm.html">Module meta.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="meta.spdrm.process.html">Module meta.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meta.spreadsheet.html">Module meta.spreadsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.tdk.html">Module meta.tdk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.toolbars.html">Module meta.toolbars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.utils.html">Module meta.utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.visuals.html">Module meta.visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.vr.html">Module meta.vr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.windows.html">Module meta.windows</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-meta.overlay">
+<span id="module-meta-overlay"></span><span id="api-ref-meta-overlay"></span><h1>Module meta.overlay<a class="headerlink" href="#module-meta.overlay" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.ClearOverlayRuns">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">ClearOverlayRuns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.overlay.ClearOverlayRuns" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function deletes all the overlay runs.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Overlay run type. Possible string values:</div>
+<div class="line">- ‘session’</div>
+<div class="line">- ‘project’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">It returns 1 upon success or 0 upon failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">overlay_run_type</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">ClearOverlayRuns</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.CollectNewOverlayRunsEnd">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">CollectNewOverlayRunsEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><span class="pre">meta.overlay.Overlay</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.CollectNewOverlayRunsEnd" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function ends recording the creation of new overlay runs. This function should be preceded by a corresponding call to script function CollectNewOverlayRunsStart().</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Overlay run type. Possible string values:</div>
+<div class="line">- ‘session’</div>
+<div class="line">- ‘project’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[Overlay]</dt><dd><div class="line-block">
+<div class="line">It returns a list where each member of the list is an object of class Overlay referring to one specific newly created overlay run.</div>
+<div class="line">Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">overlay_run_type</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">CollectNewOverlayRunsStart</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">)</span>
+
+    <span class="c1"># create new overlay runs</span>
+    <span class="n">utils</span><span class="o">.</span><span class="n">MetaCommand</span><span class="p">(</span>
+        <span class="s1">&#39;read ses overlay &quot;/home/examples/Overlay_session.ses&quot; &quot;/home/examples/NastranEx2.nas,/home/examples/NastranEx2Overlay.nas,/home/examples/NastranEx2.op2,/home/examples/NastranEx2Overlay.op2&quot;&#39;</span>
+    <span class="p">)</span>
+
+    <span class="n">new_overlay_runs</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">CollectNewOverlayRunsEnd</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ovr</span> <span class="ow">in</span> <span class="n">new_overlay_runs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.CollectNewOverlayRunsStart">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">CollectNewOverlayRunsStart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.overlay.CollectNewOverlayRunsStart" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function starts recording the creation of new overlay runs. This function should be followed by a corresponding call to script function CollectNewOverlayRunsEnd().</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Type of the overlay run. Possible values are:</div>
+<div class="line">- ‘session’</div>
+<div class="line">- ‘project’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">It returns 1 upon success or 0 upon failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">overlay_run_type</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">CollectNewOverlayRunsStart</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">)</span>
+
+    <span class="c1"># create new overlay runs</span>
+    <span class="n">utils</span><span class="o">.</span><span class="n">MetaCommand</span><span class="p">(</span>
+        <span class="s1">&#39;read ses overlay &quot;/home/examples/Overlay_session.ses&quot; &quot;/home/examples/NastranEx2.nas,/home/examples/NastranEx2Overlay.nas,/home/examples/NastranEx2.op2,/home/examples/NastranEx2Overlay.op2&quot;&#39;</span>
+    <span class="p">)</span>
+
+    <span class="n">new_overlay_runs</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">CollectNewOverlayRunsEnd</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ovr</span> <span class="ow">in</span> <span class="n">new_overlay_runs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.IsOverlayRun">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">IsOverlayRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.overlay.IsOverlayRun" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function checks whether an object is of class Overlay.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run</strong><span class="classifier">Any</span></dt><dd><div class="line-block">
+<div class="line">Any given object.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">It returns 1 if the object is of class Overlay, or 0 if not.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">all_overlay_runs</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">OverlayRuns</span><span class="p">()</span>
+
+    <span class="n">entities</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">entities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;A string&quot;</span><span class="p">)</span>
+    <span class="n">entities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">all_overlay_runs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">entities</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">overlay</span><span class="o">.</span><span class="n">IsOverlayRun</span><span class="p">(</span><span class="n">ent</span><span class="p">):</span>
+            <span class="n">ovr</span> <span class="o">=</span> <span class="n">ent</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is an object of class type Overlay&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is NOT an object of class type Overlay&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.OverlayRunById">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">OverlayRunById</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlay_run_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><span class="pre">Overlay</span></a></span></span><a class="headerlink" href="#meta.overlay.OverlayRunById" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 20.1.0: </span>Use <a class="reference internal" href="meta.utils.html#meta.utils.get_overlay_runs" title="meta.utils.get_overlay_runs"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.get_overlay_runs()</span></code></a> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">This function searches for the overlay_run with the given id (overlay_run_id).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Type of the overlay run. Possible values are:</div>
+<div class="line">- ‘session’</div>
+<div class="line">- ‘project’.</div>
+</div>
+</dd>
+<dt><strong>overlay_run_id</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Id of the overlay run.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>Overlay</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns an object of class Overlay with the given id.</div>
+<div class="line">Else, None is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">overlay_run_type</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+    <span class="n">overlay_run_id</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">OverlayRunById</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">,</span> <span class="n">overlay_run_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ovr</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.OverlayRuns">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">OverlayRuns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><span class="pre">meta.overlay.Overlay</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.OverlayRuns" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 20.1.0: </span>Use <a class="reference internal" href="meta.utils.html#meta.utils.get_overlay_runs" title="meta.utils.get_overlay_runs"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.get_overlay_runs()</span></code></a> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">This function collects all overlay runs.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[Overlay]</dt><dd><div class="line-block">
+<div class="line">It returns a list where each member of the list is an object of class Overlay referring to one specific overlay run.</div>
+<div class="line">Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">all_overlay_runs</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">OverlayRuns</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">ovr</span> <span class="ow">in</span> <span class="n">all_overlay_runs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.OverlayRunsByFilename">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">OverlayRunsByFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlay_run_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><span class="pre">meta.overlay.Overlay</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.OverlayRunsByFilename" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 20.1.0: </span>Use <a class="reference internal" href="meta.utils.html#meta.utils.get_overlay_runs" title="meta.utils.get_overlay_runs"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.get_overlay_runs()</span></code></a> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">This function collects all overlay runs with a specific filename.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Overlay run type. Possible string values:</div>
+<div class="line">- ‘session’</div>
+<div class="line">- ‘project’.</div>
+</div>
+</dd>
+<dt><strong>overlay_run_filename</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Search string for the filename of the overlay run. Wildcards can also be used (“*”, “?”, “[…]”).</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[Overlay]</dt><dd><div class="line-block">
+<div class="line">It returns a list where each member of the list is an object of class Overlay referring to one specific overlay run.</div>
+<div class="line">Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">overlay_run_type</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+    <span class="n">overlay_run_filename</span> <span class="o">=</span> <span class="s2">&quot;*ex*&quot;</span>
+    <span class="n">overlay_runs</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">OverlayRunsByFilename</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">,</span> <span class="n">overlay_run_filename</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">ovr</span> <span class="ow">in</span> <span class="n">overlay_runs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.OverlayRunsByName">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">OverlayRunsByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlay_run_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><span class="pre">meta.overlay.Overlay</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.OverlayRunsByName" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 20.1.0: </span>Use <a class="reference internal" href="meta.utils.html#meta.utils.get_overlay_runs" title="meta.utils.get_overlay_runs"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.get_overlay_runs()</span></code></a> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">This function collects all overlay runs with a specific name.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Type of the overlay run. Possible values are:</div>
+<div class="line">- ‘session’</div>
+<div class="line">- ‘project’.</div>
+</div>
+</dd>
+<dt><strong>overlay_run_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Search string for the name of the overlay run. Wildcards can also be used (“*”, “?”, “[…]”).</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[Overlay]</dt><dd><div class="line-block">
+<div class="line">It returns a list where each member of the list is an object of class Overlay referring to one specific overlay run.</div>
+<div class="line">Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">overlay_run_type</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+    <span class="n">overlay_run_name</span> <span class="o">=</span> <span class="s2">&quot;Run1&quot;</span>
+    <span class="n">overlay_runs</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">OverlayRunsByName</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">,</span> <span class="n">overlay_run_name</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">ovr</span> <span class="ow">in</span> <span class="n">overlay_runs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.OverlayRunsByType">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">OverlayRunsByType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><span class="pre">meta.overlay.Overlay</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.OverlayRunsByType" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 20.1.0: </span>Use <a class="reference internal" href="meta.utils.html#meta.utils.get_overlay_runs" title="meta.utils.get_overlay_runs"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.get_overlay_runs()</span></code></a> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">This function collects all overlay runs with a specific type.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Type of the overlay run. Possible values are:</div>
+<div class="line">- ‘session’</div>
+<div class="line">- ‘project’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[Overlay]</dt><dd><div class="line-block">
+<div class="line">It returns a list where each member of the list is an object of class OverlayRun referring to one specific overlay run.</div>
+<div class="line">Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">overlay_run_type</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+    <span class="n">overlay_runs</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">OverlayRunsByType</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">ovr</span> <span class="ow">in</span> <span class="n">overlay_runs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.OverlayRunsListToDict">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">OverlayRunsListToDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_runs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><span class="pre">meta.overlay.Overlay</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#meta.overlay.OverlayRunsListToDict" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function constructs a dictionary from a given list with objects of class Overlay.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_runs</strong><span class="classifier">list[Overlay]</span></dt><dd><div class="line-block">
+<div class="line">List of objects of class Overlay.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>dict</dt><dd><div class="line-block">
+<div class="line">It returns a dictionary whose key is the id of the overlay run and data is the corresponding Overlay object.</div>
+<div class="line">Upon failure, an empty dictionary is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">If overlay runs with the same element id exist in the given list, then only the first overlay run will be saved in the dictionary.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">all_overlay_runs</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">OverlayRuns</span><span class="p">()</span>
+    <span class="n">dict_overlay_runs</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">OverlayRunsListToDict</span><span class="p">(</span><span class="n">all_overlay_runs</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nb">id</span><span class="p">,</span> <span class="n">ovr</span> <span class="ow">in</span> <span class="n">dict_overlay_runs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.PlanesOfOverlayRun">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">PlanesOfOverlayRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlay_run_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.planes.html#meta.planes.Plane" title="meta.planes.Plane"><span class="pre">meta.planes.Plane</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.PlanesOfOverlayRun" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 20.1.0: </span>Use <a class="reference internal" href="meta.utils.html#meta.utils.get_planes" title="meta.utils.get_planes"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.get_planes()</span></code></a> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">This function searches for the planes of an overlay run with a given type and id.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Type of the overlay run. Possible values are:</div>
+<div class="line">- ‘session’</div>
+<div class="line">- ‘project’.</div>
+</div>
+</dd>
+<dt><strong>overlay_run_id</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Id of the overlay run.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[planes.Plane]</dt><dd><div class="line-block">
+<div class="line">It returns a list where each member of the list is an object of class Plane referring to one plane of the given overlay run.</div>
+<div class="line">Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="meta.planes.html#meta.planes.Plane" title="meta.planes.Plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.planes.Plane</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">planes</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">overlay_run_type</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+    <span class="n">overlay_run_id</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">overlay_run_planes</span> <span class="o">=</span> <span class="n">planes</span><span class="o">.</span><span class="n">PlanesOfOverlayRun</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">,</span> <span class="n">overlay_run_id</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">pl</span> <span class="ow">in</span> <span class="n">overlay_run_planes</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">pl</span><span class="o">.</span><span class="n">clip_type</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">normal_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">normal_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">normal_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">edge_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">edge_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">edge_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.ReportNewOverlayRuns">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">ReportNewOverlayRuns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><span class="pre">meta.overlay.Overlay</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.ReportNewOverlayRuns" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function collects the newly created overlay runs from the last call of script function CollectNewOverlayRunsStart(). This function should be preceded by a corresponding call to script function CollectNewOverlayRunsStart() and should be followed by a corresponding call to script function CollectNewOverlayRunsEnd().</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run_type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Type of the overlay run. Possible values are:</div>
+<div class="line">- ‘session’</div>
+<div class="line">- ‘project’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[Overlay]</dt><dd><div class="line-block">
+<div class="line">It returns a list with the Overlay objects of the corresponding newly created overlay runs.</div>
+<div class="line">Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">overlay_run_type</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">CollectNewOverlayRunsStart</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">)</span>
+
+    <span class="c1"># create new overlay runs</span>
+    <span class="n">utils</span><span class="o">.</span><span class="n">MetaCommand</span><span class="p">(</span>
+        <span class="s1">&#39;read ses overlay &quot;/home/examples/Overlay/Overlay.ses&quot; &quot;/home/examples/Overlay/Abaqus.inp,/home/examples/Overlay/AbaqusOverlay.inp,/home/examples/Overlay/Abaqus.odb,/home/examples/Overlay/AbaqusOverlay.odb&quot;&#39;</span>
+    <span class="p">)</span>
+
+    <span class="n">new_overlay_runs</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">ReportNewOverlayRuns</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ovr</span> <span class="ow">in</span> <span class="n">new_overlay_runs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">overlay</span><span class="o">.</span><span class="n">CollectNewOverlayRunsEnd</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.overlay.UpdateOverlayRun">
+<span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">UpdateOverlayRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay_run</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><span class="pre">Overlay</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><span class="pre">Overlay</span></a></span></span><a class="headerlink" href="#meta.overlay.UpdateOverlayRun" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function updates the data of the given Overlay object. Update is based in the field ‘id’ of the given Overlay object.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>overlay_run</strong><span class="classifier">Overlay</span></dt><dd><div class="line-block">
+<div class="line">An object of class Overlay.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>Overlay</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns the new updated Overlay object.</div>
+<div class="line">Else, None is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.overlay.Overlay" title="meta.overlay.Overlay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.overlay.Overlay</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">overlay_run_type</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+    <span class="n">overlay_run_id</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">OverlayRunById</span><span class="p">(</span><span class="n">overlay_run_type</span><span class="p">,</span> <span class="n">overlay_run_id</span><span class="p">)</span>
+
+    <span class="c1"># commands which alter the data of the Overlay object</span>
+    <span class="c1"># .......</span>
+
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">UpdateOverlayRun</span><span class="p">(</span><span class="n">ovr</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ovr</span><span class="p">:</span>  <span class="c1"># Update OK</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># Update FAILED</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is not a valid Overlay object&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="meta.overlay.Overlay">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">meta.overlay.</span></span><span class="sig-name descname"><span class="pre">Overlay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#meta.overlay.Overlay" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Class for overlay runs.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>id</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Id of the overlay run.</div>
+</div>
+</dd>
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Type of the overlay run (‘session’, ‘project’).</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.overlay.Overlay.id" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Id of the overlay run.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.type">
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.overlay.Overlay.type" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Type of the overlay run (‘session’, ‘project’).</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.overlay.Overlay.name" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Name of the overlay run.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#meta.overlay.Overlay.filename" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Filename of the overlay run.</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_models">
+<span class="sig-name descname"><span class="pre">get_models</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.models.html#meta.models.Model" title="meta.models.Model"><span class="pre">meta.models.Model</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_models" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the models of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[models.Model]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of type Model referring to one model of the overlay run.Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_models</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_models</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">overlay_models</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">deck</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">active</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_planes">
+<span class="sig-name descname"><span class="pre">get_planes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.planes.html#meta.planes.Plane" title="meta.planes.Plane"><span class="pre">meta.planes.Plane</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_planes" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the planes of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[planes.Plane]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of type Plane referring to one plane of the overlay run.Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_planes</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_planes</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">pl</span> <span class="ow">in</span> <span class="n">overlay_planes</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">pl</span><span class="o">.</span><span class="n">clip_type</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">normal_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">normal_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">normal_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">edge_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">edge_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pl</span><span class="o">.</span><span class="n">edge_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_isofunctions">
+<span class="sig-name descname"><span class="pre">get_isofunctions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">isofunctions.Isofunction</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_isofunctions" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the isofunctions of the overlay run. This method works for the active page.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[isofunctions.Isofunction]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of type Isofunction referring to one isofunction of the overlay run. Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_iso</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_isofunctions</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">iso</span> <span class="ow">in</span> <span class="n">overlay_iso</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">iso</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">iso</span><span class="o">.</span><span class="n">window_name</span><span class="p">,</span> <span class="n">iso</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">iso</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">iso</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span> <span class="n">iso</span><span class="o">.</span><span class="n">page_id</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_groups">
+<span class="sig-name descname"><span class="pre">get_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_instances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_groups" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the groups of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>all_instances</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">All instances of group.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of type Group referring to one group of the overlay run.Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_groups</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_groups</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">overlay_groups</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">model_id</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">module_id</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">version</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">representation</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">study_version</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">part_type</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">vsc_number</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">target_mass</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">user_group</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">pid_offset</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">freeze</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">instance</span><span class="p">,</span>
+            <span class="n">g</span><span class="o">.</span><span class="n">is_color_active</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_resultsets">
+<span class="sig-name descname"><span class="pre">get_resultsets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.results.html#meta.results.Result" title="meta.results.Result"><span class="pre">meta.results.Result</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_resultsets" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the resultsets of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[results.Result]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of type Result referring to one resultset of the overlay run.Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_resultsets</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_resultsets</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">overlay_resultsets</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">cycle</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">nodal_data_name</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">function_data_name</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">vector_data_name</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">subcase</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">state</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">step</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">frequency</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">eigenvalue</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">imaginary_eigenvalue</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">loadstep</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">generate_sequence</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">nodal_data_label</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">function_data_label</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">vector_data_label</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_parts">
+<span class="sig-name descname"><span class="pre">get_parts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.parts.html#meta.parts.Part" title="meta.parts.Part"><span class="pre">meta.parts.Part</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_parts" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the parts of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[parts.Part]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of type Part referring to one part of the overlay run. Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_parts</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_parts</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">overlay_parts</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">subtype</span><span class="p">,</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">mat_id</span><span class="p">,</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">shell_thick</span><span class="p">,</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">model_id</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_elements">
+<span class="sig-name descname"><span class="pre">get_elements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.elements.html#meta.elements.Element" title="meta.elements.Element"><span class="pre">meta.elements.Element</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_elements" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the elements of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[elements.Element]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of type Element referring to one element of the overlay run. Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_elements</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_elements</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">overlay_elements</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">second_id</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">subtype</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">part_id</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_nodes">
+<span class="sig-name descname"><span class="pre">get_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.nodes.html#meta.nodes.Node" title="meta.nodes.Node"><span class="pre">meta.nodes.Node</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_nodes" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the nodes of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[nodes.Node]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of type Node referring to one specific node of the overlay run. Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_nodes</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_nodes</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">overlay_nodes</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">n</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">n</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span> <span class="n">n</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_coordinate_systems">
+<span class="sig-name descname"><span class="pre">get_coordinate_systems</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.coordsystems.html#meta.coordsystems.CoordSystem" title="meta.coordsystems.CoordSystem"><span class="pre">meta.coordsystems.CoordSystem</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_coordinate_systems" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the coordinate systems of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[coordsystems.CoordSystem]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list with the CoordSystem objects of the coordinate systems of the overlay run.Each item of the list is an object of class type CoordSystem, referring to one coordinate system of the overlay run.Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_coords</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_coordinate_systems</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">cs</span> <span class="ow">in</span> <span class="n">overlay_coords</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>  <span class="c1"># Coordinate System id</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>  <span class="c1"># Coordinate System type</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">visible</span><span class="p">)</span>  <span class="c1"># Coordinate System visibility status</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">ref_id</span><span class="p">)</span>  <span class="c1"># Coordinate System reference id</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">imported</span><span class="p">)</span>  <span class="c1"># Coordinate System imported</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">moving</span><span class="p">)</span>  <span class="c1"># Coordinate System moving</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>  <span class="c1"># Coordinate System model id</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">origin</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">xaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">xaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">xaxis</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># X-axis</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">yaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">yaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">yaxis</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># Y-axis</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">zaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">zaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cs</span><span class="o">.</span><span class="n">zaxis</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># Z-axis</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_boundaries">
+<span class="sig-name descname"><span class="pre">get_boundaries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.boundaries.html#meta.boundaries.Boundary" title="meta.boundaries.Boundary"><span class="pre">meta.boundaries.Boundary</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_boundaries" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the boundary elements of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[boundaries.Boundary]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of type Boundary referring to one boundary element of the overlay run. Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_boundaries</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_boundaries</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">overlay_boundaries</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">second_id</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">subtype</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_materials">
+<span class="sig-name descname"><span class="pre">get_materials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.materials.html#meta.materials.Material" title="meta.materials.Material"><span class="pre">meta.materials.Material</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_materials" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function gets the materials of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[materials.Material]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of type Material referring to one material of the overlay run.Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_materials</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_materials</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">overlay_materials</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">model_id</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_annotations">
+<span class="sig-name descname"><span class="pre">get_annotations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.annotations.html#meta.annotations.Annotation" title="meta.annotations.Annotation"><span class="pre">annotations.Annotation</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_annotations" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the annotations of the overlay run. This method works for the active page.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[annotations.Annotation]</dt><dd><div class="line-block">
+<div class="line">Upon failure, it returns a list where each member of the list is an object of type Annotation referring to one annotation of the overlay run.Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_annot</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_annotations</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">overlay_annot</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">a</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">window_name</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">page_id</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">origin_text</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">selected</span>
+        <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_curves">
+<span class="sig-name descname"><span class="pre">get_curves</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.plot2d.html#meta.plot2d.Curve" title="meta.plot2d.Curve"><span class="pre">meta.plot2d.Curve</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_curves" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the curves of the overlay run. This method works for the active page.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[plot2d.Curve]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of class Curve referring to one curve of the overlay run. Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_curves</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_curves</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">overlay_curves</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">plot_id</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">selected</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">window_name</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">page_id</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">command</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">entity_id</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.get_connections">
+<span class="sig-name descname"><span class="pre">get_connections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="meta.connections.html#meta.connections.Connection" title="meta.connections.Connection"><span class="pre">meta.connections.Connection</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.overlay.Overlay.get_connections" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This method gets the connections of the overlay run.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list[connections.Connection]</dt><dd><div class="line-block">
+<div class="line">Upon success, it returns a list where each member of the list is an object of class Connection referring to one connection of the overlay run. Upon failure, an empty list is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">overlay_connections</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">get_connections</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">con</span> <span class="ow">in</span> <span class="n">overlay_connections</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">con</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">con</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">con</span><span class="o">.</span><span class="n">subtype</span><span class="p">,</span> <span class="n">con</span><span class="o">.</span><span class="n">model_id</span><span class="p">,</span> <span class="n">con</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="meta.overlay.Overlay.is_usable">
+<span class="sig-name descname"><span class="pre">is_usable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#meta.overlay.Overlay.is_usable" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Checks if the object refers to a usable META Overlay entity.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True if the Entity is usable. False otherwise.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">ovr</span><span class="o">.</span><span class="n">is_usable</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">overlay</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ovr</span> <span class="o">=</span> <span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ovr</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ovr</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ovr</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

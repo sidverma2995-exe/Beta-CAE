@@ -1,0 +1,1988 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module meta.toolbars &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_meta/generated/meta.toolbars';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="meta.html">Module meta</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="meta.annotations.html">Module meta.annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.base.html">Module meta.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.betascript.html">Module meta.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.betavisibility.html">Module meta.betavisibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.boundaries.html">Module meta.boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.calc.html">Module meta.calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.collaboration.html">Module meta.collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.connections.html">Module meta.connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.constants.html">Module meta.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.coordsystems.html">Module meta.coordsystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.dm.html">Module meta.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.elements.html">Module meta.elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.em.html">Module meta.em</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.groups.html">Module meta.groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.isofunctions.html">Module meta.isofunctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.materials.html">Module meta.materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.models.html">Module meta.models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.nodes.html">Module meta.nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.nvh.html">Module meta.nvh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.overlay.html">Module meta.overlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.pages.html">Module meta.pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.parts.html">Module meta.parts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.planes.html">Module meta.planes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.plot2d.html">Module meta.plot2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.report.html">Module meta.report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.results.html">Module meta.results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.sections.html">Module meta.sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.session.html">Module meta.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="meta.spdrm.html">Module meta.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="meta.spdrm.process.html">Module meta.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="meta.spreadsheet.html">Module meta.spreadsheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.tdk.html">Module meta.tdk</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module meta.toolbars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.utils.html">Module meta.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.visuals.html">Module meta.visuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.vr.html">Module meta.vr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.windows.html">Module meta.windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meta.annotations.html">Module meta.annotations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.base.html">Module meta.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.betascript.html">Module meta.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.betavisibility.html">Module meta.betavisibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.boundaries.html">Module meta.boundaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.calc.html">Module meta.calc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.collaboration.html">Module meta.collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.connections.html">Module meta.connections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.constants.html">Module meta.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.coordsystems.html">Module meta.coordsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.dm.html">Module meta.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.elements.html">Module meta.elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.em.html">Module meta.em</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.groups.html">Module meta.groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.isofunctions.html">Module meta.isofunctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.materials.html">Module meta.materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.models.html">Module meta.models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.nodes.html">Module meta.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.nvh.html">Module meta.nvh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.overlay.html">Module meta.overlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.pages.html">Module meta.pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.parts.html">Module meta.parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.planes.html">Module meta.planes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.plot2d.html">Module meta.plot2d</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.report.html">Module meta.report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.results.html">Module meta.results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.sections.html">Module meta.sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.session.html">Module meta.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="meta.spdrm.html">Module meta.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="meta.spdrm.process.html">Module meta.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meta.spreadsheet.html">Module meta.spreadsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.tdk.html">Module meta.tdk</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module meta.toolbars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.utils.html">Module meta.utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.visuals.html">Module meta.visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.vr.html">Module meta.vr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.windows.html">Module meta.windows</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-meta.toolbars">
+<span id="module-meta-toolbars"></span><span id="api-ref-meta-toolbars"></span><h1>Module meta.toolbars<a class="headerlink" href="#module-meta.toolbars" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListAddColumn">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListAddColumn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.ListAddColumn" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Adds a new column with specific title in the list.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+<dt><strong>column_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the new column.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 if the column has been added; otherwise, it returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Time&quot;</span>
+    <span class="c1"># add columns:</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddColumn</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">column_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Distance&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddColumn</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">column_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListAddKey">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListAddKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.ListAddKey" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Adds a new row with specific key in the list.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+<dt><strong>row_key</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the new row key.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 if the row has been added; otherwise, it returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">row_key</span> <span class="o">=</span> <span class="s2">&quot;T01&quot;</span>
+    <span class="c1"># add row key:</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddKey</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">row_key</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListAddRow">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListAddRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.ListAddRow" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Adds a new row with specific key in the list, along with a set of values.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+<dt><strong>row_key</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the new row key.</div>
+</div>
+</dd>
+<dt><strong>value_list</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">List of values to be added.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 if the row has been added; otherwise, it returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Time&quot;</span>
+    <span class="c1"># add columns:</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddColumn</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">column_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Distance&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddColumn</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">column_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">row_key</span> <span class="o">=</span> <span class="s2">&quot;T02&quot;</span>
+    <span class="n">value_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;0.33s&quot;</span><span class="p">,</span> <span class="s2">&quot;25m&quot;</span><span class="p">]</span>
+    <span class="c1"># add rows:</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddRow</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">row_key</span><span class="p">,</span> <span class="n">value_list</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+    <span class="c1"># data list may be smaller than column number:</span>
+    <span class="n">row_key</span> <span class="o">=</span> <span class="s2">&quot;T03&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddRow</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">row_key</span><span class="p">,</span> <span class="n">value_list</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+    <span class="c1"># data list may contain zero-length elements:</span>
+    <span class="n">row_key</span> <span class="o">=</span> <span class="s2">&quot;T04&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddRow</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">row_key</span><span class="p">,</span> <span class="n">value_list</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListClear">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListClear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.ListClear" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Clears the list. All row and column entries are removed.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 if the list has been cleared; otherwise, it returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListClear</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListGetAllKeys">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListGetAllKeys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.toolbars.ListGetAllKeys" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns an array of the row keys of the specified list.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[str]</dt><dd><div class="line-block">
+<div class="line">Returns a list object of the row keys.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">vColumns</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetColumns</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;List Columns: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vColumns</span><span class="p">))</span>
+
+    <span class="n">vKeys</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetAllKeys</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;List Keys: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vKeys</span><span class="p">))</span>
+
+    <span class="n">vRows</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetAllRows</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;List Contents: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vRows</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListGetAllRows">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListGetAllRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#meta.toolbars.ListGetAllRows" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the row contents of the specified list.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>dict</dt><dd><div class="line-block">
+<div class="line">Returns a map object of the row keys along with their row contents;</div>
+<div class="line">the row contents are returned as list objects.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">vRows</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetAllRows</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;List Contents: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vRows</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListGetColumns">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListGetColumns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.toolbars.ListGetColumns" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns an array of the list’s column names.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[str]</dt><dd><div class="line-block">
+<div class="line">Return a list object containing the names of the list’s columns.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">vColumns</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetColumns</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;List Columns: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vColumns</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListGetSelectedKeys">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListGetSelectedKeys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#meta.toolbars.ListGetSelectedKeys" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the selected row’s or rows’ keys of a list.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns an arrray object containing the selected list row keys.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">vSelection</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetSelectedKeys</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selected IDs: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vSelection</span><span class="p">))</span>
+
+    <span class="n">vSelectionRows</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetSelectedRows</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selected Rows: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vSelectionRows</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">rowId</span> <span class="ow">in</span> <span class="n">vSelection</span><span class="p">:</span>
+        <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Time&quot;</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;Selected time: &quot;</span>
+            <span class="o">+</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetValue</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">rowId</span><span class="p">,</span> <span class="n">column_name</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Distance&quot;</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;Selected distance: &quot;</span>
+            <span class="o">+</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetValue</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">rowId</span><span class="p">,</span> <span class="n">column_name</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListGetSelectedRows">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListGetSelectedRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#meta.toolbars.ListGetSelectedRows" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the selected rows of the specified list.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>dict</dt><dd><div class="line-block">
+<div class="line">Returns a map object of the selected row keys along with their row contents. </div>
+<div class="line">The row contents are returned as list objects.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">vSelection</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetSelectedKeys</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selected IDs: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vSelection</span><span class="p">))</span>
+    <span class="n">vSelectionRows</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetSelectedRows</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selected Rows: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vSelectionRows</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">rowId</span> <span class="ow">in</span> <span class="n">vSelection</span><span class="p">:</span>
+        <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Time&quot;</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;Selected time: &quot;</span>
+            <span class="o">+</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetValue</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">rowId</span><span class="p">,</span> <span class="s2">&quot;Time&quot;</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Distance&quot;</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;Selected distance: &quot;</span>
+            <span class="o">+</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetValue</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">rowId</span><span class="p">,</span> <span class="s2">&quot;Distance&quot;</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListGetValue">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListGetValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#meta.toolbars.ListGetValue" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the list value that is in a specific row and column combination.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+<dt><strong>row_key</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the row key.</div>
+</div>
+</dd>
+<dt><strong>column_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the column.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns the value that a list has on a specific row and column combination.</div>
+<div class="line">If there is not such value, returns an empty string.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">vSelection</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetSelectedKeys</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selected IDs: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vSelection</span><span class="p">))</span>
+    <span class="n">vSelectionRows</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetSelectedRows</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selected Rows: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vSelectionRows</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">rowId</span> <span class="ow">in</span> <span class="n">vSelection</span><span class="p">:</span>
+        <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Time&quot;</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;Selected time: &quot;</span> <span class="o">+</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetValue</span><span class="p">(</span><span class="s2">&quot;Test&quot;</span><span class="p">,</span> <span class="s2">&quot;TestList&quot;</span><span class="p">,</span> <span class="n">rowId</span><span class="p">,</span> <span class="s2">&quot;Time&quot;</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Distance&quot;</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot; Selected distance: &quot;</span>
+            <span class="o">+</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetValue</span><span class="p">(</span><span class="s2">&quot;Test&quot;</span><span class="p">,</span> <span class="s2">&quot;TestList&quot;</span><span class="p">,</span> <span class="n">rowId</span><span class="p">,</span> <span class="s2">&quot;Distance&quot;</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListRemoveRow">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListRemoveRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.ListRemoveRow" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Removes the row, having the specified key, from the list.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+<dt><strong>row_key</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the row key.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 if the row has been removed; otherwise, it returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">vSelection</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetSelectedKeys</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">rowId</span> <span class="ow">in</span> <span class="n">vSelection</span><span class="p">:</span>
+        <span class="n">bOk</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListRemoveRow</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">rowId</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListSetValue">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListSetValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.ListSetValue" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Sets a new value into the specificed row and column field.</div>
+<div class="line">Any pre-existed content will be replaced.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+<dt><strong>row_key</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the row key.</div>
+</div>
+</dd>
+<dt><strong>column_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the column.</div>
+</div>
+</dd>
+<dt><strong>new_value</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Value to be set.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 if the value has been set; otherwise, returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Test&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;TestList&quot;</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Time&quot;</span>
+    <span class="c1"># add columns:</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddColumn</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">column_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Distance&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddColumn</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">column_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+    <span class="c1"># add row (verbose style):</span>
+    <span class="n">row_key</span> <span class="o">=</span> <span class="s2">&quot;T01&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListAddKey</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">row_key</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Time&quot;</span>
+    <span class="n">new_value</span> <span class="o">=</span> <span class="s2">&quot;0.11s&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListSetValue</span><span class="p">(</span>
+        <span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">row_key</span><span class="p">,</span> <span class="n">column_name</span><span class="p">,</span> <span class="n">new_value</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;Distance&quot;</span>
+    <span class="n">new_value</span> <span class="o">=</span> <span class="s2">&quot;10m&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListSetValue</span><span class="p">(</span>
+        <span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">row_key</span><span class="p">,</span> <span class="n">column_name</span><span class="p">,</span> <span class="n">new_value</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.CheckboxGetState">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">CheckboxGetState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkbox_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#meta.toolbars.CheckboxGetState" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function gets the state, checked or not checked, of a checkbox of a</div>
+<div class="line">given toolbar.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>checkbox_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the checkbox.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Toolbar 1&quot;</span>
+    <span class="n">checkbox_name</span> <span class="o">=</span> <span class="s2">&quot;Checkbox 1&quot;</span>
+
+    <span class="n">state</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">toolbars</span><span class="o">.</span><span class="n">CheckboxGetState</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">checkbox_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Checked&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not checked&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failure!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.RadiobuttonGetState">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">RadiobuttonGetState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radio_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.RadiobuttonGetState" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function gets the state (checked or not checked) of a radio button of a</div>
+<div class="line">given toolbar.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>radio_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the radio button.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">It returns an integer, 1 if radio button is checked and 0 if it is not checked.</div>
+<div class="line">Upon failure, it returns -1.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Toolbar 1&quot;</span>
+    <span class="n">radio_name</span> <span class="o">=</span> <span class="s2">&quot;Radiobutton 1&quot;</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">RadiobuttonGetState</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">radio_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enabled&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Disabled&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failure!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.SliderGetMaxValue">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">SliderGetMaxValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slider_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.SliderGetMaxValue" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function gets the max value of a slider of a given toolbar.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>slider_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the slider.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">It returns an integer referring to the maximum value of the slider of the given</div>
+<div class="line">toolbar. Upon failure, it returns -1.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Toolbar 1&quot;</span>
+    <span class="n">slider_name</span> <span class="o">=</span> <span class="s2">&quot;Slider 1&quot;</span>
+
+    <span class="n">slider_value</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">SliderGetMaxValue</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">slider_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">slider_value</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.SliderGetMinValue">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">SliderGetMinValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slider_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.SliderGetMinValue" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function gets the min value of a slider of a given toolbar.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>slider_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the slider.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">It returns an integer, referring to the min value of the slider of the given </div>
+<div class="line">toolbar. Upon failure, it returns -1.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Toolbar 1&quot;</span>
+    <span class="n">slider_name</span> <span class="o">=</span> <span class="s2">&quot;Slider 1&quot;</span>
+
+    <span class="n">slider_value</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">SliderGetMinValue</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">slider_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">slider_value</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.SliderGetValue">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">SliderGetValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slider_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.SliderGetValue" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function gets the value of a slider of a given toolbar.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>slider_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the slider.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">It returns an integer referring to the value of the slider of the given toolbar.</div>
+<div class="line">Upon failure, it returns -1.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Toolbar 1&quot;</span>
+    <span class="n">slider_name</span> <span class="o">=</span> <span class="s2">&quot;Slider 1&quot;</span>
+
+    <span class="n">slider_value</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">SliderGetValue</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">slider_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">slider_value</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.TextboxGetValue">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">TextboxGetValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textbox_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#meta.toolbars.TextboxGetValue" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function gets the text of a textbox of a given toolbar.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>textbox_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the textbox.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">It returns a string referring to the text of the textbox of the given toolbar.</div>
+<div class="line">Upon failure, an empty string is returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.toolbars.TextboxGetAllValues" title="meta.toolbars.TextboxGetAllValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.toolbars.TextboxGetAllValues</span></code></a>, <a class="reference internal" href="#meta.toolbars.TextboxIsEditable" title="meta.toolbars.TextboxIsEditable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.toolbars.TextboxIsEditable</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Toolbar 1&quot;</span>
+    <span class="n">textbox_name</span> <span class="o">=</span> <span class="s2">&quot;Textbox 1&quot;</span>
+
+    <span class="n">text</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">TextboxGetValue</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">textbox_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.TogglebuttonGetState">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">TogglebuttonGetState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">togglebutton_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.TogglebuttonGetState" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function gets the state (pushed or not pushed) of a togglebutton of a given</div>
+<div class="line">toolbar.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>togglebutton_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the togglebutton.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Upon success an integer, 1 if checkbox is checked and 0 if it is not checked.</div>
+<div class="line">Upon failure, it returns -1.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Toolbar 1&quot;</span>
+    <span class="n">togglebutton_name</span> <span class="o">=</span> <span class="s2">&quot;Togglebutton 1&quot;</span>
+
+    <span class="n">state</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">TogglebuttonGetState</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">togglebutton_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pushed&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not pushed&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failure!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.TextboxGetAllValues">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">TextboxGetAllValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textbox_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.toolbars.TextboxGetAllValues" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns an array of the history values contained in the specified textbox. The </div>
+<div class="line">same function may be used to retrieve the history entries of a file or directory</div>
+<div class="line">textbox.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>textbox_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the textbox.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[str]</dt><dd><div class="line-block">
+<div class="line">Returns a list object of the textbox entries.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.toolbars.FileTextboxGetAllWildcards" title="meta.toolbars.FileTextboxGetAllWildcards"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.toolbars.FileTextboxGetAllWildcards</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;MyToolbar&quot;</span>
+    <span class="n">textbox_name</span> <span class="o">=</span> <span class="s2">&quot;MyTextbox&quot;</span>
+    <span class="n">vValues</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">TextboxGetAllValues</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">textbox_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Contents: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vValues</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.GroupGetCheckState">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">GroupGetCheckState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.GroupGetCheckState" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function returns the current checked status of a user toolbar checkable </div>
+<div class="line">group.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of toolbar</div>
+</div>
+</dd>
+<dt><strong>group_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of (checkable) group</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">The function returns 1 if the group is checked, 0 if unchecked. If the group is </div>
+<div class="line">not checkable or in case of failure, it returns -1.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;MyToolbar&quot;</span>
+    <span class="n">group_name</span> <span class="o">=</span> <span class="s2">&quot;MyGroup&quot;</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">GroupGetCheckState</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">group_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Group is checked&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Group is not checked&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">c</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not a checkable group&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.GetLabel">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">GetLabel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#meta.toolbars.GetLabel" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function returns the label of a user toolbar item.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of toolbar</div>
+</div>
+</dd>
+<dt><strong>item_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of item</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns the label string. If the item is not found, it returns an empty string.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;ToolbarLabels&quot;</span>
+    <span class="n">item_name</span> <span class="o">=</span> <span class="s2">&quot;MyButton&quot;</span>
+    <span class="c1"># Need some documentation? Run this with F5</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">item_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="n">item_name</span> <span class="o">=</span> <span class="s2">&quot;MyCheckbox&quot;</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">item_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="n">item_name</span> <span class="o">=</span> <span class="s2">&quot;MyTextbox&quot;</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">item_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="n">item_name</span> <span class="o">=</span> <span class="s2">&quot;MyLabel&quot;</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">item_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListSelectRows">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListSelectRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_key_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.ListSelectRows" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Selects list rows having the specified keys. An empty row_key_list will clear</div>
+<div class="line">(any) current row selections. The toolbar containing the list must be visible</div>
+<div class="line">during the call of this function. </div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+<dt><strong>row_key_list</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">List of keys of rows to be selected.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 if the selection has been applied; otherwise, it returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.toolbars.ListOnlySelectRows" title="meta.toolbars.ListOnlySelectRows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.toolbars.ListOnlySelectRows</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">Any associated user commands set to run during selection will be executed; in</div>
+<div class="line">order to avoid the command execution during the selection, please use the </div>
+<div class="line">ListOnlySelectRows() variation.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;TOOLBAR&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;LIST&quot;</span>
+    <span class="n">row_key_list</span> <span class="o">=</span> <span class="s2">&quot;A,B&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListSelectRows</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">row_key_list</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+    <span class="n">strSelected</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetSelectedRows</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selected rows: &quot;</span> <span class="o">+</span> <span class="n">strSelected</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ListOnlySelectRows">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ListOnlySelectRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_key_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.ListOnlySelectRows" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Selects list rows having the specified keys without executing the associated</div>
+<div class="line">user commands. An empty row_key_list will clear (any) current row selections.</div>
+<div class="line">The toolbar containing the list must be visible during the call of this</div>
+<div class="line">function. </div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>list_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the list.</div>
+</div>
+</dd>
+<dt><strong>row_key_list</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">List of keys of rows to be selected.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 if the selection has been applied; otherwise, it returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.toolbars.ListSelectRows" title="meta.toolbars.ListSelectRows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.toolbars.ListSelectRows</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">Any associated user commands set to run during selection will be skipped; in</div>
+<div class="line">order to allow the command execution during the selection, please use the </div>
+<div class="line">ListSelectRows() variation.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;TOOLBAR&quot;</span>
+    <span class="n">list_name</span> <span class="o">=</span> <span class="s2">&quot;LIST&quot;</span>
+    <span class="n">row_key_list</span> <span class="o">=</span> <span class="s2">&quot;A,B&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ListOnlySelectRows</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">,</span> <span class="n">row_key_list</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+    <span class="n">strSelected</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">toolbars</span><span class="o">.</span><span class="n">ListGetSelectedRows</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">list_name</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selected rows: &quot;</span> <span class="o">+</span> <span class="n">strSelected</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ToolbarGetDefaultsPath">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ToolbarGetDefaultsPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#meta.toolbars.ToolbarGetDefaultsPath" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the path of the toolbar’s default’s file.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of toolbar</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns the defaults path of the toolbar. If the toolbar is not found, an empty</div>
+<div class="line">string will be returned.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Pedestrian&quot;</span>
+    <span class="n">default_path</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ToolbarGetDefaultsPath</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Defaults path: &quot;</span> <span class="o">+</span> <span class="n">default_path</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.TextboxIsEditable">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">TextboxIsEditable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textbox_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.TextboxIsEditable" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function checks if a textbox of a given toolbar can be edited by the user.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>textbox_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the textbox.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">This function returns 1 if the textbox is editable, and 0 if it’s not. </div>
+<div class="line">If there is not a textbox with such name, it returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.toolbars.TextboxGetValue" title="meta.toolbars.TextboxGetValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.toolbars.TextboxGetValue</span></code></a>, <a class="reference internal" href="#meta.toolbars.TextboxGetAllValues" title="meta.toolbars.TextboxGetAllValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.toolbars.TextboxGetAllValues</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">File textboxes and directory textboxes always return 1.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Toolbar 1&quot;</span>
+    <span class="n">textbox_name</span> <span class="o">=</span> <span class="s2">&quot;Textbox 1&quot;</span>
+    <span class="n">isEditable</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">TextboxIsEditable</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">textbox_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">isEditable</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.ItemIsVisible">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">ItemIsVisible</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#meta.toolbars.ItemIsVisible" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function checks the visibility status of a user toolbar item, e.g. button, </div>
+<div class="line">label, etc.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Name of the toolbar.</div>
+</div>
+</dd>
+<dt><strong>item_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">Item name.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">This function returns 1 if the item has visible status, and 0 if it has not. </div>
+<div class="line">If there is not an item with such name, it returns 0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">The visibility flag of the item is not affected by its parent visibility. This </div>
+<div class="line">function checks only the item’s visibility status which was set by the user (via </div>
+<div class="line">invoking the session command “toolbar edit show/hide …”). This means that the </div>
+<div class="line">function will return 1 for a visible item, even if its parent toolbar is hidden.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;Toolbar 1&quot;</span>
+    <span class="n">item_name</span> <span class="o">=</span> <span class="s2">&quot;Textbox 1&quot;</span>
+    <span class="n">isVisible</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">ItemIsVisible</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">item_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">isVisible</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.toolbars.FileTextboxGetAllWildcards">
+<span class="sig-prename descclassname"><span class="pre">meta.toolbars.</span></span><span class="sig-name descname"><span class="pre">FileTextboxGetAllWildcards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbar_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filetextbox_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.toolbars.FileTextboxGetAllWildcards" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns an array of the wildcards (filters) set to the specified file textbox.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>toolbar_name</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>filetextbox_name</strong><span class="classifier">str</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[str]</dt><dd><div class="line-block">
+<div class="line">Returns a list containing the File Textbox wildcards.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#meta.toolbars.TextboxGetAllValues" title="meta.toolbars.TextboxGetAllValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta.toolbars.TextboxGetAllValues</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">toolbars</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">toolbar_name</span> <span class="o">=</span> <span class="s2">&quot;MyToolbar&quot;</span>
+    <span class="n">filetextbox_name</span> <span class="o">=</span> <span class="s2">&quot;MyFileTextbox&quot;</span>
+    <span class="n">vValues</span> <span class="o">=</span> <span class="n">toolbars</span><span class="o">.</span><span class="n">FileTextboxGetAllWildcards</span><span class="p">(</span><span class="n">toolbar_name</span><span class="p">,</span> <span class="n">filetextbox_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wildcards: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vValues</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>
