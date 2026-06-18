@@ -30,23 +30,29 @@ export class QaComponent {
     this.userInput = '';
     this.isLoading = true;
 
-    this.chatService.askQuestion(query, 'qa').subscribe({
-      next: (response) => {
-        this.messages.push({
-          role: 'assistant',
-          content: response.answer,
-          timestamp: new Date()
-        });
+    const assistantMsg: ChatMessage = { role: 'assistant', content: '', timestamp: new Date() };
+    this.messages.push(assistantMsg);
+    const idx = this.messages.length - 1;
+
+    this.chatService.streamQuery(query, 'qa').subscribe({
+      next: (event) => {
+        if (event.token) {
+          this.messages[idx].content += event.token;
+        }
+        if (event.done) {
+          this.messages[idx].chunks = event.chunks ?? [];
+          this.isLoading = false;
+        }
+        if (event.error) {
+          this.messages[idx].content = 'Sorry, something went wrong. Please try again.';
+          this.isLoading = false;
+        }
+      },
+      error: () => {
+        this.messages[idx].content = 'Sorry, something went wrong. Please try again.';
         this.isLoading = false;
       },
-      error: (err) => {
-        this.messages.push({
-          role: 'assistant',
-          content: 'Sorry, something went wrong. Please try again.',
-          timestamp: new Date()
-        });
-        this.isLoading = false;
-      }
+      complete: () => { this.isLoading = false; }
     });
   }
 }

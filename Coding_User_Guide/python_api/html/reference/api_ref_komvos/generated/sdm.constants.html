@@ -1,0 +1,1212 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module sdm.constants &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_komvos/generated/sdm.constants';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sdm.html">Module sdm</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sdm.base.html">Module sdm.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.betascript.html">Module sdm.betascript</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module sdm.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.dm.html">Module sdm.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.ml.html">Module sdm.ml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.sdm_base.html">Module sdm.sdm_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.session.html">Module sdm.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sdm.spdrm.html">Module sdm.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.fileChooser.html">Module sdm.spdrm.fileChooser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.inputGetter.html">Module sdm.spdrm.inputGetter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.messageDisplayer.html">Module sdm.spdrm.messageDisplayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.process.html">Module sdm.spdrm.process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.question.html">Module sdm.spdrm.question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.scriptCommands.html">Module sdm.spdrm.scriptCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.utils.html">Module sdm.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.base.html">Module sdm.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.betascript.html">Module sdm.betascript</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module sdm.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.dm.html">Module sdm.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.ml.html">Module sdm.ml</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.sdm_base.html">Module sdm.sdm_base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.session.html">Module sdm.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="sdm.spdrm.html">Module sdm.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.fileChooser.html">Module sdm.spdrm.fileChooser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.inputGetter.html">Module sdm.spdrm.inputGetter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.messageDisplayer.html">Module sdm.spdrm.messageDisplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.process.html">Module sdm.spdrm.process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.question.html">Module sdm.spdrm.question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.scriptCommands.html">Module sdm.spdrm.scriptCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.utils.html">Module sdm.utils</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-sdm.constants">
+<span id="module-sdm-constants"></span><span id="api-ref-sdm-constants"></span><h1>Module sdm.constants<a class="headerlink" href="#module-sdm.constants" title="Permalink to this heading">#</a></h1>
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.NASTRAN">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">NASTRAN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.NASTRAN" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the NASTRAN Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;GRID&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.LSDYNA">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">LSDYNA</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.LSDYNA" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the LSDYNA Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">LSDYNA</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PAMCRASH">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PAMCRASH</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PAMCRASH" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the PAMCRASH Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">PAMCRASH</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.ABAQUS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">ABAQUS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.ABAQUS" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the ABAQUS Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">ABAQUS</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.RADIOSS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">RADIOSS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.RADIOSS" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the RADIOSS Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">RADIOSS</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.ANSYS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">ANSYS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.ANSYS" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the ANSYS Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">ANSYS</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PERMAS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PERMAS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PERMAS" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the PERMAS Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">ANSYS</span><span class="p">,</span> <span class="s2">&quot;COOR&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.FLUENT">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">FLUENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.FLUENT" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the FLUENT Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">FLUENT</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.FLUENT2D">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">FLUENT2D</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.FLUENT2D" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the FLUENT2D Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">FLUENT2D</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.STAR">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">STAR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.STAR" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the STAR Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">STAR</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.UH3D">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">UH3D</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.UH3D" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the UH3D Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">UH3D</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.CFDPP">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">CFDPP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.CFDPP" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the CFDPP Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">CFDPP</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.OPENFOAM">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">OPENFOAM</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.OPENFOAM" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the OPENFOAM Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">OPENFOAM</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.MOLDEX3D">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">MOLDEX3D</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.MOLDEX3D" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the MOLDEX3D Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">MOLDEX3D</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.RADTHERM">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">RADTHERM</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.RADTHERM" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the RADTHERM Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">RADTHERM</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.SESTRA">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">SESTRA</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.SESTRA" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the SESTRA Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">SESTRA</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.THESEUS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">THESEUS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.THESEUS" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the THESEUS Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">THESEUS</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.app_version">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">app_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.app_version" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the current ansa version.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">app_version</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.app_version_int">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">app_version_int</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.app_version_int" title="Permalink to this definition">#</a></dt>
+<dd><p>This function returns the current ansa version.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">app_version_int</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.app_home_dir">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">app_home_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.app_home_dir" title="Permalink to this definition">#</a></dt>
+<dd><p>The system directory used for the configuration files.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">app_home_dir</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.app_root_dir">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">app_root_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.app_root_dir" title="Permalink to this definition">#</a></dt>
+<dd><p>The system’s root directory.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">app_root_dir</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.FILENAME">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">FILENAME</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.FILENAME" title="Permalink to this definition">#</a></dt>
+<dd><p>The name of the CAD file currently processed.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.FILEPATH">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">FILEPATH</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.FILEPATH" title="Permalink to this definition">#</a></dt>
+<dd><p>The directory of the CAD file currently processed.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.FLANCH_PROPERTY_ID">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">FLANCH_PROPERTY_ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.FLANCH_PROPERTY_ID" title="Permalink to this definition">#</a></dt>
+<dd><p>The flanch property ID</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_DX1">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_DX1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_DX1" title="Permalink to this definition">#</a></dt>
+<dd><p>X component of X axis used for Part’s transformation.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_DX2">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_DX2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_DX2" title="Permalink to this definition">#</a></dt>
+<dd><p>X component of Y axis used for Part’s transformation.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_DX3">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_DX3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_DX3" title="Permalink to this definition">#</a></dt>
+<dd><p>X component of Z axis used for Part’s transformation.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_DY1">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_DY1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_DY1" title="Permalink to this definition">#</a></dt>
+<dd><p>Y component of X axis used for Part’s transformation.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_DY2">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_DY2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_DY2" title="Permalink to this definition">#</a></dt>
+<dd><p>Y component of Y axis used for Part’s transformation.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_DY3">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_DY3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_DY3" title="Permalink to this definition">#</a></dt>
+<dd><p>Y component of Z axis used for Part’s transformation.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_DZ1">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_DZ1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_DZ1" title="Permalink to this definition">#</a></dt>
+<dd><p>Z component of X axis used for Part’s transformation.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_DZ2">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_DZ2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_DZ2" title="Permalink to this definition">#</a></dt>
+<dd><p>Z component of Y axis used for Part’s transformation.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_DZ3">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_DZ3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_DZ3" title="Permalink to this definition">#</a></dt>
+<dd><p>Z component of Z axis used for Part’s transformation.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_X">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_X</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_X" title="Permalink to this definition">#</a></dt>
+<dd><p>X coordinate of the origin used for Part’s position.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_COORD_SYS_Z">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_COORD_SYS_Z</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_COORD_SYS_Z" title="Permalink to this definition">#</a></dt>
+<dd><p>Z coordinate of the origin used for Part’s position.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_ID">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_ID" title="Permalink to this definition">#</a></dt>
+<dd><p>Module ID of current Part.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_MASS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_MASS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_MASS" title="Permalink to this definition">#</a></dt>
+<dd><p>The Mass of the Part as appears in the Parts Manager.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_MATERIAL_ID">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_MATERIAL_ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_MATERIAL_ID" title="Permalink to this definition">#</a></dt>
+<dd><p>The Material ID that will be assigned to all entities of the Part.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_MODEL_NAME">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_MODEL_NAME</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_MODEL_NAME" title="Permalink to this definition">#</a></dt>
+<dd><p>The PART_MODEL_NAME</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_NAME">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_NAME</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_NAME" title="Permalink to this definition">#</a></dt>
+<dd><p>The name of the Part as appears in the Parts Manager.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_VERSION">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_VERSION</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_VERSION" title="Permalink to this definition">#</a></dt>
+<dd><p>The version of the Part as appears in the Parts Manager.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_VSC">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_VSC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_VSC" title="Permalink to this definition">#</a></dt>
+<dd><p>The VSC Number of the Part as appears in the Parts Manager.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_PROPERTY_ID">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_PROPERTY_ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_PROPERTY_ID" title="Permalink to this definition">#</a></dt>
+<dd><p>The Property ID that will be assigned to all entities of the Part.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_PROPERTY_NAME">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_PROPERTY_NAME</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_PROPERTY_NAME" title="Permalink to this definition">#</a></dt>
+<dd><p>The name of the Property as appears in the Properties list.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.PART_PROPERTY_THICKNESS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">PART_PROPERTY_THICKNESS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.PART_PROPERTY_THICKNESS" title="Permalink to this definition">#</a></dt>
+<dd><p>The thickness of the Property.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.POST_TRANSL_SCRIPT">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">POST_TRANSL_SCRIPT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.POST_TRANSL_SCRIPT" title="Permalink to this definition">#</a></dt>
+<dd><p>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.POST_TRANSL_SCRIPT_ARGS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">POST_TRANSL_SCRIPT_ARGS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.POST_TRANSL_SCRIPT_ARGS" title="Permalink to this definition">#</a></dt>
+<dd><p>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.TRANSLATIONS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">TRANSLATIONS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.TRANSLATIONS" title="Permalink to this definition">#</a></dt>
+<dd><p>Default character translations, eg. ” ” = “_”, blank space is translated into an underscore.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.SEPARATORS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">SEPARATORS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.SEPARATORS" title="Permalink to this definition">#</a></dt>
+<dd><p>Definition of whatever is used to separate words, ( eg. , _ . )</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.MAT_REG">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">MAT_REG</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.MAT_REG" title="Permalink to this definition">#</a></dt>
+<dd><p>MAT_REG</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.SYMMETRY_PART_ID">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">SYMMETRY_PART_ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.SYMMETRY_PART_ID" title="Permalink to this definition">#</a></dt>
+<dd><p>SYMMETRY_PART_ID</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.SYMMETRY_PART_PID_OFFSET">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">SYMMETRY_PART_PID_OFFSET</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.SYMMETRY_PART_PID_OFFSET" title="Permalink to this definition">#</a></dt>
+<dd><p>SYMMETRY_PART_PID_OFFSET</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.app_temp_dir">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">app_temp_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.app_temp_dir" title="Permalink to this definition">#</a></dt>
+<dd><p>The path of the temporary directory used by the application.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">app_temp_dir</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.ENM_REGEX">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">ENM_REGEX</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.ENM_REGEX" title="Permalink to this definition">#</a></dt>
+<dd><p>A regular expression match (default) for the base.NameToEnts function.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.ENM_EXACT">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">ENM_EXACT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.ENM_EXACT" title="Permalink to this definition">#</a></dt>
+<dd><p>An exact match for the base.NameToEnts function.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.ENM_SUBSTRING">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">ENM_SUBSTRING</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.ENM_SUBSTRING" title="Permalink to this definition">#</a></dt>
+<dd><p>A sub-string match for the base.NameToEnts function.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.ENM_SUBSTRING_IGNORECASE">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">ENM_SUBSTRING_IGNORECASE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.ENM_SUBSTRING_IGNORECASE" title="Permalink to this definition">#</a></dt>
+<dd><p>A sub-string case-insensitive match for the base.NameToEnts function.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.decks">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">decks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.decks" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns a tuple with all the deck constants. Useful to iterate through all the available decks.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">deck</span> <span class="ow">in</span> <span class="n">constants</span><span class="o">.</span><span class="n">decks</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">TypesInCategory</span><span class="p">(</span><span class="n">deck</span><span class="p">,</span> <span class="s2">&quot;__PROPERTIES__&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.DM_STATUS_UP_TO_DATE">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">DM_STATUS_UP_TO_DATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.DM_STATUS_UP_TO_DATE" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the “Up to date” value of the “DM Update Status” of an entity</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span><span class="p">,</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">getDMUpdateStatus</span><span class="p">():</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;ANSAPART&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+        <span class="n">dm_update_status</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityDMUpdateStatus</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dm_update_status</span> <span class="o">==</span> <span class="n">constants</span><span class="o">.</span><span class="n">DM_STATUS_UP_TO_DATE</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The &quot;&#39;</span> <span class="o">+</span> <span class="n">part</span><span class="o">.</span><span class="n">_name</span> <span class="o">+</span> <span class="s1">&#39;&quot; part has &quot;Up to date&quot; DM Update Status&#39;</span><span class="p">)</span>
+
+<span class="n">getDMUpdateStatus</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.DM_STATUS_NOT_UP_TO_DATE">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">DM_STATUS_NOT_UP_TO_DATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.DM_STATUS_NOT_UP_TO_DATE" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the “Not up to date” value of the “DM Update Status” of an entity</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span><span class="p">,</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">getDMUpdateStatus</span><span class="p">():</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;ANSAPART&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+        <span class="n">dm_update_status</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityDMUpdateStatus</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dm_update_status</span> <span class="o">==</span> <span class="n">constants</span><span class="o">.</span><span class="n">DM_STATUS_NOT_UP_TO_DATE</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The &quot;&#39;</span> <span class="o">+</span> <span class="n">part</span><span class="o">.</span><span class="n">_name</span> <span class="o">+</span> <span class="s1">&#39;&quot; part has &quot;Not up to date&quot; DM Update Status&#39;</span><span class="p">)</span>
+
+<span class="n">getDMUpdateStatus</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.DM_STATUS_MODIFIED">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">DM_STATUS_MODIFIED</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.DM_STATUS_MODIFIED" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the “Modified” value of the “DM Update Status” of an entity</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span><span class="p">,</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">getDMUpdateStatus</span><span class="p">():</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;ANSAPART&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+        <span class="n">dm_update_status</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityDMUpdateStatus</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dm_update_status</span> <span class="o">==</span> <span class="n">constants</span><span class="o">.</span><span class="n">DM_STATUS_MODIFIED</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The &quot;&#39;</span> <span class="o">+</span> <span class="n">part</span><span class="o">.</span><span class="n">_name</span> <span class="o">+</span> <span class="s1">&#39;&quot; part has &quot;Modified&quot; DM Update Status&#39;</span><span class="p">)</span>
+
+<span class="n">getDMUpdateStatus</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.DM_STATUS_ALTERNATIVE">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">DM_STATUS_ALTERNATIVE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.DM_STATUS_ALTERNATIVE" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the “Alternative” value of the “DM Update Status” of an entity</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span><span class="p">,</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">getDMUpdateStatus</span><span class="p">():</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;ANSAPART&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+        <span class="n">dm_update_status</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityDMUpdateStatus</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dm_update_status</span> <span class="o">==</span> <span class="n">constants</span><span class="o">.</span><span class="n">DM_STATUS_ALTERNATIVE</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The &quot;&#39;</span> <span class="o">+</span> <span class="n">part</span><span class="o">.</span><span class="n">_name</span> <span class="o">+</span> <span class="s1">&#39;&quot; part has &quot;Alternative&quot; DM Update Status&#39;</span><span class="p">)</span>
+
+<span class="n">getDMUpdateStatus</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.DM_STATUS_NOT_FOUND">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">DM_STATUS_NOT_FOUND</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.DM_STATUS_NOT_FOUND" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the “Not found” value of the “DM Update Status” of an entity</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span><span class="p">,</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">getDMUpdateStatus</span><span class="p">():</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;ANSAPART&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+        <span class="n">dm_update_status</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityDMUpdateStatus</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dm_update_status</span> <span class="o">==</span> <span class="n">constants</span><span class="o">.</span><span class="n">DM_STATUS_NOT_FOUND</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The &quot;&#39;</span> <span class="o">+</span> <span class="n">part</span><span class="o">.</span><span class="n">_name</span> <span class="o">+</span> <span class="s1">&#39;&quot; part was not found in DM&#39;</span><span class="p">)</span>
+
+<span class="n">getDMUpdateStatus</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.DM_STATUS_ERROR">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">DM_STATUS_ERROR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.DM_STATUS_ERROR" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the error value when the “DM Update Status” of an entity cannot be identified</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span><span class="p">,</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">getDMUpdateStatus</span><span class="p">():</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;ANSAPART&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+        <span class="n">dm_update_status</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityDMUpdateStatus</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dm_update_status</span> <span class="o">==</span> <span class="n">constants</span><span class="o">.</span><span class="n">DM_STATUS_ERROR</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please add/connect to a DM Root&quot;</span><span class="p">)</span>
+            <span class="k">break</span>
+
+<span class="n">getDMUpdateStatus</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.REPORT_ALL">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">REPORT_ALL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.REPORT_ALL" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the debug mode to report everything.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span><span class="p">,</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">debug_mode</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">REPORT_ALL</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;G1&quot;</span><span class="p">:</span> <span class="mi">15861</span><span class="p">,</span> <span class="s2">&quot;G2&quot;</span><span class="p">:</span> <span class="mi">18709</span><span class="p">,</span> <span class="s2">&quot;G3&quot;</span><span class="p">:</span> <span class="mi">19459</span><span class="p">}</span>
+    <span class="n">ent</span><span class="p">,</span> <span class="n">debug_report</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CreateEntity</span><span class="p">(</span>
+        <span class="n">constants</span><span class="o">.</span><span class="n">ABAQUS</span><span class="p">,</span> <span class="s2">&quot;SHELL&quot;</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">debug_mode</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.REPORT_SILENCE">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">REPORT_SILENCE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.REPORT_SILENCE" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the debug mode to report silently.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span><span class="p">,</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">debug_mode</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">REPORT_SILENCE</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;G1&quot;</span><span class="p">:</span> <span class="mi">15861</span><span class="p">,</span> <span class="s2">&quot;G2&quot;</span><span class="p">:</span> <span class="mi">18709</span><span class="p">,</span> <span class="s2">&quot;G3&quot;</span><span class="p">:</span> <span class="mi">19459</span><span class="p">}</span>
+    <span class="n">ent</span><span class="p">,</span> <span class="n">debug_report</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CreateEntity</span><span class="p">(</span>
+        <span class="n">constants</span><span class="o">.</span><span class="n">ABAQUS</span><span class="p">,</span> <span class="s2">&quot;SHELL&quot;</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">debug_mode</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.MARC">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">MARC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.MARC" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the MARC Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">MARC</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.ACTRAN">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">ACTRAN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.ACTRAN" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the ACTRAN Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">ACTRAN</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.IMPETUS">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">IMPETUS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.IMPETUS" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the IMPETUS Deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">IMPETUS</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.OPTISTRUCT">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">OPTISTRUCT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.OPTISTRUCT" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the OPTISTRUCT deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">OPTISTRUCT</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="sdm.constants.ADVENTURECluster">
+<span class="sig-prename descclassname"><span class="pre">sdm.constants.</span></span><span class="sig-name descname"><span class="pre">ADVENTURECluster</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.constants.ADVENTURECluster" title="Permalink to this definition">#</a></dt>
+<dd><p>Defines the ADVENTURECluster deck.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ent</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">ADVENTURECluster</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,2233 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module ansa.calc &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_ansa/generated/ansa.calc';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ansa.html">Module ansa</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ansa.analysis_tools.html">Module ansa.analysis_tools</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ansa.base.html">Module ansa.base</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="ansa.base.checks.html">Module ansa.base.checks</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.general.html">Module ansa.base.checks.general</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.geometry.html">Module ansa.base.checks.geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.mesh.html">Module ansa.base.checks.mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ansa.base.checks.penetration.html">Module ansa.base.checks.penetration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.kinetics.html">Module ansa.base.kinetics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.batchmesh.html">Module ansa.batchmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.betascript.html">Module ansa.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.cad.html">Module ansa.cad</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module ansa.calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.connections.html">Module ansa.connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.constants.html">Module ansa.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.dm.html">Module ansa.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.kinetics.html">Module ansa.kinetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.mesh.html">Module ansa.mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.morph.html">Module ansa.morph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.report.html">Module ansa.report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.session.html">Module ansa.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ansa.spdrm.html">Module ansa.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ansa.spdrm.process.html">Module ansa.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.taskmanager.html">Module ansa.taskmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.utils.html">Module ansa.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.vr.html">Module ansa.vr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.analysis_tools.html">Module ansa.analysis_tools</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ansa.base.html">Module ansa.base</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ansa.base.checks.html">Module ansa.base.checks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.general.html">Module ansa.base.checks.general</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.geometry.html">Module ansa.base.checks.geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.mesh.html">Module ansa.base.checks.mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansa.base.checks.penetration.html">Module ansa.base.checks.penetration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ansa.base.kinetics.html">Module ansa.base.kinetics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.batchmesh.html">Module ansa.batchmesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.betascript.html">Module ansa.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.cad.html">Module ansa.cad</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module ansa.calc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.connections.html">Module ansa.connections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.constants.html">Module ansa.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.dm.html">Module ansa.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.kinetics.html">Module ansa.kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.mesh.html">Module ansa.mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.morph.html">Module ansa.morph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.report.html">Module ansa.report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.session.html">Module ansa.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ansa.spdrm.html">Module ansa.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ansa.spdrm.process.html">Module ansa.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.taskmanager.html">Module ansa.taskmanager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.utils.html">Module ansa.utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansa.vr.html">Module ansa.vr</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-ansa.calc">
+<span id="module-ansa-calc"></span><span id="api-ref-ansa-calc"></span><h1>Module ansa.calc<a class="headerlink" href="#module-ansa.calc" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.CheckIntersectionOfVolumes">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">CheckIntersectionOfVolumes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.CheckIntersectionOfVolumes" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Calculates the volumes of two ortho-parallelepiped boxes in 3d space and the common volume of them.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>volume1</strong><span class="classifier">Iterable[Iterable[float]]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of 8-corners of first ortho-parallelepiped box in 3d space.</div>
+</div>
+</dd>
+<dt><strong>volume2</strong><span class="classifier">Iterable[Iterable[float]]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of 8-corners of second ortho-parallelepiped box in 3d space.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list with three values. The first value of the list is the volume of the first box.</div>
+<div class="line">The second value of the list is the volume of the second box. The last value of the list is the</div>
+<div class="line">common volume of the two boxes. If the value of the common volume is equal to zero, the two boxes are</div>
+<div class="line">not intersected in 3d space.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">The definition of volume needs to be in a specific order. The first four items in the list need to be the bottom square and the next 4 items in the list need to be the top square in the corresponding order.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># box 1</span>
+    <span class="n">point_a</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">point_b</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">xyz_a</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">xyz_b</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">point_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">point_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">point_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">point_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">point_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+    <span class="n">point_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+    <span class="n">point_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+    <span class="n">point_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+    <span class="c1"># box 2</span>
+    <span class="n">point_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    <span class="n">point_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">point_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+    <span class="n">point_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">point_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">))</span>
+    <span class="n">point_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+    <span class="n">point_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+    <span class="n">point_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+
+    <span class="c1"># CREATE THE MATRIX WITH COORDINATES OF box 1</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityCardValues</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">point_a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">vals</span><span class="p">)</span>
+        <span class="n">xyz_a</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">ret</span><span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">],</span> <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;Y&quot;</span><span class="p">],</span> <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;Z&quot;</span><span class="p">]))</span>
+    <span class="c1"># CREATE THE MATRIX WITH COORDINATES OF box 2</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityCardValues</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="n">point_b</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">vals</span><span class="p">)</span>
+        <span class="n">xyz_b</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">ret</span><span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">],</span> <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;Y&quot;</span><span class="p">],</span> <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;Z&quot;</span><span class="p">]))</span>
+    <span class="c1"># CALL SCRIPT FUNCTION</span>
+    <span class="n">ret_mat</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">CheckIntersectionOfVolumes</span><span class="p">(</span><span class="n">xyz_a</span><span class="p">,</span> <span class="n">xyz_b</span><span class="p">)</span>
+
+    <span class="c1"># PRINT THE RESULTS OF CALCULATION</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VOLUME OF BOX A: &quot;</span><span class="p">,</span> <span class="n">ret_mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VOLUME OF BOX B: &quot;</span><span class="p">,</span> <span class="n">ret_mat</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;COMMON VOLUME OF BOXES: &quot;</span><span class="p">,</span> <span class="n">ret_mat</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.GetCoordTransformMatrix4x3">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">GetCoordTransformMatrix4x3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deck</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.GetCoordTransformMatrix4x3" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function returns a transformation matrix of a coordinate system according to the global coordinate system.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>deck</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">The deck constant.</div>
+</div>
+</dd>
+<dt><strong>entity</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">The coordinate system whose transformation matrix will be calculated.</div>
+</div>
+</dd>
+<dt><strong>x0</strong><span class="classifier">float</span></dt><dd><div class="line-block">
+<div class="line">The x-coordinate of the reference point. Needed for the case of cylindrical or </div>
+<div class="line">spherical coordinate system. In case of rectangular coordinate system, </div>
+<div class="line">these coordinates do not influence the results.</div>
+</div>
+</dd>
+<dt><strong>y0</strong><span class="classifier">float</span></dt><dd><div class="line-block">
+<div class="line">The y-coordinate of the reference point. Needed for the case of cylindrical or </div>
+<div class="line">spherical coordinate system. In case of rectangular coordinate system, </div>
+<div class="line">these coordinates do not influence the results.</div>
+</div>
+</dd>
+<dt><strong>z0</strong><span class="classifier">float</span></dt><dd><div class="line-block">
+<div class="line">The z-coordinate of the reference point. Needed for the case of cylindrical or </div>
+<div class="line">spherical coordinate system. In case of rectangular coordinate system, </div>
+<div class="line">these coordinates do not influence the results.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">On success, it returns a list that contains the 4x3 matrix. </div>
+<div class="line">The first three rows correspond to the rotation matrix and the fourth row to the translation.</div>
+<div class="line">On failure, it returns None.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="n">cs</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">LSDYNA</span><span class="p">,</span> <span class="s2">&quot;DEFINE_COORDINATE_SYSTEM&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">ret4x3</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">GetCoordTransformMatrix4x3</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">LSDYNA</span><span class="p">,</span> <span class="n">cs</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.GetVectorsOfCord">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">GetVectorsOfCord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coord</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.GetVectorsOfCord" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function computes the three unit-vectors of a given coordinate system.</div>
+<div class="line">The vectors have coordinates at global coordinate-system.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coord</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">The local coordinate system.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list containing the three unit-vectors of the given coordinate system.</div>
+<div class="line"><br /></div>
+<div class="line">The order is : </div>
+<div class="line">a) The first  is (1x3) list with coordinates of the axial ‘xx’.</div>
+<div class="line">b) The second is (1x3) list with coordinates of the axial ‘yy’.</div>
+<div class="line">c) The third  is (1x3) list with coordinates of the axial ‘zz’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">coord</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">ansa</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;CORD_NODES_R&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">vecs</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">GetVectorsOfCord</span><span class="p">(</span><span class="n">coord</span><span class="p">)</span>
+    <span class="n">axial_X</span> <span class="o">=</span> <span class="n">vecs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">axial_Y</span> <span class="o">=</span> <span class="n">vecs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">axial_Z</span> <span class="o">=</span> <span class="n">vecs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">uX</span> <span class="o">=</span> <span class="n">axial_X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">vX</span> <span class="o">=</span> <span class="n">axial_X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">wX</span> <span class="o">=</span> <span class="n">axial_X</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">uY</span> <span class="o">=</span> <span class="n">axial_Y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">vY</span> <span class="o">=</span> <span class="n">axial_Y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">wY</span> <span class="o">=</span> <span class="n">axial_Y</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">uZ</span> <span class="o">=</span> <span class="n">axial_Z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">vZ</span> <span class="o">=</span> <span class="n">axial_Z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">wZ</span> <span class="o">=</span> <span class="n">axial_Z</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.GlobalToLocal">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">GlobalToLocal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cord_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.GlobalToLocal" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The function converts the global-coordinates of one ‘point’ or ‘vector’ to the local-coordinates</div>
+<div class="line">for one specific local-cordinate with (id_cord).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>cord_id</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">The ‘id’ of the local-coordinate system.</div>
+</div>
+</dd>
+<dt><strong>coordinates</strong><span class="classifier">Iterable</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of a ‘point’ or a ‘vector’ at the global-system.</div>
+</div>
+</dd>
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The string ‘point’ or ‘vector’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list with the local-coordinates of ‘point’ or ‘vector’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">cord_id</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">point_coords</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">new_coords</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">GlobalToLocal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">point_coords</span><span class="p">,</span> <span class="s2">&quot;point&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.HelixSweep">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">HelixSweep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">starting_point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_pitch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CURVE</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.HelixSweep" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function creates points around a main-curve as a helix.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>starting_point</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the starting point.</div>
+</div>
+</dd>
+<dt><strong>period_pitch</strong><span class="classifier">float</span></dt><dd><div class="line-block">
+<div class="line">The step of the helix along the direction of the main-curve.</div>
+</div>
+</dd>
+<dt><strong>CURVE</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">The object of the curve entity.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list with the following contents:</div>
+<div class="line">1) At position [0], there is the number of points.</div>
+<div class="line">2) At position [1], there is a list of the x-coordinates of points.</div>
+<div class="line">3) At position [2], there is a list of the y-coordinates of points.</div>
+<div class="line">4) At position [3], there is a list of the z-coordinates of points.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">curve</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;CURVE&quot;</span><span class="p">,</span> <span class="mi">166</span><span class="p">)</span>
+    <span class="n">mat_res</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">HelixSweep</span><span class="p">((</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">,</span> <span class="mf">35.0</span><span class="p">),</span> <span class="mf">40.0</span><span class="p">,</span> <span class="n">curve</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mat_res</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">base</span><span class="o">.</span><span class="n">Newpoint</span><span class="p">(</span><span class="n">mat_res</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="n">mat_res</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="n">mat_res</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.LocalSystem">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">LocalSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.calc.LocalSystem" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function calculates the axes directions of a local coordinate system.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>origin</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">The list with the coordinates that correspond to the origin.</div>
+</div>
+</dd>
+<dt><strong>point1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of a point that lies on the z-axis.</div>
+</div>
+</dd>
+<dt><strong>point2</strong><span class="classifier">list[float], optional</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of a point that lies in the x-z plane.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>tuple[tuple, tuple, tuple]</dt><dd><div class="line-block">
+<div class="line">Returns a tuple of three vectors representing the axis of local system.</div>
+<div class="line">The output tuple is: ((Vector1_x,Vector1_y,Vector1_z), (Vector2_x,Vector2_y,Vector2_z), (Vector3_x,Vector3_y,Vector3_z)).</div>
+<div class="line">The first vector (Vector1) is the local axis x, the second vector (Vector2) is the local axis y, </div>
+<div class="line">and the third vector (Vector3) is the local axis z. The vectors are unit.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">LocalSystem</span><span class="p">(</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">)</span>  <span class="c1"># return tuple is : m = ((0,1,0), (0,0,-1), (-1,0,0))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.LocalToGlobal">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">LocalToGlobal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cord_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.LocalToGlobal" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts the local-coordinates of one ‘point’ or ‘vector’ to the global-coordinates for a specific local cordinate system.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>cord_id</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">The ‘id’ of the local-coordinate system.</div>
+</div>
+</dd>
+<dt><strong>coordinates</strong><span class="classifier">Iterable</span></dt><dd><div class="line-block">
+<div class="line">The list (1x3) with coordinate of ‘point’ or ‘vector’ </div>
+<div class="line">at local-system. When the input data is ‘vector’ on spherical </div>
+<div class="line">or cylindrical coordinate system, you are able to give the </div>
+<div class="line">reference point (in which the vector is applied) with the </div>
+<div class="line">extension of the matrix to (1x6). The three more positions </div>
+<div class="line">of matrix represent the reference coordinates of local system.</div>
+</div>
+</dd>
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">‘point’ or ‘vector’. In general, the return coordinates are </div>
+<div class="line">different for ‘point’ and ‘vector’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns the global-coordinates of ‘point’ or ‘vector’.</div>
+<div class="line">The output data is a list (1x3) with coordinate of ‘point’ or ‘vector’ at global-system.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point_coords</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">new_coords</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">LocalToGlobal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">point_coords</span><span class="p">,</span> <span class="s2">&quot;point&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.Normalize">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">Normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.calc.Normalize" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function normalizes a vector (ie. makes it unit long).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>vec</strong><span class="classifier">Iterable[float]</span></dt><dd><div class="line-block">
+<div class="line">A list describing the vector.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">Returns a vector (list) of length 1 pointing to the same direction as the original.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ProjectPointToCons">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ProjectPointToCons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_y_z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cons</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.ProjectPointToCons" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function computes the projection point of one point on ‘Cons’.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>x_y_z</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the point.</div>
+</div>
+</dd>
+<dt><strong>cons</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">The object of the CONS were the projection will take place.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list with the result of the projection.</div>
+<div class="line"><br /></div>
+<div class="line">The output list can be: </div>
+<div class="line">i) 0 - When cons is not valid. </div>
+<div class="line">ii) A list [ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z] - When the point </div>
+<div class="line-block">
+<div class="line">to be projected is projected on ‘Cons’ between end points. </div>
+</div>
+<div class="line">iii) A list [ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z, SnapPoint_x,SnapPoint_y,SnapPoint_z] - When the </div>
+<div class="line-block">
+<div class="line">point to be projected is projected on extension of ‘Cons’, outside the end points.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">cons_ref</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">ansa</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;CONS&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ProjectPointToCons</span><span class="p">((</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span> <span class="n">cons_ref</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ProjectPointToContainer">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ProjectPointToContainer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coords</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">ansa.base.Entity</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.ProjectPointToContainer" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function finds the projection of a point to a list of faces and shells.</div>
+<div class="line">If no projection can be found the minimum distance is computed.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coords</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">The point coordinates are given as a list of [x, y, z].</div>
+</div>
+</dd>
+<dt><strong>entities</strong><span class="classifier">list[base.Entity]</span></dt><dd><div class="line-block">
+<div class="line">The list of entities. It should contain shells, faces, parts,</div>
+<div class="line">properties or set.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list that contains:</div>
+<div class="line">a) mat[0][0], mat[0][1], mat[0][2] = the projected point (x,y,z) or the point of the minimum distance.</div>
+<div class="line">b) mat[1] = the found minimum distance d.</div>
+<div class="line">b) mat[2][0], mat[2][1], mat[2][2] = the found minimum distances (dx, dy, dz).</div>
+<div class="line">c) mat[3][0], mat[3][1], mat[3][2] = the normal vector (dx,dy,dz) at the point of projection.</div>
+<div class="line">d) mat[4] = the entity (shell or face) where the projection was found .</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">ents</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;POINT&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;SHELL&quot;</span><span class="p">,</span> <span class="s2">&quot;FACE&quot;</span><span class="p">]]</span>
+
+    <span class="n">nodes</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">PickEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">LSDYNA</span><span class="p">,</span> <span class="n">ents</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All selected points = &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">))</span>
+
+    <span class="n">container</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">PickEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">LSDYNA</span><span class="p">,</span> <span class="n">ents</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All selected ents:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">container</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">container</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">ret_vals</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityCardValues</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">LSDYNA</span><span class="p">,</span> <span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;point to be projected (x,y,z): &quot;</span><span class="p">,</span>
+            <span class="n">ret_vals</span><span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+            <span class="n">ret_vals</span><span class="p">[</span><span class="s2">&quot;Y&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+            <span class="n">ret_vals</span><span class="p">[</span><span class="s2">&quot;Z&quot;</span><span class="p">],</span>
+        <span class="p">)</span>
+        <span class="n">mat</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ProjectPointToContainer</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">ret_vals</span><span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">],</span> <span class="n">ret_vals</span><span class="p">[</span><span class="s2">&quot;Y&quot;</span><span class="p">],</span> <span class="n">ret_vals</span><span class="p">[</span><span class="s2">&quot;Z&quot;</span><span class="p">]],</span> <span class="n">container</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">mat</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="s2">&quot;projected point (x,y,z): &quot;</span><span class="p">,</span> <span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;, &quot;</span><span class="p">,</span> <span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;, &quot;</span><span class="p">,</span> <span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="s2">&quot;distance (d,dx,dy,dz): &quot;</span><span class="p">,</span>
+                <span class="n">mat</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+                <span class="n">mat</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+                <span class="n">mat</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+                <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+                <span class="n">mat</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span>
+            <span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="s2">&quot;normal vector (dx,dy,dz): &quot;</span><span class="p">,</span>
+                <span class="n">mat</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+                <span class="n">mat</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+                <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+                <span class="n">mat</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">mat</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span>
+                <span class="n">entity</span> <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntityCardValues</span><span class="p">(</span>
+                    <span class="n">constants</span><span class="o">.</span><span class="n">LSDYNA</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;__id__&quot;</span><span class="p">,</span> <span class="s2">&quot;__type__&quot;</span><span class="p">)</span>
+                <span class="p">)</span>
+                <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span>
+                        <span class="s2">&quot;projection found on entity: &quot;</span><span class="p">,</span>
+                        <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;__type__&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+                        <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;__id__&quot;</span><span class="p">],</span>
+                    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ProjectPointToShell">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ProjectPointToShell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#ansa.calc.ProjectPointToShell" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function computes the projection of a point on a shell.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>point</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the point to be projected.</div>
+</div>
+</dd>
+<dt><strong>shell</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">A shell object.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>tuple</dt><dd><div class="line-block">
+<div class="line">Returns a tuple with the result of the projection.</div>
+<div class="line"><br /></div>
+<div class="line">The output tuple can be : </div>
+<div class="line">i) (ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z,) - When the point to be projected is projected on ‘Shell’ between     the boundary edges of ‘Shell’. </div>
+<div class="line">ii)(ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z), (SnapPoint_x,SnapPoint_y,SnapPoint_z)) - When the point to be        projected is projected on extension of ‘Shell’, out from the boundary edges of ‘Shell’. </div>
+<div class="line"><br /></div>
+<div class="line">The ‘Snap Point’ is on the boundary of the ‘Shell’ (on edge or at corner). </div>
+<div class="line">When the input shell is not a reference to a valid shell, exception is raised.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">shell</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">GetEntity</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">NASTRAN</span><span class="p">,</span> <span class="s2">&quot;SHELL&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ProjectPointToShell</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">],</span> <span class="n">shell</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.TransformPointMatrix4x3">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">TransformPointMatrix4x3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">POINT</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ansa.base.html#ansa.base.Entity" title="ansa.base.Entity"><span class="pre">Entity</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">TRANSF_MATRIX4x3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.TransformPointMatrix4x3" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function transforms a point (x,y,z) according to the given TRANSF_MATRIX4x3.</div>
+<div class="line">TRANSF_MATRIX4x3 is the 4x3 transformation matrix.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>POINT</strong><span class="classifier">base.Entity</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the points.</div>
+</div>
+</dd>
+<dt><strong>TRANSF_MATRIX4x3</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">The 4x3 transformation matrix.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list with 3 elements [x, y, z] on success and None on error.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># This example creates the mirror location of a given point (10,20,30),</span>
+    <span class="c1"># according to the XZ plane</span>
+
+    <span class="n">transf</span> <span class="o">=</span> <span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+    <span class="n">res</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">TransformPointMatrix4x3</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">trasnf</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.TransformVectorMatrix4x3">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">TransformVectorMatrix4x3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VECTOR</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TRANSF_MATRIX4x3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.TransformVectorMatrix4x3" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function transforms a vector (dx,dy,dz) according to the given TRANSF_MATRIX4x3.</div>
+<div class="line">TRANSF_MATRIX4x3 is the 4x3 transformation matrix.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>VECTOR</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list of the vector.</div>
+</div>
+</dd>
+<dt><strong>TRANSF_MATRIX4x3</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">The 4x3 list of the transformation matrix.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list with 3 elements [dx, dy, dz] on success and 0 on error.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># This example creates the mirror location of a given point (10,20,30),</span>
+    <span class="c1"># according to the XZ plane</span>
+    <span class="n">transf_matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+    <span class="n">vector</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">res</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">TransformVectorMatrix4x3</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">trasnf</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.TransposeMatrix">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">TransposeMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.TransposeMatrix" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function is used to transpose a list (matrix).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>matrix</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">A list that will be transposed.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns the resulting list, without modifying the input list.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">TransposeMatrix</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>  <span class="c1"># k = [[1,4], [2,5], [3,6]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.CalcAngleOfVectors">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">CalcAngleOfVectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec_3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#ansa.calc.CalcAngleOfVectors" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function computes the angle of two or three 3D vectors.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>vec_1</strong><span class="classifier">Iterable[float]</span></dt><dd><div class="line-block">
+<div class="line">A list defining the first vector.</div>
+</div>
+</dd>
+<dt><strong>vec_2</strong><span class="classifier">Iterable[float]</span></dt><dd><div class="line-block">
+<div class="line">A list defining the second vector.</div>
+</div>
+</dd>
+<dt><strong>vec_3</strong><span class="classifier">Iterable[float], optional</span></dt><dd><div class="line-block">
+<div class="line">A list defining the third vector.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>float</dt><dd><div class="line-block">
+<div class="line">Returns the angle of the vectors in radians (double), which is computed as follows:</div>
+<div class="line">i) When the input list has two vectors, the angle is mathematically defined to be between ‘0’ and ‘PI’ (inclusive). </div>
+<div class="line">ii) When the input list has three vectors the angle is mathematically defined to be between ‘0’ and ‘2PI’ (inclusive). </div>
+<div class="line">iii) When the input list is not correct the function returns the error value ‘-PI’ .</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">calc</span><span class="o">.</span><span class="n">CalcAngleOfVectors</span><span class="p">(</span>
+        <span class="p">[</span><span class="o">-</span><span class="mf">17.0</span><span class="p">,</span> <span class="mf">72.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">61.0</span><span class="p">,</span> <span class="o">-</span><span class="mi">43</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+    <span class="p">)</span>  <span class="c1"># The return angle in radians is &#39;2.41668002&#39;</span>
+    <span class="n">calc</span><span class="o">.</span><span class="n">CalcAngleOfVectors</span><span class="p">(</span>
+        <span class="p">[</span><span class="o">-</span><span class="mf">17.0</span><span class="p">,</span> <span class="mf">72.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">61.0</span><span class="p">,</span> <span class="o">-</span><span class="mi">43</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">]</span>
+    <span class="p">)</span>  <span class="c1"># The return angle in radians is &#39;3.86650528&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.CartesianToCylindrical">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">CartesianToCylindrical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.calc.CartesianToCylindrical" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts the cartesian coordinates to cylindrical coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A list with the cartesian coordinates to convert.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a list with the respective cylindrical coordinates.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>ArithmeticError</dt><dd><div class="line-block">
+<div class="line">Invalid arguments given.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">CartesianToCylindrical</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+    <span class="c1"># The result is: new_point == [1.41421356, 0.785398163, 1]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.CartesianToSpherical">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">CartesianToSpherical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.calc.CartesianToSpherical" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts the cartesian coordinates to spherical coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A list with the cartesian coordinates to be converted.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a list with the spherical coordinates.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">CartesianToSpherical</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+    <span class="c1"># The result is : new_point == [1.73205081 ,0.785398163, 0.955316618]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.CylindricalToCartesian">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">CylindricalToCartesian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.calc.CylindricalToCartesian" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts the cylindrical coordinates to cartesian coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the cylindrical coordinates to be converted.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">Returns a list with the converted cartesian coordinates.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.41421356</span><span class="p">,</span> <span class="mf">0.785398163</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">CylindricalToCartesian</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+
+    <span class="c1"># The result is : new_point = [1,1,1]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.CylindricalToSpherical">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">CylindricalToSpherical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.calc.CylindricalToSpherical" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts the cylindrical coordinates to spherical coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A list with the cylindrical coordinates to be converted.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a list with the converted spherical coordinates.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.41421356</span><span class="p">,</span> <span class="mf">0.785398163</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">CylindricalToSpherical</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+
+    <span class="c1"># The result is: [1.73205081, 0.785398163, 0.955316618]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.NormalVec">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">NormalVec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.calc.NormalVec" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function computes a unit normal vector from the input vector ‘vec’.</div>
+<div class="line">At the end, the dot product of the vectors must be 0.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>vec</strong><span class="classifier">list[float, float, float]</span></dt><dd><div class="line-block">
+<div class="line">A list describing the vector.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float, float, float]</dt><dd><div class="line-block">
+<div class="line">Returns a unit vector (list) of the input vector ‘vec’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">vec</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">vecNrm</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">NormalVec</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>  <span class="c1"># |vecNrm| == 1</span>
+    <span class="n">dot</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="n">vecNrm</span><span class="p">)</span>  <span class="c1"># the value &#39;dot&#39; is &#39;0.&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ProjectPointToLineSegment">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ProjectPointToLineSegment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_segment_point_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_segment_point_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#ansa.calc.ProjectPointToLineSegment" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function computes the projection point of a point on a line segment.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>project_point</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list of coordinates that define the point to be projected.</div>
+</div>
+</dd>
+<dt><strong>line_segment_point_1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list of coordinates that define the first end point.</div>
+</div>
+</dd>
+<dt><strong>line_segment_point_2</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list of coordinates that define the second end point.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>tuple</dt><dd><div class="line-block">
+<div class="line">Returns a tuple with the result of the projection.</div>
+<div class="line"><br /></div>
+<div class="line">The output tuple can be: </div>
+<div class="line">i) ((ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z),) - When the point is projected on the </div>
+<div class="line-block">
+<div class="line">line segment between end points. </div>
+</div>
+<div class="line">ii)((ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z), (SnapPoint_x,SnapPoint_y,SnapPoint_z)) - When the point </div>
+<div class="line-block">
+<div class="line">is projected on the extension of the line segment, outside the end points. </div>
+<div class="line"><br /></div>
+</div>
+<div class="line">The ‘Snap Point’ is one of the two end points of the line segment.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ProjectPointToLineSegment</span><span class="p">(</span>
+        <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ProjectPointToTriangle">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ProjectPointToTriangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangle_point_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangle_point_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangle_point_3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.ProjectPointToTriangle" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function computes the projection point of a point on a triangle. </div>
+<div class="line"><br /></div>
+<div class="line">The input list is of the following format: </div>
+<div class="line">[ProjectPoint_x,ProjectPoint_y,ProjectPoint_z, TrianglePoint1_x,TrianglePoint1_y,TrianglePoint1_z, </div>
+<div class="line">TrianglePoint2_x,TrianglePoint2_y,TrianglePoint2_z, TrianglePoint3_x,TrianglePoint3_y,TrianglePoint3_z] </div>
+<div class="line">The first point is the point to be projected on the triangle and the other three points are the corners of the triangle.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>project_point</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of point to be projected.</div>
+</div>
+</dd>
+<dt><strong>triangle_point_1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the 1st triangle node.</div>
+</div>
+</dd>
+<dt><strong>triangle_point_2</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the 2nd triangle node.</div>
+</div>
+</dd>
+<dt><strong>triangle_point_3</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the 3rd triangle node.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list with the result of the projection.</div>
+<div class="line"><br /></div>
+<div class="line">The output list can be : </div>
+<div class="line">i) ((ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z)) - When the point to </div>
+<div class="line-block">
+<div class="line">be projected is projected in triangle. </div>
+</div>
+<div class="line">ii) ((ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z), (SnapPoint_x,SnapPoint_y,SnapPoint_z)) - When the </div>
+<div class="line-block">
+<div class="line">point to be projected is projected outside the triangle area. The ‘Snap Point’ is the nearest point of the </div>
+<div class="line">triangle to the projected point.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">The degenerate triangles, such as the three points are collinear or all points have the same coordinates, the function treats them as a line segment or as a singler point respectevely.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ProjectPointToTriangle</span><span class="p">(</span>
+        <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="c1"># return list is : m = (0.,0.,0.)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.SphericalToCartesian">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">SphericalToCartesian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.calc.SphericalToCartesian" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function converts spherical coordinates to cartesian coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">The input data is a list (1x3) with the spherical coordinates to be converted.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">Returns a list with the converted cartesian coordinates.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.73205081</span><span class="p">,</span> <span class="mf">0.785398163</span><span class="p">,</span> <span class="mf">0.955316618</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">SphericalToCartesian</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+    <span class="c1"># The result is : new_point == [1, 1, 1]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.SphericalToCylindrical">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">SphericalToCylindrical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.calc.SphericalToCylindrical" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function converts spherical coordinates to cylindrical coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">The input data is a list (1x3) with the spherical coordinates to be converted.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">Returns a list (1x3) with the converted cylindrical coordinates.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.73205081</span><span class="p">,</span> <span class="mf">0.785398163</span><span class="p">,</span> <span class="mf">0.955316618</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">SphericalToCylindrical</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+    <span class="c1"># The result is : new_point == [1.41421356, 0.785398163, 1]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ConvertEulerAnglesToRotationMatrix_XYZ">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ConvertEulerAnglesToRotationMatrix_XYZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.calc.ConvertEulerAnglesToRotationMatrix_XYZ" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts Euler angles to a rotation matrix. The order of the rotations is as follows:</div>
+<div class="line-block">
+<div class="line">1st) Rotation around existed axial ‘X’ is the first rotation.</div>
+<div class="line">2nd) Rotation around a new axial ‘Y’ is the second rotation.</div>
+<div class="line">3rd) Rotation around a newest axial ‘Z’ is the last rotation.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">The input data are:</div>
+<div class="line-block">
+<div class="line">1) The first rotation angle around axial ‘X’ (x).</div>
+<div class="line">2) The second rotation angle around new axial ‘Y’ (y).</div>
+<div class="line">3) The third rotationa angle around newest axial ‘Z’ (z).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">All the above angles are in radians.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>vector</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A series of floats.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[list]</dt><dd><div class="line-block">
+<div class="line">Returns a 3d-rotation matrix (3x3) as a list.</div>
+<div class="line"><br /></div>
+<div class="line">ATTENTION: The rotation matrix is from the source coordinate system to the target coordinate system.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+    <span class="n">v</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ConvertEulerAnglesToRotationMatrix_XYZ</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:32}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">row</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ConvertEulerAnglesToRotationMatrix_ZXZ">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ConvertEulerAnglesToRotationMatrix_ZXZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.calc.ConvertEulerAnglesToRotationMatrix_ZXZ" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts Euler angles to a rotation matrix. The order of the rotations is as follows:</div>
+<div class="line-block">
+<div class="line">1st) Rotation around existed axial ‘Z’ is the first rotation.</div>
+<div class="line">2nd) Rotation around a new axial ‘X’ is the second rotation.</div>
+<div class="line">3rd) Rotation around a newest axial ‘Z’ is the last rotation.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">The input data are:</div>
+<div class="line-block">
+<div class="line">1) The first rotation angle around axial ‘Z’ (zAngle1).</div>
+<div class="line">2) The second rotation angle around new axial ‘X’ (xAngle2).</div>
+<div class="line">3) The third rotationa angle around newest axial ‘Z’ (zAngle3).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">All the above angles are in radians.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>axis</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list of floats respresenting the 3 angles.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[list]</dt><dd><div class="line-block">
+<div class="line">Returns a 3d-rotation matrix (3x3) as a list.</div>
+<div class="line"><br /></div>
+<div class="line">ATTENTION: The rotation matrix is from the source coordinate system to the target coordinate system.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">zAngle1</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+    <span class="n">xAngle2</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">zAngle3</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+    <span class="n">v</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ConvertEulerAnglesToRotationMatrix_ZXZ</span><span class="p">((</span><span class="n">zAngle1</span><span class="p">,</span> <span class="n">xAngle2</span><span class="p">,</span> <span class="n">zAngle3</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:32}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">row</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ConvertRotationMatrixToEulerAngles_XYZ">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ConvertRotationMatrixToEulerAngles_XYZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotationMatrix1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationMatrix2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationMatrix3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.calc.ConvertRotationMatrixToEulerAngles_XYZ" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts a 3d-rotation matrix to the combination x-y-z of Euler angles. The order of rotations is as follows:</div>
+<div class="line-block">
+<div class="line">1st) Rotation around existing axial ‘X’ is the first rotation.</div>
+<div class="line">2nd) Rotation around a new axial ‘Y’ is the second rotation.</div>
+<div class="line">3rd) Rotation around a newest axial ‘Z’ is the last rotation.</div>
+</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>rotationMatrix1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the first rotation matrix.</div>
+</div>
+</dd>
+<dt><strong>rotationMatrix2</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the second rotation matrix.</div>
+</div>
+</dd>
+<dt><strong>rotationMatrix3</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the third rotation matrix.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">Returns a list containing the three Euler angles of the combination x-y-z.</div>
+<div class="line">The first item of the returned list is the Euler angle of rotation around the existing axial ‘X’.</div>
+<div class="line">The second item of the returned list is the Euler angle of rotation around the new axial ‘Y’.</div>
+<div class="line">The third item of the returned list is the Euler angle of rotation around the newest axial ‘Z’.</div>
+<div class="line">All the above angles are in radians.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">rotMat1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5088281</span><span class="p">,</span> <span class="mf">0.04234156</span><span class="p">,</span> <span class="mf">0.8598262</span><span class="p">)</span>
+    <span class="n">rotMat2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.53177536</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8009058</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.275254</span><span class="p">)</span>
+    <span class="n">rotMat3</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.6769852</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.59729135</span><span class="p">,</span> <span class="mf">0.43003967</span><span class="p">)</span>
+
+    <span class="n">anglesEuler_XYZ</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ConvertRotationMatrixToEulerAngles_XYZ</span><span class="p">(</span>
+        <span class="n">rotMat1</span><span class="p">,</span> <span class="n">rotMat2</span><span class="p">,</span> <span class="n">rotMat3</span>
+    <span class="p">)</span>
+
+    <span class="n">anglesEuler_XYZ_0</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">anglesEuler_XYZ</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">anglesEuler_XYZ_1</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">anglesEuler_XYZ</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">anglesEuler_XYZ_2</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">anglesEuler_XYZ</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">anglesEuler_XYZ_0</span><span class="p">,</span> <span class="n">anglesEuler_XYZ_1</span><span class="p">,</span> <span class="n">anglesEuler_XYZ_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ConvertRotationMatrixToEulerAngles_ZXZ">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ConvertRotationMatrixToEulerAngles_ZXZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotationMatrix1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationMatrix2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationMatrix3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ansa.calc.ConvertRotationMatrixToEulerAngles_ZXZ" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts a 3d-rotation matrix to the combination z-x-z of Euler angles. The order of rotations is as follows:</div>
+<div class="line-block">
+<div class="line">1st) Rotation around the existing axial ‘Z’ is the first rotation.</div>
+<div class="line">2nd) Rotation around a new axial ‘X’ is the second rotation.</div>
+<div class="line">3rd) Rotation around a newest axial ‘Z’ is the last rotation.</div>
+</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>rotationMatrix1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the first rotation matrix.</div>
+</div>
+</dd>
+<dt><strong>rotationMatrix2</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the first rotation matrix.</div>
+</div>
+</dd>
+<dt><strong>rotationMatrix3</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the first rotation matrix.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">Returns a list containing the three Euler angles of the combination z-x-z.</div>
+<div class="line">The first item of the list is the Euler angle of rotation around the existing axial ‘Z’.</div>
+<div class="line">The second item of the list is the Euler angle of rotation around the new axial ‘X’.</div>
+<div class="line">The third item of the list is the Euler angle of rotation around the newest axial ‘Z’. </div>
+<div class="line">All the above angles are in radians.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">rotMat1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5088281</span><span class="p">,</span> <span class="mf">0.04234156</span><span class="p">,</span> <span class="mf">0.8598262</span><span class="p">)</span>
+    <span class="n">rotMat2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.53177536</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8009058</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.275254</span><span class="p">)</span>
+    <span class="n">rotMat3</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.6769852</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.59729135</span><span class="p">,</span> <span class="mf">0.43003967</span><span class="p">)</span>
+
+    <span class="n">anglesEuler_ZXZ</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ConvertRotationMatrixToEulerAngles_ZXZ</span><span class="p">(</span>
+        <span class="n">rotMat1</span><span class="p">,</span> <span class="n">rotMat2</span><span class="p">,</span> <span class="n">rotMat3</span>
+    <span class="p">)</span>
+
+    <span class="n">anglesEuler_ZXZ_0</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">anglesEuler_ZXZ</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">anglesEuler_ZXZ_1</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">anglesEuler_ZXZ</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">anglesEuler_ZXZ_2</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">anglesEuler_ZXZ</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">anglesEuler_ZXZ_0</span><span class="p">,</span> <span class="n">anglesEuler_ZXZ_1</span><span class="p">,</span> <span class="n">anglesEuler_ZXZ_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ConvertRotationMatrixToEulerAxisAngle">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ConvertRotationMatrixToEulerAxisAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotationMatrix1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationMatrix2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotationMatrix3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#ansa.calc.ConvertRotationMatrixToEulerAxisAngle" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts a 3d-rotation matrix to the Euler axis and angle.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>rotationMatrix1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the first rotation matrix.</div>
+</div>
+</dd>
+<dt><strong>rotationMatrix2</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the first rotation matrix.</div>
+</div>
+</dd>
+<dt><strong>rotationMatrix3</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the first rotation matrix.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>tuple</dt><dd><div class="line-block">
+<div class="line">Returns a tuple that has a length of two. The first item is a tuple containing 3 floats </div>
+<div class="line">and it represents the vector of Euler axis. The second item is a float value representing </div>
+<div class="line">the Euler rotation angle in radians.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">rotMat</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="o">-</span><span class="mf">0.5088281</span><span class="p">,</span> <span class="mf">0.04234156</span><span class="p">,</span> <span class="mf">0.8598262</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">-</span><span class="mf">0.53177536</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8009058</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.275254</span><span class="p">),</span>
+        <span class="p">(</span><span class="mf">0.6769852</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.59729135</span><span class="p">,</span> <span class="mf">0.43003967</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">eAxisAngle</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ConvertRotationMatrixToEulerAxisAngle</span><span class="p">(</span>
+        <span class="n">rotMat</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rotMat</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">rotMat</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;axis:&quot;</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">eAxisAngle</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;angle:&quot;</span><span class="p">,</span> <span class="n">eAxisAngle</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.ProjectPointsToElements">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">ProjectPointsToElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.ProjectPointsToElements" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Projects a list of points on a list of elements in a given tolerance and gets the projected point, </div>
+<div class="line">the distance and the projection element.</div>
+<div class="line"><br /></div>
+<div class="line">It works with SHELL, SOLID, SEGMENT, ELSURFACE, RIGID, ACOUSTIC, CAABSF3/4, ASI3D elements.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">A list with (x, y, z) coordinates of the points to be projected.</div>
+</div>
+</dd>
+<dt><strong>entities</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">A list with the elements to check for projection.</div>
+</div>
+</dd>
+<dt><strong>tolerance</strong><span class="classifier">float</span></dt><dd><div class="line-block">
+<div class="line">The tolerance in which the function checks for a projection.</div>
+</div>
+</dd>
+<dt><strong>direction</strong><span class="classifier">list, optional</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the direction vector along which </div>
+<div class="line">the projection is going to take place.</div>
+<div class="line">Search with direction works with SHELL and SOLID elements.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list containing objects with the following attributes: projection, distance and entity.</div>
+<div class="line">If no projection is found, entity is None.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">entities</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">CollectEntities</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">ABAQUS</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;SHELL&quot;</span><span class="p">)</span>
+
+    <span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">entities</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">Cog</span><span class="p">(</span><span class="n">ent</span><span class="p">)</span>
+        <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ProjectPointsToElements</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">entities</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">proj</span> <span class="ow">in</span> <span class="n">ret</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">proj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">proj</span><span class="o">.</span><span class="n">projection</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">proj</span><span class="o">.</span><span class="n">distance</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">proj</span><span class="o">.</span><span class="n">entity</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.CrossProduct">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">CrossProduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ansa.calc.CrossProduct" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function calculates the cross product of the two vectors.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>vec1</strong><span class="classifier">tuple</span></dt><dd><div class="line-block">
+<div class="line">A tuple representing vector 1.</div>
+</div>
+</dd>
+<dt><strong>vec2</strong><span class="classifier">tuple</span></dt><dd><div class="line-block">
+<div class="line">A tuple representing vector 2.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a new vector (list) representing the cross product.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>ArithmeticError</dt><dd><div class="line-block">
+<div class="line">Invalid arguments given</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.15</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">m2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.54</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">CrossProduct</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.DotProduct">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">DotProduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#ansa.calc.DotProduct" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function calculates the dot product of two vectors.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>vec1</strong><span class="classifier">tuple[float, float, float]</span></dt><dd><div class="line-block">
+<div class="line">A tuple representing Vector 1.</div>
+</div>
+</dd>
+<dt><strong>vec2</strong><span class="classifier">tuple[float, float, float]</span></dt><dd><div class="line-block">
+<div class="line">A tuple representing Vector 2.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>float</dt><dd><div class="line-block">
+<div class="line">Returns a double precision value representing the dot product.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>TypeError</dt><dd><div class="line-block">
+<div class="line">The two vectors do not belong in the same dimensional-space (they have not equal length).</div>
+</div>
+</dd>
+<dt>ArithmeticError</dt><dd><div class="line-block">
+<div class="line">Invalid arguments given.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">from</span> <span class="nn">ansa</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.97</span><span class="p">)</span>
+    <span class="n">m2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.76</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.39</span><span class="p">)</span>
+
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ansa.calc.GetDoeStudyExperimentsForParams">
+<span class="sig-prename descclassname"><span class="pre">ansa.calc.</span></span><span class="sig-name descname"><span class="pre">GetDoeStudyExperimentsForParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experiments_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taguchi_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reject_duplicates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ansa.calc.GetDoeStudyExperimentsForParams" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Function to get the experiments of the input parameters </div>
+<div class="line">that are defined as named tuples with the fieldnames “min”</div>
+<div class="line">and “max”. For the definition of the input parameters the</div>
+<div class="line">“import collections” statement is essential (look at the example).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>parameters</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">list or objects of parameters defined as named </div>
+<div class="line">tuples with the fieldnames “min” and “max”</div>
+</div>
+</dd>
+<dt><strong>algorithm</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">algorithm used to generate the experiments.</div>
+<div class="line">Supported algorithms are “Full Factorial”, “Uniform Latin Hypercube”, </div>
+<div class="line">“Optimal Latin Hypercube (ESE)”, “Symmetric Optimal Latin Hypercube”, </div>
+<div class="line">“Random”, “Taguchi Orthogonal Arrays”, </div>
+<div class="line">“Modified Extensible Lattice Sequence” and “Linear”.</div>
+</div>
+</dd>
+<dt><strong>level</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">integer value used for all parameters (“Full </div>
+<div class="line">Factorial” or “Taguchi Orthogonal Arrays” </div>
+<div class="line">algorithms). Default value is 2.</div>
+</div>
+</dd>
+<dt><strong>experiments_number</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">the number of the generated experiments (used in </div>
+<div class="line">“Uniform Latin Hypercube”, “Random” and “Linear” </div>
+<div class="line">algorithms).</div>
+</div>
+</dd>
+<dt><strong>seed</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">positive number used to initialize the random number generator</div>
+<div class="line">(used in “Uniform Latin Hypercube” and “Random” algorithms).</div>
+</div>
+</dd>
+<dt><strong>taguchi_array</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">Taguchi array to be used for experiments generation. </div>
+<div class="line">Taguchi array is related to the level value. </div>
+<div class="line">For level = 2, supported arrays are “L4”, “L8”, “L12”, </div>
+<div class="line">“L16”, “L20”, “L24”, “L32”, “L64”, “L128”, “L256”.</div>
+<div class="line">For level = 3, supported arrays are “L9”, “L18”, “L27”, </div>
+<div class="line">“L36”, “L54”, “L81”, “L108”.</div>
+<div class="line">For level = 4, supported arrays are “L16”, “L32”, “L64”.</div>
+<div class="line">For level = 5, supported arrays are “L25”, “L50”.</div>
+</div>
+</dd>
+<dt><strong>reject_duplicates</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">reject duplicate experiments in Taguchi algorithm</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a list of lists (every list corresponds to a single experiment).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">ansa</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">Parameter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;Parameter&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">])</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">)</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">)</span>
+    <span class="n">p3</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="o">-</span><span class="mf">2.2</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
+
+    <span class="n">designs1</span> <span class="o">=</span> <span class="n">ansa</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">GetDoeStudyExperimentsForParams</span><span class="p">(</span>
+        <span class="n">params</span><span class="p">,</span> <span class="s2">&quot;Random&quot;</span><span class="p">,</span> <span class="n">experiments_number</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">345</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DOE Study experiments = &quot;</span><span class="p">,</span> <span class="n">designs1</span><span class="p">)</span>
+
+    <span class="n">designs2</span> <span class="o">=</span> <span class="n">ansa</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">GetDoeStudyExperimentsForParams</span><span class="p">(</span>
+        <span class="n">params</span><span class="p">,</span> <span class="s2">&quot;Full Factorial&quot;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">3</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DOE Study experiments = &quot;</span><span class="p">,</span> <span class="n">designs2</span><span class="p">)</span>
+
+    <span class="n">designs3</span> <span class="o">=</span> <span class="n">ansa</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">GetDoeStudyExperimentsForParams</span><span class="p">(</span>
+        <span class="n">params</span><span class="p">,</span> <span class="s2">&quot;Uniform Latin Hypercube&quot;</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">467</span><span class="p">,</span> <span class="n">experiments_number</span><span class="o">=</span><span class="mi">5</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DOE Study experiments = &quot;</span><span class="p">,</span> <span class="n">designs3</span><span class="p">)</span>
+
+    <span class="n">designs4</span> <span class="o">=</span> <span class="n">ansa</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">GetDoeStudyExperimentsForParams</span><span class="p">(</span>
+        <span class="n">parameters</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;Taguchi Orthogonal Arrays&quot;</span><span class="p">,</span> <span class="n">taguchi_array</span><span class="o">=</span><span class="s2">&quot;L16&quot;</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DOE Study experiments = &quot;</span><span class="p">,</span> <span class="n">designs4</span><span class="p">)</span>
+
+    <span class="n">designs5</span> <span class="o">=</span> <span class="n">ansa</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">GetDoeStudyExperimentsForParams</span><span class="p">(</span>
+        <span class="n">params</span><span class="p">,</span> <span class="s2">&quot;Linear&quot;</span><span class="p">,</span> <span class="n">experiments_number</span><span class="o">=</span><span class="mi">3</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DOE Study experiments = &quot;</span><span class="p">,</span> <span class="n">designs5</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

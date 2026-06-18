@@ -1,0 +1,1969 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module sdm.sdm_base &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_komvos/generated/sdm.sdm_base';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sdm.html">Module sdm</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sdm.base.html">Module sdm.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.betascript.html">Module sdm.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.constants.html">Module sdm.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.dm.html">Module sdm.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.ml.html">Module sdm.ml</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module sdm.sdm_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.session.html">Module sdm.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sdm.spdrm.html">Module sdm.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.fileChooser.html">Module sdm.spdrm.fileChooser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.inputGetter.html">Module sdm.spdrm.inputGetter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.messageDisplayer.html">Module sdm.spdrm.messageDisplayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.process.html">Module sdm.spdrm.process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.question.html">Module sdm.spdrm.question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.scriptCommands.html">Module sdm.spdrm.scriptCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.utils.html">Module sdm.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.base.html">Module sdm.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.betascript.html">Module sdm.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.constants.html">Module sdm.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.dm.html">Module sdm.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.ml.html">Module sdm.ml</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module sdm.sdm_base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.session.html">Module sdm.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="sdm.spdrm.html">Module sdm.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.fileChooser.html">Module sdm.spdrm.fileChooser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.inputGetter.html">Module sdm.spdrm.inputGetter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.messageDisplayer.html">Module sdm.spdrm.messageDisplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.process.html">Module sdm.spdrm.process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.question.html">Module sdm.spdrm.question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.scriptCommands.html">Module sdm.spdrm.scriptCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.utils.html">Module sdm.utils</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-sdm.sdm_base">
+<span id="module-sdm-sdm-base"></span><span id="api-ref-sdm-sdm-base"></span><h1>Module sdm.sdm_base<a class="headerlink" href="#module-sdm.sdm_base" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.GetDiskSpaceStatus">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">GetDiskSpaceStatus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#sdm.sdm_base.GetDiskSpaceStatus" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function queries the disk status for the home / temporary directories and</div>
+<div class="line">classifies the available disk space according to the thresholds configured for</div>
+<div class="line">‘Disk Monitoring’.</div>
+<div class="line"><br /></div>
+<div class="line">The classificiation result can be one of the strings below:</div>
+<div class="line">- UNKNOWN: Classification failed, e.g. because the available disk space could</div>
+<div class="line-block">
+<div class="line">not be queried</div>
+</div>
+<div class="line">- OK: Available disk space is above any of the configured thresholds</div>
+<div class="line">- WARNING: The available disk space is below the WARNING threshold, but above</div>
+<div class="line-block">
+<div class="line">the CRITICAL threshold</div>
+</div>
+<div class="line">- CRITICAL: The available disk space is below the CRITICAL threshold</div>
+<div class="line">- FULL: The disk is effectively full: less than 1 MB is available</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">This function returns objects of class DiskSpaceStatus, which contain the</div>
+<div class="line">following members</div>
+<div class="line">- homedir_free_space: Free space (measured in bytes) for the user’s home</div>
+<div class="line-block">
+<div class="line">directory </div>
+</div>
+<div class="line">- homedir_status: Evaluated status according to the configured ‘Home Directory’</div>
+<div class="line-block">
+<div class="line">threshold for Disk Monitoring (see description for possible </div>
+<div class="line">values)</div>
+</div>
+<div class="line">- tempdir_free_space: Free space (measured in bytes) for the temporary directory</div>
+<div class="line-block">
+<div class="line">used by the application</div>
+</div>
+<div class="line">- tempdir_status: Evaluated status according to the configured ‘Caching </div>
+<div class="line-block">
+<div class="line">Directory’ threshold for Disk Monitoring (see description for</div>
+<div class="line">possible values)</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">report</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetDiskSpaceStatus</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Home free space:&quot;</span><span class="p">,</span> <span class="n">report</span><span class="o">.</span><span class="n">homedir_free_space</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Home status:&quot;</span><span class="p">,</span> <span class="n">report</span><span class="o">.</span><span class="n">homedir_status</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temp free space:&quot;</span><span class="p">,</span> <span class="n">report</span><span class="o">.</span><span class="n">tempdir_free_space</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temp status:&quot;</span><span class="p">,</span> <span class="n">report</span><span class="o">.</span><span class="n">tempdir_status</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">report</span><span class="o">.</span><span class="n">homedir_status</span> <span class="o">==</span> <span class="s2">&quot;OK&quot;</span> <span class="ow">and</span> <span class="n">report</span><span class="o">.</span><span class="n">tempdir_status</span> <span class="o">==</span> <span class="s2">&quot;OK&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Disk Status: OK&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Disk Status: Non OK&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.RefreshCurrentTab">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">RefreshCurrentTab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.RefreshCurrentTab" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function refreshes current tab in KOMVOS application.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">RefreshCurrentTab</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.StartIdentifyInViewer">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">StartIdentifyInViewer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sdm.sdm_base.StartIdentifyInViewer" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function sends a session command in META viewer in order to start the identify process for items loaded from running application. META viewer should be already launched.   </div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True if command has been sent successfully, </div>
+<div class="line-block">
+<div class="line">None if viewer has not been launched, </div>
+<div class="line">False otherwise.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.StopIdentifyInViewer</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">StartIdentifyInViewer</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.StopIdentifyInViewer">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">StopIdentifyInViewer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sdm.sdm_base.StopIdentifyInViewer" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function sends a session command in META viewer in order to stop the identify process for items loaded from running application.   </div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True if viewer is launched and command was sent.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.StartIdentifyInViewer</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">StopIdentifyInViewer</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.ShowItemsInViewer">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">ShowItemsInViewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attributes_per_server_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_only</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sdm.sdm_base.ShowItemsInViewer" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function shows in META viewer the items given as input argument from running application.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>attributes_per_server_ids</strong><span class="classifier">list[dict], optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is a list of dictionaries of part attributes per server id.</div>
+</div>
+</dd>
+<dt><strong>show_only</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">If this argument is set to True, ‘Show only’ will be applied in viewer. </div>
+<div class="line">If this argument is omitted, ‘Show’ will be applied (default).</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True in case of success.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.HideItemsInViewer</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="k">def</span> <span class="nf">showOnlyAllPartsInViewer</span><span class="p">():</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">SelectAllInCurrentTab</span><span class="p">()</span>
+    <span class="n">current_tab_info</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetInfoOnSelectedItemsFromCurrentTab</span><span class="p">(</span><span class="n">any_type</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">ClearSelectionInCurrentTab</span><span class="p">()</span>
+    <span class="n">parts_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">attrs_per_server_ids_list</span> <span class="o">=</span> <span class="n">current_tab_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;attributes_per_server_ids&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">attrs_per_server_ids_list</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">attrs_per_server_id_dict</span> <span class="ow">in</span> <span class="n">attrs_per_server_ids_list</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">server_id</span><span class="p">,</span> <span class="n">names_values_dict</span> <span class="ow">in</span> <span class="n">attrs_per_server_id_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="nb">type</span> <span class="o">=</span> <span class="n">names_values_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                        <span class="s2">&quot;_DM_Attr_Hidden_Developer_dm_entity_type_&quot;</span>
+                    <span class="p">)</span>
+                    <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;parts&quot;</span><span class="p">:</span>
+                        <span class="n">parts_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">attrs_per_server_id_dict</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">ClearViewer</span><span class="p">()</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">ShowItemsInViewer</span><span class="p">(</span><span class="n">attributes_per_server_ids</span><span class="o">=</span><span class="n">parts_list</span><span class="p">,</span> <span class="n">show_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.HideItemsInViewer">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">HideItemsInViewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attributes_per_server_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sdm.sdm_base.HideItemsInViewer" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>attributes_per_server_ids</strong><span class="classifier">list[dict], optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is a list of dictionaries of part attributes per server id.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True in case of success,</div>
+<div class="line-block">
+<div class="line">False otherwise.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.ShowItemsInViewer</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="k">def</span> <span class="nf">hideFunction</span><span class="p">(</span><span class="n">attrs_per_server_ids_list</span><span class="p">):</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">SetViewerHighlightStatus</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">HideItemsInViewer</span><span class="p">(</span><span class="n">attributes_per_server_ids</span><span class="o">=</span><span class="n">attrs_per_server_ids_list</span><span class="p">)</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">SetViewerHighlightStatus</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.ClearViewer">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">ClearViewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clear_all</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.ClearViewer" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function clears the META viewer area.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>clear_all</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">If this argument is set to True, all pages that might be opened will be cleared.</div>
+<div class="line">If this argument is omitted, only 3D model page will be cleared (default).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="k">def</span> <span class="nf">showOnlyPartsInViewer</span><span class="p">(</span><span class="n">parts_list</span><span class="p">):</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">ClearViewer</span><span class="p">()</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">ShowItemsInViewer</span><span class="p">(</span><span class="n">attributes_per_server_ids</span><span class="o">=</span><span class="n">parts_list</span><span class="p">,</span> <span class="n">show_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">clearAllInViewer</span><span class="p">():</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">ClearViewer</span><span class="p">(</span><span class="n">clear_all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.EnableDrawingStyleInViewer">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">EnableDrawingStyleInViewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.EnableDrawingStyleInViewer" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function enables in embedded META viewer the drawing style given as argument.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>style</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">This argument is given in order to specify the drawing style that should be enabled in viewer.</div>
+<div class="line">Keywords that can be used (case insensitive) and the corresponding drawing style are:</div>
+<div class="line">Keywords (case insensitive) –&gt; Drawing Style</div>
+<div class="line">———————————————-</div>
+<div class="line">Pid                         –&gt; PID</div>
+<div class="line">Mid                         –&gt; MID</div>
+<div class="line">Ent/Entities                –&gt; ENT</div>
+<div class="line">Submodel/Subsystem/Component–&gt; Submodel</div>
+<div class="line">Simulation Model/BFZG       –&gt; Simulation Model</div>
+<div class="line">Thickness                   –&gt; Thickness</div>
+<div class="line">Unique Thickness            –&gt; Unique Thickness</div>
+<div class="line">Contact Thickness           –&gt; Contact Thickness</div>
+<div class="line">Pcomp Zones                 –&gt; Pcomp Zones</div>
+<div class="line">Status                      –&gt; Status</div>
+<div class="line">Diff                        –&gt; Diff</div>
+<div class="line"><br /></div>
+<div class="line">For custom drawing styles, their name should be given as argument.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">EnableDrawingStyleInViewer</span><span class="p">(</span><span class="s2">&quot;Subsystem&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.SetViewerHighlightStatus">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">SetViewerHighlightStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.SetViewerHighlightStatus" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function is used to enable/disable highlight status and identify synchronization between embedded META viewer and the list in running application.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>status</strong><span class="classifier">bool</span></dt><dd><div class="line-block">
+<div class="line">This argument is used to enable/disable highlight status and </div>
+<div class="line">identify synchronization. Use: </div>
+<div class="line-block">
+<div class="line">True to enable highlight status or reset,</div>
+<div class="line">False to disable highlight status.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">SetViewerHighlightStatus</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.SaveJtAsMetadbInViewer">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">SaveJtAsMetadbInViewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sdm.sdm_base.SaveJtAsMetadbInViewer" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function saves jt files corresponding to the item given as input (from its children items) as one compressed metadb file using META viewer. Meta-data are also saved in metadb file in order to maintain the identify process.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>names_values</strong><span class="classifier">dict</span></dt><dd><div class="line-block">
+<div class="line">This argument is a dictionary with the attribute names </div>
+<div class="line">and values that describe the given as input item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Return True for success.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="k">def</span> <span class="nf">save_jt_as_metadb_in_viewer</span><span class="p">(</span><span class="n">list_of_maps</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">list_of_maps</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">sdm_base</span><span class="o">.</span><span class="n">PostMessageInInfoArea</span><span class="p">(</span>
+            <span class="s2">&quot;Save jt as metadb Error: please select just one item.&quot;</span>
+        <span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">names_values</span> <span class="o">=</span> <span class="n">list_of_maps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">SaveJtAsMetadbInViewer</span><span class="p">(</span><span class="n">names_values</span><span class="o">=</span><span class="n">names_values</span><span class="p">)</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.SelectAllInCurrentTab">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">SelectAllInCurrentTab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.SelectAllInCurrentTab" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function selects all the items in list view of current tab.</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.ClearSelectionInCurrentTab</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">SelectAllInCurrentTab</span><span class="p">()</span>
+<span class="n">current_tab_info</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetInfoOnSelectedItemsFromCurrentTab</span><span class="p">(</span><span class="n">any_type</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">ClearSelectionInCurrentTab</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.ClearSelectionInCurrentTab">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">ClearSelectionInCurrentTab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.ClearSelectionInCurrentTab" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function deselects all items in list view of current tab.</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.SelectAllInCurrentTab</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">SelectAllInCurrentTab</span><span class="p">()</span>
+<span class="n">current_tab_info</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetInfoOnSelectedItemsFromCurrentTab</span><span class="p">()</span>
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">ClearSelectionInCurrentTab</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.SetColorToItemsInViewer">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">SetColorToItemsInViewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">red</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">green</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes_per_server_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sdm.sdm_base.SetColorToItemsInViewer" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function sets a specific color in embedded META viewer for the given items.</div>
+<div class="line">Input could be the instance ids of items loaded in viewer (if known) or server </div>
+<div class="line">ids and attributes describing those items loaded in viewer.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>red</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Set value for red channel.</div>
+</div>
+</dd>
+<dt><strong>green</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Set value for green channel.</div>
+</div>
+</dd>
+<dt><strong>blue</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Set value for blue channel.</div>
+</div>
+</dd>
+<dt><strong>alpha</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">Set value for alpha channel (transparency).</div>
+</div>
+</dd>
+<dt><strong>model_ids</strong><span class="classifier">list[int], optional</span></dt><dd><div class="line-block">
+<div class="line">Instance ids describing the items in viewer.</div>
+</div>
+</dd>
+<dt><strong>attributes_per_server_ids</strong><span class="classifier">list, optional</span></dt><dd><div class="line-block">
+<div class="line">List of maps containing server id (as key) and attributes of each given item.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True for success.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">model_ids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">SetColorToItemsInViewer</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">model_ids</span><span class="o">=</span><span class="n">model_ids</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.GetInfoOnSelectedItemsFromViewer">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">GetInfoOnSelectedItemsFromViewer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#sdm.sdm_base.GetInfoOnSelectedItemsFromViewer" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This functions is used to get the attribute names and values of the items that are selected in list of running application and have been sent in embedded META viewer.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list of maps with server ids as keys and attribute names-values as data.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">attrs_per_server_ids_list</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetInfoOnSelectedItemsFromCurrentTab</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">attrs_per_server_ids_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.GetInfoOnSelectedItemsFromCurrentTab">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">GetInfoOnSelectedItemsFromCurrentTab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">any_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#sdm.sdm_base.GetInfoOnSelectedItemsFromCurrentTab" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function will return a dictionary that will contain two key/value members:</div>
+<div class="line">‘attributes_per_server_ids’ is a list that contains all information on the selected items per server id.</div>
+<div class="line-block">
+<div class="line">Each item in the list is a dictionary with the server id as the key and another </div>
+<div class="line">dictionary as the value. The latter is the names/values map for the specific server id.</div>
+<div class="line">In case of instances, more than one entry will exist in the list for each server id. </div>
+<div class="line">They may have different attributes.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">‘child_parent_attributes_per_server_ids’ is a list that contains sub_lists.</div>
+<div class="line-block">
+<div class="line">Each sub_list has the attributes_per_server_id for the child as the first item </div>
+<div class="line">and the attributes_per_server_id for the parent as the second.</div>
+<div class="line">It is essentially a child-parent relationship, only each instance is contained </div>
+<div class="line">more than once.</div>
+</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>any_type</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">True if you wish to collect information for any type of items.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>dict</dt><dd><div class="line-block">
+<div class="line">Returns a dictionary.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="k">def</span> <span class="nf">getInfo</span><span class="p">():</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">SelectAllInCurrentTab</span><span class="p">()</span>
+    <span class="n">current_tab_info</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetInfoOnSelectedItemsFromCurrentTab</span><span class="p">()</span>
+    <span class="n">sdm_base</span><span class="o">.</span><span class="n">ClearSelectionInCurrentTab</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">attrs_per_server_ids_list</span> <span class="o">=</span> <span class="n">current_tab_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;attributes_per_server_ids&quot;</span><span class="p">)</span>
+        <span class="n">child_parent_attributes</span> <span class="o">=</span> <span class="n">current_tab_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s2">&quot;child_parent_attributes_per_server_ids&quot;</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">attrs_per_server_ids_list</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">attrs_per_server_id_dict</span> <span class="ow">in</span> <span class="n">attrs_per_server_ids_list</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">server_id</span><span class="p">,</span> <span class="n">names_values_dict</span> <span class="ow">in</span> <span class="n">attrs_per_server_id_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="n">names_values_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Is Group&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;YES&quot;</span><span class="p">:</span>
+                        <span class="n">group_attributes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">attrs_per_server_id_dict</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">part_attributes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">attrs_per_server_id_dict</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.BuildSubsystemPopulateWithChildrenAndSave">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">BuildSubsystemPopulateWithChildrenAndSave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subsystem_properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes_per_server_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_parent_attributes_per_server_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sdm.sdm_base.BuildSubsystemPopulateWithChildrenAndSave" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function will save a subsystem hierarchy to the current DM.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>subsystem_properties</strong><span class="classifier">dict</span></dt><dd><div class="line-block">
+<div class="line">This is the first argument, where a dictionary with the </div>
+<div class="line">subsystem’s properties must be entered.</div>
+</div>
+</dd>
+<dt><strong>attributes_per_server_ids</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">Second argument, where a list with names/values per server </div>
+<div class="line">ids must be entered. The input here can be used directly </div>
+<div class="line">from the function GetInfoOnSelectedItemsFromCurrentTab.</div>
+</div>
+</dd>
+<dt><strong>child_parent_attributes_per_server_ids</strong><span class="classifier">list[list]</span></dt><dd><div class="line-block">
+<div class="line">This is the third argument, where the hierarchy is described </div>
+<div class="line">in a list with lists! Again, the input can be used directly </div>
+<div class="line">from the function GetInfoOnSelectedItemsFromCurrentTab.</div>
+</div>
+</dd>
+<dt><strong>child_type</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">This is a variable argument that defines the kind of children </div>
+<div class="line">existing in the hierarchy,e.g. “parts” or “includes”. By </div>
+<div class="line">default “parts” are created.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True if everything went OK, </div>
+<div class="line-block">
+<div class="line">False if the command failed.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.GetInfoOnSelectedItemsFromCurrentTab</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.GetNewSubmodelAttributesWindow</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># If the viewer has been opened and we picked some items:</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">ret</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetInfoOnSelectedItemsFromCurrentTab</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">ret</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">attributes_per_server_ids</span> <span class="o">=</span> <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;attributes_per_server_ids&quot;</span><span class="p">]</span>
+    <span class="n">child_parent_attributes_per_server_ids</span> <span class="o">=</span> <span class="n">ret</span><span class="p">[</span>
+        <span class="s2">&quot;child_parent_attributes_per_server_ids&quot;</span>
+    <span class="p">]</span>
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetNewSubmodelAttributesWindow</span><span class="p">(</span><span class="n">window_title</span><span class="o">=</span><span class="s2">&quot;Save Subsystem&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">properties</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">BuildSubsystemPopulateWithChildrenAndSave</span><span class="p">(</span>
+        <span class="n">properties</span><span class="p">,</span> <span class="n">attributes_per_server_ids</span><span class="p">,</span> <span class="n">child_parent_attributes_per_server_ids</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.BuildSimulationModelWithChildrenAndSave">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">BuildSimulationModelWithChildrenAndSave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes_per_server_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_parent_attributes_per_server_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sdm.sdm_base.BuildSimulationModelWithChildrenAndSave" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function will save a simulation model hierarchy to the current DM.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>names_values</strong><span class="classifier">dict</span></dt><dd><div class="line-block">
+<div class="line">This is the first argument, where a dictionary with the simulation </div>
+<div class="line">model’s properties must be entered.</div>
+</div>
+</dd>
+<dt><strong>attributes_per_server_ids</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">This is the second argument, where a list with names/values per server </div>
+<div class="line">ids must be entered. The input here can be used directly from the </div>
+<div class="line">function GetInfoOnSelectedItemsFromCurrentTab.</div>
+</div>
+</dd>
+<dt><strong>child_parent_attributes_per_server_ids</strong><span class="classifier">list[list]</span></dt><dd><div class="line-block">
+<div class="line">This is the third argument, where the hierarchy is described in a list </div>
+<div class="line">with lists! Again, the input can be used directly from the function </div>
+<div class="line">GetInfoOnSelectedItemsFromCurrentTab.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True if everything went OK, </div>
+<div class="line-block">
+<div class="line">False if the command failed.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.GetInfoOnSelectedItemsFromCurrentTab</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.BuildSubsystemPopulateWithChildrenAndSave</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># If the viewer has been opened and we picked some items:</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">ret</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetInfoOnSelectedItemsFromCurrentTab</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">ret</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">attributes_per_server_ids</span> <span class="o">=</span> <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;attributes_per_server_ids&quot;</span><span class="p">]</span>
+    <span class="n">child_parent_attributes_per_server_ids</span> <span class="o">=</span> <span class="n">ret</span><span class="p">[</span>
+        <span class="s2">&quot;child_parent_attributes_per_server_ids&quot;</span>
+    <span class="p">]</span>
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetNewSimulationModelAttributesWindow</span><span class="p">(</span>
+        <span class="n">window_title</span><span class="o">=</span><span class="s2">&quot;Save Simulation Model&quot;</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">properties</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">BuildSimulationModelWithChildrenAndSave</span><span class="p">(</span>
+        <span class="n">properties</span><span class="p">,</span> <span class="n">attributes_per_server_ids</span><span class="p">,</span> <span class="n">child_parent_attributes_per_server_ids</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.OpenProgressReport">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">OpenProgressReport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#sdm.sdm_base.OpenProgressReport" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function opens a progress report file in KOMVOS Progress Report viewer.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>filename</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">This argument is the name of the file we want to open.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 if file opens,</div>
+<div class="line-block">
+<div class="line">0 if file is already opened.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">OpenProgressReport</span><span class="p">(</span><span class="s2">&quot;/home/user/progress_report.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.OpenNewTab">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">OpenNewTab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">make_current</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#sdm.sdm_base.OpenNewTab" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This functions opens a new tab in KOMVOS application.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is the title of the tab that will be created.</div>
+</div>
+</dd>
+<dt><strong>index</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument specifies the index of the tab. If index is out of range, </div>
+<div class="line">the tab is simply appended. Otherwise it is inserted at the specified position.</div>
+</div>
+</dd>
+<dt><strong>make_current</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument specifies if this tab should be current or not.</div>
+<div class="line">By default, tab is made current.</div>
+</div>
+</dd>
+<dt><strong>icon</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is an image name, if user wishes to use an icon for the new tab.</div>
+</div>
+</dd>
+<dt><strong>frame</strong><span class="classifier">object, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is a frame, if user wishes to use an existing one.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns the created tab as an object, if everything went ok, None otherwise.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">OpenNewTab</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;NEW&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">make_current</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.PostMessageInInfoArea">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">PostMessageInInfoArea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sdm.sdm_base.PostMessageInInfoArea" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function prints a message in application’s Info area.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>message</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">This is the message that will be printed in Info area.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True for success.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">PostMessageInInfoArea</span><span class="p">(</span><span class="s2">&quot;This is my message for Info area.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.CreateNewSubmodelWindow">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">CreateNewSubmodelWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assign_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">paint_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#sdm.sdm_base.CreateNewSubmodelWindow" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function pops up an ‘Insert new Subsystem’ window in order to create a new subsystem.</div>
+<div class="line">Furthermore, after ‘OK’ button pressed, function opens a new tab with the new hierarchy.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>assign_values</strong><span class="classifier">dict, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is a dictionary containing attribute names-values, </div>
+<div class="line">in case user wants to pre-assign them.</div>
+</div>
+</dd>
+<dt><strong>paint_names</strong><span class="classifier">list, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is a list of attribute names that user wishes to </div>
+<div class="line">paint with different color (red).</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 0</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">name_values</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Module Id&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span> <span class="s2">&quot;Study Version&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">}</span>
+<span class="n">paint_attrs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Variant&quot;</span><span class="p">,</span> <span class="s2">&quot;Release&quot;</span><span class="p">]</span>
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">CreateNewSubmodelWindow</span><span class="p">(</span><span class="n">assign_values</span><span class="o">=</span><span class="n">name_values</span><span class="p">,</span> <span class="n">paint_names</span><span class="o">=</span><span class="n">paint_attrs</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.CreateNewSimulationModelWindow">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">CreateNewSimulationModelWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assign_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">paint_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_new_entry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#sdm.sdm_base.CreateNewSimulationModelWindow" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function pops up an ‘Insert new Simulation Model’ window in order to create a new simulation model. </div>
+<div class="line">Furthermore, after ‘OK’ button pressed, function opens a new tab with the new hierarchy.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>assign_values</strong><span class="classifier">dict, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is a dictionary with attribute name-values, </div>
+<div class="line">in case user wants to pre-assign them.</div>
+</div>
+</dd>
+<dt><strong>paint_names</strong><span class="classifier">list, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is a list of attribute names that user wishes </div>
+<div class="line">to paint with different color (red).</div>
+</div>
+</dd>
+<dt><strong>create_new_entry</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument dictates whether an actual Simulation Model will be created after ‘OK’ has been pressed.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>dict</dt><dd><div class="line-block">
+<div class="line">In case of success, returns a dictionary with the attribute name-values of the created simulation model.</div>
+<div class="line">Otherwise, it returns None.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">name_values</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;MY_NEW_SIMULATION_MODEL&quot;</span><span class="p">}</span>
+<span class="n">paint_attrs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Release&quot;</span><span class="p">]</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">CreateNewSimulationModelWindow</span><span class="p">(</span>
+    <span class="n">assign_values</span><span class="o">=</span><span class="n">name_values</span><span class="p">,</span> <span class="n">paint_names</span><span class="o">=</span><span class="n">paint_attrs</span><span class="p">,</span> <span class="n">create_new_entry</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.ProgressBarSetAttributes">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">ProgressBarSetAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#sdm.sdm_base.ProgressBarSetAttributes" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function creates a progress bar for running application.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>label</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument sets the label of the progress bar.</div>
+</div>
+</dd>
+<dt><strong>current_step</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument sets current step for the progress bar.</div>
+</div>
+</dd>
+<dt><strong>visible</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">This arguments makes progress bar visible (True) or not (False).</div>
+</div>
+</dd>
+<dt><strong>total_steps</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument sets total steps of the progress bar.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>bool</dt><dd><div class="line-block">
+<div class="line">Returns True for success.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">ret</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">ProgressBarSetAttributes</span><span class="p">(</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Progress&quot;</span><span class="p">,</span> <span class="n">current_step</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">total_steps</span><span class="o">=</span><span class="mi">100</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.GetNewSubmodelAttributesWindow">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">GetNewSubmodelAttributesWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window_title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#sdm.sdm_base.GetNewSubmodelAttributesWindow" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function pops up a window with submodel’s attributes in order to create and </div>
+<div class="line">save in DM a new one.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>window_title</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument sets the title of the window.</div>
+</div>
+</dd>
+<dt><strong>names_values</strong><span class="classifier">dict, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is a dictionary with attribute name-values, </div>
+<div class="line">in case user wishes to pre-assign them.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>dict</dt><dd><div class="line-block">
+<div class="line">Returns a dictionary with the attribute name-values of the new submodel in case of success,</div>
+<div class="line-block">
+<div class="line">None or NULL otherwise.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.BuildSubsystemPopulateWithChildrenAndSave</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">start_tot_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">module_id</span> <span class="o">=</span> <span class="s2">&quot;24&quot;</span>
+<span class="n">properties</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetNewSubmodelAttributesWindow</span><span class="p">(</span>
+    <span class="n">window_title</span><span class="o">=</span><span class="s2">&quot;Save Module in DM&quot;</span><span class="p">,</span> <span class="n">names_values</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Module Id&quot;</span><span class="p">:</span> <span class="n">module_id</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">properties</span><span class="p">)</span>
+<span class="n">end_tot_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; time spent: &quot;</span><span class="p">,</span> <span class="n">end_tot_time</span> <span class="o">-</span> <span class="n">start_tot_time</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.GetNewSimulationModelAttributesWindow">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">GetNewSimulationModelAttributesWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window_title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#sdm.sdm_base.GetNewSimulationModelAttributesWindow" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function pops up a window with simulation model’s attributes in order to create and </div>
+<div class="line">save in DM a new one.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>window_title</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument sets a title for the window,</div>
+</div>
+</dd>
+<dt><strong>names_values</strong><span class="classifier">dict, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is a dictionary with attribute name-values, </div>
+<div class="line">in case user wishes to pre-assign them.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>dict</dt><dd><div class="line-block">
+<div class="line">Returns a dictionary with the attribute name-values of the new simulation model in case of success,</div>
+<div class="line-block">
+<div class="line">None or NULL otherwise.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.BuildSimulationModelWithChildrenAndSave</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Project&quot;</span><span class="p">:</span> <span class="s2">&quot;TEST&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;NEW_SIM_MODEL&quot;</span><span class="p">}</span>
+<span class="n">properties</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GetNewSimulationModelAttributesWindow</span><span class="p">(</span>
+    <span class="n">window_title</span><span class="o">=</span><span class="s2">&quot;Save Simulation Model in DM&quot;</span><span class="p">,</span> <span class="n">names_values</span><span class="o">=</span><span class="n">values</span>
+<span class="p">)</span>
+<span class="k">if</span> <span class="n">properties</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; OK &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">properties</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.FullyBuildItemsInCurrentTab">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">FullyBuildItemsInCurrentTab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#sdm.sdm_base.FullyBuildItemsInCurrentTab" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function builds given items in current tab to the furthest. At least one of input arguments must be filled.</div>
+<div class="line">Input arguments can be added as a list or as a single value. </div>
+<div class="line">For example:</div>
+<div class="line">- server_ids = [server_id1, server_id2…] or server_id (a single one)</div>
+<div class="line">- object_ids = [row_id1, row_id2….] or row_id (a single one)</div>
+<div class="line">- attributes = [attr_map_of_item1, attr_map_of_item2….] or attr_map_of_item (a single one)</div>
+<div class="line">Function returns the list of attributes of the items it built, since after the building they may very well be different.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>server_ids</strong><span class="classifier">list[str], optional</span></dt><dd><div class="line-block">
+<div class="line">This argument can be a list of server ids (for multiple items) or a single server id </div>
+<div class="line">(string).</div>
+</div>
+</dd>
+<dt><strong>object_ids</strong><span class="classifier">list[str], optional</span></dt><dd><div class="line-block">
+<div class="line">This argument can be a list of row ids (for multiple items) or a single row id (integer).</div>
+</div>
+</dd>
+<dt><strong>attributes</strong><span class="classifier">list[dict], optional</span></dt><dd><div class="line-block">
+<div class="line">This argument can be a list of dictionaries with attribute name-values (for more than one </div>
+<div class="line">items) or a single dictionary with attribute name-values (for a single one).</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[dict]</dt><dd><div class="line-block">
+<div class="line">Returns a list of dictionaries with attribute name-values for the built items, in case of success.</div>
+<div class="line-block">
+<div class="line">None otherwise.</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="n">server_id</span> <span class="o">=</span> <span class="s2">&quot;97&quot;</span>
+<span class="n">ret1</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">FullyBuildItemsInCurrentTab</span><span class="p">(</span><span class="n">server_ids</span><span class="o">=</span><span class="n">server_id</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ret1</span><span class="p">)</span>
+
+<span class="n">row_ids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
+<span class="n">ret2</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">FullyBuildItemsInCurrentTab</span><span class="p">(</span><span class="n">object_ids</span><span class="o">=</span><span class="n">row_ids</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ret2</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.ApplicationInformation">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">ApplicationInformation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#sdm.sdm_base.ApplicationInformation" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function reports build and runtime information of the running KOMVOS process.</div>
+<div class="line">This includes the KOMVOS version, its build date, and information about the architecture </div>
+<div class="line">of the application and the underling operating system. The function takes no arguments. </div>
+<div class="line">The report is similar to:</div>
+<div class="line">+————————————————————</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">K O M V O S                       </div>
+</div>
+<div class="line">version:  21.1.0, compiled: Oct  5 2020, 15:12:45</div>
+<div class="line">built:    64-bit, sn: 27a41e6c8c0b</div>
+<div class="line">platform: Linux x86_64 4.18.5-1.el7.elrepo.x86_64 little-endian</div>
+<div class="line">company:  BETA CAE Systems S.A.(licsrv)</div>
+</div>
+<div class="line">+————————————————————</div>
+<div class="line"><br /></div>
+<div class="line">Information also available through KOMVOS &gt; Help &gt; About KOMVOS.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns a string containing the build/runtime information.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">ApplicationInformation</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.GenerateSimulationModelBasedOnTemplates">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">GenerateSimulationModelBasedOnTemplates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sim_model_attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simulation_model_template_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_structure</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submodel_templates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree_settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sdm.base.html#sdm.base.InputProductTreeSettings" title="sdm.base.InputProductTreeSettings"><span class="pre">base.InputProductTreeSettings</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#sdm.sdm_base.GenerateSimulationModelBasedOnTemplates" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function will save a new Simulation Model by doing the following:</div>
+<div class="line">* Input a PLMXML file</div>
+<div class="line">* Save a Simulation Model by applying a Template</div>
+<div class="line">* Create Subsystems by applying respective Templates on the PLMXML structure</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>sim_model_attributes</strong><span class="classifier">dict</span></dt><dd><div class="line-block">
+<div class="line">A dictionary with the name/values pairs for </div>
+<div class="line">the Properties and Attributes of the Simulation Model.</div>
+</div>
+</dd>
+<dt><strong>simulation_model_template_filename</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The Template that will be applied to the new Simulation Model.</div>
+<div class="line">An absolute file path or</div>
+<div class="line">a filename relative to the Templates/SimulationModels folder can be used.</div>
+</div>
+</dd>
+<dt><strong>model_structure</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The PLMXML file that will be read.</div>
+</div>
+</dd>
+<dt><strong>submodel_templates</strong><span class="classifier">dict</span></dt><dd><div class="line-block">
+<div class="line">A dictionary with pairs of the following type:</div>
+<div class="line">Subsystem Module Id : Subsystem Template Name</div>
+<div class="line">Each Template will be applied to the Subsystem with the respective Module Id.</div>
+</div>
+</dd>
+<dt><strong>tree_settings</strong><span class="classifier">base.InputProductTreeSettings</span></dt><dd><div class="line-block">
+<div class="line">An object of type “base.InputProductTreeSettings()” for defining the settings </div>
+<div class="line">when reading the file.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns the newly saved Simulation Model’s server id.</div>
+<div class="line">None is returned if something goes wrong and if the Model isn’t saved successfully.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.BuildSimulationModelWithChildrenAndSave</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.GetNewSimulationModelAttributesWindow</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">The Simulation Model’s server id will be returned even if any of the Subsystems </div>
+<div class="line">fails to be saved.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">seed</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">base</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+<span class="n">bfzg_names_values</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;PRISMA Number&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">),</span>
+    <span class="s2">&quot;Product Line&quot;</span><span class="p">:</span> <span class="s2">&quot;LR&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Derivat&quot;</span><span class="p">:</span> <span class="s2">&quot;RR11&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Project Phase&quot;</span><span class="p">:</span> <span class="s2">&quot;BENCHMARK&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">bfzg_names_values</span><span class="p">[</span><span class="s2">&quot;Variant&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;KOM-940A&quot;</span>
+<span class="n">bfzg_names_values</span><span class="p">[</span><span class="s2">&quot;Drive&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+<span class="n">bfzg_names_values</span><span class="p">[</span><span class="s2">&quot;Steering&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+<span class="n">bfzg_names_values</span><span class="p">[</span><span class="s2">&quot;Country&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+<span class="n">bfzg_names_values</span><span class="p">[</span><span class="s2">&quot;Transmission&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+<span class="n">bfzg_names_values</span><span class="p">[</span><span class="s2">&quot;Engine&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span>
+<span class="n">bfzg_names_values</span><span class="p">[</span><span class="s2">&quot;Version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;A-_01_A&quot;</span>
+<span class="n">bfzg_names_values</span><span class="p">[</span><span class="s2">&quot;Study Version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+<span class="n">bfzg_names_values</span><span class="p">[</span><span class="s2">&quot;File Type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ANSA&quot;</span>
+<span class="n">bfzg_names_values</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;KOM-940&quot;</span>
+<span class="n">bfzg_template</span> <span class="o">=</span> <span class="s2">&quot;//jirafiles/jiradata/attachments/KOM/00001-10000/940/EK30_SUV.xml&quot;</span>
+<span class="n">model_structure</span> <span class="o">=</span> <span class="s2">&quot;//jirafiles/jiradata/attachments/KOM/00001-10000/940/_jira_/P1GHKY1_A_4_A_ST_SNAPPK.plmxml&quot;</span>
+<span class="n">submodel_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Karosseriegerippe&quot;</span><span class="p">:</span> <span class="s2">&quot;BIW_standard.xml&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Normaldach&quot;</span><span class="p">:</span> <span class="s2">&quot;Frontklappe_standard.xml&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">settings</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">InputProductTreeSettings</span><span class="p">()</span>
+<span class="n">settings</span><span class="o">.</span><span class="n">use_plmxml_parser</span> <span class="o">=</span> <span class="s2">&quot;Vismockup&quot;</span>
+<span class="n">settings</span><span class="o">.</span><span class="n">read_plmxml_attributes</span> <span class="o">=</span> <span class="s2">&quot;All&quot;</span>
+<span class="n">settings</span><span class="o">.</span><span class="n">should_open_window</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># PTEditor</span>
+<span class="n">settings</span><span class="o">.</span><span class="n">part_name_convert</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">settings</span><span class="o">.</span><span class="n">post_actions_script_path</span> <span class="o">=</span> <span class="s2">&quot;$DCM_GUI_HOME/cad4cae_plmxml.py&quot;</span>
+<span class="n">settings</span><span class="o">.</span><span class="n">post_actions_script_function</span> <span class="o">=</span> <span class="s2">&quot;RunPostTreatmentAttributesForConversionService&quot;</span>
+<span class="n">settings</span><span class="o">.</span><span class="n">compress_parts</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">settings</span><span class="o">.</span><span class="n">keep_different_versions_per_part_number</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="n">sdm_base</span><span class="o">.</span><span class="n">GenerateSimulationModelBasedOnTemplates</span><span class="p">(</span>
+    <span class="n">sim_model_attributes</span><span class="o">=</span><span class="n">bfzg_names_values</span><span class="p">,</span>
+    <span class="n">simulation_model_template_filename</span><span class="o">=</span><span class="n">bfzg_template</span><span class="p">,</span>
+    <span class="n">model_structure</span><span class="o">=</span><span class="n">model_structure</span><span class="p">,</span>
+    <span class="n">submodel_templates</span><span class="o">=</span><span class="n">submodel_dict</span><span class="p">,</span>
+    <span class="n">tree_settings</span><span class="o">=</span><span class="n">settings</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+<span class="n">dm</span><span class="o">.</span><span class="n">OpenDMObjectsInNewTab</span><span class="p">(</span>
+    <span class="n">server_ids</span><span class="o">=</span><span class="p">[</span><span class="n">ret</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ANSA_SIMULATION_MODEL&quot;</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="s2">&quot;Default&quot;</span><span class="p">,</span> <span class="n">expand_all</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.SDMProgressBarSetVisible">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">SDMProgressBarSetVisible</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.SDMProgressBarSetVisible" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 21.1.0: </span>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">sdm_base.ProgressBarSetAttributes()</span></code> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">SDMProgressBarSetVisible</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.ProgressBarSetAttributes</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">This function is deprecated.</div>
+<div class="line">Use sdm_base.ProgressBarSetAttributes instead.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SDMProgressBarSetVisible</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.SDMProgressBarSetTotalSteps">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">SDMProgressBarSetTotalSteps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.SDMProgressBarSetTotalSteps" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 21.1.0: </span>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">sdm_base.ProgressBarSetAttributes()</span></code> instead.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.ProgressBarSetAttributes</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">This function is deprecated.</div>
+<div class="line">Use sdm_base.ProgressBarSetAttributes instead.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SDMProgressBarSetTotalSteps</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.SDMProgressBarSetStep">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">SDMProgressBarSetStep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.SDMProgressBarSetStep" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 21.1.0: </span>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">sdm_base.ProgressBarSetAttributes()</span></code> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">SDMProgressBarSetStep</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.ProgressBarSetAttributes</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">This function is deprecated.</div>
+<div class="line">Use sdm_base.ProgressBarSetAttributes instead.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SDMProgressBarSetStep</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.SDMProgressBarSetLabel">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">SDMProgressBarSetLabel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.SDMProgressBarSetLabel" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 21.1.0: </span>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">sdm_base.ProgressBarSetAttributes()</span></code> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">SDMProgressBarSetLabel</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base.ProgressBarSetAttributes</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">This function is deprecated.</div>
+<div class="line">Use sdm_base.ProgressBarSetAttributes instead.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SDMProgressBarSetLabel</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.ShowPlotInViewer">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">ShowPlotInViewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sdm.sdm_base.ShowPlotInViewer" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function starts META viewer for running application (if not already started), </div>
+<div class="line">and shows there the created plot given as input.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>plot</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">This argument is the created plot we want to show in viewer.</div>
+</div>
+</dd>
+<dt><strong>window_name</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is the window name in viewer.</div>
+</div>
+</dd>
+<dt><strong>page_name</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">This argument is the name of the page added in viewer.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="sdm.utils.html#sdm.utils.CreatePlot" title="sdm.utils.CreatePlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.utils.CreatePlot</span></code></a>, <a class="reference internal" href="sdm.utils.html#sdm.utils.SetPlotProperties" title="sdm.utils.SetPlotProperties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.utils.SetPlotProperties</span></code></a>, <a class="reference internal" href="sdm.utils.html#sdm.utils.DeletePlot" title="sdm.utils.DeletePlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.utils.DeletePlot</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># KOMVOS</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span><span class="p">,</span> <span class="n">utils</span>
+
+<span class="n">plot</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">CreatePlot</span><span class="p">()</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">SetPlotProperties</span><span class="p">(</span><span class="n">plot</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;My plot&quot;</span><span class="p">,</span> <span class="n">legend_position</span><span class="o">=</span><span class="s2">&quot;TopRight&quot;</span><span class="p">)</span>
+<span class="n">sdm_base</span><span class="o">.</span><span class="n">ShowPlotInViewer</span><span class="p">(</span><span class="n">plot</span><span class="p">,</span> <span class="n">window_name</span><span class="o">=</span><span class="s2">&quot;Plot&quot;</span><span class="p">,</span> <span class="n">page_name</span><span class="o">=</span><span class="s2">&quot;Plot&#39;s page&quot;</span><span class="p">)</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">DeletePlot</span><span class="p">(</span><span class="n">plot</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.sdm_base.InsertFrameInTabWidget">
+<span class="sig-prename descclassname"><span class="pre">sdm.sdm_base.</span></span><span class="sig-name descname"><span class="pre">InsertFrameInTabWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'side'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">about_to_close_tab_function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">about_to_close_tab_function_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#sdm.sdm_base.InsertFrameInTabWidget" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Inserts a frame as a new tab to the right-side or the bottom tab widgets.</div>
+<div class="line">It’s automatically set as current.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>frame</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">The frame to insert as a tab to the respective tab widget.</div>
+</div>
+</dd>
+<dt><strong>position</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The respective tab widget, valid values are: “side” and “bottom”.</div>
+</div>
+</dd>
+<dt><strong>about_to_close_tab_function</strong><span class="classifier">Callable, optional</span></dt><dd><div class="line-block">
+<div class="line">The function that will be called before the tab closes. See BC_TABWIDGET_ABOUT_TO_CLOSE_TAB_FUNCTION for details.</div>
+<div class="line">integer BC_TABWIDGET_ABOUT_TO_CLOSE_TAB_FUNCTION(tw, tab, data)</div>
+<div class="line">The function to be called when tab of B_TabWidget tw is about to removed.</div>
+<div class="line">WARNING: If you need to delete a GUI object (button, list view item etc) inside your call back function, do NOT delete it directly but with the use of a timer (BCTimerSingleShot).</div>
+<div class="line"><br /></div>
+<div class="line">Arguments</div>
+<div class="line"><br /></div>
+<div class="line">tw      object    the BCTabWidget.</div>
+<div class="line">tab     object    the tab to be removed.</div>
+<div class="line">data    anything  anything that may be required in function.</div>
+<div class="line"><br /></div>
+<div class="line">Return 1 in case you want to canel closing the tab; 0 otherwise.</div>
+</div>
+</dd>
+<dt><strong>about_to_close_tab_function_data</strong><span class="classifier">Any, optional</span></dt><dd><div class="line-block">
+<div class="line">any user data required by function about_to_close_tab_function.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>Any</dt><dd><div class="line-block">
+<div class="line">returns None.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">When this function is called via a user-defined Action, </div>
+<div class="line">the Action in the dm_views.xml must have the following setting:</div>
+<div class="line">&lt;keep_alive&gt;YES&lt;/keep_alive&gt;</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">sdm_base</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">guitk</span>
+
+<span class="k">def</span> <span class="nf">destroyWindowTimed</span><span class="p">(</span><span class="n">temp_window</span><span class="p">):</span>
+    <span class="n">guitk</span><span class="o">.</span><span class="n">BCDestroyLater</span><span class="p">(</span>
+        <span class="n">temp_window</span>
+    <span class="p">)</span>  <span class="c1"># Prefer DestroyLater than Destroy because it&#39;s safer to use.</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+<span class="n">temp_window</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCWindowCreateNoHandler</span><span class="p">(</span>
+    <span class="s2">&quot;Inspect DVs and Responses Window&quot;</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCOnExitDestroy</span>
+<span class="p">)</span>
+<span class="n">frame</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCFrameCreate</span><span class="p">(</span><span class="n">temp_window</span><span class="p">)</span>
+<span class="n">guitk</span><span class="o">.</span><span class="n">BCSetName</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="s2">&quot;Inspect DVs and Responses&quot;</span><span class="p">)</span>
+<span class="n">BCBoxLayout</span> <span class="o">=</span> <span class="n">guitk</span><span class="o">.</span><span class="n">BCBoxLayoutCreate</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">guitk</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">BCVertical</span><span class="p">)</span>
+<span class="n">sdm</span><span class="o">.</span><span class="n">sdm_base</span><span class="o">.</span><span class="n">InsertFrameInTabWidget</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="s2">&quot;side&quot;</span><span class="p">)</span>
+<span class="n">guitk</span><span class="o">.</span><span class="n">BCTimerSingleShot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">destroyWindowTimed</span><span class="p">,</span> <span class="n">temp_window</span><span class="p">)</span>
+<span class="n">guitk</span><span class="o">.</span><span class="n">BCShow</span><span class="p">(</span><span class="n">temp_window</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

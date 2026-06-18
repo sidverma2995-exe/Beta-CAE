@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>10 Minutes to META API &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'getting_started/10minutes_meta';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Script Editor" href="script_editor.html" />
+    <link rel="prev" title="10 Minutes to ANSA API" href="10minutes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro_py.html">Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpreter.html">Standalone Python Interpreter</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10minutes.html">10 Minutes to ANSA API</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10 Minutes to META API</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="script_editor.html">Script Editor</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="minutes-to-meta-api">
+<h1>10 Minutes to META API<a class="headerlink" href="#minutes-to-meta-api" title="Permalink to this heading">#</a></h1>
+<p>This is a short introduction to the META API, geared mainly for new users. If you want to dive into all the details, you can read the complete <a class="reference internal" href="../user_guide/api_meta/intro_meta.html#interacting-with-meta"><span class="std std-ref">Interacting with META</span></a>.</p>
+<section id="script-editor">
+<h2>Script Editor<a class="headerlink" href="#script-editor" title="Permalink to this heading">#</a></h2>
+<p>Whether you are an experienced developer or a beginner in the field of programming, the <strong>Script Editor</strong> is going to be a good friend of yours, for at least your first couple of experiments with the META API. Although it’s mainly designed as a playground for simple python scripts, the <strong>Script Editor</strong> is a complete editing environment attached directly to the META core functionality, while offering very useful search and documentation help features.
+In order to access the Script Editor from META, press the menu button <strong>Tools</strong> –&gt; <strong>Script Editor</strong>. The <strong>Script Editor</strong> will open and you can either start editing a new file or open an already existing one, by using the respective options from the File menu.</p>
+<p>A new file in the <strong>Script Editor</strong> will look as the following:</p>
+<img alt="../_images/script_editor_meta.jpg" src="../_images/script_editor_meta.jpg" />
+<p>The main part of the window is the editor, where specific python and META API keywords are highlighted, while on the right-hand side lies the <strong>Search</strong> toolbar. By double clicking on a selected function from the list, the respective help text appears at the bottom of the screen, in the <strong>Help window</strong>, or by right clicking, the function is written on the active file at the current cursor position.  Additionaly, pressing <strong>F1</strong> while the cursor is on a function, its help will appear in the Help window.</p>
+<p>The help gives information about the function, the arguments needed as well as one or more examples.</p>
+<p>When you press the <strong>Run</strong> button or the <strong>F5</strong> key, the code will be executed and all the appropriate messages will appear on the Output window.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Greyed out functions found in <strong>Script Editor</strong> are deprecated since v20.1.0, but they are totally functional.</p>
+</div>
+<p>You can read more info on how to use the <a class="reference internal" href="script_editor.html#script-editor"><span class="std std-ref">Script Editor</span></a>.</p>
+</section>
+<section id="execution-of-scripts">
+<h2>Execution of scripts<a class="headerlink" href="#execution-of-scripts" title="Permalink to this heading">#</a></h2>
+<p>Scripts can be executed directly from the <strong>Script Editor</strong>, from <strong>File</strong> –&gt; <strong>Open Session/Script</strong> menu of META or through the META commands <em>read session</em>, <em>script execute</em> or <em>toolbar execute</em>. Note that when calling a script through the <em>read session</em> command, the first line of the script should be exactly <em># PYTHON script</em>. This allows META to understand tha the file is a Python script.</p>
+<p>Additionally, scripts can be inserted within a session file in between the lines <em>//#!python</em> and <em>//#!EOF</em>.</p>
+</section>
+<section id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">#</a></h2>
+<p>The META API consists of a series of functions and classes that interact directly with the META interface. These are divided in distinct modules, separating the different functionalities of the respective components contained in each one. Every module needs to be imported prior to using its functions.</p>
+<p>The materials module can be simply accessed as shown in the following example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">materials</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All available modules are listed under the <strong>Library</strong> tab in <strong>Script Editor</strong> as well as in the <span class="xref std std-ref">META API Reference Manual</span>.</p>
+</div>
+</section>
+<section id="objects-and-functions">
+<h2>Objects and functions<a class="headerlink" href="#objects-and-functions" title="Permalink to this heading">#</a></h2>
+<p>The META API is mainly structured by objects which have methods and attributes instead of functions. Firstly, the required module is imported. Then, through a function or the object’s constructor, objects corresponding to entities in META are created. These objects have methods and attributes to apply actions, set settings, collect other entities or give some information.</p>
+<p>In the example below, assuming that an annotation with id 1 already exists in META, an annotation object is created by its constructor <a class="reference internal" href="../reference/api_ref_meta/generated/meta.annotations.html#meta.annotations.Annotation" title="meta.annotations.Annotation"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.annotations.Annotation</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="n">annotation_id</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">page_id</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">annotations</span><span class="o">.</span><span class="n">Annotation</span><span class="p">(</span><span class="n">annotation_id</span><span class="p">,</span> <span class="n">page_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">a</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">visible</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">selected</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>While, in the next example the model objects are returned by the function <a class="reference internal" href="../reference/api_ref_meta/generated/meta.utils.html#meta.utils.get_models" title="meta.utils.get_models"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.get_models()</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="n">models</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_models</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">models</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All objects related to META entities are directly linked to them. For example an Annotation object is linked with the actual Annotation in META. If it’s text changes, the change will instantly be available in the python object. If the annotation is deleted, the python object will become invalid.</p>
+</div>
+</section>
+<section id="attributes-and-methods">
+<h2>Attributes and methods<a class="headerlink" href="#attributes-and-methods" title="Permalink to this heading">#</a></h2>
+<p>Each object has attributes which can be directly used to collect information such as their name, type or properties. Through their methods, other entities can be collected, information can be retrieved, settings or options can be applied and actions can be performed. Methods that collect entites or information usually start by <em>get_</em>, methods that apply options start by <em>set_</em>.</p>
+<p>For example some attributes of the <a class="reference internal" href="../reference/api_ref_meta/generated/meta.windows.html#meta.windows.Window" title="meta.windows.Window"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.windows.Window</span></code></a> object are:</p>
+<blockquote>
+<div><p><strong>.name</strong> : Returns the name of the window.</p>
+<p><strong>.active</strong> : Returns 1 if the window is active, else 0 if not active.</p>
+<p><strong>.height</strong> : Returns the height of the window.</p>
+</div></blockquote>
+<p>And some methods of the <a class="reference internal" href="../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.Curve" title="meta.plot2d.Curve"><code class="xref py py-class docutils literal notranslate"><span class="pre">meta.plot2d.Curve</span></code></a> object which are:</p>
+<blockquote>
+<div><p><strong>.get_points_y_values()</strong> : Returns a list with the Y values.</p>
+<p><strong>.set_color()</strong> : Sets the curve’s color</p>
+<p><strong>.hide()</strong> : Hides the curve.</p>
+</div></blockquote>
+</section>
+<section id="read-models-and-results">
+<h2>Read models and results<a class="headerlink" href="#read-models-and-results" title="Permalink to this heading">#</a></h2>
+<p>Although, models and results can be read by META commands, these do not return the model or resultset objects. It is recommended to use the appropriate functions instead, <a class="reference internal" href="../reference/api_ref_meta/generated/meta.models.html#meta.models.LoadModel" title="meta.models.LoadModel"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.models.LoadModel()</span></code></a> for models and  <a class="reference internal" href="../reference/api_ref_meta/generated/meta.results.html#meta.results.LoadDeformations" title="meta.results.LoadDeformations"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.results.LoadDeformations()</span></code></a> , <a class="reference internal" href="../reference/api_ref_meta/generated/meta.results.html#meta.results.LoadScalar" title="meta.results.LoadScalar"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.results.LoadScalar()</span></code></a> , <a class="reference internal" href="../reference/api_ref_meta/generated/meta.results.html#meta.results.LoadVector" title="meta.results.LoadVector"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.results.LoadVector()</span></code></a> for results.</p>
+<p>Similarly, curves can be loaded by functions like <a class="reference internal" href="../reference/api_ref_meta/generated/meta.plot2d.html#meta.plot2d.LoadCurvesDyna" title="meta.plot2d.LoadCurvesDyna"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.plot2d.LoadCurvesDyna()</span></code></a>. A separate function exists in this case for each type of file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span><span class="p">,</span> <span class="n">results</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="n">window_name</span> <span class="o">=</span> <span class="s1">&#39;MetaPost&#39;</span>
+        <span class="n">model_filename</span> <span class="o">=</span> <span class="s1">&#39;/home/examples/AbaqusEx8.inp&#39;</span>
+        <span class="n">results_filename</span> <span class="o">=</span> <span class="s1">&#39;/home/examples/Abaqus.odb&#39;</span>
+        <span class="n">deck</span> <span class="o">=</span> <span class="s1">&#39;ABAQUS&#39;</span>
+        <span class="n">states</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Stress components,Von Mises,Inner and Outer,Centroid&#39;</span>
+
+        <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LoadModel</span><span class="p">(</span><span class="n">window_name</span><span class="p">,</span> <span class="n">model_filename</span><span class="p">,</span> <span class="n">deck</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">m</span><span class="p">:</span>
+                <span class="n">model_id</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">id</span>
+                <span class="n">new_resultsets</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">LoadScalar</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">results_filename</span><span class="p">,</span> <span class="n">deck</span><span class="p">,</span> <span class="n">states</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are special functions to scan for the available results in file which can be used as arguments in the Load functions e.g. <a class="reference internal" href="../reference/api_ref_meta/generated/meta.results.html#meta.results.DeformationTypes" title="meta.results.DeformationTypes"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.results.DeformationTypes()</span></code></a>, <a class="reference internal" href="../reference/api_ref_meta/generated/meta.results.html#meta.results.DeformationTypesList" title="meta.results.DeformationTypesList"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.results.DeformationTypesList()</span></code></a>, <a class="reference internal" href="../reference/api_ref_meta/generated/meta.results.html#meta.results.ScalarTypesAll" title="meta.results.ScalarTypesAll"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.results.ScalarTypesAll()</span></code></a> etc.</p>
+</div>
+</section>
+<section id="collect-entities">
+<h2>Collect entities<a class="headerlink" href="#collect-entities" title="Permalink to this heading">#</a></h2>
+<p>Entities are collected from various objects through <strong>get</strong> methods based on a <em>Parent-Child</em> structure. From a model, parts can be collected. From an element, deformations. From a window, annotations etc…
+Main entities like models, pages and planes are collected directly, and not from a parent object, through functions like <em>utils._get_xxx()</em>.</p>
+<p>Similar functionalities are grouped under one method and handled with named arguments which act like filters. For example the <em>get_parts()</em> method in the code example below can be used to collect only visible parts or parts that have a specific type.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span><span class="p">,</span> <span class="n">models</span><span class="p">,</span> <span class="n">constants</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="n">models</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_models</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+                <span class="c1">#Returns all parts of the model</span>
+                <span class="n">all_parts</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_parts</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+                <span class="c1">#Returns visible parts only</span>
+                <span class="n">visible_parts</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_parts</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">)</span>
+
+                <span class="c1">#Returns a part by id</span>
+                <span class="n">my_part</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_parts</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">part_id</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+
+                <span class="c1">#Returns parts by search in their name</span>
+                <span class="n">rail_parts</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_parts</span><span class="p">(</span><span class="s1">&#39;with_name&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;*RAIL*&#39;</span><span class="p">)</span>
+
+                <span class="c1">#Returns only parts of type PSHELL</span>
+                <span class="n">pshell_parts</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_parts</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">part_type</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">PSHELL</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All keywords related to solver dependent entities like parts, element types etc which can be used through the constants module, can be found under the <strong>Functions List</strong> in <strong>Script Editor</strong> in <em>Library –&gt; betameta_structs –&gt;betameta_structs.META_KEYWORDS</em>.</p>
+</div>
+</section>
+<section id="get-states-labels-and-result-values">
+<h2>Get states, labels and result values<a class="headerlink" href="#get-states-labels-and-result-values" title="Permalink to this heading">#</a></h2>
+<p>Getting states and labels information is based on the <a class="reference internal" href="../reference/api_ref_meta/generated/meta.results.html#meta.results.Result" title="meta.results.Result"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.results.Result()</span></code></a> resultset object. This object refers to a specific state and label. It is required as an argument in multiple methods in order to retrieve state ids, cycles, deformation, scalar, vector values etc.</p>
+<p>Getting deformation, centroid, nodal, corner scalar or centroid and nodal vector is realized by methods available on the entity from which we need to collect the data. e.g. <a class="reference internal" href="../reference/api_ref_meta/generated/meta.nodes.html#meta.nodes.Node.get_nodal_scalar" title="meta.nodes.Node.get_nodal_scalar"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.nodes.Node.get_nodal_scalar()</span></code></a>. These methods do not directly return values but they return objects or lists of objects with more information than the value.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">windows</span><span class="p">,</span> <span class="n">models</span><span class="p">,</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="c1">#Get window</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">windows</span><span class="o">.</span><span class="n">Window</span><span class="p">(</span><span class="s1">&#39;MetaPost&#39;</span><span class="p">,</span> <span class="n">page_id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1">#Get active model</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_models</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1">#Get current resultset</span>
+        <span class="n">resultset</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_current_resultset</span><span class="p">()</span>
+
+        <span class="c1">#Loop on visible elements and get their centroid and corner</span>
+        <span class="n">visible_elements</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_elements</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">,</span> <span class="n">window</span> <span class="o">=</span> <span class="n">w</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">visible_elements</span><span class="p">:</span>
+                <span class="n">centroid</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">get_centroid_scalar</span><span class="p">(</span><span class="n">resultset</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">centroid</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">centroid</span><span class="o">.</span><span class="n">element_id</span><span class="p">,</span> <span class="n">centroid</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+                <span class="n">corner</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">get_corner_scalar</span><span class="p">(</span><span class="n">resultset</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">corn</span> <span class="ow">in</span> <span class="n">corner</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">corn</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="c1"># Corner scalar value</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">corn</span><span class="o">.</span><span class="n">element_id</span><span class="p">,</span> <span class="n">corn</span><span class="o">.</span><span class="n">second_id</span><span class="p">,</span> <span class="n">corn</span><span class="o">.</span><span class="n">type</span><span class="p">)</span> <span class="c1"># Id, second id and type of the element</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">corn</span><span class="o">.</span><span class="n">corner</span><span class="p">)</span> <span class="c1"># Id of the node - corner with this corner scalar value for shell and solid elements</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Avoid collecting results in a for loop for many entities, e.g. by <a class="reference internal" href="../reference/api_ref_meta/generated/meta.elements.html#meta.elements.Element.get_centroid_scalar" title="meta.elements.Element.get_centroid_scalar"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.elements.Element.get_centroid_scalar()</span></code></a>. For better performance use the method in a model, part or group object instead.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">parts</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">part</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="n">Part</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">PSOLID</span><span class="p">,</span> <span class="n">model_id</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_current_resultset</span><span class="p">()</span>
+
+        <span class="n">part_centroid</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">get_centroid_scalar</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span> <span class="c1">#Use &#39;min&#39; or &#39;max&#39; instead of &#39;all&#39; to get only the min or max of the part.</span>
+
+        <span class="k">for</span> <span class="n">centroid</span> <span class="ow">in</span> <span class="n">part_centroid</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">centroid</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">centroid</span><span class="o">.</span><span class="n">element_id</span><span class="p">,</span> <span class="n">centroid</span><span class="o">.</span><span class="n">second_id</span><span class="p">,</span> <span class="n">centroid</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="call-meta-commands-within-a-script">
+<h2>Call META commands within a script<a class="headerlink" href="#call-meta-commands-within-a-script" title="Permalink to this heading">#</a></h2>
+<p>Even if the majority of functionality can be covered through scripting, the use of META commands is frequent.
+All META commands can be called through the <a class="reference internal" href="../reference/api_ref_meta/generated/meta.utils.html#meta.utils.MetaCommand" title="meta.utils.MetaCommand"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.MetaCommand()</span></code></a> function by passing the command as a string argument.</p>
+<p>Single quotes are preferred to avoid conflict with double quotes of META commands.</p>
+<p>To avoid repetition of the same command for multiple entities, it is possible to convert a list of ids to a string representing a range by <a class="reference internal" href="../reference/api_ref_meta/generated/meta.utils.html#meta.utils.ListToRange" title="meta.utils.ListToRange"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.ListToRange()</span></code></a> function.</p>
+<p>In the following example, the elements connected to a node are collected and identified.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">models</span><span class="p">,</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">161</span><span class="p">,</span> <span class="n">model_id</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+        <span class="n">elems</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">get_elements</span><span class="p">()</span>
+        <span class="n">utils</span><span class="o">.</span><span class="n">MetaCommand</span><span class="p">(</span><span class="s1">&#39;identify reset&#39;</span><span class="p">)</span>
+        <span class="n">element_ids</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">elems</span><span class="p">:</span>
+                <span class="n">element_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="n">elements_ids_range</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">ListToRange</span><span class="p">(</span><span class="n">element_ids</span><span class="p">)</span>
+        <span class="n">utils</span><span class="o">.</span><span class="n">MetaCommand</span><span class="p">(</span><span class="s1">&#39;identify element </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="n">elements_ids_range</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="variables-and-built-in-functions">
+<h2>Variables and Built-in Functions<a class="headerlink" href="#variables-and-built-in-functions" title="Permalink to this heading">#</a></h2>
+<p>META variables are frequently used to store information. They can also be used to exhange data between different runs of sessions, scripts and user toolbars. Variables can be collected by <a class="reference internal" href="../reference/api_ref_meta/generated/meta.utils.html#meta.utils.MetaGetVariable" title="meta.utils.MetaGetVariable"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.MetaGetVariable()</span></code></a> function. They can be created by <a class="reference internal" href="../reference/api_ref_meta/generated/meta.utils.html#meta.utils.MetaSetVariable" title="meta.utils.MetaSetVariable"><code class="xref py py-func docutils literal notranslate"><span class="pre">meta.utils.MetaSetVariable()</span></code></a> function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="n">my_value</span> <span class="o">=</span> <span class="mf">0.42</span>
+        <span class="n">utils</span><span class="o">.</span><span class="n">MetaSetVariable</span><span class="p">(</span><span class="s1">&#39;my_var_name&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">my_value</span><span class="p">))</span>
+        <span class="n">collected_value</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">MetaGetVariable</span><span class="p">(</span><span class="s1">&#39;my_var_name&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">collected_value</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All META variable values are returned as strings and need to be converted to the desired type. Similarly, only strings can be set as META variables.</p>
+</div>
+<p>Built-in functions, which are expressions to collect data and found in many tools of META, can also be evaluated within a script. In some cases, their use is preferable as it may allow to avoid massive collections and loops between entities and their attributes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="c1">#Get the Y value of curve 1 of window 1 for X equal to 1.25</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">EvalBuiltInFunction</span><span class="p">(</span><span class="s1">&#39;`w[Window1]c1.y[x=1.25]`&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As with META variables, results from Built-in functions are also returned as strings.</p>
+</div>
+</section>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="10minutes.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">10 Minutes to ANSA API</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="script_editor.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Script Editor</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#script-editor">
+   Script Editor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#execution-of-scripts">
+   Execution of scripts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modules">
+   Modules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objects-and-functions">
+   Objects and functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes-and-methods">
+   Attributes and methods
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#read-models-and-results">
+   Read models and results
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#collect-entities">
+   Collect entities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-states-labels-and-result-values">
+   Get states, labels and result values
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#call-meta-commands-within-a-script">
+   Call META commands within a script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-and-built-in-functions">
+   Variables and Built-in Functions
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

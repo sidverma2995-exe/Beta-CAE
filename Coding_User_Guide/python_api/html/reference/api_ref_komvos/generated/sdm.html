@@ -1,0 +1,735 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module sdm &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_komvos/generated/sdm';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Module sdm</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdm.base.html">Module sdm.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.betascript.html">Module sdm.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.constants.html">Module sdm.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.dm.html">Module sdm.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.ml.html">Module sdm.ml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.sdm_base.html">Module sdm.sdm_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.session.html">Module sdm.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sdm.spdrm.html">Module sdm.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.fileChooser.html">Module sdm.spdrm.fileChooser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.inputGetter.html">Module sdm.spdrm.inputGetter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.messageDisplayer.html">Module sdm.spdrm.messageDisplayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.process.html">Module sdm.spdrm.process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.question.html">Module sdm.spdrm.question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.scriptCommands.html">Module sdm.spdrm.scriptCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.utils.html">Module sdm.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.base.html">Module sdm.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.betascript.html">Module sdm.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.constants.html">Module sdm.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.dm.html">Module sdm.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.ml.html">Module sdm.ml</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.sdm_base.html">Module sdm.sdm_base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.session.html">Module sdm.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="sdm.spdrm.html">Module sdm.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.fileChooser.html">Module sdm.spdrm.fileChooser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.inputGetter.html">Module sdm.spdrm.inputGetter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.messageDisplayer.html">Module sdm.spdrm.messageDisplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.process.html">Module sdm.spdrm.process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.question.html">Module sdm.spdrm.question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.scriptCommands.html">Module sdm.spdrm.scriptCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.utils.html">Module sdm.utils</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-0">
+<span id="module-sdm"></span><span id="api-ref-sdm"></span><h1>Module sdm<a class="headerlink" href="#module-0" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.ImportCode">
+<span class="sig-prename descclassname"><span class="pre">sdm.</span></span><span class="sig-name descname"><span class="pre">ImportCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#sdm.ImportCode" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function imports the code from another python module (py or pyb).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the script file to import.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 0 on success, else an exception is raised.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>FileNotFoundError</dt><dd><div class="line-block">
+<div class="line">Cannot read the file.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<div class="line-block">
+<div class="line">If you want to import Python modules (.py), it is recommended to use the native Python mechanism.</div>
+<div class="line">This function should ideally be used only for importing Beta encrypted Python modules (.pyb).</div>
+<div class="line">Notice, that in this case, you don’t have to add the filepath in python system path.</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+
+<span class="n">file1</span> <span class="o">=</span> <span class="s2">&quot;/home/demo/module1.pyb&quot;</span>
+<span class="n">file2</span> <span class="o">=</span> <span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">demo</span><span class="se">\\</span><span class="s2">module2.pyb&quot;</span>
+
+<span class="n">sdm</span><span class="o">.</span><span class="n">ImportCode</span><span class="p">(</span><span class="n">file1</span><span class="p">)</span>
+<span class="n">sdm</span><span class="o">.</span><span class="n">ImportCode</span><span class="p">(</span><span class="n">file2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">module1</span><span class="o">.</span><span class="n">function1</span><span class="p">()</span>
+    <span class="n">module2</span><span class="o">.</span><span class="n">function1</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.ScriptCurrentDir">
+<span class="sig-prename descclassname"><span class="pre">sdm.</span></span><span class="sig-name descname"><span class="pre">ScriptCurrentDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#sdm.ScriptCurrentDir" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns the current working directory path.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns the current working directory.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#sdm.ScriptHomeDir" title="sdm.ScriptHomeDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ScriptHomeDir</span></code></a>, <a class="reference internal" href="#sdm.ScriptUserDir" title="sdm.ScriptUserDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ScriptUserDir</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sdm</span><span class="o">.</span><span class="n">ScriptCurrentDir</span><span class="p">())</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.ScriptHomeDir">
+<span class="sig-prename descclassname"><span class="pre">sdm.</span></span><span class="sig-name descname"><span class="pre">ScriptHomeDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#sdm.ScriptHomeDir" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version Use: </span><a class="reference internal" href="../../api_ref_ansa/generated/ansa.constants.html#ansa.constants.app_root_dir" title="ansa.constants.app_root_dir"><code class="xref py py-const docutils literal notranslate"><span class="pre">ansa.constants.app_root_dir</span></code></a> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">Returns the ANSA/META Home directory path</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns the ANSA/META Home directory path.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#sdm.ScriptCurrentDir" title="sdm.ScriptCurrentDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ScriptCurrentDir</span></code></a>, <a class="reference internal" href="#sdm.ScriptUserDir" title="sdm.ScriptUserDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ScriptUserDir</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sdm</span><span class="o">.</span><span class="n">ScriptHomeDir</span><span class="p">())</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.ScriptUserDir">
+<span class="sig-prename descclassname"><span class="pre">sdm.</span></span><span class="sig-name descname"><span class="pre">ScriptUserDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#sdm.ScriptUserDir" title="Permalink to this definition">#</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version Use: </span><a class="reference internal" href="../../api_ref_ansa/generated/ansa.constants.html#ansa.constants.app_home_dir" title="ansa.constants.app_home_dir"><code class="xref py py-const docutils literal notranslate"><span class="pre">ansa.constants.app_home_dir</span></code></a> instead.</p>
+</div>
+<div class="line-block">
+<div class="line">Returns the BetaHome directory path.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns the BetaHome directory path.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#sdm.ScriptCurrentDir" title="sdm.ScriptCurrentDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ScriptCurrentDir</span></code></a>, <a class="reference internal" href="#sdm.ScriptHomeDir" title="sdm.ScriptHomeDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ScriptHomeDir</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sdm</span><span class="o">.</span><span class="n">ScriptUserDir</span><span class="p">())</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.CompileScript">
+<span class="sig-prename descclassname"><span class="pre">sdm.</span></span><span class="sig-name descname"><span class="pre">CompileScript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileInput</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileOutput</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moduleName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#sdm.CompileScript" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Creates a compiled (pyb/bsx) file from the given script path.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fileInput</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The path of the script that we want to compile.</div>
+</div>
+</dd>
+<dt><strong>fileOutput</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The destination path of the created compiled file.</div>
+</div>
+</dd>
+<dt><strong>moduleName</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the module.</div>
+</div>
+</dd>
+<dt><strong>mode</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">Declares whether to include the input script’s imported modules, inside the final compiled file.</div>
+<div class="line">(Applicable to all the imported modules, either through the native Python “import”, or through the “ansa.ImportCode” function)</div>
+<div class="line">-True, to include dependencies in the compiled script. (Default)</div>
+<div class="line">-False, otherwise.</div>
+<div class="line">It has effect only for Python scripts.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>int</dt><dd><div class="line-block">
+<div class="line">Returns 1 on success, 0 on failure.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">sdm</span><span class="o">.</span><span class="n">CompileScript</span><span class="p">(</span>
+        <span class="s2">&quot;/home/user/scripts/some_script.py&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;/home/user/scripts/some_script.pyb&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;moduleName&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.PybImport">
+<span class="sig-prename descclassname"><span class="pre">sdm.</span></span><span class="sig-name descname"><span class="pre">PybImport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">script_file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">module</span></span></span><a class="headerlink" href="#sdm.PybImport" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A function that imports python scripts (pyb).</div>
+<div class="line">Returns the imported module.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>module_name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the module.</div>
+</div>
+</dd>
+<dt><strong>script_file_path</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The filepath of the script.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>ModuleType</dt><dd><div class="line-block">
+<div class="line">Returns the imported module.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">sdm</span><span class="o">.</span><span class="n">PybImport</span><span class="p">(</span><span class="s2">&quot;moduleName&quot;</span><span class="p">,</span> <span class="s2">&quot;/module/file/path/moduleNameCompiled.pyb&quot;</span><span class="p">)</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">funcInModuleNameCompiled</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sdm.ReadingFile">
+<span class="sig-prename descclassname"><span class="pre">sdm.</span></span><span class="sig-name descname"><span class="pre">ReadingFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#sdm.ReadingFile" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Function that returns the currently reading physical file on disk.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>str</dt><dd><div class="line-block">
+<div class="line">Returns the currently reading physical file on disk.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sdm</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">sdm</span><span class="o">.</span><span class="n">ReadingFile</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p class="rubric">Modules</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#module-0" title="sdm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="sdm.base.html#module-sdm.base" title="sdm.base"><code class="xref py py-obj docutils literal notranslate"><span class="pre">base</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="sdm.betascript.html#module-sdm.betascript" title="sdm.betascript"><code class="xref py py-obj docutils literal notranslate"><span class="pre">betascript</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="sdm.constants.html#module-sdm.constants" title="sdm.constants"><code class="xref py py-obj docutils literal notranslate"><span class="pre">constants</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="sdm.dm.html#module-sdm.dm" title="sdm.dm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dm</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="sdm.ml.html#module-sdm.ml" title="sdm.ml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ml</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="sdm.sdm_base.html#module-sdm.sdm_base" title="sdm.sdm_base"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm_base</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="sdm.session.html#module-sdm.session" title="sdm.session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">session</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="sdm.spdrm.html#module-sdm.spdrm" title="sdm.spdrm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spdrm</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="sdm.utils.html#module-sdm.utils" title="sdm.utils"><code class="xref py py-obj docutils literal notranslate"><span class="pre">utils</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

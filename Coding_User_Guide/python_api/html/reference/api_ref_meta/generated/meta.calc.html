@@ -1,0 +1,1408 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module meta.calc &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_meta/generated/meta.calc';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="meta.html">Module meta</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="meta.annotations.html">Module meta.annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.base.html">Module meta.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.betascript.html">Module meta.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.betavisibility.html">Module meta.betavisibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.boundaries.html">Module meta.boundaries</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module meta.calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.collaboration.html">Module meta.collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.connections.html">Module meta.connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.constants.html">Module meta.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.coordsystems.html">Module meta.coordsystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.dm.html">Module meta.dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.elements.html">Module meta.elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.em.html">Module meta.em</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.groups.html">Module meta.groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.isofunctions.html">Module meta.isofunctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.materials.html">Module meta.materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.models.html">Module meta.models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.nodes.html">Module meta.nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.nvh.html">Module meta.nvh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.overlay.html">Module meta.overlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.pages.html">Module meta.pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.parts.html">Module meta.parts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.planes.html">Module meta.planes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.plot2d.html">Module meta.plot2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.report.html">Module meta.report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.results.html">Module meta.results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.sections.html">Module meta.sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.session.html">Module meta.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="meta.spdrm.html">Module meta.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="meta.spdrm.process.html">Module meta.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="meta.spreadsheet.html">Module meta.spreadsheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.tdk.html">Module meta.tdk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.toolbars.html">Module meta.toolbars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.utils.html">Module meta.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.visuals.html">Module meta.visuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.vr.html">Module meta.vr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta.windows.html">Module meta.windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meta.annotations.html">Module meta.annotations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.base.html">Module meta.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.betascript.html">Module meta.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.betavisibility.html">Module meta.betavisibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.boundaries.html">Module meta.boundaries</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module meta.calc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.collaboration.html">Module meta.collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.connections.html">Module meta.connections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.constants.html">Module meta.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.coordsystems.html">Module meta.coordsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.dm.html">Module meta.dm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.elements.html">Module meta.elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.em.html">Module meta.em</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.groups.html">Module meta.groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.isofunctions.html">Module meta.isofunctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.materials.html">Module meta.materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.models.html">Module meta.models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.nodes.html">Module meta.nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.nvh.html">Module meta.nvh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.overlay.html">Module meta.overlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.pages.html">Module meta.pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.parts.html">Module meta.parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.planes.html">Module meta.planes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.plot2d.html">Module meta.plot2d</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.report.html">Module meta.report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.results.html">Module meta.results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.sections.html">Module meta.sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.session.html">Module meta.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="meta.spdrm.html">Module meta.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="meta.spdrm.process.html">Module meta.spdrm.process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meta.spreadsheet.html">Module meta.spreadsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.tdk.html">Module meta.tdk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.toolbars.html">Module meta.toolbars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.utils.html">Module meta.utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.visuals.html">Module meta.visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.vr.html">Module meta.vr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meta.windows.html">Module meta.windows</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-meta.calc">
+<span id="module-meta-calc"></span><span id="api-ref-meta-calc"></span><h1>Module meta.calc<a class="headerlink" href="#module-meta.calc" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.CrossProduct">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">CrossProduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#meta.calc.CrossProduct" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function calculates the cross product of the two vectors.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>vec1</strong><span class="classifier">tuple</span></dt><dd><div class="line-block">
+<div class="line">A tuple representing vector 1.</div>
+</div>
+</dd>
+<dt><strong>vec2</strong><span class="classifier">tuple</span></dt><dd><div class="line-block">
+<div class="line">A tuple representing vector 2.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a new vector (list) representing the cross product.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>ArithmeticError</dt><dd><div class="line-block">
+<div class="line">Invalid arguments given</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.15</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">m2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.54</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">CrossProduct</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.DotProduct">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">DotProduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#meta.calc.DotProduct" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function calculates the dot product of two vectors.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>vec1</strong><span class="classifier">tuple[float, float, float]</span></dt><dd><div class="line-block">
+<div class="line">A tuple representing Vector 1.</div>
+</div>
+</dd>
+<dt><strong>vec2</strong><span class="classifier">tuple[float, float, float]</span></dt><dd><div class="line-block">
+<div class="line">A tuple representing Vector 2.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>float</dt><dd><div class="line-block">
+<div class="line">Returns a double precision value representing the dot product.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>TypeError</dt><dd><div class="line-block">
+<div class="line">The two vectors do not belong in the same dimensional-space (they have not equal length).</div>
+</div>
+</dd>
+<dt>ArithmeticError</dt><dd><div class="line-block">
+<div class="line">Invalid arguments given.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.97</span><span class="p">)</span>
+    <span class="n">m2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.76</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.39</span><span class="p">)</span>
+
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.GetDoeStudyExperimentsForParams">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">GetDoeStudyExperimentsForParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experiments_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taguchi_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reject_duplicates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#meta.calc.GetDoeStudyExperimentsForParams" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Function to get the experiments of the input parameters </div>
+<div class="line">that are defined as named tuples with the fieldnames “min”</div>
+<div class="line">and “max”. For the definition of the input parameters the</div>
+<div class="line">“import collections” statement is essential (look at the example).</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>parameters</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">list or objects of parameters defined as named </div>
+<div class="line">tuples with the fieldnames “min” and “max”</div>
+</div>
+</dd>
+<dt><strong>algorithm</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">algorithm used to generate the experiments.</div>
+<div class="line">Supported algorithms are “Full Factorial”, “Uniform Latin Hypercube”, </div>
+<div class="line">“Optimal Latin Hypercube (ESE)”, “Symmetric Optimal Latin Hypercube”, </div>
+<div class="line">“Random”, “Taguchi Orthogonal Arrays”, </div>
+<div class="line">“Modified Extensible Lattice Sequence” and “Linear”.</div>
+</div>
+</dd>
+<dt><strong>level</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">integer value used for all parameters (“Full </div>
+<div class="line">Factorial” or “Taguchi Orthogonal Arrays” </div>
+<div class="line">algorithms). Default value is 2.</div>
+</div>
+</dd>
+<dt><strong>experiments_number</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">the number of the generated experiments (used in </div>
+<div class="line">“Uniform Latin Hypercube”, “Random” and “Linear” </div>
+<div class="line">algorithms).</div>
+</div>
+</dd>
+<dt><strong>seed</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">positive number used to initialize the random number generator</div>
+<div class="line">(used in “Uniform Latin Hypercube” and “Random” algorithms).</div>
+</div>
+</dd>
+<dt><strong>taguchi_array</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">Taguchi array to be used for experiments generation. </div>
+<div class="line">Taguchi array is related to the level value. </div>
+<div class="line">For level = 2, supported arrays are “L4”, “L8”, “L12”, </div>
+<div class="line">“L16”, “L20”, “L24”, “L32”, “L64”, “L128”, “L256”.</div>
+<div class="line">For level = 3, supported arrays are “L9”, “L18”, “L27”, </div>
+<div class="line">“L36”, “L54”, “L81”, “L108”.</div>
+<div class="line">For level = 4, supported arrays are “L16”, “L32”, “L64”.</div>
+<div class="line">For level = 5, supported arrays are “L25”, “L50”.</div>
+</div>
+</dd>
+<dt><strong>reject_duplicates</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">reject duplicate experiments in Taguchi algorithm</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">Returns a list of lists (every list corresponds to a single experiment).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">Parameter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;Parameter&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">])</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">)</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">)</span>
+    <span class="n">p3</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="o">-</span><span class="mf">2.2</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
+
+    <span class="n">designs1</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">GetDoeStudyExperimentsForParams</span><span class="p">(</span>
+        <span class="n">params</span><span class="p">,</span> <span class="s2">&quot;Random&quot;</span><span class="p">,</span> <span class="n">experiments_number</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">345</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DOE Study experiments = &quot;</span><span class="p">,</span> <span class="n">designs1</span><span class="p">)</span>
+
+    <span class="n">designs2</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">GetDoeStudyExperimentsForParams</span><span class="p">(</span>
+        <span class="n">params</span><span class="p">,</span> <span class="s2">&quot;Full Factorial&quot;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">3</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DOE Study experiments = &quot;</span><span class="p">,</span> <span class="n">designs2</span><span class="p">)</span>
+
+    <span class="n">designs3</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">GetDoeStudyExperimentsForParams</span><span class="p">(</span>
+        <span class="n">params</span><span class="p">,</span> <span class="s2">&quot;Uniform Latin Hypercube&quot;</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">467</span><span class="p">,</span> <span class="n">experiments_number</span><span class="o">=</span><span class="mi">5</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DOE Study experiments = &quot;</span><span class="p">,</span> <span class="n">designs3</span><span class="p">)</span>
+
+    <span class="n">designs4</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">GetDoeStudyExperimentsForParams</span><span class="p">(</span>
+        <span class="n">parameters</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;Taguchi Orthogonal Arrays&quot;</span><span class="p">,</span> <span class="n">taguchi_array</span><span class="o">=</span><span class="s2">&quot;L16&quot;</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DOE Study experiments = &quot;</span><span class="p">,</span> <span class="n">designs4</span><span class="p">)</span>
+
+    <span class="n">designs5</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">GetDoeStudyExperimentsForParams</span><span class="p">(</span>
+        <span class="n">params</span><span class="p">,</span> <span class="s2">&quot;Linear&quot;</span><span class="p">,</span> <span class="n">experiments_number</span><span class="o">=</span><span class="mi">3</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DOE Study experiments = &quot;</span><span class="p">,</span> <span class="n">designs5</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.Normalize">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">Normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.calc.Normalize" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function normalizes a vector (ie. makes its Eucledean norm equal to 1)</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>vec</strong><span class="classifier">Iterable</span></dt><dd><div class="line-block">
+<div class="line">Vector to normalize.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">It returns a list, where each member is regarded as a vector component.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">m1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">m1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+    <span class="n">m1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">m</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.TransposeMatrix">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">TransposeMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#meta.calc.TransposeMatrix" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function is used to transpose a matrix given as a list of lists.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>matrix</strong><span class="classifier">list</span></dt><dd><div class="line-block">
+<div class="line">A list of vectors (lists) representing the Matrix to transpose.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">It returns a list where each member is a list representing a vector.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">m1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">m1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">m1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="n">m2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">m2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">m2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">m2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">m</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="n">k</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">TransposeMatrix</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">k</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.CartesianToSpherical">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">CartesianToSpherical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#meta.calc.CartesianToSpherical" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts the cartesian coordinates to spherical coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>coordinates</strong><span class="classifier">list</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">The return value is a list with spherical coordinates.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">CartesianToSpherical</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+    <span class="c1"># The result is : new_point == [1.73205081,0.785398163,0.955316618]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.CylindricalToCartesian">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">CylindricalToCartesian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.calc.CylindricalToCartesian" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts the cylindrical coordinates to cartesian coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">(1x3) with cylindrical coordinates</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">The return value is the cartesian coordinates.</div>
+<div class="line">The output data is a list (1x3) with cartesian coordinates</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.41421356</span><span class="p">,</span> <span class="mf">0.785398163</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">CylindricalToCartesian</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+
+    <span class="c1"># The result is : new_point[1,1,1]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.CylindricalToSpherical">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">CylindricalToSpherical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.calc.CylindricalToSpherical" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Converts the cylindrical coordinates to spherical coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">(1x3) with cylindrical coordinates</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">The return value is the spherical coordinates.</div>
+<div class="line"><br /></div>
+<div class="line">The output data is a list (1x3) with spherical coordinates</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.41421356</span><span class="p">,</span> <span class="mf">0.785398163</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">CylindricalToSpherical</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+    <span class="c1"># The result is :  [1.73205081,0.785398163,0.955316618]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.NormalVec">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">NormalVec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.calc.NormalVec" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function compute a unit normal vector of input vector ‘vec’. At the end the dot product of the vectors must be 0.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>vec</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">describing the vector</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float, float, float]</dt><dd><div class="line-block">
+<div class="line">It returns a unit vector (list) of input vector ‘vec’.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">vec</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">vecNrm</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">NormalVec</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>  <span class="c1"># |vecNrm| == 1</span>
+    <span class="n">dot</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="n">vecNrm</span><span class="p">)</span>  <span class="c1"># the value &#39;dot&#39; is &#39;0.&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.ProjectPointToLineSegment">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">ProjectPointToLineSegment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_segment_point_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_segment_point_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#meta.calc.ProjectPointToLineSegment" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function computes the projection point of a point on a line segment.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>line_segment_point_1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">a list of coordinates that define the first end point</div>
+</div>
+</dd>
+<dt><strong>line_segment_point_2</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">a list of coordinates that define the second end point</div>
+</div>
+</dd>
+<dt><strong>project_point</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">a list of coordinates that define the point to be projected</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list with the result of projection.</div>
+<div class="line"><br /></div>
+<div class="line">The output list can be : </div>
+<div class="line">i) [1, ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z] - When the point is projected on line segment between end points. </div>
+<div class="line">ii)[2, ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z, SnapPoint_x,SnapPoint_y,SnapPoint_z] - When the point is projected on the extension of the line segment, outside the end points. </div>
+<div class="line"><br /></div>
+<div class="line">The ‘Snap Point’ is one of the two end points of line segment. </div>
+<div class="line">The first value of list is a flag with values (1 or 2) representing the two situations described above.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ProjectPointToLineSegment</span><span class="p">(</span>
+        <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.ProjectPointToTriangle">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">ProjectPointToTriangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">triangle_point_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangle_point_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangle_point_3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#meta.calc.ProjectPointToTriangle" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function computes the projection point of a point on a triangle. The first point is the point to be projected on the triangle and the other three points are the corners of the triangle.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>triangle_point_1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the 1st node of the triangle.</div>
+</div>
+</dd>
+<dt><strong>triangle_point_2</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the 2nd node of the triangle.</div>
+</div>
+</dd>
+<dt><strong>triangle_point_3</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of the 3rd node of the triangle.</div>
+</div>
+</dd>
+<dt><strong>project_point</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with the coordinates of point to be projected.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list with the result of the projection.</div>
+<div class="line"><br /></div>
+<div class="line">The output list can be : </div>
+<div class="line">i)  0, When the three corners are collinear or create a degenerate triangle. </div>
+<div class="line">ii) ((ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z)) - When the point to </div>
+<div class="line">be projected is projected in triangle. </div>
+<div class="line">iii)((ProjectedPoint_x, ProjectedPoint_y, ProjectedPoint_z), (SnapPoint_x,SnapPoint_y,SnapPoint_z)) </div>
+<div class="line">- When the point to be projected is projected outside the triangle area. The ‘Snap Point’ is the</div>
+<div class="line">nearest point of the triangle to the projected point. The first value of list is a flag with values</div>
+<div class="line">(0,1 or 2) that represent the three situations described above.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">triangle_p1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span>
+    <span class="n">triangle_p2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">triangle_p3</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">orig_point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">proj_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ProjectPointToTriangle</span><span class="p">(</span>
+        <span class="n">triangle_p1</span><span class="p">,</span> <span class="n">triangle_p2</span><span class="p">,</span> <span class="n">triangle_p3</span><span class="p">,</span> <span class="n">orig_point</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">proj_point</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.SphericalToCartesian">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">SphericalToCartesian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.calc.SphericalToCartesian" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function converts spherical coordinates to cartesian coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">(1x3) with spherical coordinates</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">The return value is a list with the cartesian coordinates.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.73205081</span><span class="p">,</span> <span class="mf">0.785398163</span><span class="p">,</span> <span class="mf">0.955316618</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">SphericalToCartesian</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+    <span class="c1"># The result is : new_point == [1,1,1]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.SphericalToCylindrical">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">SphericalToCylindrical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.calc.SphericalToCylindrical" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">This function converts spherical coordinates to cylindrical coordinates.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>coordinates</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">The input data is a list (1x3) with spherical coordinate</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">The return value a list (1x3) of the cylindrical coordinates.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.73205081</span><span class="p">,</span> <span class="mf">0.785398163</span><span class="p">,</span> <span class="mf">0.955316618</span><span class="p">)</span>
+    <span class="n">new_point</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">SphericalToCylindrical</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+    <span class="c1"># The result is : new_point == [1.41421356,0.785398163,1]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.ConvertEulerAnglesToRotationMatrix_XYZ">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">ConvertEulerAnglesToRotationMatrix_XYZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">RotAngles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#meta.calc.ConvertEulerAnglesToRotationMatrix_XYZ" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Convert Euler angles to rotation matrix. The order of rotations is:</div>
+<div class="line">- 1st rotation around original axis ‘X’.</div>
+<div class="line">- 2nd rotation around a new axis ‘Y’.</div>
+<div class="line">- 3rd rotation around a newest axis ‘Z’.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>RotAngles</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list of rotation angles in radians.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a 3d-rotation matrix (3x3) as a list. The rotation matrix relates the original coordinate system to the transformed coordinate system.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">RotAngles</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">RotAngles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">23</span><span class="p">))</span>
+    <span class="n">RotAngles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">37</span><span class="p">))</span>
+    <span class="n">RotAngles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">19</span><span class="p">))</span>
+
+    <span class="n">RotMatrix</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ConvertEulerAnglesToRotationMatrix_XYZ</span><span class="p">(</span><span class="n">RotAngles</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:1.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">RotMatrix</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.ConvertEulerAnglesToRotationMatrix_ZXZ">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">ConvertEulerAnglesToRotationMatrix_ZXZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">RotAngles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#meta.calc.ConvertEulerAnglesToRotationMatrix_ZXZ" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Convert Euler angles to rotation matrix. The order of rotations is:</div>
+<div class="line">- 1st rotation around original axis ‘Z’.</div>
+<div class="line">- 2nd rotation around a new axis ‘X’.</div>
+<div class="line">- 3rd rotation around a newest axis ‘Z’.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>RotAngles</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list of rotation angles in radians.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a 3d-rotation matrix (3x3) as a list. The rotation matrix relates the original coordinate system to the transformed coordinate system.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">RotAngles</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">RotAngles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">23</span><span class="p">))</span>
+    <span class="n">RotAngles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">37</span><span class="p">))</span>
+    <span class="n">RotAngles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">19</span><span class="p">))</span>
+
+    <span class="n">RotMatrix</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ConvertEulerAnglesToRotationMatrix_ZXZ</span><span class="p">(</span><span class="n">RotAngles</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:1.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">RotMatrix</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.ConvertRotationMatrixToEulerAngles_XYZ">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">ConvertRotationMatrixToEulerAngles_XYZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">RotMatRow1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RotMatRow2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RotMatRow3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.calc.ConvertRotationMatrixToEulerAngles_XYZ" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Convert the 3d-rotation matrix to the X-Y-Z combination of Euler angles. The order of rotations is:</div>
+<div class="line">- 1st rotation around original axis ‘X’.</div>
+<div class="line">- 2nd rotation around a new axis ‘Y’.</div>
+<div class="line">- 3rd rotation around a newest axis ‘Z’.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>RotMatRow1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with three numbers representing the first row of the rotation matrix.</div>
+</div>
+</dd>
+<dt><strong>RotMatRow2</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with three numbers representing the second row of the rotation matrix.</div>
+</div>
+</dd>
+<dt><strong>RotMatRow3</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with three numbers representing the third row of the rotation matrix.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">Returns a list with the three Euler angles of X-Y-Z combination in radians.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">RotMatRow1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.755</span><span class="p">,</span> <span class="mf">0.522</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.397</span><span class="p">)</span>
+    <span class="n">RotMatRow2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.260</span><span class="p">,</span> <span class="mf">0.794</span><span class="p">,</span> <span class="mf">0.550</span><span class="p">)</span>
+    <span class="n">RotMatRow3</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.602</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.312</span><span class="p">,</span> <span class="mf">0.735</span><span class="p">)</span>
+
+    <span class="n">AnglesEuler_XYZ</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ConvertRotationMatrixToEulerAngles_XYZ</span><span class="p">(</span>
+        <span class="n">RotMatRow1</span><span class="p">,</span> <span class="n">RotMatRow2</span><span class="p">,</span> <span class="n">RotMatRow3</span>
+    <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">Angle</span> <span class="ow">in</span> <span class="n">AnglesEuler_XYZ</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:1.1f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">Angle</span><span class="p">)))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.ConvertRotationMatrixToEulerAngles_ZXZ">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">ConvertRotationMatrixToEulerAngles_ZXZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">RotMatRow1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RotMatRow2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RotMatRow3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#meta.calc.ConvertRotationMatrixToEulerAngles_ZXZ" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Convert the 3d-rotation matrix to the Z-X-Z combination of Euler angles. The order of rotations is:</div>
+<div class="line">- 1st rotation around original axis ‘Z’.</div>
+<div class="line">- 2nd rotation around a new axis ‘X’.</div>
+<div class="line">- 3rd rotation around a newest axis ‘Z’.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>RotMatRow1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with three numbers representing the first row of the rotation matrix.</div>
+</div>
+</dd>
+<dt><strong>RotMatRow2</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with three numbers representing the second row of the rotation matrix.</div>
+</div>
+</dd>
+<dt><strong>RotMatRow3</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">A list with three numbers representing the third row of the rotation matrix.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list[float]</dt><dd><div class="line-block">
+<div class="line">Returns a list with the three Euler angles of Z-X-Z combination in radians.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">RotMatRow1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.769</span><span class="p">,</span> <span class="mf">0.609</span><span class="p">,</span> <span class="mf">0.196</span><span class="p">)</span>
+    <span class="n">RotMatRow2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.595</span><span class="p">,</span> <span class="mf">0.568</span><span class="p">,</span> <span class="mf">0.569</span><span class="p">)</span>
+    <span class="n">RotMatRow3</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.235</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.554</span><span class="p">,</span> <span class="mf">0.799</span><span class="p">)</span>
+
+    <span class="n">AnglesEuler_ZXZ</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ConvertRotationMatrixToEulerAngles_ZXZ</span><span class="p">(</span>
+        <span class="n">RotMatRow1</span><span class="p">,</span> <span class="n">RotMatRow2</span><span class="p">,</span> <span class="n">RotMatRow3</span>
+    <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">Angle</span> <span class="ow">in</span> <span class="n">AnglesEuler_ZXZ</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:1.1f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">Angle</span><span class="p">)))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="meta.calc.ConvertRotationMatrixToEulerAxisAngle">
+<span class="sig-prename descclassname"><span class="pre">meta.calc.</span></span><span class="sig-name descname"><span class="pre">ConvertRotationMatrixToEulerAxisAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">RotationMatrix1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RotationMatrix2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RotationMatrix3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#meta.calc.ConvertRotationMatrixToEulerAxisAngle" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Convert the 3d-rotation matrix to the Euler axis and angle.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>RotationMatrix1</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">1x3 vector (list of numbers).</div>
+</div>
+</dd>
+<dt><strong>RotationMatrix2</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">1x3 vector (list of numbers).</div>
+</div>
+</dd>
+<dt><strong>RotationMatrix3</strong><span class="classifier">list[float]</span></dt><dd><div class="line-block">
+<div class="line">1x3 vector (list of numbers).</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>tuple</dt><dd><div class="line-block">
+<div class="line">Returns a tuple that has a length of two. The first item is a tuple ‘1x3’ of floats and it represents the vector of the Euler axis. The second item is a float value of the Euler rotation angle in radians.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">meta</span>
+<span class="kn">from</span> <span class="nn">meta</span> <span class="kn">import</span> <span class="n">calc</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">RotMat</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">RotMat</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="o">-</span><span class="mf">0.508828</span><span class="p">,</span> <span class="mf">0.0423415</span><span class="p">,</span> <span class="mf">0.859826</span><span class="p">])</span>
+    <span class="n">RotMat</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="o">-</span><span class="mf">0.531775</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8009058</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2752548</span><span class="p">])</span>
+    <span class="n">RotMat</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mf">0.6769852</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5972913</span><span class="p">,</span> <span class="mf">0.4300396</span><span class="p">])</span>
+
+    <span class="n">EulerAxisVectorAngle</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">ConvertRotationMatrixToEulerAxisAngle</span><span class="p">(</span>
+        <span class="n">RotMat</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">RotMat</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">RotMat</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">&quot;EulerAxisVector: &quot;</span><span class="p">,</span>
+        <span class="n">EulerAxisVectorAngle</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">EulerAxisVectorAngle</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">EulerAxisVectorAngle</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EulerAxisAngle: &quot;</span><span class="p">,</span> <span class="n">EulerAxisVectorAngle</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

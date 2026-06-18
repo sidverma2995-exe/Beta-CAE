@@ -1,0 +1,1365 @@
+
+<span class="api-ref"></span>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Module sdm.ml &#8212; BETA Suite API  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pandas.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/api_ref_komvos/generated/sdm.ml';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../../_static/BETA_logo.svg" class="logo__image only-light" alt="BETA Suite API documentation">
+    <img src="../../../_static/BETA_logo_negative.svg" class="logo__image only-dark" alt="BETA Suite API documentation">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user_guide/index.html">
+                        User Guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        API Reference Manuals
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../development/index.html">
+                        Application Development
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sdm.html">Module sdm</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sdm.base.html">Module sdm.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.betascript.html">Module sdm.betascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.constants.html">Module sdm.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.dm.html">Module sdm.dm</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module sdm.ml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.sdm_base.html">Module sdm.sdm_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.session.html">Module sdm.session</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sdm.spdrm.html">Module sdm.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.fileChooser.html">Module sdm.spdrm.fileChooser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.inputGetter.html">Module sdm.spdrm.inputGetter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.messageDisplayer.html">Module sdm.spdrm.messageDisplayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.process.html">Module sdm.spdrm.process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.question.html">Module sdm.spdrm.question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdm.spdrm.scriptCommands.html">Module sdm.spdrm.scriptCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.utils.html">Module sdm.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.base.html">Module sdm.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.betascript.html">Module sdm.betascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.constants.html">Module sdm.constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.dm.html">Module sdm.dm</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module sdm.ml</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.sdm_base.html">Module sdm.sdm_base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.session.html">Module sdm.session</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="sdm.spdrm.html">Module sdm.spdrm</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.fileChooser.html">Module sdm.spdrm.fileChooser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.inputGetter.html">Module sdm.spdrm.inputGetter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.messageDisplayer.html">Module sdm.spdrm.messageDisplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.process.html">Module sdm.spdrm.process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.question.html">Module sdm.spdrm.question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdm.spdrm.scriptCommands.html">Module sdm.spdrm.scriptCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdm.utils.html">Module sdm.utils</a></li>
+</ul>
+</div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+    <section id="module-sdm.ml">
+<span id="module-sdm-ml"></span><span id="api-ref-sdm-ml"></span><h1>Module sdm.ml<a class="headerlink" href="#module-sdm.ml" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sdm.ml.</span></span><span class="sig-name descname"><span class="pre">RunCollection</span></span><a class="headerlink" href="#sdm.ml.RunCollection" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A collection of Experiment Simulation Runs</div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection.runs">
+<span class="sig-name descname"><span class="pre">runs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.RunCollection.runs" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A dictionary with the Simulation Run objects contained in the RunCollection, using the server ids of the Simulation Runs as keys.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection.doe_studies">
+<span class="sig-name descname"><span class="pre">doe_studies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.RunCollection.doe_studies" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A dictionary with the DOE Study objects contained in the RunCollection, using the server ids of the DOE Studies as keys.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection.result_file">
+<span class="sig-name descname"><span class="pre">result_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.RunCollection.result_file" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The result file name for loading the field (3d) results, if needed. None otherwise.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection.curve_result_file">
+<span class="sig-name descname"><span class="pre">curve_result_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.RunCollection.curve_result_file" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The result file name for loading the curve (2d) results, if needed. None otherwise.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection.extras_names">
+<span class="sig-name descname"><span class="pre">extras_names</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.RunCollection.extras_names" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A list of the names of the custom extra features, if any are given through csv or callback.</div>
+<div class="line">In the case of csv, the 1st row of the csv file contains the names of those custom features and the 1st column specifies the server id of the Sim Run they corresponds to.</div>
+<div class="line">In the case of the callback, the features are named after the callback function. The user must specify the file and the function name of the callback. The function must return a list.</div>
+<div class="line">Note: these custom features will be used as extra inputs only in DV-based tasks.</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection.get_sids">
+<span class="sig-name descname"><span class="pre">get_sids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#sdm.ml.RunCollection.get_sids" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns a list of the server ids of the Simulation Runs contained in the RunCollection</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>object</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection.get_doe_study_sids">
+<span class="sig-name descname"><span class="pre">get_doe_study_sids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#sdm.ml.RunCollection.get_doe_study_sids" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns a list of the server ids of the DOE Studies contained in the RunCollection</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>object</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection.get_dv_names">
+<span class="sig-name descname"><span class="pre">get_dv_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#sdm.ml.RunCollection.get_dv_names" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns a list with the names of the Design Variables of the RunCollection</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>object</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection.get_input_names">
+<span class="sig-name descname"><span class="pre">get_input_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#sdm.ml.RunCollection.get_input_names" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Returns a list of the inputs used by the RunCollection</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>object</dt><dd><div class="line-block">
+<div class="line">If no extras have been given then the inputs are the names of the Design Variables</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.RunCollection.print_self">
+<span class="sig-name descname"><span class="pre">print_self</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#sdm.ml.RunCollection.print_self" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Prints the contents of the RunCollection</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>object</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#sdm.ml.Dataset" title="sdm.ml.Dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ml.Dataset</span></code></a>, <a class="reference internal" href="#sdm.ml.Predictor" title="sdm.ml.Predictor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ml.Predictor</span></code></a>, <a class="reference internal" href="#sdm.ml.ModeClassifier" title="sdm.ml.ModeClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ml.ModeClassifier</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="c1"># Using a DOE Study sid</span>
+<span class="k">def</span> <span class="nf">main_doe_study</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">]</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">)</span>
+
+<span class="c1"># Using Simulation Run sids</span>
+<span class="k">def</span> <span class="nf">main_sim_runs</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">)</span>
+
+<span class="c1"># Interested in 2d/3d results too</span>
+<span class="k">def</span> <span class="nf">main_2d3d</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;d3plot&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;binout&quot;</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">)</span>
+
+<span class="c1"># Using custom features as inputs - through csv file</span>
+<span class="k">def</span> <span class="nf">main_extras_csv</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;d3plot&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;binout&quot;</span>
+    <span class="n">extras_csv</span> <span class="o">=</span> <span class="s2">&quot;/path/to/extras_example.csv&quot;</span>
+    <span class="n">extras_callback</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span>
+        <span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">,</span> <span class="n">extras_csv</span><span class="p">,</span> <span class="n">extras_callback</span>
+    <span class="p">)</span>
+
+<span class="c1"># Using custom features as inputs - through callback</span>
+<span class="k">def</span> <span class="nf">main_extras_callback</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;d3plot&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;binout&quot;</span>
+    <span class="n">extras_csv</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">extras_callback</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;/path/to/extras_callback_file.py&quot;</span><span class="p">,</span> <span class="s2">&quot;function_name&quot;</span><span class="p">]</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span>
+        <span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">,</span> <span class="n">extras_csv</span><span class="p">,</span> <span class="n">extras_callback</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sdm.ml.Dataset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sdm.ml.</span></span><span class="sig-name descname"><span class="pre">Dataset</span></span><a class="headerlink" href="#sdm.ml.Dataset" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A collection of Experiment Simulation Runs with information about the responses of interest. It can be used as input for training tasks.</div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.Dataset.run_collection">
+<span class="sig-name descname"><span class="pre">run_collection</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.Dataset.run_collection" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The RunCollection used to create the Dataset.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.Dataset.response_names">
+<span class="sig-name descname"><span class="pre">response_names</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.Dataset.response_names" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A list of the responses names to be used a targets.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.Dataset.response_types">
+<span class="sig-name descname"><span class="pre">response_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.Dataset.response_types" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A list of the response Output Types.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.Dataset.response_subtypes">
+<span class="sig-name descname"><span class="pre">response_subtypes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.Dataset.response_subtypes" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A list of the response Output SubTypes.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.Dataset.entities_selection_mode">
+<span class="sig-name descname"><span class="pre">entities_selection_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.Dataset.entities_selection_mode" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A dictionary with the curve entity selection mode for each curve sub-type, using the curve sub-types as keys. Used only for curve (2d) responses in NASTRAN DMs.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.Dataset.curve_x_axis">
+<span class="sig-name descname"><span class="pre">curve_x_axis</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.Dataset.curve_x_axis" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A dictionary with the curve x-axis data for each curve sub-type, using the curve sub-types as keys. Used only for curve (2d) responses in NASTRAN DMs.</div>
+</div>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#sdm.ml.RunCollection" title="sdm.ml.RunCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ml.RunCollection</span></code></a>, <a class="reference internal" href="#sdm.ml.Predictor" title="sdm.ml.Predictor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ml.Predictor</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PYTHON script</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="c1"># Only 1d responses</span>
+<span class="k">def</span> <span class="nf">main_1d</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">]</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">)</span>
+
+    <span class="n">responses</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;First_Torsional_value&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;First_Vertical_Bending_value&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;First_Lateral_Bending_value&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">run_collection</span><span class="p">,</span> <span class="n">responses</span><span class="p">)</span>
+
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">sub_type</span> <span class="o">=</span> <span class="s2">&quot;fb&quot;</span>  <span class="c1"># or &#39;dv&#39;</span>
+    <span class="n">new_predictor_sids</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sub_type</span><span class="p">)</span>
+
+<span class="c1"># Interested in 2d/3d results too</span>
+<span class="k">def</span> <span class="nf">main_1d2d3d</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;d3plot&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;binout&quot;</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">)</span>
+
+    <span class="n">responses</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;max_intrusion&quot;</span><span class="p">,</span> <span class="s2">&quot;Kinetic energy (ke)&quot;</span><span class="p">,</span> <span class="s2">&quot;Displacements&quot;</span><span class="p">]</span>
+    <span class="n">response_types</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;keyvalue&quot;</span><span class="p">,</span> <span class="s2">&quot;curve&quot;</span><span class="p">,</span> <span class="s2">&quot;field&quot;</span><span class="p">]</span>
+    <span class="n">response_subtypes</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;glstat-Global&quot;</span><span class="p">,</span> <span class="s2">&quot;Deformation&quot;</span><span class="p">]</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">run_collection</span><span class="p">,</span> <span class="n">responses</span><span class="p">,</span> <span class="n">response_types</span><span class="p">,</span> <span class="n">response_subtypes</span><span class="p">)</span>
+
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">sub_type</span> <span class="o">=</span> <span class="s2">&quot;dv&quot;</span>
+    <span class="n">new_predictor_sids</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sub_type</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sdm.ml.Predictor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sdm.ml.</span></span><span class="sig-name descname"><span class="pre">Predictor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predictor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sdm.ml.Predictor" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A Machine Learning Predictor used for training or prediction tasks.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><div class="line-block">
+<div class="line">The name of the Predictor Group.</div>
+</div>
+</dd>
+<dt><strong>result_name</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The result name of a single predictor. To access a single predictor instead of the whole group. The result_name argument should determine the result name of the predictor. This argument should follow the Predictor Group name argument</div>
+</div>
+</dd>
+<dt><strong>predictor_id</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The Id of the predictor in the DM. To access a single predictor instead of the whole group. Only the predictor_id argument should be given.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.Predictor.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.Predictor.name" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The name of the Predictor Group.</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.Predictor.result_name">
+<span class="sig-name descname"><span class="pre">result_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.Predictor.result_name" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The result name of a single predictor. To access a single predictor instead of the whole group. The result_name argument should determine the result name of the predictor. This argument should follow the Predictor Group name argument</div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.Predictor.predictor_id">
+<span class="sig-name descname"><span class="pre">predictor_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.Predictor.predictor_id" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The Id of the predictor in the DM. To access a single predictor instead of the whole group. Only the predictor_id argument should be given.</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.Predictor.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#sdm.ml.Dataset" title="sdm.ml.Dataset"><span class="pre">Dataset</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'dv_based'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incremental_support</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#sdm.ml.Predictor.train" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Trains the Predictor. The input Simulation Runs and the selected responses are specified by a Dataset object. Training can be either DV-based or Feature-based. Training is asynchronous.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>dataset</strong><span class="classifier">Dataset</span></dt><dd><div class="line-block">
+<div class="line">A Dataset object that specifies the input Simulation Runs and the selected responses.</div>
+</div>
+</dd>
+<dt><strong>sub_type</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The predictor Sub-Type, e.g. DV based or Feature based. </div>
+<div class="line">Accepted values for DV based are: ‘dv’, ‘dv-based’, ‘dv_based’.</div>
+<div class="line">Accepted values for Feature based are: ‘fb’, ‘feature’, ‘feature-based’, ‘feature_based’.</div>
+<div class="line">Default value is DV based training.</div>
+</div>
+</dd>
+<dt><strong>incremental_support</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">Whether or not the predictor should support Incremental Training. </div>
+<div class="line">Default value is False.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list of the server ids of the created predictor(s).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.Predictor.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_collection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#sdm.ml.RunCollection" title="sdm.ml.RunCollection"><span class="pre">RunCollection</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">external</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#sdm.ml.Predictor.predict" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Runs a prediction on the specified input, which can be one of the following: A list of server ids of Simulation Runs, a RunCollection object or external data.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>sids</strong><span class="classifier">list, optional</span></dt><dd><div class="line-block">
+<div class="line">A list of server ids (integers) of Simulation Runs.</div>
+</div>
+</dd>
+<dt><strong>run_collection</strong><span class="classifier">RunCollection, optional</span></dt><dd><div class="line-block">
+<div class="line">A RunCollection object.</div>
+</div>
+</dd>
+<dt><strong>external</strong><span class="classifier">list, optional</span></dt><dd><div class="line-block">
+<div class="line">A list of external data. </div>
+<div class="line">For DV-based predictors this means a list of DV values lists. </div>
+<div class="line">For Feature-based predictors this means a list of paths to input files.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>tuple</dt><dd><div class="line-block">
+<div class="line">Returns a namedtuple object with the following fields: predictions, variances and prediction_sids. Keyvalue (1d) predictors provide predictions and variances, while Curve (2d) and Field (3d) predictors provide Prediction Simulation Run server ids.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.Predictor.re_train">
+<span class="sig-name descname"><span class="pre">re_train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_collection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#sdm.ml.RunCollection" title="sdm.ml.RunCollection"><span class="pre">RunCollection</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">incremental_support</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#sdm.ml.Predictor.re_train" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Re-trains a Predictor with new data. The new data are specified by a RunCollection object. The resulting Predictor can either support Incremental Training or not. Training is asynchronous.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>run_collection</strong><span class="classifier">RunCollection</span></dt><dd><div class="line-block">
+<div class="line">A RunCollection object that specifies the input Simulation Runs.</div>
+</div>
+</dd>
+<dt><strong>incremental_support</strong><span class="classifier">bool, optional</span></dt><dd><div class="line-block">
+<div class="line">Whether or not the predictor should support Incremental Training. </div>
+<div class="line">Default value is False.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list of the server ids of the created predictor(s).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.Predictor.incremental_train">
+<span class="sig-name descname"><span class="pre">incremental_train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_collection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#sdm.ml.RunCollection" title="sdm.ml.RunCollection"><span class="pre">RunCollection</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#sdm.ml.Predictor.incremental_train" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Incrementally trains a Predictor with new data. The new data are specified by a RunCollection object. Training is asynchronous.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>run_collection</strong><span class="classifier">RunCollection</span></dt><dd><div class="line-block">
+<div class="line">A RunCollection object that specifies the input Simulation Runs.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list of the server ids of the created predictor(s).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.Predictor.generate_new_experiments">
+<span class="sig-name descname"><span class="pre">generate_new_experiments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_experiments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#sdm.ml.Predictor.generate_new_experiments" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Improves a group of Predictors with new data that will be solved during this process. The new data are new experiments optimally selected through smart sampling. The new experiments are added one at a time, i.e. the optimization task executes for each new experiment and the predictor is improved adding each new experiment iteratively. generate_new_experiments is only supported for DV-based predictors (feature based predictors are not supported) and for ansa models with an optimization task set up. Mode Classifiers are not supported.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>n_experiments</strong><span class="classifier">int</span></dt><dd><div class="line-block">
+<div class="line">The number of new experiments to be selected for solving and adding to the training data of the predictor group (integer &gt;=1)</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list of the server ids of the created predictor(s).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.Predictor.improve">
+<span class="sig-name descname"><span class="pre">improve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_collection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#sdm.ml.RunCollection" title="sdm.ml.RunCollection"><span class="pre">RunCollection</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_experiments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#sdm.ml.Predictor.improve" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Improves a Predictor by adding new data to its training set. There are two ways to improve a predictor:</div>
+<div class="line"><br /></div>
+<div class="line">1) Using existing experiments: The new data are specified by a RunCollection object. The resulting Predictor will be Incremental if the base predictor selected is Incremental. Training is asynchronous.</div>
+<div class="line"><br /></div>
+<div class="line">2) Selecting and solving new experiments: The new data are new experiments optimally selected through smart sampling. The new experiments are added one at a time, i.e. the optimization task executes for each new experiment and the predictor is improved adding each new experiment iteratively. This is only supported for DV-based predictors (feature based and Mode Classifiers are not supported).</div>
+<div class="line"><br /></div>
+<div class="line">To use the improve function use only keyword arguments.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>run_collection</strong><span class="classifier">RunCollection, optional</span></dt><dd><div class="line-block">
+<div class="line">A RunCollection object that specifies the input Simulation Runs of the existing experiments.</div>
+</div>
+</dd>
+<dt><strong>n_experiments</strong><span class="classifier">int, optional</span></dt><dd><div class="line-block">
+<div class="line">The number of new experiments to be generated, solved and added in the predictor training set. Positive integer.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list of the server ids of the created predictor(s).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#sdm.ml.ModeClassifier" title="sdm.ml.ModeClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ml.ModeClassifier</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TRAIN</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">]</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;d3plot&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;binout&quot;</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">)</span>
+
+    <span class="n">responses</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;max_intrusion&quot;</span><span class="p">,</span> <span class="s2">&quot;Kinetic energy (ke)&quot;</span><span class="p">,</span> <span class="s2">&quot;Displacements&quot;</span><span class="p">]</span>
+    <span class="n">response_types</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;keyvalue&quot;</span><span class="p">,</span> <span class="s2">&quot;curve&quot;</span><span class="p">,</span> <span class="s2">&quot;field&quot;</span><span class="p">]</span>
+    <span class="n">response_subtypes</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;glstat-Global&quot;</span><span class="p">,</span> <span class="s2">&quot;Deformation&quot;</span><span class="p">]</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">run_collection</span><span class="p">,</span> <span class="n">responses</span><span class="p">,</span> <span class="n">response_types</span><span class="p">,</span> <span class="n">response_subtypes</span><span class="p">)</span>
+
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">new_predictor_sids</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;dv&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+<span class="c1"># --------------</span>
+<span class="c1"># PREDICT</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="c1"># Predict with Sim Runs server ids</span>
+<span class="k">def</span> <span class="nf">main1</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sids</span><span class="o">=</span><span class="n">sids</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">predictions</span>
+
+<span class="c1"># Predict with RunCollection object</span>
+<span class="k">def</span> <span class="nf">main2</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;d3plot&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;binout&quot;</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">)</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">run_collection</span><span class="o">=</span><span class="n">run_collection</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">predictions</span>
+
+<span class="c1"># Predict with specific DV values (only for DV-based)</span>
+<span class="k">def</span> <span class="nf">main3</span><span class="p">():</span>
+    <span class="n">external</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">10.4896</span><span class="p">,</span> <span class="mf">2.37</span><span class="p">],</span> <span class="p">[</span><span class="mf">7.773</span><span class="p">,</span> <span class="mf">1.81</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.1122</span><span class="p">,</span> <span class="mf">1.72</span><span class="p">]]</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name_dv&quot;</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">external</span><span class="o">=</span><span class="n">external</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">predictions</span>
+
+<span class="c1"># Predict with specific input files (only for Feature-based)</span>
+<span class="k">def</span> <span class="nf">main4</span><span class="p">():</span>
+    <span class="n">external</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;/path/to/model_1.ansa&quot;</span><span class="p">,</span> <span class="s2">&quot;/path/to/model_2.ansa&quot;</span><span class="p">]</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name_fb&quot;</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">external</span><span class="o">=</span><span class="n">external</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">predictions</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">main1</span><span class="p">()</span>
+    <span class="c1"># predictions = main2()</span>
+    <span class="c1"># predictions = main3()</span>
+    <span class="c1"># predictions = main4()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">predictions</span><span class="o">.</span><span class="n">predictions</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">predictions</span><span class="o">.</span><span class="n">variances</span><span class="p">)</span>
+
+<span class="c1"># --------------</span>
+<span class="c1"># RE-TRAIN</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">26</span><span class="p">]</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;d3plot&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;binout&quot;</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">)</span>
+
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">incremental_support</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">new_predictor_sids</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">re_train</span><span class="p">(</span>
+        <span class="n">run_collection</span><span class="p">,</span> <span class="n">incremental_support</span><span class="o">=</span><span class="n">incremental_support</span>
+    <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+<span class="c1"># --------------</span>
+<span class="c1"># INCREMENTAL TRAIN</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">26</span><span class="p">]</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;d3plot&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;binout&quot;</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">)</span>
+
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">new_predictor_sids</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">incremental_train</span><span class="p">(</span><span class="n">run_collection</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+<span class="c1"># --------------</span>
+<span class="c1"># GENERATE NEW EXPERIMENTS</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">n_experiments</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">new_predictor_sids</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">generate_new_experiments</span><span class="p">(</span><span class="n">n_experiments</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+<span class="c1"># --------------</span>
+<span class="c1"># IMPROVE WITH EXISTING EXPERIMENTS</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">26</span><span class="p">]</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;d3plot&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;binout&quot;</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">)</span>
+
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">n_experiments</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">new_predictor_sids</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">improve</span><span class="p">(</span><span class="n">run_collection</span><span class="o">=</span><span class="n">run_collection</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+<span class="c1"># --------------</span>
+<span class="c1"># IMPROVE WITH NEW EXPERIMENTS</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">Predictor</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">n_experiments</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">new_predictor_sids</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">improve</span><span class="p">(</span><span class="n">n_experiments</span><span class="o">=</span><span class="n">n_experiments</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sdm.ml.ModeClassifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sdm.ml.</span></span><span class="sig-name descname"><span class="pre">ModeClassifier</span></span><a class="headerlink" href="#sdm.ml.ModeClassifier" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">A Machine Learning Classifier that can be trained to label modes of Simulation Runs solved for modal analysis.</div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sdm.ml.ModeClassifier.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sdm.ml.ModeClassifier.name" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">The name of the Predictor Group.</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.ModeClassifier.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_collection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_labels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#sdm.ml.ModeClassifier.train" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Trains the ModeClassifier. The input Simulation Runs are specified by a RunCollection object. The labels of the modes of those Simulation Runs can be specified either by Mode_Labels reports (Table) in each Run or by a csv file with labels for all Runs. Training is asynchronous.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>run_collection</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A RunCollection object that specifies the input Simulation Runs and their result files.</div>
+</div>
+</dd>
+<dt><strong>mode_labels</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The path of the csv file that specifies the mode labels for all the Simulation Runs that will be used for training.</div>
+<div class="line">The file must be structured as follows:</div>
+<div class="line">Sim Run Id, Mode number, Mode label</div>
+<div class="line">3, 7, torsional</div>
+<div class="line">3, 8, lateral_bending</div>
+<div class="line">4, 7, torsional</div>
+<div class="line">4, 8, vertical_bending</div>
+<div class="line">If the Simulation Runs of the training set contain Mode_Labels reports, then the mode_labels argument can be skipped.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list of the server ids of the created predictor(s).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.ModeClassifier.re_train">
+<span class="sig-name descname"><span class="pre">re_train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_collection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_labels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#sdm.ml.ModeClassifier.re_train" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Re-trains a ModeClassifier with new data. The new data are specified by a RunCollection object. Training is asynchronous.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>run_collection</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A RunCollection object that specifies the input Simulation Runs and their result files.</div>
+</div>
+</dd>
+<dt><strong>mode_labels</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The path of the csv file that specifies the mode labels for all the Simulation Runs that will be used for training.</div>
+<div class="line">The file must be structured as follows:</div>
+<div class="line">Sim Run Id, Mode number, Mode label</div>
+<div class="line">3, 7, torsional</div>
+<div class="line">3, 8, lateral_bending</div>
+<div class="line">4, 7, torsional</div>
+<div class="line">4, 8, vertical_bending</div>
+<div class="line">If the Simulation Runs of the training set contain Mode_Labels reports, then the mode_labels argument can be skipped.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list of the server ids of the created predictor(s).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.ModeClassifier.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_collection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">external</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#sdm.ml.ModeClassifier.predict" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Runs a prediction on the specified input, which can be one of the following: A list of server ids of Simulation Runs, a RunCollection object or external data.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>sids</strong><span class="classifier">list, optional</span></dt><dd><div class="line-block">
+<div class="line">A list of server ids (integers) of Simulation Runs.</div>
+</div>
+</dd>
+<dt><strong>run_collection</strong><span class="classifier">object, optional</span></dt><dd><div class="line-block">
+<div class="line">A RunCollection object.</div>
+</div>
+</dd>
+<dt><strong>external</strong><span class="classifier">list, optional</span></dt><dd><div class="line-block">
+<div class="line">A list of paths to result files.</div>
+</div>
+</dd>
+<dt><strong>mode_numbers</strong><span class="classifier">list, optional</span></dt><dd><div class="line-block">
+<div class="line">A list with the modes we want to predict, e.g. [7, 8]. If left blank, all the modes of each result file will be given a prediction.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>tuple</dt><dd><div class="line-block">
+<div class="line">Returns a namedtuple object with the following fields: predictions, variances and prediction_sids. Only predictions will be provided since ModeClassifiers are Keyvalue (1d) Predictors.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sdm.ml.ModeClassifier.improve">
+<span class="sig-name descname"><span class="pre">improve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_collection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode_labels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#sdm.ml.ModeClassifier.improve" title="Permalink to this definition">#</a></dt>
+<dd><div class="line-block">
+<div class="line">Improves a Predictor by adding new data to its training set. There one two way to improve a Mode Classifier:</div>
+<div class="line"><br /></div>
+<div class="line">1) Using existing experiments: The new data are specified by a RunCollection object. Training is asynchronous.</div>
+<div class="line"><br /></div>
+<div class="line">To use the improve function use only keyword arguments.</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>run_collection</strong><span class="classifier">object</span></dt><dd><div class="line-block">
+<div class="line">A RunCollection object that specifies the input Simulation Runs of the existing experiments.</div>
+</div>
+</dd>
+<dt><strong>mode_labels</strong><span class="classifier">str, optional</span></dt><dd><div class="line-block">
+<div class="line">The path of the csv file that specifies the mode labels for all the Simulation Runs that will be used for training.</div>
+<div class="line">The file must be structured as follows:</div>
+<div class="line">Sim Run Id, Mode number, Mode label</div>
+<div class="line">3, 7, torsional</div>
+<div class="line">3, 8, lateral_bending</div>
+<div class="line">4, 7, torsional</div>
+<div class="line">4, 8, vertical_bending</div>
+<div class="line">If the Simulation Runs of the training set contain Mode_Labels reports, then the mode_labels argument can be skipped.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt>list</dt><dd><div class="line-block">
+<div class="line">Returns a list of the server ids of the created predictor(s).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#sdm.ml.RunCollection" title="sdm.ml.RunCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ml.RunCollection</span></code></a>, <a class="reference internal" href="#sdm.ml.Predictor" title="sdm.ml.Predictor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sdm.ml.Predictor</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TRAIN</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;model.op2&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;model.op2&quot;</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">)</span>
+
+    <span class="n">mode_labels</span> <span class="o">=</span> <span class="s2">&quot;/path/to/mode/labels.csv&quot;</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">ModeClassifier</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">new_predictor_sids</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">run_collection</span><span class="p">,</span> <span class="n">mode_labels</span><span class="o">=</span><span class="n">mode_labels</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+<span class="c1"># --------------</span>
+<span class="c1"># PREDICT</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="c1"># Predict with Sim Runs server ids</span>
+<span class="k">def</span> <span class="nf">main1</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">ModeClassifier</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sids</span><span class="o">=</span><span class="n">sids</span><span class="p">)</span>
+    <span class="c1"># or</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sids</span><span class="o">=</span><span class="n">sids</span><span class="p">,</span> <span class="n">mode_numbers</span><span class="o">=</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">predictions</span>
+
+<span class="c1"># Predict with RunCollection object</span>
+<span class="k">def</span> <span class="nf">main2</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;model.op2&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;model.op2&quot;</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">)</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">ModeClassifier</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">run_collection</span><span class="o">=</span><span class="n">run_collection</span><span class="p">)</span>
+    <span class="c1"># or</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+        <span class="n">run_collection</span><span class="o">=</span><span class="n">run_collection</span><span class="p">,</span> <span class="n">mode_numbers</span><span class="o">=</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">predictions</span>
+
+<span class="c1"># Predict with external result files</span>
+<span class="k">def</span> <span class="nf">main3</span><span class="p">():</span>
+    <span class="n">external</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;/path/to/model1.op2&quot;</span><span class="p">,</span> <span class="s2">&quot;/path/to/model2.op2&quot;</span><span class="p">,</span> <span class="s2">&quot;/path/to/model3.op2&quot;</span><span class="p">]</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">ModeClassifier</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">external</span><span class="o">=</span><span class="n">external</span><span class="p">)</span>
+    <span class="c1"># or</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">external</span><span class="o">=</span><span class="n">external</span><span class="p">,</span> <span class="n">mode_numbers</span><span class="o">=</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">predictions</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">main1</span><span class="p">()</span>
+    <span class="c1"># predictions = main2()</span>
+    <span class="c1"># predictions = main3()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">predictions</span><span class="o">.</span><span class="n">predictions</span><span class="p">)</span>
+
+<span class="c1"># --------------</span>
+<span class="c1"># RE-TRAIN</span>
+<span class="kn">import</span> <span class="nn">sdm</span>
+<span class="kn">from</span> <span class="nn">sdm</span> <span class="kn">import</span> <span class="n">ml</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">24</span><span class="p">))</span>
+    <span class="n">result_file</span> <span class="o">=</span> <span class="s2">&quot;model.op2&quot;</span>
+    <span class="n">curve_result_file</span> <span class="o">=</span> <span class="s2">&quot;model.op2&quot;</span>
+    <span class="n">run_collection</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">RunCollection</span><span class="p">(</span><span class="n">sids</span><span class="p">,</span> <span class="n">result_file</span><span class="p">,</span> <span class="n">curve_result_file</span><span class="p">)</span>
+
+    <span class="n">mode_labels</span> <span class="o">=</span> <span class="s2">&quot;/path/to/mode/labels.csv&quot;</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">ml</span><span class="o">.</span><span class="n">ModeClassifier</span><span class="p">(</span><span class="s2">&quot;group_name&quot;</span><span class="p">)</span>
+    <span class="n">new_predictor_sids</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">re_train</span><span class="p">(</span><span class="n">run_collection</span><span class="p">,</span> <span class="n">mode_labels</span><span class="o">=</span><span class="n">mode_labels</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+  
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2024, BETA CAE Systems.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>
